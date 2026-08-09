@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Route — Green-Wood Guan</title>
+  <meta name="description" content="A closed walking route covering every path in Green-Wood Cemetery, solved as Guan's Route Problem.">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#49692A">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/">Green-Wood Guan</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="route.html" aria-current="page">Route</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="page-head">
+        <h1>Route</h1>
+        <p class="tldr">
+          A single closed walk covering every path in Green-Wood Cemetery at least once.
+        </p>
+      </div>
+
+      <div class="route-map">
+        <div id="route-map-svg" role="img" aria-label="Map of the route through Green-Wood Cemetery"></div>
+      </div>
+
+      <div class="page-body">
+        <p>
+          This route covers <span data-stat="total_length_miles">—</span> miles across
+          <span data-stat="turn_count">—</span> turns, with
+          <span data-stat="retrace_percent">—</span>% of the distance spent retracing paths
+          already walked. Walking it in <span data-stat="target_duration_hours">—</span> hours
+          means keeping a pace of <span data-stat="required_pace_min_per_mile">—</span> minutes
+          per mile.
+        </p>
+        <p>
+          The path network is from Sevtsuk, Basu, Liu, Alhassan &amp; Kollar (2025),
+          <a href="https://www.nature.com/articles/s44284-025-00383-y">&ldquo;Spatial distribution of
+          foot traffic in New York City and applications for urban planning&rdquo;</a>, Nature Cities —
+          a citywide pedestrian network built from NYC's planimetric sidewalk data, corrected and
+          hand-verified against aerial imagery for routing use, clipped here to Green-Wood Cemetery.
+        </p>
+        <p>
+          This specific path is a
+          <a href="https://github.com/windmountain/green-wood-guan/blob/main/scripts/solve_guan_route.py">solution</a>
+          for <a href="https://en.wikipedia.org/wiki/Route_inspection_problem">Guan's Route Problem</a>
+          (also known as the Chinese Postman Problem). It's expected to be the shortest possible walk
+          that covers every path.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+    </div>
+  </footer>
+
+  <script src="js/route-animation.js"></script>
+  <script src="js/route-stats.js"></script>
+</body>
+</html>

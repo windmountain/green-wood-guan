@@ -1,0 +1,7 @@
+1. There are some problems that are sort of handled in the SQL that makes green_wood_healed. They stem from having two non-overlapping areas in greenwood_boundary. The current code attempts to join them together by bringing in OSM data and melding it all together. This is the wrong approach. The correct thing to do is further isolate the network to only what exists within _the largest contiguous shape_ in greenwood_boundary. The smaller "island" and it's paths can be ignored. The other thing this script does is remove sidewalks along the perimeter of the cemetery. That's good.
+
+2. There should be a hard-coded starting and stopping point for the journey. Whatever spot on the network is closest to 40.6590286493774, -73.99565538729414 is the starting and ending point.
+
+3. The route page should avoid text with facts and figures for now. We can add that in later. It should also somehow get the turn-by-turn data and display it as a list.
+
+

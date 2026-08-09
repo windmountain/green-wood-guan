@@ -1,0 +1,165 @@
+{
+  "name": "green-wood-guan",
+  "title": "Datasets for a Guan's Route Problem solution over Green-Wood Cemetery's paths",
+  "version": "1.0.0",
+  "resources": [
+    {
+      "name": "borough-boundaries",
+      "title": "Borough Boundaries",
+      "description": "NYC borough boundary polygons. Used as a base map layer and for spatial filtering.",
+      "path": "data/borough-boundaries.geojson",
+      "format": "geojson",
+      "mediatype": "application/geo+json",
+      "sources": [
+        {
+          "title": "Borough Boundaries",
+          "path": "https://data.cityofnewyork.us/City-Government/Borough-Boundaries/yqww-f9f3",
+          "api": "https://data.cityofnewyork.us/resource/gthc-hcne.geojson"
+        }
+      ],
+      "hash": "sha256:890b7ee4cf97c37796220a44d7549e0e51970a63403d4a76162666f44b92b544",
+      "accessed": "2026-02-12",
+      "licenses": [
+        {
+          "name": "ODC-PDDL-1.0",
+          "path": "http://opendatacommons.org/licenses/pddl/",
+          "title": "Open Data Commons Public Domain Dedication and License"
+        }
+      ]
+    },
+    {
+      "name": "street-centerline",
+      "title": "NYC Street Centerline (CSCL)",
+      "description": "Street centerline geometry for base map rendering.",
+      "path": "data/street-centerline.geojson",
+      "format": "geojson",
+      "mediatype": "application/geo+json",
+      "sources": [
+        {
+          "title": "Centerline",
+          "path": "https://data.cityofnewyork.us/City-Government/Centerline/3mf9-qshr",
+          "api": "https://data.cityofnewyork.us/api/v3/views/inkn-q76z/query.geojson"
+        }
+      ],
+      "hash": "sha256:47000cba0a6c292f19f21f14b54d8eeffff97b98bb0b8b48033a32b38211a178",
+      "accessed": "2026-02-12",
+      "licenses": [
+        {
+          "name": "ODC-PDDL-1.0",
+          "path": "http://opendatacommons.org/licenses/pddl/",
+          "title": "Open Data Commons Public Domain Dedication and License"
+        }
+      ]
+    },
+    {
+      "name": "sidewalk-lines",
+      "title": "Sidewalk Lines",
+      "description": "Sidewalk line geometry for base map rendering.",
+      "path": "data/sidewalk-lines.geojson",
+      "format": "geojson",
+      "mediatype": "application/geo+json",
+      "sources": [
+        {
+          "title": "SIDEWALK_LINE",
+          "path": "https://data.cityofnewyork.us/dataset/SIDEWALK_LINE/fytp-pq92",
+          "api": "https://data.cityofnewyork.us/api/v3/views/fytp-pq92/query.geojson"
+        }
+      ],
+      "hash": "sha256:40319ce40635831eb40f7f5d5eaa9f84ea55e4d3c126388ab081e0977128ee94",
+      "accessed": "2026-02-12",
+      "licenses": [
+        {
+          "name": "ODC-PDDL-1.0",
+          "path": "http://opendatacommons.org/licenses/pddl/",
+          "title": "Open Data Commons Public Domain Dedication and License"
+        }
+      ]
+    },
+    {
+      "name": "pedestrian-network-flows",
+      "title": "NYC Pedestrian Network with Estimated Foot-Traffic Flows",
+      "description": "Citywide pedestrian network (315,577 segments) with estimated pedestrian volumes by trip type and time-of-day, calibrated against 2018-2019 observed foot-traffic counts. Supplementary Data 1 from Sevtsuk, Basu, Liu, Alhassan & Kollar (2025), 'Spatial distribution of foot traffic in New York City and applications for urban planning,' Nature Cities.",
+      "path": "data/pedestrian-network-flows.zip",
+      "format": "zip",
+      "mediatype": "application/zip",
+      "sources": [
+        {
+          "title": "Spatial distribution of foot traffic in New York City and applications for urban planning — Supplementary Data 1",
+          "path": "https://www.nature.com/articles/s44284-025-00383-y",
+          "api": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs44284-025-00383-y/MediaObjects/44284_2025_383_MOESM3_ESM.zip"
+        }
+      ],
+      "hash": "sha256:84d83d7d23760d33d77d9e8fec81e0ab9f24150f3899befc6d888eb9442149c7",
+      "accessed": "2026-08-02"
+    },
+    {
+      "name": "pedestrian-network-flows-metadata",
+      "title": "NYC Pedestrian Network Field Metadata",
+      "description": "Field-level metadata describing the columns in pedestrian-network-flows: estimated and observed pedestrian volumes by time period and trip type, calibration flags, and projection info. Supplementary Data 1 Metadata from Sevtsuk et al. (2025), Nature Cities.",
+      "path": "data/pedestrian-network-flows-metadata.txt",
+      "format": "txt",
+      "mediatype": "text/plain",
+      "sources": [
+        {
+          "title": "Spatial distribution of foot traffic in New York City and applications for urban planning — Supplementary Data 1 Metadata",
+          "path": "https://www.nature.com/articles/s44284-025-00383-y",
+          "api": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs44284-025-00383-y/MediaObjects/44284_2025_383_MOESM4_ESM.txt"
+        }
+      ],
+      "hash": "sha256:ff6af13df1e6a6c79a02e0aab207c2af0c51deac42ee504d29cffaa3502d56e4",
+      "accessed": "2026-08-02"
+    },
+    {
+      "name": "greenwood-boundary",
+      "title": "Green-Wood Cemetery Boundary (OpenStreetMap)",
+      "description": "Cemetery boundary polygon, from OSM relation 10213172 (landuse=cemetery). Used to scope the map and path network to the cemetery.",
+      "path": "data/greenwood-boundary.geojson",
+      "format": "geojson",
+      "mediatype": "application/geo+json",
+      "overpass_kind": "polygon",
+      "sources": [
+        {
+          "title": "Green-Wood Cemetery (OpenStreetMap relation 10213172)",
+          "path": "https://www.openstreetmap.org/relation/10213172",
+          "api": "https://overpass-api.de/api/interpreter",
+          "query": "[out:json][timeout:25];relation(10213172);out geom;"
+        }
+      ],
+      "hash": "sha256:b0684995a50d89d87b2701b36c525a9b78faedf085a1f9d51534e96f0afd3458",
+      "accessed": "2026-08-08",
+      "licenses": [
+        {
+          "name": "ODbL-1.0",
+          "path": "https://opendatacommons.org/licenses/odbl/",
+          "title": "Open Data Commons Open Database License — © OpenStreetMap contributors"
+        }
+      ]
+    },
+    {
+      "name": "greenwood-paths",
+      "title": "Green-Wood Cemetery Paths (OpenStreetMap)",
+      "description": "Footways, steps, service roads, and paths within Green-Wood Cemetery's boundary (OSM relation 10213172), for building the routable path network for Guan's Route Problem.",
+      "path": "data/greenwood-paths.geojson",
+      "format": "geojson",
+      "mediatype": "application/geo+json",
+      "overpass_kind": "lines",
+      "sources": [
+        {
+          "title": "Highways within Green-Wood Cemetery (OpenStreetMap)",
+          "path": "https://www.openstreetmap.org/relation/10213172",
+          "api": "https://overpass-api.de/api/interpreter",
+          "query": "[out:json][timeout:60];area(3610213172)->.a;(way(area.a)[highway];);out geom;"
+        }
+      ],
+      "hash": "sha256:90457b9994bb61877f367941bf98a8a74c7215a50aa5e35d3203a2148cf17d36",
+      "accessed": "2026-08-08",
+      "licenses": [
+        {
+          "name": "ODbL-1.0",
+          "path": "https://opendatacommons.org/licenses/odbl/",
+          "title": "Open Data Commons Open Database License — © OpenStreetMap contributors"
+        }
+      ]
+    }
+  ]
+}
