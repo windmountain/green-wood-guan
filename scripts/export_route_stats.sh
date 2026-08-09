@@ -9,7 +9,7 @@ set -euo pipefail
 # required_pace_min_per_mile is the constant pace needed to walk the whole
 # tour (including retraced segments) in TARGET_DURATION_HOURS.
 
-psql -h 127.0.0.1 -p 5432 -d green_wood_guan -t -A -o website/route-stats.json << 'SQL'
+psql -h 127.0.0.1 -p 5432 -d green_wood_guan -t -A -o docs/route-stats.json << 'SQL'
 
 WITH stats AS (
   SELECT

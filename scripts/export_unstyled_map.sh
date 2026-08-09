@@ -9,7 +9,7 @@ set -euo pipefail
 # origin. ST_AsSVG flips the Y axis internally to account for SVG's
 # top-left origin, so no manual flip is needed here.
 
-psql -h 127.0.0.1 -p 5432 -d green_wood_guan -t -A -o website/unstyled_map.svg << 'SQL'
+psql -h 127.0.0.1 -p 5432 -d green_wood_guan -t -A -o docs/unstyled_map.svg << 'SQL'
 
 WITH bbox AS (
   SELECT

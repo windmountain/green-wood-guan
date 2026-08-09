@@ -18,7 +18,7 @@ import psycopg
 DB = "dbname=green_wood_guan host=127.0.0.1 port=5432"
 PRECISION = 2
 MARGIN = 20  # feet of padding around the route in the viewBox
-DEFAULT_OUT = Path(__file__).parent.parent / "website" / "route.svg"
+DEFAULT_OUT = Path(__file__).parent.parent / "docs" / "route.svg"
 
 
 def main():
