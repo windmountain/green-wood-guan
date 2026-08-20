@@ -134,10 +134,10 @@
       ]
     },
     {
-      "name": "greenwood-boundary",
+      "name": "osm-greenwood-boundary",
       "title": "Green-Wood Cemetery Boundary (OpenStreetMap)",
       "description": "Cemetery boundary polygon, from OSM relation 10213172 (landuse=cemetery). Used to scope the map and path network to the cemetery.",
-      "path": "data/greenwood-boundary.geojson",
+      "path": "data/osm-greenwood-boundary.geojson",
       "format": "geojson",
       "mediatype": "application/geo+json",
       "overpass_kind": "polygon",
@@ -160,10 +160,10 @@
       ]
     },
     {
-      "name": "greenwood-paths",
+      "name": "osm-greenwood-paths",
       "title": "Green-Wood Cemetery Paths (OpenStreetMap)",
       "description": "Footways, steps, service roads, and paths within Green-Wood Cemetery's boundary (OSM relation 10213172), for building the routable path network for Guan's Route Problem.",
-      "path": "data/greenwood-paths.geojson",
+      "path": "data/osm-greenwood-paths.geojson",
       "format": "geojson",
       "mediatype": "application/geo+json",
       "overpass_kind": "lines",

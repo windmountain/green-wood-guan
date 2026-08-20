@@ -8,9 +8,10 @@ Supports two NYC Open Data API versions:
 Resources without an API endpoint are skipped with a note.
 
 Usage:
-    python fetch.py             # download missing files
-    python fetch.py --force     # re-download everything
-    python fetch.py --check     # verify hashes of existing files
+    python scripts/fetch.py             # download missing files
+    python scripts/fetch.py --force     # re-download everything
+    python scripts/fetch.py --check     # verify hashes of existing files
+    python scripts/fetch.py --delete    # delete downloaded files (manual-source files kept)
 """
 import base64
 import hashlib
@@ -21,7 +22,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-PACKAGE_DIR = Path(__file__).parent
+PACKAGE_DIR = Path(__file__).parent.parent
 DATAPACKAGE = PACKAGE_DIR / "datapackage.json"
 ENV_FILE = PACKAGE_DIR / ".env"
 PAGE_SIZE = 1000
@@ -344,6 +345,30 @@ def print_hash_summary(changes):
             print(f"    + {new}")
 
 
+def delete_only(resources):
+    """Delete downloaded files for resources with an API endpoint.
+
+    Resources without an API endpoint (manual sources) are left alone —
+    there's nothing to re-fetch for them.
+    """
+    for r in resources:
+        name = r["name"]
+        filepath = PACKAGE_DIR / r["path"]
+        sources = r.get("sources", [])
+        source = sources[0] if sources else {}
+
+        if not source.get("api"):
+            print(f"  {name}: kept (no API endpoint — manual source)")
+            continue
+
+        if not filepath.exists():
+            print(f"  {name}: not downloaded")
+            continue
+
+        filepath.unlink()
+        print(f"  {name}: deleted {r['path']}")
+
+
 def check_only(resources):
     for r in resources:
         name = r["name"]
@@ -377,6 +402,10 @@ def main():
     if "--check" in sys.argv:
         check_only(resources)
         print_hash_summary(collect_hash_changes(resources))
+        return
+
+    if "--delete" in sys.argv:
+        delete_only(resources)
         return
 
     ok = 0

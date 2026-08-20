@@ -47,6 +47,19 @@
         <div id="route-map-svg" role="img" aria-label="Map of the route through Green-Wood Cemetery"></div>
       </div>
 
+      <div class="route-controls">
+        <button id="route-play-pause" type="button" aria-label="Pause">⏸</button>
+        <button id="route-stop" type="button" aria-label="Stop and rewind">⏹</button>
+        <button id="route-step-back" type="button" aria-label="Step back one">⏮</button>
+        <button id="route-step-forward" type="button" aria-label="Step forward one">⏭</button>
+        <label class="route-controls-toggle">
+          <input type="checkbox" id="route-show-directions" checked>
+          Show directions
+        </label>
+      </div>
+
+      <div id="route-directions" class="route-directions" aria-live="polite"></div>
+
       <div class="page-body">
         <p>
           This route covers <span data-stat="total_length_miles">—</span> miles across
@@ -87,6 +100,8 @@
   </footer>
 
   <script src="js/route-animation.js"></script>
+  <script src="js/route-controls.js"></script>
+  <script src="js/route-directions.js"></script>
   <script src="js/route-stats.js"></script>
 </body>
 </html>

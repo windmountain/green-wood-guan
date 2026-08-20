@@ -1,8 +1,8 @@
-# greenwood_boundary
+# osm_greenwood_path
 ogr2ogr -f "PostgreSQL" \
   PG:"dbname=green_wood_guan host=127.0.0.1 port=5432" \
-  "data/greenwood-boundary.geojson" \
-  -nln greenwood_boundary \
+  "data/osm-greenwood-paths.geojson" \
+  -nln osm_greenwood_path \
   -t_srs "EPSG:4326" \
   -lco GEOM_TYPE=geography \
   -lco OVERWRITE=YES;

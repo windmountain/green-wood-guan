@@ -39,7 +39,7 @@ For some of these dependencies, you will need an account with NYC Open Data. Fol
 - Click the "Create new API Key" button. Give it a name.
 - Fill in your .env file with your new API Key ID and Api Key Secret.
 
-Once set up, fetch the data by running the fetch.py Python script.
+Once set up, fetch the data by running the scripts/fetch.py Python script.
 
 # Postgres and QGIS
 

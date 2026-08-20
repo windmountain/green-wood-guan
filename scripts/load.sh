@@ -7,8 +7,8 @@ set -euo pipefail
 . $(dirname "$0")/load_sidewalks.sh
 . $(dirname "$0")/load_street_centerlines.sh
 . $(dirname "$0")/load_pedestrian_network_flows.sh
-. $(dirname "$0")/load_greenwood_boundary.sh
-. $(dirname "$0")/load_greenwood_paths.sh
+. $(dirname "$0")/load_osm_greenwood_boundary.sh
+. $(dirname "$0")/load_osm_greenwood_paths.sh
 . $(dirname "$0")/load_elevation_points.sh
 . $(dirname "$0")/create_greenwood_pedestrian_network.sh
 . $(dirname "$0")/create_green_wood_healed.sh

@@ -367,6 +367,48 @@ table.records td {
   height: auto;
 }
 
+.route-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 calc(var(--rhythm) * 1);
+}
+
+.route-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 0.375rem;
+  color: var(--ink-1);
+  font-size: 1.125rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.route-controls button:hover {
+  border-color: var(--ink-1);
+}
+
+.route-controls-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.route-controls-toggle input {
+  cursor: pointer;
+}
+
 .route-segment {
   fill: none;
   stroke-width: 2;
@@ -380,6 +422,40 @@ table.records td {
 
 .route-segment.is-walked {
   stroke: #ffffff;
+}
+
+.route-directions {
+  max-width: var(--measure);
+  margin: 0 0 calc(var(--rhythm) * 1.5);
+  min-height: calc(var(--rhythm) * 2);
+}
+
+.route-direction {
+  margin: 0;
+  padding: calc(var(--rhythm) * 0.5) calc(var(--rhythm) * 0.75);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.375rem;
+  color: var(--ink-2);
+}
+
+.route-direction-step-number {
+  color: var(--ink-1);
+  font-variant-numeric: tabular-nums;
+}
+
+.route-direction-instruction {
+  flex: 1;
+  color: var(--ink-1);
+  font-weight: 700;
+}
+
+.route-direction-distance {
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 @media (prefers-reduced-motion: reduce) {

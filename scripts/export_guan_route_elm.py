@@ -24,6 +24,11 @@ def fmt(n):
     return f"{n:.{PRECISION}f}"
 
 
+def elm_string(s):
+    escaped = s.replace("\\", "\\\\").replace('"', '\\"')
+    return f'"{escaped}"'
+
+
 def main():
     out_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_OUT
 
@@ -43,6 +48,7 @@ def main():
                 SELECT
                     g.stop_order,
                     g.is_retrace,
+                    g.name,
                     g.from_vertex,
                     ST_X(ST_Transform(g.start_point::geometry, 2263)) - %(min_x)s AS from_x,
                     ST_Y(ST_Transform(g.start_point::geometry, 2263)) - %(min_y)s AS from_y,
@@ -60,14 +66,16 @@ def main():
             rows = cur.fetchall()
 
     lines = []
-    for stop_order, is_retrace, from_id, from_x, from_y, from_z, to_id, to_x, to_y, to_z in rows:
+    for stop_order, is_retrace, name, from_id, from_x, from_y, from_z, to_id, to_x, to_y, to_z in rows:
         elm_bool = "True" if is_retrace else "False"
+        elm_name = f"Just {elm_string(name)}" if name is not None else "Nothing"
         lines.append(
             "{ from = { id = "
             f"{from_id}, x = {fmt(from_x)}, y = {fmt(from_y)}, z = {fmt(from_z)} }}"
             ", to = { id = "
             f"{to_id}, x = {fmt(to_x)}, y = {fmt(to_y)}, z = {fmt(to_z)} }}"
-            f", isRetrace = {elm_bool} }}"
+            f", isRetrace = {elm_bool}"
+            f", name = {elm_name} }}"
         )
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -81,7 +89,7 @@ def main():
         f.write("type alias Point =\n")
         f.write("    { id : Int, x : Float, y : Float, z : Float }\n\n\n")
         f.write("type alias Segment =\n")
-        f.write("    { from : Point, to : Point, isRetrace : Bool }\n\n\n")
+        f.write("    { from : Point, to : Point, isRetrace : Bool, name : Maybe String }\n\n\n")
         f.write("segments : List Segment\n")
         f.write("segments =\n")
         f.write("    [ " + "\n    , ".join(lines) + "\n    ]\n")

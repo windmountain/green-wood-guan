@@ -130,6 +130,7 @@ def write_results(cur, circuit, G_aug):
                 o.to_vertex,
                 o.path_id,
                 o.is_retrace,
+                r.name,
                 r.cost AS length_meters,
                 CASE
                     WHEN r.source = o.from_vertex THEN r.the_geom
@@ -166,6 +167,7 @@ def write_results(cur, circuit, G_aug):
             to_vertex,
             path_id,
             is_retrace,
+            name,
             round(length_meters::numeric, 1) AS length_meters,
             round(
                 (SUM(length_meters) OVER (ORDER BY stop_order ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING))::numeric,
