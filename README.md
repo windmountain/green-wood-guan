@@ -16,13 +16,10 @@ This repo contains tools for:
 - downloading geospatial layers from NYC Open Data
 - massaging layers into Postgres views
 - designing a map in QGIS
-
-Not yet implemented:
-- the cemetery's internal path network (Green-Wood's paths aren't NYC
-  street/sidewalk data — this needs its own data source)
 - building a routable graph and solving Guan's Route Problem (find
   the odd-degree vertices, compute a minimum-weight matching between them,
   find an Eulerian circuit)
+- exporting the solved route as JSON stats, SVG, and an Elm data module
 
 This repository manages its external dependencies (gdal, postgres, jq, etc.) with [devenv.sh](https://devenv.sh).
 
@@ -66,6 +63,36 @@ Python dependencies (Jupyter, psycopg, pandas, numpy, matplotlib) are declared i
 ```
 uv sync
 ```
+
+# Solving the route
+
+`./scripts/load.sh` (above) loads raw data and builds the routable graph, but
+stops short of solving anything. `./scripts/solve.sh` picks up from there:
+
+- `solve_guan_route.py` — solves Guan's Route Problem over the graph built by
+  `load.sh`, writing the result to the `guan_route_order`/`guan_route` tables
+- `enrich_guan_route_elevation.sh` — adds per-stop elevation and climb to the
+  now-solved route (`guan_route_elevation` view); run after
+  `solve_guan_route.py`, since it requires `guan_route` to already exist
+- `export_route_stats.sh` — writes summary stats (length, retrace percent,
+  turn count, required pace, total climb) to `docs/route-stats.json`
+- `export_unstyled_map.sh` — writes the route as a plain SVG to
+  `docs/unstyled_map.svg`, for a JS/CSS controller to style and animate
+- `export_guan_route_svg.py` — writes the route as a standalone SVG for
+  opening in a GUI vector editor
+- `export_guan_route_elm.py` — writes the route (with elevation) as a static
+  Elm data module, for the 3D route view
+
+Run `uv sync` first (for `solve_guan_route.py`'s `networkx`/`psycopg`
+dependencies), then `./scripts/solve.sh`.
+
+**Not yet connected to the site:** `elm/` is a complete Elm app (orbit
+camera, walk animation, elevation exaggeration) that consumes the
+generated `GuanRoute.elm` module, but nothing compiles it (no `elm make`
+step anywhere) and no page in `docs/` embeds the result. `./scripts/solve.sh`
+keeps `GuanRoute.elm` up to date; turning that into a working 3D view on
+the site still needs a build step (e.g. a `scripts/build_elm.sh` producing
+`docs/js/elm.js`) and a mount point in an HTML page.
 
 # A note on AI
 

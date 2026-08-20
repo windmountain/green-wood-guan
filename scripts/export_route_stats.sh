@@ -8,6 +8,9 @@ set -euo pipefail
 #
 # required_pace_min_per_mile is the constant pace needed to walk the whole
 # tour (including retraced segments) in TARGET_DURATION_HOURS.
+#
+# total_climb_feet requires guan_route_elevation — run
+# enrich_guan_route_elevation.sh first.
 
 psql -h 127.0.0.1 -p 5432 -d green_wood_guan -t -A -o docs/route-stats.json << 'SQL'
 
@@ -21,6 +24,10 @@ WITH stats AS (
     count(*) FILTER (WHERE turn_instruction NOT IN ('start', 'continue straight')) AS turn_count,
     12 AS target_duration_hours
   FROM guan_route
+),
+climb_stats AS (
+  SELECT sum(climb_ft) AS total_climb_ft
+  FROM guan_route_elevation
 )
 SELECT json_build_object(
   'total_length_meters', round(total_tour_length_m::numeric, 1),
@@ -32,8 +39,9 @@ SELECT json_build_object(
   'target_duration_hours', target_duration_hours,
   'required_pace_min_per_mile', round(
     (target_duration_hours * 60 / (total_tour_length_m / 1609.344))::numeric, 2
-  )
+  ),
+  'total_climb_feet', round(total_climb_ft::numeric, 1)
 )
-FROM stats;
+FROM stats, climb_stats;
 
 SQL

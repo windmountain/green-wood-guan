@@ -7,6 +7,7 @@ node_modules
 .devenv*
 devenv.local.nix
 devenv.local.yaml
+*/*.tool-versions
 
 # direnv
 .direnv
@@ -33,3 +34,5 @@ shoe-deal/*.log
 
 # special projects
 *radio
+
+elm/elm-stuff

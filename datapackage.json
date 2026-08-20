@@ -110,6 +110,30 @@
       "accessed": "2026-08-02"
     },
     {
+      "name": "elevation-points",
+      "title": "NYC Planimetric Database: Elevation Points",
+      "description": "Citywide spot elevation points captured for all building footprint features. Used to derive elevation/grade for the Green-Wood path network. Points fall at building corners, not evenly across open ground, so within the cemetery this will need interpolation or a denser source before it can drive path grade directly.",
+      "path": "data/elevation-points.geojson",
+      "format": "geojson",
+      "mediatype": "application/geo+json",
+      "sources": [
+        {
+          "title": "NYC Planimetric Database: Elevation Points",
+          "path": "https://data.cityofnewyork.us/Transportation/NYC-Planimetric-Database-Elevation-Points/szwg-xci6",
+          "api": "https://data.cityofnewyork.us/api/v3/views/szwg-xci6/query.geojson"
+        }
+      ],
+      "hash": "sha256:1c6a5f98e0e4adafd2b1459267108777ff4f69cdb380528faccaa55204ab2904",
+      "accessed": "2026-08-10",
+      "licenses": [
+        {
+          "name": "ODC-PDDL-1.0",
+          "path": "http://opendatacommons.org/licenses/pddl/",
+          "title": "Open Data Commons Public Domain Dedication and License"
+        }
+      ]
+    },
+    {
       "name": "greenwood-boundary",
       "title": "Green-Wood Cemetery Boundary (OpenStreetMap)",
       "description": "Cemetery boundary polygon, from OSM relation 10213172 (landuse=cemetery). Used to scope the map and path network to the cemetery.",

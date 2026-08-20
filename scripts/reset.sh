@@ -13,5 +13,7 @@ psql -h 127.0.0.1 -p 5432 -d green_wood_guan --command "drop table if exists gre
 psql -h 127.0.0.1 -p 5432 -d green_wood_guan --command "drop table if exists greenwood_routing_vertices_pgr cascade;"
 psql -h 127.0.0.1 -p 5432 -d green_wood_guan --command "drop table if exists guan_route_order cascade;"
 psql -h 127.0.0.1 -p 5432 -d green_wood_guan --command "drop table if exists guan_route cascade;"
+psql -h 127.0.0.1 -p 5432 -d green_wood_guan --command "drop table if exists elevation_point cascade;"
+psql -h 127.0.0.1 -p 5432 -d green_wood_guan --command "drop table if exists greenwood_elevation_points cascade;"
 
 . $(dirname "$0")/drop_extensions.sh
