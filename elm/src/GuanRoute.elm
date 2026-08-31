@@ -18,1238 +18,1211 @@ type alias Segment =
 
 segments : List Segment
 segments =
-    [ { from = { id = 61, x = 1566.94, y = 5129.51, z = 67.01 }, to = { id = 442, x = 1464.77, y = 4806.33, z = 80.08 }, isRetrace = False, name = Just "Magnolia Avenue" }
-    , { from = { id = 442, x = 1464.77, y = 4806.33, z = 80.08 }, to = { id = 381, x = 1648.70, y = 4634.83, z = 86.03 }, isRetrace = False, name = Nothing }
-    , { from = { id = 381, x = 1648.70, y = 4634.83, z = 86.03 }, to = { id = 442, x = 1464.77, y = 4806.33, z = 80.08 }, isRetrace = True, name = Nothing }
-    , { from = { id = 442, x = 1464.77, y = 4806.33, z = 80.08 }, to = { id = 421, x = 1181.52, y = 4535.36, z = 78.32 }, isRetrace = False, name = Just "Margin Path" }
-    , { from = { id = 421, x = 1181.52, y = 4535.36, z = 78.32 }, to = { id = 392, x = 963.84, y = 4292.94, z = 67.78 }, isRetrace = False, name = Just "Margin Path" }
-    , { from = { id = 392, x = 963.84, y = 4292.94, z = 67.78 }, to = { id = 380, x = 1029.22, y = 4227.80, z = 66.66 }, isRetrace = False, name = Just "Mimosa Path" }
-    , { from = { id = 380, x = 1029.22, y = 4227.80, z = 66.66 }, to = { id = 379, x = 963.29, y = 4202.27, z = 64.93 }, isRetrace = False, name = Nothing }
-    , { from = { id = 379, x = 963.29, y = 4202.27, z = 64.93 }, to = { id = 591, x = 887.74, y = 4036.24, z = 65.31 }, isRetrace = False, name = Just "Margin Path" }
-    , { from = { id = 591, x = 887.74, y = 4036.24, z = 65.31 }, to = { id = 360, x = 907.54, y = 4027.20, z = 65.79 }, isRetrace = False, name = Just "Walnut Avenue" }
-    , { from = { id = 360, x = 907.54, y = 4027.20, z = 65.79 }, to = { id = 591, x = 887.74, y = 4036.24, z = 65.31 }, isRetrace = True, name = Just "Walnut Avenue" }
-    , { from = { id = 591, x = 887.74, y = 4036.24, z = 65.31 }, to = { id = 592, x = 838.28, y = 4055.08, z = 66.43 }, isRetrace = False, name = Just "Walnut Avenue" }
-    , { from = { id = 592, x = 838.28, y = 4055.08, z = 66.43 }, to = { id = 352, x = 753.35, y = 3917.48, z = 71.37 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 352, x = 753.35, y = 3917.48, z = 71.37 }, to = { id = 582, x = 878.18, y = 3824.57, z = 79.06 }, isRetrace = False, name = Just "Sunset Path" }
-    , { from = { id = 582, x = 878.18, y = 3824.57, z = 79.06 }, to = { id = 352, x = 753.35, y = 3917.48, z = 71.37 }, isRetrace = True, name = Just "Sunset Path" }
-    , { from = { id = 352, x = 753.35, y = 3917.48, z = 71.37 }, to = { id = 322, x = 694.68, y = 3678.07, z = 39.90 }, isRetrace = False, name = Nothing }
-    , { from = { id = 322, x = 694.68, y = 3678.07, z = 39.90 }, to = { id = 352, x = 753.35, y = 3917.48, z = 71.37 }, isRetrace = False, name = Nothing }
-    , { from = { id = 352, x = 753.35, y = 3917.48, z = 71.37 }, to = { id = 592, x = 838.28, y = 4055.08, z = 66.43 }, isRetrace = True, name = Just "Lake Avenue" }
-    , { from = { id = 592, x = 838.28, y = 4055.08, z = 66.43 }, to = { id = 321, x = 650.42, y = 3648.62, z = 27.02 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 321, x = 650.42, y = 3648.62, z = 27.02 }, to = { id = 322, x = 694.68, y = 3678.07, z = 39.90 }, isRetrace = False, name = Nothing }
-    , { from = { id = 322, x = 694.68, y = 3678.07, z = 39.90 }, to = { id = 321, x = 650.42, y = 3648.62, z = 27.02 }, isRetrace = True, name = Nothing }
-    , { from = { id = 321, x = 650.42, y = 3648.62, z = 27.02 }, to = { id = 319, x = 684.33, y = 3603.97, z = 26.15 }, isRetrace = False, name = Nothing }
-    , { from = { id = 319, x = 684.33, y = 3603.97, z = 26.15 }, to = { id = 315, x = 588.36, y = 3503.00, z = 23.91 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 315, x = 588.36, y = 3503.00, z = 23.91 }, to = { id = 319, x = 684.33, y = 3603.97, z = 26.15 }, isRetrace = True, name = Just "Lake Avenue" }
-    , { from = { id = 319, x = 684.33, y = 3603.97, z = 26.15 }, to = { id = 311, x = 903.66, y = 3453.45, z = 29.40 }, isRetrace = False, name = Nothing }
-    , { from = { id = 311, x = 903.66, y = 3453.45, z = 29.40 }, to = { id = 304, x = 871.34, y = 3411.95, z = 29.40 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 304, x = 871.34, y = 3411.95, z = 29.40 }, to = { id = 315, x = 588.36, y = 3503.00, z = 23.91 }, isRetrace = False, name = Just "Sylvan Avenue" }
-    , { from = { id = 315, x = 588.36, y = 3503.00, z = 23.91 }, to = { id = 314, x = 235.42, y = 3229.32, z = 20.83 }, isRetrace = False, name = Nothing }
-    , { from = { id = 314, x = 235.42, y = 3229.32, z = 20.83 }, to = { id = 286, x = 36.72, y = 3208.12, z = 17.91 }, isRetrace = False, name = Just "Sylvan Avenue" }
-    , { from = { id = 286, x = 36.72, y = 3208.12, z = 17.91 }, to = { id = 287, x = 0.00, y = 3237.79, z = 45.36 }, isRetrace = False, name = Nothing }
-    , { from = { id = 287, x = 0.00, y = 3237.79, z = 45.36 }, to = { id = 286, x = 36.72, y = 3208.12, z = 17.91 }, isRetrace = True, name = Nothing }
-    , { from = { id = 286, x = 36.72, y = 3208.12, z = 17.91 }, to = { id = 255, x = 168.44, y = 2982.99, z = 27.18 }, isRetrace = False, name = Just "Maple Avenue" }
-    , { from = { id = 255, x = 168.44, y = 2982.99, z = 27.18 }, to = { id = 267, x = 283.94, y = 3059.33, z = 26.37 }, isRetrace = False, name = Nothing }
-    , { from = { id = 267, x = 283.94, y = 3059.33, z = 26.37 }, to = { id = 551, x = 322.85, y = 3033.10, z = 27.54 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 551, x = 322.85, y = 3033.10, z = 27.54 }, to = { id = 543, x = 420.74, y = 2871.34, z = 39.17 }, isRetrace = False, name = Just "Pastoral Path" }
-    , { from = { id = 543, x = 420.74, y = 2871.34, z = 39.17 }, to = { id = 540, x = 394.27, y = 2852.38, z = 42.11 }, isRetrace = False, name = Just "Andromeda Path" }
-    , { from = { id = 540, x = 394.27, y = 2852.38, z = 42.11 }, to = { id = 543, x = 420.74, y = 2871.34, z = 39.17 }, isRetrace = True, name = Just "Andromeda Path" }
-    , { from = { id = 543, x = 420.74, y = 2871.34, z = 39.17 }, to = { id = 218, x = 652.27, y = 2593.24, z = 53.05 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 218, x = 652.27, y = 2593.24, z = 53.05 }, to = { id = 212, x = 639.97, y = 2560.24, z = 56.14 }, isRetrace = False, name = Nothing }
-    , { from = { id = 212, x = 639.97, y = 2560.24, z = 56.14 }, to = { id = 540, x = 394.27, y = 2852.38, z = 42.11 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 540, x = 394.27, y = 2852.38, z = 42.11 }, to = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, isRetrace = False, name = Just "Andromeda Path" }
-    , { from = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, to = { id = 533, x = 351.55, y = 2796.37, z = 53.42 }, isRetrace = False, name = Just "Andromeda Path" }
-    , { from = { id = 533, x = 351.55, y = 2796.37, z = 53.42 }, to = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, isRetrace = False, name = Just "Andromeda Path" }
-    , { from = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, to = { id = 254, x = 284.83, y = 2697.43, z = 51.27 }, isRetrace = False, name = Just "Andromeda Path" }
-    , { from = { id = 254, x = 284.83, y = 2697.43, z = 51.27 }, to = { id = 255, x = 168.44, y = 2982.99, z = 27.18 }, isRetrace = False, name = Nothing }
-    , { from = { id = 255, x = 168.44, y = 2982.99, z = 27.18 }, to = { id = 267, x = 283.94, y = 3059.33, z = 26.37 }, isRetrace = True, name = Nothing }
-    , { from = { id = 267, x = 283.94, y = 3059.33, z = 26.37 }, to = { id = 314, x = 235.42, y = 3229.32, z = 20.83 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 314, x = 235.42, y = 3229.32, z = 20.83 }, to = { id = 282, x = 322.43, y = 3197.57, z = 31.43 }, isRetrace = False, name = Just "Lake-Ridge Path" }
-    , { from = { id = 282, x = 322.43, y = 3197.57, z = 31.43 }, to = { id = 283, x = 438.43, y = 3089.82, z = 46.54 }, isRetrace = False, name = Nothing }
-    , { from = { id = 283, x = 438.43, y = 3089.82, z = 46.54 }, to = { id = 282, x = 322.43, y = 3197.57, z = 31.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 282, x = 322.43, y = 3197.57, z = 31.43 }, to = { id = 283, x = 438.43, y = 3089.82, z = 46.54 }, isRetrace = True, name = Nothing }
-    , { from = { id = 283, x = 438.43, y = 3089.82, z = 46.54 }, to = { id = 31, x = 659.18, y = 2779.82, z = 52.60 }, isRetrace = False, name = Just "Lake-Ridge Path" }
-    , { from = { id = 31, x = 659.18, y = 2779.82, z = 52.60 }, to = { id = 32, x = 826.05, y = 2694.98, z = 55.91 }, isRetrace = False, name = Just "Cedar Path" }
-    , { from = { id = 32, x = 826.05, y = 2694.98, z = 55.91 }, to = { id = 223, x = 800.84, y = 2620.89, z = 59.06 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 223, x = 800.84, y = 2620.89, z = 59.06 }, to = { id = 217, x = 833.48, y = 2592.39, z = 59.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 217, x = 833.48, y = 2592.39, z = 59.06 }, to = { id = 204, x = 798.07, y = 2591.85, z = 59.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 204, x = 798.07, y = 2591.85, z = 59.06 }, to = { id = 223, x = 800.84, y = 2620.89, z = 59.06 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 223, x = 800.84, y = 2620.89, z = 59.06 }, to = { id = 32, x = 826.05, y = 2694.98, z = 55.91 }, isRetrace = True, name = Just "Lake Avenue" }
-    , { from = { id = 32, x = 826.05, y = 2694.98, z = 55.91 }, to = { id = 305, x = 950.72, y = 2898.18, z = 36.50 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 305, x = 950.72, y = 2898.18, z = 36.50 }, to = { id = 539, x = 1036.59, y = 2844.88, z = 55.27 }, isRetrace = False, name = Just "Ravine Path" }
-    , { from = { id = 539, x = 1036.59, y = 2844.88, z = 55.27 }, to = { id = 305, x = 950.72, y = 2898.18, z = 36.50 }, isRetrace = True, name = Just "Ravine Path" }
-    , { from = { id = 305, x = 950.72, y = 2898.18, z = 36.50 }, to = { id = 304, x = 871.34, y = 3411.95, z = 29.40 }, isRetrace = False, name = Nothing }
-    , { from = { id = 304, x = 871.34, y = 3411.95, z = 29.40 }, to = { id = 311, x = 903.66, y = 3453.45, z = 29.40 }, isRetrace = True, name = Just "Lake Avenue" }
-    , { from = { id = 311, x = 903.66, y = 3453.45, z = 29.40 }, to = { id = 273, x = 1147.94, y = 3061.37, z = 79.37 }, isRetrace = False, name = Nothing }
-    , { from = { id = 273, x = 1147.94, y = 3061.37, z = 79.37 }, to = { id = 274, x = 1226.40, y = 3108.28, z = 88.97 }, isRetrace = False, name = Nothing }
-    , { from = { id = 274, x = 1226.40, y = 3108.28, z = 88.97 }, to = { id = 572, x = 1374.62, y = 3605.87, z = 98.42 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 572, x = 1374.62, y = 3605.87, z = 98.42 }, to = { id = 576, x = 1389.69, y = 3673.25, z = 94.43 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 576, x = 1389.69, y = 3673.25, z = 94.43 }, to = { id = 572, x = 1374.62, y = 3605.87, z = 98.42 }, isRetrace = True, name = Just "Landscape Avenue" }
-    , { from = { id = 572, x = 1374.62, y = 3605.87, z = 98.42 }, to = { id = 290, x = 1722.94, y = 3307.45, z = 122.39 }, isRetrace = False, name = Just "Lawn Avenue" }
-    , { from = { id = 290, x = 1722.94, y = 3307.45, z = 122.39 }, to = { id = 291, x = 1849.44, y = 3260.20, z = 119.78 }, isRetrace = False, name = Nothing }
-    , { from = { id = 291, x = 1849.44, y = 3260.20, z = 119.78 }, to = { id = 560, x = 2023.81, y = 3296.30, z = 133.44 }, isRetrace = False, name = Just "Laurel Path" }
-    , { from = { id = 560, x = 2023.81, y = 3296.30, z = 133.44 }, to = { id = 45, x = 2131.35, y = 3330.72, z = 136.22 }, isRetrace = False, name = Just "Cypress Path" }
-    , { from = { id = 45, x = 2131.35, y = 3330.72, z = 136.22 }, to = { id = 560, x = 2023.81, y = 3296.30, z = 133.44 }, isRetrace = True, name = Just "Cypress Path" }
-    , { from = { id = 560, x = 2023.81, y = 3296.30, z = 133.44 }, to = { id = 281, x = 1933.42, y = 3184.94, z = 117.51 }, isRetrace = False, name = Just "Cypress Path" }
-    , { from = { id = 281, x = 1933.42, y = 3184.94, z = 117.51 }, to = { id = 275, x = 1941.44, y = 3113.35, z = 115.61 }, isRetrace = False, name = Nothing }
-    , { from = { id = 275, x = 1941.44, y = 3113.35, z = 115.61 }, to = { id = 548, x = 2057.31, y = 3109.93, z = 126.34 }, isRetrace = False, name = Just "Crocus Path" }
-    , { from = { id = 548, x = 2057.31, y = 3109.93, z = 126.34 }, to = { id = 549, x = 2049.68, y = 3039.81, z = 121.52 }, isRetrace = False, name = Just "Crocus Path" }
-    , { from = { id = 549, x = 2049.68, y = 3039.81, z = 121.52 }, to = { id = 262, x = 2087.40, y = 3027.74, z = 122.35 }, isRetrace = False, name = Just "Vista Avenue" }
-    , { from = { id = 262, x = 2087.40, y = 3027.74, z = 122.35 }, to = { id = 549, x = 2049.68, y = 3039.81, z = 121.52 }, isRetrace = True, name = Just "Vista Avenue" }
-    , { from = { id = 549, x = 2049.68, y = 3039.81, z = 121.52 }, to = { id = 271, x = 1940.10, y = 3097.77, z = 113.66 }, isRetrace = False, name = Just "Vista Avenue" }
-    , { from = { id = 271, x = 1940.10, y = 3097.77, z = 113.66 }, to = { id = 275, x = 1941.44, y = 3113.35, z = 115.61 }, isRetrace = False, name = Nothing }
-    , { from = { id = 275, x = 1941.44, y = 3113.35, z = 115.61 }, to = { id = 548, x = 2057.31, y = 3109.93, z = 126.34 }, isRetrace = True, name = Just "Crocus Path" }
-    , { from = { id = 548, x = 2057.31, y = 3109.93, z = 126.34 }, to = { id = 294, x = 2152.76, y = 3138.92, z = 131.32 }, isRetrace = False, name = Just "Crocus Path" }
-    , { from = { id = 294, x = 2152.76, y = 3138.92, z = 131.32 }, to = { id = 268, x = 2199.15, y = 3065.62, z = 126.80 }, isRetrace = False, name = Just "Myrtle Path" }
-    , { from = { id = 268, x = 2199.15, y = 3065.62, z = 126.80 }, to = { id = 293, x = 2369.81, y = 3277.38, z = 138.57 }, isRetrace = False, name = Just "Alder Avenue" }
-    , { from = { id = 293, x = 2369.81, y = 3277.38, z = 138.57 }, to = { id = 43, x = 2497.18, y = 3100.32, z = 145.32 }, isRetrace = False, name = Just "Iris Path" }
-    , { from = { id = 43, x = 2497.18, y = 3100.32, z = 145.32 }, to = { id = 554, x = 2410.43, y = 3148.32, z = 141.61 }, isRetrace = False, name = Just "Lupine Path" }
-    , { from = { id = 554, x = 2410.43, y = 3148.32, z = 141.61 }, to = { id = 43, x = 2497.18, y = 3100.32, z = 145.32 }, isRetrace = True, name = Just "Lupine Path" }
-    , { from = { id = 43, x = 2497.18, y = 3100.32, z = 145.32 }, to = { id = 44, x = 2547.68, y = 3081.07, z = 148.05 }, isRetrace = False, name = Just "Lupine Path" }
-    , { from = { id = 44, x = 2547.68, y = 3081.07, z = 148.05 }, to = { id = 43, x = 2497.18, y = 3100.32, z = 145.32 }, isRetrace = True, name = Just "Lupine Path" }
-    , { from = { id = 43, x = 2497.18, y = 3100.32, z = 145.32 }, to = { id = 293, x = 2369.81, y = 3277.38, z = 138.57 }, isRetrace = True, name = Just "Iris Path" }
-    , { from = { id = 293, x = 2369.81, y = 3277.38, z = 138.57 }, to = { id = 292, x = 2381.68, y = 3309.39, z = 138.66 }, isRetrace = False, name = Nothing }
-    , { from = { id = 292, x = 2381.68, y = 3309.39, z = 138.66 }, to = { id = 303, x = 2221.58, y = 3384.12, z = 127.22 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 303, x = 2221.58, y = 3384.12, z = 127.22 }, to = { id = 295, x = 2159.64, y = 3313.18, z = 139.39 }, isRetrace = False, name = Nothing }
-    , { from = { id = 295, x = 2159.64, y = 3313.18, z = 139.39 }, to = { id = 303, x = 2221.58, y = 3384.12, z = 127.22 }, isRetrace = True, name = Nothing }
-    , { from = { id = 303, x = 2221.58, y = 3384.12, z = 127.22 }, to = { id = 307, x = 2194.37, y = 3448.99, z = 122.66 }, isRetrace = False, name = Nothing }
-    , { from = { id = 307, x = 2194.37, y = 3448.99, z = 122.66 }, to = { id = 316, x = 2313.00, y = 3544.93, z = 131.95 }, isRetrace = False, name = Nothing }
-    , { from = { id = 316, x = 2313.00, y = 3544.93, z = 131.95 }, to = { id = 307, x = 2194.37, y = 3448.99, z = 122.66 }, isRetrace = True, name = Nothing }
-    , { from = { id = 307, x = 2194.37, y = 3448.99, z = 122.66 }, to = { id = 567, x = 2053.53, y = 3517.05, z = 116.41 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 567, x = 2053.53, y = 3517.05, z = 116.41 }, to = { id = 46, x = 2017.52, y = 3425.29, z = 126.53 }, isRetrace = False, name = Just "Myrtle Path" }
-    , { from = { id = 46, x = 2017.52, y = 3425.29, z = 126.53 }, to = { id = 567, x = 2053.53, y = 3517.05, z = 116.41 }, isRetrace = True, name = Just "Myrtle Path" }
-    , { from = { id = 567, x = 2053.53, y = 3517.05, z = 116.41 }, to = { id = 575, x = 1781.76, y = 3670.91, z = 107.34 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 575, x = 1781.76, y = 3670.91, z = 107.34 }, to = { id = 326, x = 1739.77, y = 3706.61, z = 102.93 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 326, x = 1739.77, y = 3706.61, z = 102.93 }, to = { id = 575, x = 1781.76, y = 3670.91, z = 107.34 }, isRetrace = True, name = Just "Central Avenue" }
-    , { from = { id = 575, x = 1781.76, y = 3670.91, z = 107.34 }, to = { id = 318, x = 2088.26, y = 3568.03, z = 124.66 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 318, x = 2088.26, y = 3568.03, z = 124.66 }, to = { id = 573, x = 2104.99, y = 3611.31, z = 132.45 }, isRetrace = False, name = Just "Sumac Path" }
-    , { from = { id = 573, x = 2104.99, y = 3611.31, z = 132.45 }, to = { id = 318, x = 2088.26, y = 3568.03, z = 124.66 }, isRetrace = True, name = Just "Sumac Path" }
-    , { from = { id = 318, x = 2088.26, y = 3568.03, z = 124.66 }, to = { id = 317, x = 2233.64, y = 3589.30, z = 131.13 }, isRetrace = False, name = Nothing }
-    , { from = { id = 317, x = 2233.64, y = 3589.30, z = 131.13 }, to = { id = 573, x = 2104.99, y = 3611.31, z = 132.45 }, isRetrace = False, name = Just "Sumac Path" }
-    , { from = { id = 573, x = 2104.99, y = 3611.31, z = 132.45 }, to = { id = 577, x = 2036.93, y = 3678.41, z = 134.95 }, isRetrace = False, name = Just "Sycamore Avenue" }
-    , { from = { id = 577, x = 2036.93, y = 3678.41, z = 134.95 }, to = { id = 570, x = 2109.10, y = 3721.28, z = 140.11 }, isRetrace = False, name = Just "Corvus Avenue" }
-    , { from = { id = 570, x = 2109.10, y = 3721.28, z = 140.11 }, to = { id = 577, x = 2036.93, y = 3678.41, z = 134.95 }, isRetrace = True, name = Just "Corvus Avenue" }
-    , { from = { id = 577, x = 2036.93, y = 3678.41, z = 134.95 }, to = { id = 569, x = 1967.84, y = 3805.05, z = 123.42 }, isRetrace = False, name = Just "Sycamore Avenue" }
-    , { from = { id = 569, x = 1967.84, y = 3805.05, z = 123.42 }, to = { id = 535, x = 1941.78, y = 3836.34, z = 123.44 }, isRetrace = False, name = Just "Blossom Path" }
-    , { from = { id = 535, x = 1941.78, y = 3836.34, z = 123.44 }, to = { id = 569, x = 1967.84, y = 3805.05, z = 123.42 }, isRetrace = True, name = Just "Blossom Path" }
-    , { from = { id = 569, x = 1967.84, y = 3805.05, z = 123.42 }, to = { id = 568, x = 1899.03, y = 3876.82, z = 118.62 }, isRetrace = False, name = Just "Blossom Path" }
-    , { from = { id = 568, x = 1899.03, y = 3876.82, z = 118.62 }, to = { id = 535, x = 1941.78, y = 3836.34, z = 123.44 }, isRetrace = False, name = Just "Sycamore Avenue" }
-    , { from = { id = 535, x = 1941.78, y = 3836.34, z = 123.44 }, to = { id = 534, x = 2000.03, y = 3888.84, z = 136.88 }, isRetrace = False, name = Just "Rue Path" }
-    , { from = { id = 534, x = 2000.03, y = 3888.84, z = 136.88 }, to = { id = 545, x = 2014.35, y = 3875.45, z = 136.15 }, isRetrace = False, name = Just "Berry Path" }
-    , { from = { id = 545, x = 2014.35, y = 3875.45, z = 136.15 }, to = { id = 534, x = 2000.03, y = 3888.84, z = 136.88 }, isRetrace = True, name = Just "Berry Path" }
-    , { from = { id = 534, x = 2000.03, y = 3888.84, z = 136.88 }, to = { id = 583, x = 1868.19, y = 3972.38, z = 117.07 }, isRetrace = False, name = Just "Berry Path" }
-    , { from = { id = 583, x = 1868.19, y = 3972.38, z = 117.07 }, to = { id = 354, x = 1838.56, y = 3941.94, z = 115.03 }, isRetrace = False, name = Just "Bay Side Avenue" }
-    , { from = { id = 354, x = 1838.56, y = 3941.94, z = 115.03 }, to = { id = 568, x = 1899.03, y = 3876.82, z = 118.62 }, isRetrace = False, name = Just "Blossom Path" }
-    , { from = { id = 568, x = 1899.03, y = 3876.82, z = 118.62 }, to = { id = 354, x = 1838.56, y = 3941.94, z = 115.03 }, isRetrace = True, name = Just "Blossom Path" }
-    , { from = { id = 354, x = 1838.56, y = 3941.94, z = 115.03 }, to = { id = 583, x = 1868.19, y = 3972.38, z = 117.07 }, isRetrace = True, name = Just "Bay Side Avenue" }
-    , { from = { id = 583, x = 1868.19, y = 3972.38, z = 117.07 }, to = { id = 590, x = 1951.34, y = 4134.62, z = 133.14 }, isRetrace = False, name = Just "Bay Side Avenue" }
-    , { from = { id = 590, x = 1951.34, y = 4134.62, z = 133.14 }, to = { id = 401, x = 1939.80, y = 4373.69, z = 130.99 }, isRetrace = False, name = Just "Artemisia Path" }
-    , { from = { id = 401, x = 1939.80, y = 4373.69, z = 130.99 }, to = { id = 404, x = 1985.48, y = 4423.64, z = 129.23 }, isRetrace = False, name = Just "Bay Side Avenue" }
-    , { from = { id = 404, x = 1985.48, y = 4423.64, z = 129.23 }, to = { id = 403, x = 2091.34, y = 4416.24, z = 131.07 }, isRetrace = False, name = Nothing }
-    , { from = { id = 403, x = 2091.34, y = 4416.24, z = 131.07 }, to = { id = 404, x = 1985.48, y = 4423.64, z = 129.23 }, isRetrace = True, name = Nothing }
-    , { from = { id = 404, x = 1985.48, y = 4423.64, z = 129.23 }, to = { id = 604, x = 1995.22, y = 4667.54, z = 105.26 }, isRetrace = False, name = Just "Arbor Avenue" }
-    , { from = { id = 604, x = 1995.22, y = 4667.54, z = 105.26 }, to = { id = 417, x = 2129.55, y = 4611.81, z = 115.26 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 417, x = 2129.55, y = 4611.81, z = 115.26 }, to = { id = 604, x = 1995.22, y = 4667.54, z = 105.26 }, isRetrace = True, name = Just "Battle Avenue" }
-    , { from = { id = 604, x = 1995.22, y = 4667.54, z = 105.26 }, to = { id = 439, x = 1841.34, y = 4738.31, z = 93.60 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 439, x = 1841.34, y = 4738.31, z = 93.60 }, to = { id = 602, x = 1861.56, y = 4480.05, z = 116.01 }, isRetrace = False, name = Just "Artemisia Path" }
-    , { from = { id = 602, x = 1861.56, y = 4480.05, z = 116.01 }, to = { id = 410, x = 1868.02, y = 4465.58, z = 116.01 }, isRetrace = False, name = Just "Artemisia Path" }
-    , { from = { id = 410, x = 1868.02, y = 4465.58, z = 116.01 }, to = { id = 602, x = 1861.56, y = 4480.05, z = 116.01 }, isRetrace = True, name = Just "Artemisia Path" }
-    , { from = { id = 602, x = 1861.56, y = 4480.05, z = 116.01 }, to = { id = 409, x = 1860.87, y = 4465.93, z = 116.01 }, isRetrace = False, name = Just "Artemisia Path" }
-    , { from = { id = 409, x = 1860.87, y = 4465.93, z = 116.01 }, to = { id = 407, x = 1846.91, y = 4397.93, z = 100.79 }, isRetrace = False, name = Nothing }
-    , { from = { id = 407, x = 1846.91, y = 4397.93, z = 100.79 }, to = { id = 406, x = 1704.30, y = 4449.22, z = 79.87 }, isRetrace = False, name = Nothing }
-    , { from = { id = 406, x = 1704.30, y = 4449.22, z = 79.87 }, to = { id = 400, x = 1726.93, y = 4359.62, z = 82.29 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 400, x = 1726.93, y = 4359.62, z = 82.29 }, to = { id = 406, x = 1704.30, y = 4449.22, z = 79.87 }, isRetrace = True, name = Just "Landscape Avenue" }
-    , { from = { id = 406, x = 1704.30, y = 4449.22, z = 79.87 }, to = { id = 407, x = 1846.91, y = 4397.93, z = 100.79 }, isRetrace = True, name = Nothing }
-    , { from = { id = 407, x = 1846.91, y = 4397.93, z = 100.79 }, to = { id = 399, x = 1876.96, y = 4347.24, z = 113.02 }, isRetrace = False, name = Just "Sweet-Gum Path" }
-    , { from = { id = 399, x = 1876.96, y = 4347.24, z = 113.02 }, to = { id = 407, x = 1846.91, y = 4397.93, z = 100.79 }, isRetrace = True, name = Just "Sweet-Gum Path" }
-    , { from = { id = 407, x = 1846.91, y = 4397.93, z = 100.79 }, to = { id = 409, x = 1860.87, y = 4465.93, z = 116.01 }, isRetrace = True, name = Nothing }
-    , { from = { id = 409, x = 1860.87, y = 4465.93, z = 116.01 }, to = { id = 410, x = 1868.02, y = 4465.58, z = 116.01 }, isRetrace = False, name = Nothing }
-    , { from = { id = 410, x = 1868.02, y = 4465.58, z = 116.01 }, to = { id = 398, x = 1907.93, y = 4357.32, z = 127.25 }, isRetrace = False, name = Just "Artemisia Path" }
-    , { from = { id = 398, x = 1907.93, y = 4357.32, z = 127.25 }, to = { id = 401, x = 1939.80, y = 4373.69, z = 130.99 }, isRetrace = False, name = Nothing }
-    , { from = { id = 401, x = 1939.80, y = 4373.69, z = 130.99 }, to = { id = 398, x = 1907.93, y = 4357.32, z = 127.25 }, isRetrace = True, name = Nothing }
-    , { from = { id = 398, x = 1907.93, y = 4357.32, z = 127.25 }, to = { id = 399, x = 1876.96, y = 4347.24, z = 113.02 }, isRetrace = False, name = Nothing }
-    , { from = { id = 399, x = 1876.96, y = 4347.24, z = 113.02 }, to = { id = 590, x = 1951.34, y = 4134.62, z = 133.14 }, isRetrace = False, name = Just "Sweet-Gum Path" }
-    , { from = { id = 590, x = 1951.34, y = 4134.62, z = 133.14 }, to = { id = 357, x = 2114.83, y = 4009.79, z = 157.35 }, isRetrace = False, name = Just "Fern Path" }
-    , { from = { id = 357, x = 2114.83, y = 4009.79, z = 157.35 }, to = { id = 545, x = 2014.35, y = 3875.45, z = 136.15 }, isRetrace = False, name = Just "Rue Path" }
-    , { from = { id = 545, x = 2014.35, y = 3875.45, z = 136.15 }, to = { id = 570, x = 2109.10, y = 3721.28, z = 140.11 }, isRetrace = False, name = Just "Berry Path" }
-    , { from = { id = 570, x = 2109.10, y = 3721.28, z = 140.11 }, to = { id = 329, x = 2175.38, y = 3732.85, z = 146.72 }, isRetrace = False, name = Just "Corvus Avenue" }
-    , { from = { id = 329, x = 2175.38, y = 3732.85, z = 146.72 }, to = { id = 328, x = 2284.03, y = 3713.68, z = 154.95 }, isRetrace = False, name = Nothing }
-    , { from = { id = 328, x = 2284.03, y = 3713.68, z = 154.95 }, to = { id = 337, x = 2568.99, y = 3766.23, z = 146.26 }, isRetrace = False, name = Just "Corvus Avenue" }
-    , { from = { id = 337, x = 2568.99, y = 3766.23, z = 146.26 }, to = { id = 355, x = 2429.54, y = 3955.94, z = 155.59 }, isRetrace = False, name = Just "Fern Avenue" }
-    , { from = { id = 355, x = 2429.54, y = 3955.94, z = 155.59 }, to = { id = 356, x = 2363.11, y = 3973.22, z = 158.26 }, isRetrace = False, name = Nothing }
-    , { from = { id = 356, x = 2363.11, y = 3973.22, z = 158.26 }, to = { id = 355, x = 2429.54, y = 3955.94, z = 155.59 }, isRetrace = True, name = Nothing }
-    , { from = { id = 355, x = 2429.54, y = 3955.94, z = 155.59 }, to = { id = 368, x = 2735.32, y = 4147.12, z = 174.54 }, isRetrace = False, name = Just "Hydrangea Path" }
-    , { from = { id = 368, x = 2735.32, y = 4147.12, z = 174.54 }, to = { id = 369, x = 2681.47, y = 4158.16, z = 178.24 }, isRetrace = False, name = Nothing }
-    , { from = { id = 369, x = 2681.47, y = 4158.16, z = 178.24 }, to = { id = 368, x = 2735.32, y = 4147.12, z = 174.54 }, isRetrace = True, name = Nothing }
-    , { from = { id = 368, x = 2735.32, y = 4147.12, z = 174.54 }, to = { id = 405, x = 2960.95, y = 4439.63, z = 188.96 }, isRetrace = False, name = Just "Warrior Path" }
-    , { from = { id = 405, x = 2960.95, y = 4439.63, z = 188.96 }, to = { id = 365, x = 3042.37, y = 4097.94, z = 179.79 }, isRetrace = False, name = Nothing }
-    , { from = { id = 365, x = 3042.37, y = 4097.94, z = 179.79 }, to = { id = 405, x = 2960.95, y = 4439.63, z = 188.96 }, isRetrace = True, name = Nothing }
-    , { from = { id = 405, x = 2960.95, y = 4439.63, z = 188.96 }, to = { id = 408, x = 2952.14, y = 4465.01, z = 190.54 }, isRetrace = False, name = Nothing }
-    , { from = { id = 408, x = 2952.14, y = 4465.01, z = 190.54 }, to = { id = 411, x = 2905.56, y = 4473.25, z = 190.04 }, isRetrace = False, name = Nothing }
-    , { from = { id = 411, x = 2905.56, y = 4473.25, z = 190.04 }, to = { id = 408, x = 2952.14, y = 4465.01, z = 190.54 }, isRetrace = True, name = Nothing }
-    , { from = { id = 408, x = 2952.14, y = 4465.01, z = 190.54 }, to = { id = 414, x = 3034.25, y = 4516.31, z = 188.62 }, isRetrace = False, name = Nothing }
-    , { from = { id = 414, x = 3034.25, y = 4516.31, z = 188.62 }, to = { id = 435, x = 3087.09, y = 4470.42, z = 189.60 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 435, x = 3087.09, y = 4470.42, z = 189.60 }, to = { id = 601, x = 3153.52, y = 4451.06, z = 201.28 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 601, x = 3153.52, y = 4451.06, z = 201.28 }, to = { id = 413, x = 3200.71, y = 4468.47, z = 201.40 }, isRetrace = False, name = Just "Battle Path" }
-    , { from = { id = 413, x = 3200.71, y = 4468.47, z = 201.40 }, to = { id = 412, x = 3244.38, y = 4500.33, z = 201.17 }, isRetrace = False, name = Nothing }
-    , { from = { id = 412, x = 3244.38, y = 4500.33, z = 201.17 }, to = { id = 422, x = 3506.23, y = 4541.53, z = 194.19 }, isRetrace = False, name = Just "Battle Path" }
-    , { from = { id = 422, x = 3506.23, y = 4541.53, z = 194.19 }, to = { id = 434, x = 3285.08, y = 4634.11, z = 183.96 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 434, x = 3285.08, y = 4634.11, z = 183.96 }, to = { id = 440, x = 3971.49, y = 4746.74, z = 172.78 }, isRetrace = False, name = Nothing }
-    , { from = { id = 440, x = 3971.49, y = 4746.74, z = 172.78 }, to = { id = 432, x = 4053.50, y = 4631.59, z = 170.61 }, isRetrace = False, name = Nothing }
-    , { from = { id = 432, x = 4053.50, y = 4631.59, z = 170.61 }, to = { id = 440, x = 3971.49, y = 4746.74, z = 172.78 }, isRetrace = True, name = Nothing }
-    , { from = { id = 440, x = 3971.49, y = 4746.74, z = 172.78 }, to = { id = 444, x = 3857.37, y = 4609.71, z = 183.79 }, isRetrace = False, name = Just "Canna Path" }
-    , { from = { id = 444, x = 3857.37, y = 4609.71, z = 183.79 }, to = { id = 443, x = 3762.68, y = 4711.32, z = 205.92 }, isRetrace = False, name = Just "Canna Path" }
-    , { from = { id = 443, x = 3762.68, y = 4711.32, z = 205.92 }, to = { id = 444, x = 3857.37, y = 4609.71, z = 183.79 }, isRetrace = True, name = Just "Canna Path" }
-    , { from = { id = 444, x = 3857.37, y = 4609.71, z = 183.79 }, to = { id = 423, x = 3619.44, y = 4487.21, z = 188.14 }, isRetrace = False, name = Just "Canna Path" }
-    , { from = { id = 423, x = 3619.44, y = 4487.21, z = 188.14 }, to = { id = 598, x = 3665.33, y = 4382.44, z = 179.07 }, isRetrace = False, name = Just "Garland Avenue" }
-    , { from = { id = 598, x = 3665.33, y = 4382.44, z = 179.07 }, to = { id = 596, x = 3503.71, y = 4287.90, z = 180.28 }, isRetrace = False, name = Just "Hemlock Avenue" }
-    , { from = { id = 596, x = 3503.71, y = 4287.90, z = 180.28 }, to = { id = 588, x = 3416.08, y = 4221.56, z = 180.44 }, isRetrace = False, name = Just "Hemlock Avenue" }
-    , { from = { id = 588, x = 3416.08, y = 4221.56, z = 180.44 }, to = { id = 596, x = 3503.71, y = 4287.90, z = 180.28 }, isRetrace = True, name = Just "Hemlock Avenue" }
-    , { from = { id = 596, x = 3503.71, y = 4287.90, z = 180.28 }, to = { id = 412, x = 3244.38, y = 4500.33, z = 201.17 }, isRetrace = False, name = Just "Liberty Path" }
-    , { from = { id = 412, x = 3244.38, y = 4500.33, z = 201.17 }, to = { id = 413, x = 3200.71, y = 4468.47, z = 201.40 }, isRetrace = True, name = Nothing }
-    , { from = { id = 413, x = 3200.71, y = 4468.47, z = 201.40 }, to = { id = 601, x = 3153.52, y = 4451.06, z = 201.28 }, isRetrace = False, name = Just "Battle Path" }
-    , { from = { id = 601, x = 3153.52, y = 4451.06, z = 201.28 }, to = { id = 435, x = 3087.09, y = 4470.42, z = 189.60 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 435, x = 3087.09, y = 4470.42, z = 189.60 }, to = { id = 434, x = 3285.08, y = 4634.11, z = 183.96 }, isRetrace = False, name = Nothing }
-    , { from = { id = 434, x = 3285.08, y = 4634.11, z = 183.96 }, to = { id = 422, x = 3506.23, y = 4541.53, z = 194.19 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 422, x = 3506.23, y = 4541.53, z = 194.19 }, to = { id = 423, x = 3619.44, y = 4487.21, z = 188.14 }, isRetrace = False, name = Nothing }
-    , { from = { id = 423, x = 3619.44, y = 4487.21, z = 188.14 }, to = { id = 444, x = 3857.37, y = 4609.71, z = 183.79 }, isRetrace = True, name = Just "Canna Path" }
-    , { from = { id = 444, x = 3857.37, y = 4609.71, z = 183.79 }, to = { id = 433, x = 3951.72, y = 4508.21, z = 171.05 }, isRetrace = False, name = Just "Canna Path" }
-    , { from = { id = 433, x = 3951.72, y = 4508.21, z = 171.05 }, to = { id = 432, x = 4053.50, y = 4631.59, z = 170.61 }, isRetrace = False, name = Nothing }
-    , { from = { id = 432, x = 4053.50, y = 4631.59, z = 170.61 }, to = { id = 402, x = 4254.65, y = 4394.04, z = 172.28 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 402, x = 4254.65, y = 4394.04, z = 172.28 }, to = { id = 397, x = 4203.47, y = 4336.74, z = 171.77 }, isRetrace = False, name = Nothing }
-    , { from = { id = 397, x = 4203.47, y = 4336.74, z = 171.77 }, to = { id = 402, x = 4254.65, y = 4394.04, z = 172.28 }, isRetrace = True, name = Nothing }
-    , { from = { id = 402, x = 4254.65, y = 4394.04, z = 172.28 }, to = { id = 55, x = 4572.91, y = 4106.44, z = 176.03 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 55, x = 4572.91, y = 4106.44, z = 176.03 }, to = { id = 366, x = 4653.84, y = 4093.82, z = 176.64 }, isRetrace = False, name = Nothing }
-    , { from = { id = 366, x = 4653.84, y = 4093.82, z = 176.64 }, to = { id = 53, x = 4950.35, y = 3851.02, z = 156.87 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 53, x = 4950.35, y = 3851.02, z = 156.87 }, to = { id = 344, x = 4941.58, y = 3687.74, z = 158.36 }, isRetrace = False, name = Nothing }
-    , { from = { id = 344, x = 4941.58, y = 3687.74, z = 158.36 }, to = { id = 320, x = 5127.04, y = 3539.41, z = 149.28 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 320, x = 5127.04, y = 3539.41, z = 149.28 }, to = { id = 344, x = 4941.58, y = 3687.74, z = 158.36 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 344, x = 4941.58, y = 3687.74, z = 158.36 }, to = { id = 571, x = 4813.06, y = 3566.78, z = 160.87 }, isRetrace = False, name = Just "Ocean Avenue" }
-    , { from = { id = 571, x = 4813.06, y = 3566.78, z = 160.87 }, to = { id = 310, x = 4808.85, y = 3451.35, z = 172.51 }, isRetrace = False, name = Just "Hillside Avenue" }
-    , { from = { id = 310, x = 4808.85, y = 3451.35, z = 172.51 }, to = { id = 561, x = 4771.19, y = 3304.59, z = 176.71 }, isRetrace = False, name = Just "Hillside Avenue" }
-    , { from = { id = 561, x = 4771.19, y = 3304.59, z = 176.71 }, to = { id = 531, x = 4597.80, y = 2971.81, z = 171.82 }, isRetrace = False, name = Just "Ocean Avenue" }
-    , { from = { id = 531, x = 4597.80, y = 2971.81, z = 171.82 }, to = { id = 522, x = 3962.89, y = 2516.24, z = 134.54 }, isRetrace = False, name = Just "Ocean Avenue" }
-    , { from = { id = 522, x = 3962.89, y = 2516.24, z = 134.54 }, to = { id = 531, x = 4597.80, y = 2971.81, z = 171.82 }, isRetrace = True, name = Just "Ocean Avenue" }
-    , { from = { id = 531, x = 4597.80, y = 2971.81, z = 171.82 }, to = { id = 288, x = 4471.86, y = 3085.57, z = 193.81 }, isRetrace = False, name = Just "Lotus Path" }
-    , { from = { id = 288, x = 4471.86, y = 3085.57, z = 193.81 }, to = { id = 553, x = 4416.96, y = 3143.16, z = 178.51 }, isRetrace = False, name = Just "Jasmine Path" }
-    , { from = { id = 553, x = 4416.96, y = 3143.16, z = 178.51 }, to = { id = 559, x = 4523.93, y = 3276.58, z = 172.82 }, isRetrace = False, name = Just "Vine Path" }
-    , { from = { id = 559, x = 4523.93, y = 3276.58, z = 172.82 }, to = { id = 289, x = 4703.48, y = 3269.69, z = 180.79 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 289, x = 4703.48, y = 3269.69, z = 180.79 }, to = { id = 559, x = 4523.93, y = 3276.58, z = 172.82 }, isRetrace = True, name = Just "Atlantic Avenue" }
-    , { from = { id = 559, x = 4523.93, y = 3276.58, z = 172.82 }, to = { id = 555, x = 4215.31, y = 3145.97, z = 145.54 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 555, x = 4215.31, y = 3145.97, z = 145.54 }, to = { id = 553, x = 4416.96, y = 3143.16, z = 178.51 }, isRetrace = False, name = Just "Jasmine Path" }
-    , { from = { id = 553, x = 4416.96, y = 3143.16, z = 178.51 }, to = { id = 547, x = 4200.41, y = 2938.95, z = 187.19 }, isRetrace = False, name = Just "Vine Path" }
-    , { from = { id = 547, x = 4200.41, y = 2938.95, z = 187.19 }, to = { id = 33, x = 3981.55, y = 2890.22, z = 163.73 }, isRetrace = False, name = Just "Lily Path" }
-    , { from = { id = 33, x = 3981.55, y = 2890.22, z = 163.73 }, to = { id = 547, x = 4200.41, y = 2938.95, z = 187.19 }, isRetrace = True, name = Just "Lily Path" }
-    , { from = { id = 547, x = 4200.41, y = 2938.95, z = 187.19 }, to = { id = 34, x = 3953.61, y = 2707.86, z = 180.17 }, isRetrace = False, name = Just "Vine Path" }
-    , { from = { id = 34, x = 3953.61, y = 2707.86, z = 180.17 }, to = { id = 288, x = 4471.86, y = 3085.57, z = 193.81 }, isRetrace = False, name = Just "Vine Path" }
-    , { from = { id = 288, x = 4471.86, y = 3085.57, z = 193.81 }, to = { id = 289, x = 4703.48, y = 3269.69, z = 180.79 }, isRetrace = False, name = Nothing }
-    , { from = { id = 289, x = 4703.48, y = 3269.69, z = 180.79 }, to = { id = 561, x = 4771.19, y = 3304.59, z = 176.71 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 561, x = 4771.19, y = 3304.59, z = 176.71 }, to = { id = 310, x = 4808.85, y = 3451.35, z = 172.51 }, isRetrace = True, name = Just "Hillside Avenue" }
-    , { from = { id = 310, x = 4808.85, y = 3451.35, z = 172.51 }, to = { id = 309, x = 4909.22, y = 3383.17, z = 170.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 309, x = 4909.22, y = 3383.17, z = 170.00 }, to = { id = 310, x = 4808.85, y = 3451.35, z = 172.51 }, isRetrace = True, name = Nothing }
-    , { from = { id = 310, x = 4808.85, y = 3451.35, z = 172.51 }, to = { id = 571, x = 4813.06, y = 3566.78, z = 160.87 }, isRetrace = True, name = Just "Hillside Avenue" }
-    , { from = { id = 571, x = 4813.06, y = 3566.78, z = 160.87 }, to = { id = 308, x = 4447.84, y = 3373.89, z = 150.94 }, isRetrace = False, name = Just "Elm Avenue" }
-    , { from = { id = 308, x = 4447.84, y = 3373.89, z = 150.94 }, to = { id = 306, x = 4217.71, y = 3439.34, z = 159.05 }, isRetrace = False, name = Nothing }
-    , { from = { id = 306, x = 4217.71, y = 3439.34, z = 159.05 }, to = { id = 308, x = 4447.84, y = 3373.89, z = 150.94 }, isRetrace = True, name = Nothing }
-    , { from = { id = 308, x = 4447.84, y = 3373.89, z = 150.94 }, to = { id = 555, x = 4215.31, y = 3145.97, z = 145.54 }, isRetrace = False, name = Just "Elm Avenue" }
-    , { from = { id = 555, x = 4215.31, y = 3145.97, z = 145.54 }, to = { id = 284, x = 4047.48, y = 3227.21, z = 147.89 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 284, x = 4047.48, y = 3227.21, z = 147.89 }, to = { id = 285, x = 4035.31, y = 3207.20, z = 147.89 }, isRetrace = False, name = Nothing }
-    , { from = { id = 285, x = 4035.31, y = 3207.20, z = 147.89 }, to = { id = 280, x = 4083.49, y = 3176.13, z = 144.65 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 280, x = 4083.49, y = 3176.13, z = 144.65 }, to = { id = 279, x = 4148.58, y = 3143.08, z = 144.65 }, isRetrace = False, name = Nothing }
-    , { from = { id = 279, x = 4148.58, y = 3143.08, z = 144.65 }, to = { id = 280, x = 4083.49, y = 3176.13, z = 144.65 }, isRetrace = True, name = Nothing }
-    , { from = { id = 280, x = 4083.49, y = 3176.13, z = 144.65 }, to = { id = 276, x = 4079.33, y = 3116.50, z = 144.11 }, isRetrace = False, name = Nothing }
-    , { from = { id = 276, x = 4079.33, y = 3116.50, z = 144.11 }, to = { id = 241, x = 4124.22, y = 3087.72, z = 145.73 }, isRetrace = False, name = Nothing }
-    , { from = { id = 241, x = 4124.22, y = 3087.72, z = 145.73 }, to = { id = 279, x = 4148.58, y = 3143.08, z = 144.65 }, isRetrace = False, name = Nothing }
-    , { from = { id = 279, x = 4148.58, y = 3143.08, z = 144.65 }, to = { id = 242, x = 4132.27, y = 3064.31, z = 145.73 }, isRetrace = False, name = Nothing }
-    , { from = { id = 242, x = 4132.27, y = 3064.31, z = 145.73 }, to = { id = 42, x = 4094.92, y = 3021.12, z = 147.62 }, isRetrace = False, name = Nothing }
-    , { from = { id = 42, x = 4094.92, y = 3021.12, z = 147.62 }, to = { id = 242, x = 4132.27, y = 3064.31, z = 145.73 }, isRetrace = True, name = Nothing }
-    , { from = { id = 242, x = 4132.27, y = 3064.31, z = 145.73 }, to = { id = 241, x = 4124.22, y = 3087.72, z = 145.73 }, isRetrace = False, name = Nothing }
-    , { from = { id = 241, x = 4124.22, y = 3087.72, z = 145.73 }, to = { id = 276, x = 4079.33, y = 3116.50, z = 144.11 }, isRetrace = True, name = Nothing }
-    , { from = { id = 276, x = 4079.33, y = 3116.50, z = 144.11 }, to = { id = 272, x = 3979.13, y = 3093.79, z = 144.19 }, isRetrace = False, name = Nothing }
-    , { from = { id = 272, x = 3979.13, y = 3093.79, z = 144.19 }, to = { id = 550, x = 3916.12, y = 3025.25, z = 140.69 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 550, x = 3916.12, y = 3025.25, z = 140.69 }, to = { id = 249, x = 3860.93, y = 2949.49, z = 136.84 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 249, x = 3860.93, y = 2949.49, z = 136.84 }, to = { id = 550, x = 3916.12, y = 3025.25, z = 140.69 }, isRetrace = True, name = Just "Grove Avenue" }
-    , { from = { id = 550, x = 3916.12, y = 3025.25, z = 140.69 }, to = { id = 40, x = 3971.50, y = 2981.64, z = 144.15 }, isRetrace = False, name = Just "Almond Path" }
-    , { from = { id = 40, x = 3971.50, y = 2981.64, z = 144.15 }, to = { id = 41, x = 4060.24, y = 3059.95, z = 145.65 }, isRetrace = False, name = Just "Almond Path" }
-    , { from = { id = 41, x = 4060.24, y = 3059.95, z = 145.65 }, to = { id = 272, x = 3979.13, y = 3093.79, z = 144.19 }, isRetrace = False, name = Nothing }
-    , { from = { id = 272, x = 3979.13, y = 3093.79, z = 144.19 }, to = { id = 285, x = 4035.31, y = 3207.20, z = 147.89 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 285, x = 4035.31, y = 3207.20, z = 147.89 }, to = { id = 284, x = 4047.48, y = 3227.21, z = 147.89 }, isRetrace = True, name = Nothing }
-    , { from = { id = 284, x = 4047.48, y = 3227.21, z = 147.89 }, to = { id = 306, x = 4217.71, y = 3439.34, z = 159.05 }, isRetrace = False, name = Nothing }
-    , { from = { id = 306, x = 4217.71, y = 3439.34, z = 159.05 }, to = { id = 563, x = 3495.74, y = 3336.83, z = 158.91 }, isRetrace = False, name = Just "Linden Avenue" }
-    , { from = { id = 563, x = 3495.74, y = 3336.83, z = 158.91 }, to = { id = 301, x = 3465.45, y = 3320.21, z = 158.91 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 301, x = 3465.45, y = 3320.21, z = 158.91 }, to = { id = 563, x = 3495.74, y = 3336.83, z = 158.91 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 563, x = 3495.74, y = 3336.83, z = 158.91 }, to = { id = 301, x = 3465.45, y = 3320.21, z = 158.91 }, isRetrace = True, name = Just "Central Avenue" }
-    , { from = { id = 301, x = 3465.45, y = 3320.21, z = 158.91 }, to = { id = 557, x = 3365.55, y = 3225.32, z = 158.77 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 557, x = 3365.55, y = 3225.32, z = 158.77 }, to = { id = 277, x = 3472.41, y = 3121.75, z = 156.36 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 277, x = 3472.41, y = 3121.75, z = 156.36 }, to = { id = 264, x = 3425.96, y = 3052.23, z = 153.71 }, isRetrace = False, name = Nothing }
-    , { from = { id = 264, x = 3425.96, y = 3052.23, z = 153.71 }, to = { id = 259, x = 3387.35, y = 2923.34, z = 153.62 }, isRetrace = False, name = Just "Oakwood Avenue" }
-    , { from = { id = 259, x = 3387.35, y = 2923.34, z = 153.62 }, to = { id = 264, x = 3425.96, y = 3052.23, z = 153.71 }, isRetrace = True, name = Just "Oakwood Avenue" }
-    , { from = { id = 264, x = 3425.96, y = 3052.23, z = 153.71 }, to = { id = 258, x = 3526.15, y = 3004.97, z = 152.70 }, isRetrace = False, name = Nothing }
-    , { from = { id = 258, x = 3526.15, y = 3004.97, z = 152.70 }, to = { id = 261, x = 3610.50, y = 3020.03, z = 150.63 }, isRetrace = False, name = Nothing }
-    , { from = { id = 261, x = 3610.50, y = 3020.03, z = 150.63 }, to = { id = 277, x = 3472.41, y = 3121.75, z = 156.36 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 277, x = 3472.41, y = 3121.75, z = 156.36 }, to = { id = 557, x = 3365.55, y = 3225.32, z = 158.77 }, isRetrace = True, name = Just "Central Avenue" }
-    , { from = { id = 557, x = 3365.55, y = 3225.32, z = 158.77 }, to = { id = 562, x = 3231.88, y = 3305.00, z = 158.97 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 562, x = 3231.88, y = 3305.00, z = 158.97 }, to = { id = 556, x = 3218.94, y = 3173.74, z = 160.07 }, isRetrace = False, name = Just "Dell Avenue" }
-    , { from = { id = 556, x = 3218.94, y = 3173.74, z = 160.07 }, to = { id = 507, x = 3062.01, y = 3075.58, z = 160.29 }, isRetrace = False, name = Just "Oak Leaf Avenue" }
-    , { from = { id = 507, x = 3062.01, y = 3075.58, z = 160.29 }, to = { id = 556, x = 3218.94, y = 3173.74, z = 160.07 }, isRetrace = True, name = Just "Oak Leaf Avenue" }
-    , { from = { id = 556, x = 3218.94, y = 3173.74, z = 160.07 }, to = { id = 253, x = 3247.32, y = 2971.49, z = 139.89 }, isRetrace = False, name = Just "Dell Avenue" }
-    , { from = { id = 253, x = 3247.32, y = 2971.49, z = 139.89 }, to = { id = 250, x = 3184.43, y = 2962.57, z = 144.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 250, x = 3184.43, y = 2962.57, z = 144.00 }, to = { id = 507, x = 3062.01, y = 3075.58, z = 160.29 }, isRetrace = False, name = Just "Dell-Wood Path" }
-    , { from = { id = 507, x = 3062.01, y = 3075.58, z = 160.29 }, to = { id = 508, x = 2999.56, y = 3012.37, z = 159.28 }, isRetrace = False, name = Just "Oak Leaf Avenue" }
-    , { from = { id = 508, x = 2999.56, y = 3012.37, z = 159.28 }, to = { id = 562, x = 3231.88, y = 3305.00, z = 158.97 }, isRetrace = False, name = Just "Oak Leaf Avenue" }
-    , { from = { id = 562, x = 3231.88, y = 3305.00, z = 158.97 }, to = { id = 302, x = 3047.73, y = 3378.28, z = 153.80 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 302, x = 3047.73, y = 3378.28, z = 153.80 }, to = { id = 566, x = 3064.18, y = 3438.57, z = 157.06 }, isRetrace = False, name = Just "Spirea Path" }
-    , { from = { id = 566, x = 3064.18, y = 3438.57, z = 157.06 }, to = { id = 302, x = 3047.73, y = 3378.28, z = 153.80 }, isRetrace = True, name = Just "Spirea Path" }
-    , { from = { id = 302, x = 3047.73, y = 3378.28, z = 153.80 }, to = { id = 299, x = 2903.43, y = 3371.79, z = 149.36 }, isRetrace = False, name = Nothing }
-    , { from = { id = 299, x = 2903.43, y = 3371.79, z = 149.36 }, to = { id = 47, x = 2856.18, y = 3467.07, z = 151.52 }, isRetrace = False, name = Just "Holly Path" }
-    , { from = { id = 47, x = 2856.18, y = 3467.07, z = 151.52 }, to = { id = 299, x = 2903.43, y = 3371.79, z = 149.36 }, isRetrace = True, name = Just "Holly Path" }
-    , { from = { id = 299, x = 2903.43, y = 3371.79, z = 149.36 }, to = { id = 298, x = 2802.06, y = 3320.19, z = 147.19 }, isRetrace = False, name = Nothing }
-    , { from = { id = 298, x = 2802.06, y = 3320.19, z = 147.19 }, to = { id = 297, x = 2756.42, y = 3339.50, z = 147.53 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 297, x = 2756.42, y = 3339.50, z = 147.53 }, to = { id = 298, x = 2802.06, y = 3320.19, z = 147.19 }, isRetrace = True, name = Just "Central Avenue" }
-    , { from = { id = 298, x = 2802.06, y = 3320.19, z = 147.19 }, to = { id = 278, x = 2856.33, y = 3138.58, z = 149.11 }, isRetrace = False, name = Just "Pine Avenue" }
-    , { from = { id = 278, x = 2856.33, y = 3138.58, z = 149.11 }, to = { id = 265, x = 2871.19, y = 3055.13, z = 156.24 }, isRetrace = False, name = Nothing }
-    , { from = { id = 265, x = 2871.19, y = 3055.13, z = 156.24 }, to = { id = 278, x = 2856.33, y = 3138.58, z = 149.11 }, isRetrace = True, name = Nothing }
-    , { from = { id = 278, x = 2856.33, y = 3138.58, z = 149.11 }, to = { id = 558, x = 2622.18, y = 3226.82, z = 156.53 }, isRetrace = False, name = Just "Glade Path" }
-    , { from = { id = 558, x = 2622.18, y = 3226.82, z = 156.53 }, to = { id = 296, x = 2634.39, y = 3327.00, z = 146.53 }, isRetrace = False, name = Just "Rose Path" }
-    , { from = { id = 296, x = 2634.39, y = 3327.00, z = 146.53 }, to = { id = 558, x = 2622.18, y = 3226.82, z = 156.53 }, isRetrace = True, name = Just "Rose Path" }
-    , { from = { id = 558, x = 2622.18, y = 3226.82, z = 156.53 }, to = { id = 260, x = 2789.62, y = 3011.43, z = 160.16 }, isRetrace = False, name = Just "Birch Path" }
-    , { from = { id = 260, x = 2789.62, y = 3011.43, z = 160.16 }, to = { id = 252, x = 2697.30, y = 2938.93, z = 157.91 }, isRetrace = False, name = Nothing }
-    , { from = { id = 252, x = 2697.30, y = 2938.93, z = 157.91 }, to = { id = 260, x = 2789.62, y = 3011.43, z = 160.16 }, isRetrace = True, name = Nothing }
-    , { from = { id = 260, x = 2789.62, y = 3011.43, z = 160.16 }, to = { id = 265, x = 2871.19, y = 3055.13, z = 156.24 }, isRetrace = False, name = Nothing }
-    , { from = { id = 265, x = 2871.19, y = 3055.13, z = 156.24 }, to = { id = 508, x = 2999.56, y = 3012.37, z = 159.28 }, isRetrace = False, name = Just "Vista Avenue" }
-    , { from = { id = 508, x = 2999.56, y = 3012.37, z = 159.28 }, to = { id = 240, x = 3047.21, y = 2847.22, z = 166.81 }, isRetrace = False, name = Just "Woodbine Path" }
-    , { from = { id = 240, x = 3047.21, y = 2847.22, z = 166.81 }, to = { id = 251, x = 3127.68, y = 2790.32, z = 155.39 }, isRetrace = False, name = Just "Vista Avenue" }
-    , { from = { id = 251, x = 3127.68, y = 2790.32, z = 155.39 }, to = { id = 250, x = 3184.43, y = 2962.57, z = 144.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 250, x = 3184.43, y = 2962.57, z = 144.00 }, to = { id = 253, x = 3247.32, y = 2971.49, z = 139.89 }, isRetrace = True, name = Nothing }
-    , { from = { id = 253, x = 3247.32, y = 2971.49, z = 139.89 }, to = { id = 183, x = 3334.07, y = 2351.04, z = 151.16 }, isRetrace = False, name = Just "Laburnum Path" }
-    , { from = { id = 183, x = 3334.07, y = 2351.04, z = 151.16 }, to = { id = 251, x = 3127.68, y = 2790.32, z = 155.39 }, isRetrace = False, name = Just "Woodbine Path" }
-    , { from = { id = 251, x = 3127.68, y = 2790.32, z = 155.39 }, to = { id = 240, x = 3047.21, y = 2847.22, z = 166.81 }, isRetrace = True, name = Just "Vista Avenue" }
-    , { from = { id = 240, x = 3047.21, y = 2847.22, z = 166.81 }, to = { id = 221, x = 3003.02, y = 2617.31, z = 165.59 }, isRetrace = False, name = Nothing }
-    , { from = { id = 221, x = 3003.02, y = 2617.31, z = 165.59 }, to = { id = 222, x = 3163.78, y = 2344.02, z = 154.64 }, isRetrace = False, name = Nothing }
-    , { from = { id = 222, x = 3163.78, y = 2344.02, z = 154.64 }, to = { id = 181, x = 3059.43, y = 2330.07, z = 146.38 }, isRetrace = False, name = Just "Fir Path" }
-    , { from = { id = 181, x = 3059.43, y = 2330.07, z = 146.38 }, to = { id = 510, x = 2727.18, y = 2390.57, z = 149.63 }, isRetrace = False, name = Just "Fir Path" }
-    , { from = { id = 510, x = 2727.18, y = 2390.57, z = 149.63 }, to = { id = 220, x = 2725.10, y = 2568.28, z = 149.45 }, isRetrace = False, name = Just "Violet Path" }
-    , { from = { id = 220, x = 2725.10, y = 2568.28, z = 149.45 }, to = { id = 510, x = 2727.18, y = 2390.57, z = 149.63 }, isRetrace = True, name = Just "Violet Path" }
-    , { from = { id = 510, x = 2727.18, y = 2390.57, z = 149.63 }, to = { id = 187, x = 2673.97, y = 2266.57, z = 137.28 }, isRetrace = False, name = Just "Violet Path" }
-    , { from = { id = 187, x = 2673.97, y = 2266.57, z = 137.28 }, to = { id = 489, x = 2640.68, y = 2187.57, z = 141.70 }, isRetrace = False, name = Just "Hawthorne Path" }
-    , { from = { id = 489, x = 2640.68, y = 2187.57, z = 141.70 }, to = { id = 502, x = 2466.43, y = 2279.07, z = 134.07 }, isRetrace = False, name = Just "Hawthorne Path" }
-    , { from = { id = 502, x = 2466.43, y = 2279.07, z = 134.07 }, to = { id = 501, x = 2437.68, y = 2236.32, z = 127.33 }, isRetrace = False, name = Just "Acanthus Path" }
-    , { from = { id = 501, x = 2437.68, y = 2236.32, z = 127.33 }, to = { id = 502, x = 2466.43, y = 2279.07, z = 134.07 }, isRetrace = True, name = Just "Acanthus Path" }
-    , { from = { id = 502, x = 2466.43, y = 2279.07, z = 134.07 }, to = { id = 489, x = 2640.68, y = 2187.57, z = 141.70 }, isRetrace = True, name = Just "Hawthorne Path" }
-    , { from = { id = 489, x = 2640.68, y = 2187.57, z = 141.70 }, to = { id = 149, x = 2846.72, y = 2075.24, z = 146.45 }, isRetrace = False, name = Just "Locust Avenue" }
-    , { from = { id = 149, x = 2846.72, y = 2075.24, z = 146.45 }, to = { id = 150, x = 2899.95, y = 1983.33, z = 141.29 }, isRetrace = False, name = Nothing }
-    , { from = { id = 150, x = 2899.95, y = 1983.33, z = 141.29 }, to = { id = 496, x = 3014.18, y = 2142.07, z = 150.53 }, isRetrace = False, name = Just "Monarda Path" }
-    , { from = { id = 496, x = 3014.18, y = 2142.07, z = 150.53 }, to = { id = 151, x = 3099.17, y = 2084.80, z = 143.40 }, isRetrace = False, name = Just "Monarda Path" }
-    , { from = { id = 151, x = 3099.17, y = 2084.80, z = 143.40 }, to = { id = 496, x = 3014.18, y = 2142.07, z = 150.53 }, isRetrace = True, name = Just "Monarda Path" }
-    , { from = { id = 496, x = 3014.18, y = 2142.07, z = 150.53 }, to = { id = 16, x = 2914.93, y = 2211.07, z = 148.00 }, isRetrace = False, name = Just "Monarda Path" }
-    , { from = { id = 16, x = 2914.93, y = 2211.07, z = 148.00 }, to = { id = 181, x = 3059.43, y = 2330.07, z = 146.38 }, isRetrace = False, name = Nothing }
-    , { from = { id = 181, x = 3059.43, y = 2330.07, z = 146.38 }, to = { id = 222, x = 3163.78, y = 2344.02, z = 154.64 }, isRetrace = True, name = Just "Fir Path" }
-    , { from = { id = 222, x = 3163.78, y = 2344.02, z = 154.64 }, to = { id = 175, x = 3214.32, y = 2297.08, z = 147.43 }, isRetrace = False, name = Just "Vista Avenue" }
-    , { from = { id = 175, x = 3214.32, y = 2297.08, z = 147.43 }, to = { id = 174, x = 3208.82, y = 2291.20, z = 147.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 174, x = 3208.82, y = 2291.20, z = 147.43 }, to = { id = 175, x = 3214.32, y = 2297.08, z = 147.43 }, isRetrace = True, name = Nothing }
-    , { from = { id = 175, x = 3214.32, y = 2297.08, z = 147.43 }, to = { id = 174, x = 3208.82, y = 2291.20, z = 147.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 174, x = 3208.82, y = 2291.20, z = 147.43 }, to = { id = 182, x = 3339.03, y = 2341.77, z = 151.16 }, isRetrace = False, name = Nothing }
-    , { from = { id = 182, x = 3339.03, y = 2341.77, z = 151.16 }, to = { id = 183, x = 3334.07, y = 2351.04, z = 151.16 }, isRetrace = False, name = Nothing }
-    , { from = { id = 183, x = 3334.07, y = 2351.04, z = 151.16 }, to = { id = 185, x = 3411.95, y = 2357.69, z = 150.38 }, isRetrace = False, name = Just "Fir Path" }
-    , { from = { id = 185, x = 3411.95, y = 2357.69, z = 150.38 }, to = { id = 504, x = 3494.08, y = 2282.08, z = 141.82 }, isRetrace = False, name = Just "Southwood Avenue" }
-    , { from = { id = 504, x = 3494.08, y = 2282.08, z = 141.82 }, to = { id = 195, x = 3533.65, y = 2310.55, z = 138.39 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 195, x = 3533.65, y = 2310.55, z = 138.39 }, to = { id = 504, x = 3494.08, y = 2282.08, z = 141.82 }, isRetrace = True, name = Just "Grove Avenue" }
-    , { from = { id = 504, x = 3494.08, y = 2282.08, z = 141.82 }, to = { id = 163, x = 3279.88, y = 2173.89, z = 143.55 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 163, x = 3279.88, y = 2173.89, z = 143.55 }, to = { id = 165, x = 3202.06, y = 2234.90, z = 147.43 }, isRetrace = False, name = Just "Vista Avenue" }
-    , { from = { id = 165, x = 3202.06, y = 2234.90, z = 147.43 }, to = { id = 174, x = 3208.82, y = 2291.20, z = 147.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 174, x = 3208.82, y = 2291.20, z = 147.43 }, to = { id = 182, x = 3339.03, y = 2341.77, z = 151.16 }, isRetrace = True, name = Nothing }
-    , { from = { id = 182, x = 3339.03, y = 2341.77, z = 151.16 }, to = { id = 185, x = 3411.95, y = 2357.69, z = 150.38 }, isRetrace = False, name = Nothing }
-    , { from = { id = 185, x = 3411.95, y = 2357.69, z = 150.38 }, to = { id = 259, x = 3387.35, y = 2923.34, z = 153.62 }, isRetrace = False, name = Just "Oakwood Avenue" }
-    , { from = { id = 259, x = 3387.35, y = 2923.34, z = 153.62 }, to = { id = 258, x = 3526.15, y = 3004.97, z = 152.70 }, isRetrace = False, name = Nothing }
-    , { from = { id = 258, x = 3526.15, y = 3004.97, z = 152.70 }, to = { id = 261, x = 3610.50, y = 3020.03, z = 150.63 }, isRetrace = True, name = Nothing }
-    , { from = { id = 261, x = 3610.50, y = 3020.03, z = 150.63 }, to = { id = 536, x = 3695.93, y = 2932.43, z = 144.18 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 536, x = 3695.93, y = 2932.43, z = 144.18 }, to = { id = 248, x = 3712.04, y = 2926.73, z = 144.18 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 248, x = 3712.04, y = 2926.73, z = 144.18 }, to = { id = 249, x = 3860.93, y = 2949.49, z = 136.84 }, isRetrace = False, name = Nothing }
-    , { from = { id = 249, x = 3860.93, y = 2949.49, z = 136.84 }, to = { id = 239, x = 3806.66, y = 2823.23, z = 134.41 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 239, x = 3806.66, y = 2823.23, z = 134.41 }, to = { id = 248, x = 3712.04, y = 2926.73, z = 144.18 }, isRetrace = False, name = Nothing }
-    , { from = { id = 248, x = 3712.04, y = 2926.73, z = 144.18 }, to = { id = 536, x = 3695.93, y = 2932.43, z = 144.18 }, isRetrace = True, name = Just "Central Avenue" }
-    , { from = { id = 536, x = 3695.93, y = 2932.43, z = 144.18 }, to = { id = 247, x = 3637.68, y = 2827.57, z = 150.35 }, isRetrace = False, name = Just "Evergreen Path" }
-    , { from = { id = 247, x = 3637.68, y = 2827.57, z = 150.35 }, to = { id = 246, x = 3565.68, y = 2873.57, z = 157.74 }, isRetrace = False, name = Nothing }
-    , { from = { id = 246, x = 3565.68, y = 2873.57, z = 157.74 }, to = { id = 247, x = 3637.68, y = 2827.57, z = 150.35 }, isRetrace = True, name = Nothing }
-    , { from = { id = 247, x = 3637.68, y = 2827.57, z = 150.35 }, to = { id = 238, x = 3635.93, y = 2813.82, z = 149.74 }, isRetrace = False, name = Just "Evergreen Path" }
-    , { from = { id = 238, x = 3635.93, y = 2813.82, z = 149.74 }, to = { id = 527, x = 3621.68, y = 2670.07, z = 141.13 }, isRetrace = False, name = Just "Evergreen Path" }
-    , { from = { id = 527, x = 3621.68, y = 2670.07, z = 141.13 }, to = { id = 238, x = 3635.93, y = 2813.82, z = 149.74 }, isRetrace = True, name = Just "Evergreen Path" }
-    , { from = { id = 238, x = 3635.93, y = 2813.82, z = 149.74 }, to = { id = 239, x = 3806.66, y = 2823.23, z = 134.41 }, isRetrace = False, name = Nothing }
-    , { from = { id = 239, x = 3806.66, y = 2823.23, z = 134.41 }, to = { id = 39, x = 3723.85, y = 2626.19, z = 128.48 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 39, x = 3723.85, y = 2626.19, z = 128.48 }, to = { id = 527, x = 3621.68, y = 2670.07, z = 141.13 }, isRetrace = False, name = Just "Vineleaf Path" }
-    , { from = { id = 527, x = 3621.68, y = 2670.07, z = 141.13 }, to = { id = 213, x = 3578.43, y = 2569.57, z = 144.22 }, isRetrace = False, name = Just "Evergreen Path" }
-    , { from = { id = 213, x = 3578.43, y = 2569.57, z = 144.22 }, to = { id = 524, x = 3685.19, y = 2525.87, z = 126.06 }, isRetrace = False, name = Just "Flower Path" }
-    , { from = { id = 524, x = 3685.19, y = 2525.87, z = 126.06 }, to = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, to = { id = 524, x = 3685.19, y = 2525.87, z = 126.06 }, isRetrace = True, name = Just "Grove Avenue" }
-    , { from = { id = 524, x = 3685.19, y = 2525.87, z = 126.06 }, to = { id = 39, x = 3723.85, y = 2626.19, z = 128.48 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 39, x = 3723.85, y = 2626.19, z = 128.48 }, to = { id = 40, x = 3971.50, y = 2981.64, z = 144.15 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 40, x = 3971.50, y = 2981.64, z = 144.15 }, to = { id = 41, x = 4060.24, y = 3059.95, z = 145.65 }, isRetrace = True, name = Just "Almond Path" }
-    , { from = { id = 41, x = 4060.24, y = 3059.95, z = 145.65 }, to = { id = 42, x = 4094.92, y = 3021.12, z = 147.62 }, isRetrace = False, name = Just "Almond Path" }
-    , { from = { id = 42, x = 4094.92, y = 3021.12, z = 147.62 }, to = { id = 33, x = 3981.55, y = 2890.22, z = 163.73 }, isRetrace = False, name = Nothing }
-    , { from = { id = 33, x = 3981.55, y = 2890.22, z = 163.73 }, to = { id = 34, x = 3953.61, y = 2707.86, z = 180.17 }, isRetrace = False, name = Nothing }
-    , { from = { id = 34, x = 3953.61, y = 2707.86, z = 180.17 }, to = { id = 524, x = 3685.19, y = 2525.87, z = 126.06 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 524, x = 3685.19, y = 2525.87, z = 126.06 }, to = { id = 213, x = 3578.43, y = 2569.57, z = 144.22 }, isRetrace = True, name = Just "Flower Path" }
-    , { from = { id = 213, x = 3578.43, y = 2569.57, z = 144.22 }, to = { id = 194, x = 3522.18, y = 2402.57, z = 141.58 }, isRetrace = False, name = Nothing }
-    , { from = { id = 194, x = 3522.18, y = 2402.57, z = 141.58 }, to = { id = 195, x = 3533.65, y = 2310.55, z = 138.39 }, isRetrace = False, name = Nothing }
-    , { from = { id = 195, x = 3533.65, y = 2310.55, z = 138.39 }, to = { id = 192, x = 3628.16, y = 2400.09, z = 128.00 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 192, x = 3628.16, y = 2400.09, z = 128.00 }, to = { id = 194, x = 3522.18, y = 2402.57, z = 141.58 }, isRetrace = False, name = Nothing }
-    , { from = { id = 194, x = 3522.18, y = 2402.57, z = 141.58 }, to = { id = 192, x = 3628.16, y = 2400.09, z = 128.00 }, isRetrace = True, name = Nothing }
-    , { from = { id = 192, x = 3628.16, y = 2400.09, z = 128.00 }, to = { id = 180, x = 3704.86, y = 2326.25, z = 123.49 }, isRetrace = False, name = Nothing }
-    , { from = { id = 180, x = 3704.86, y = 2326.25, z = 123.49 }, to = { id = 192, x = 3628.16, y = 2400.09, z = 128.00 }, isRetrace = True, name = Nothing }
-    , { from = { id = 192, x = 3628.16, y = 2400.09, z = 128.00 }, to = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, isRetrace = False, name = Just "Grove Avenue" }
-    , { from = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, to = { id = 196, x = 3743.62, y = 2413.15, z = 123.97 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 196, x = 3743.62, y = 2413.15, z = 123.97 }, to = { id = 198, x = 3748.71, y = 2415.15, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 198, x = 3748.71, y = 2415.15, z = 122.00 }, to = { id = 193, x = 3802.20, y = 2400.12, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 193, x = 3802.20, y = 2400.12, z = 122.00 }, to = { id = 191, x = 3800.78, y = 2394.68, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 191, x = 3800.78, y = 2394.68, z = 122.00 }, to = { id = 522, x = 3962.89, y = 2516.24, z = 134.54 }, isRetrace = False, name = Just "Ocean Avenue" }
+    [ { from = { id = 95, x = 1566.94, y = 5129.51, z = 67.01 }, to = { id = 447, x = 1893.38, y = 4775.05, z = 93.60 }, isRetrace = False, name = Nothing }
+    , { from = { id = 447, x = 1893.38, y = 4775.05, z = 93.60 }, to = { id = 94, x = 1841.34, y = 4738.31, z = 93.60 }, isRetrace = False, name = Nothing }
+    , { from = { id = 94, x = 1841.34, y = 4738.31, z = 93.60 }, to = { id = 602, x = 1995.22, y = 4667.54, z = 105.26 }, isRetrace = False, name = Just "Battle Avenue" }
+    , { from = { id = 602, x = 1995.22, y = 4667.54, z = 105.26 }, to = { id = 441, x = 2129.55, y = 4611.81, z = 115.26 }, isRetrace = False, name = Just "Battle Avenue" }
+    , { from = { id = 441, x = 2129.55, y = 4611.81, z = 115.26 }, to = { id = 442, x = 2148.91, y = 4640.31, z = 115.26 }, isRetrace = False, name = Nothing }
+    , { from = { id = 442, x = 2148.91, y = 4640.31, z = 115.26 }, to = { id = 448, x = 2265.39, y = 4799.81, z = 107.55 }, isRetrace = False, name = Nothing }
+    , { from = { id = 448, x = 2265.39, y = 4799.81, z = 107.55 }, to = { id = 603, x = 2391.81, y = 4681.39, z = 127.50 }, isRetrace = False, name = Just "Bay-View Path" }
+    , { from = { id = 603, x = 2391.81, y = 4681.39, z = 127.50 }, to = { id = 448, x = 2265.39, y = 4799.81, z = 107.55 }, isRetrace = True, name = Just "Bay-View Path" }
+    , { from = { id = 448, x = 2265.39, y = 4799.81, z = 107.55 }, to = { id = 444, x = 2657.87, y = 4735.79, z = 142.85 }, isRetrace = False, name = Just "Bay View Avenue" }
+    , { from = { id = 444, x = 2657.87, y = 4735.79, z = 142.85 }, to = { id = 445, x = 2707.89, y = 4562.49, z = 157.80 }, isRetrace = False, name = Nothing }
+    , { from = { id = 445, x = 2707.89, y = 4562.49, z = 157.80 }, to = { id = 430, x = 2835.19, y = 4584.53, z = 168.92 }, isRetrace = False, name = Just "Bay View Avenue" }
+    , { from = { id = 430, x = 2835.19, y = 4584.53, z = 168.92 }, to = { id = 424, x = 2873.99, y = 4521.66, z = 185.85 }, isRetrace = False, name = Nothing }
+    , { from = { id = 424, x = 2873.99, y = 4521.66, z = 185.85 }, to = { id = 430, x = 2835.19, y = 4584.53, z = 168.92 }, isRetrace = True, name = Nothing }
+    , { from = { id = 430, x = 2835.19, y = 4584.53, z = 168.92 }, to = { id = 423, x = 3034.25, y = 4516.31, z = 188.62 }, isRetrace = False, name = Just "Battle Avenue" }
+    , { from = { id = 423, x = 3034.25, y = 4516.31, z = 188.62 }, to = { id = 439, x = 3087.09, y = 4470.42, z = 189.60 }, isRetrace = False, name = Just "Battle Avenue" }
+    , { from = { id = 439, x = 3087.09, y = 4470.42, z = 189.60 }, to = { id = 598, x = 3153.52, y = 4451.06, z = 201.28 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 598, x = 3153.52, y = 4451.06, z = 201.28 }, to = { id = 422, x = 3200.71, y = 4468.47, z = 201.40 }, isRetrace = False, name = Just "Battle Path" }
+    , { from = { id = 422, x = 3200.71, y = 4468.47, z = 201.40 }, to = { id = 598, x = 3153.52, y = 4451.06, z = 201.28 }, isRetrace = False, name = Just "Battle Path" }
+    , { from = { id = 598, x = 3153.52, y = 4451.06, z = 201.28 }, to = { id = 439, x = 3087.09, y = 4470.42, z = 189.60 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 439, x = 3087.09, y = 4470.42, z = 189.60 }, to = { id = 438, x = 3285.08, y = 4634.11, z = 183.96 }, isRetrace = False, name = Nothing }
+    , { from = { id = 438, x = 3285.08, y = 4634.11, z = 183.96 }, to = { id = 426, x = 3506.23, y = 4541.53, z = 194.19 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 426, x = 3506.23, y = 4541.53, z = 194.19 }, to = { id = 438, x = 3285.08, y = 4634.11, z = 183.96 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 438, x = 3285.08, y = 4634.11, z = 183.96 }, to = { id = 446, x = 3971.49, y = 4746.74, z = 172.78 }, isRetrace = False, name = Nothing }
+    , { from = { id = 446, x = 3971.49, y = 4746.74, z = 172.78 }, to = { id = 89, x = 4053.50, y = 4631.59, z = 170.61 }, isRetrace = False, name = Nothing }
+    , { from = { id = 89, x = 4053.50, y = 4631.59, z = 170.61 }, to = { id = 446, x = 3971.49, y = 4746.74, z = 172.78 }, isRetrace = True, name = Nothing }
+    , { from = { id = 446, x = 3971.49, y = 4746.74, z = 172.78 }, to = { id = 601, x = 3857.37, y = 4609.71, z = 183.79 }, isRetrace = False, name = Just "Canna Path" }
+    , { from = { id = 601, x = 3857.37, y = 4609.71, z = 183.79 }, to = { id = 604, x = 3762.68, y = 4711.32, z = 205.92 }, isRetrace = False, name = Just "Canna Path" }
+    , { from = { id = 604, x = 3762.68, y = 4711.32, z = 205.92 }, to = { id = 601, x = 3857.37, y = 4609.71, z = 183.79 }, isRetrace = True, name = Just "Canna Path" }
+    , { from = { id = 601, x = 3857.37, y = 4609.71, z = 183.79 }, to = { id = 427, x = 3619.44, y = 4487.21, z = 188.14 }, isRetrace = False, name = Just "Canna Path" }
+    , { from = { id = 427, x = 3619.44, y = 4487.21, z = 188.14 }, to = { id = 601, x = 3857.37, y = 4609.71, z = 183.79 }, isRetrace = True, name = Just "Canna Path" }
+    , { from = { id = 601, x = 3857.37, y = 4609.71, z = 183.79 }, to = { id = 84, x = 3951.72, y = 4508.21, z = 171.05 }, isRetrace = False, name = Just "Canna Path" }
+    , { from = { id = 84, x = 3951.72, y = 4508.21, z = 171.05 }, to = { id = 402, x = 4149.36, y = 4274.66, z = 171.50 }, isRetrace = False, name = Just "Canna Path" }
+    , { from = { id = 402, x = 4149.36, y = 4274.66, z = 171.50 }, to = { id = 407, x = 4203.47, y = 4336.74, z = 171.77 }, isRetrace = False, name = Nothing }
+    , { from = { id = 407, x = 4203.47, y = 4336.74, z = 171.77 }, to = { id = 402, x = 4149.36, y = 4274.66, z = 171.50 }, isRetrace = True, name = Nothing }
+    , { from = { id = 402, x = 4149.36, y = 4274.66, z = 171.50 }, to = { id = 392, x = 4109.12, y = 4223.57, z = 171.82 }, isRetrace = False, name = Nothing }
+    , { from = { id = 392, x = 4109.12, y = 4223.57, z = 171.82 }, to = { id = 395, x = 3964.90, y = 4238.11, z = 170.22 }, isRetrace = False, name = Nothing }
+    , { from = { id = 395, x = 3964.90, y = 4238.11, z = 170.22 }, to = { id = 83, x = 3953.27, y = 4235.89, z = 170.22 }, isRetrace = False, name = Just "Jasmine Path" }
+    , { from = { id = 83, x = 3953.27, y = 4235.89, z = 170.22 }, to = { id = 395, x = 3964.90, y = 4238.11, z = 170.22 }, isRetrace = False, name = Just "Jasmine Path" }
+    , { from = { id = 395, x = 3964.90, y = 4238.11, z = 170.22 }, to = { id = 392, x = 4109.12, y = 4223.57, z = 171.82 }, isRetrace = True, name = Nothing }
+    , { from = { id = 392, x = 4109.12, y = 4223.57, z = 171.82 }, to = { id = 70, x = 3840.22, y = 3927.02, z = 169.50 }, isRetrace = False, name = Nothing }
+    , { from = { id = 70, x = 3840.22, y = 3927.02, z = 169.50 }, to = { id = 389, x = 3872.46, y = 4160.53, z = 169.36 }, isRetrace = False, name = Nothing }
+    , { from = { id = 389, x = 3872.46, y = 4160.53, z = 169.36 }, to = { id = 590, x = 3865.01, y = 4172.27, z = 169.36 }, isRetrace = False, name = Just "Garland Avenue" }
+    , { from = { id = 590, x = 3865.01, y = 4172.27, z = 169.36 }, to = { id = 82, x = 3825.17, y = 4258.84, z = 172.65 }, isRetrace = False, name = Just "Garland Avenue" }
+    , { from = { id = 82, x = 3825.17, y = 4258.84, z = 172.65 }, to = { id = 557, x = 3772.42, y = 4305.00, z = 175.29 }, isRetrace = False, name = Just "Garland Avenue" }
+    , { from = { id = 557, x = 3772.42, y = 4305.00, z = 175.29 }, to = { id = 587, x = 3508.49, y = 4132.62, z = 183.51 }, isRetrace = False, name = Just "Coronilla Path" }
+    , { from = { id = 587, x = 3508.49, y = 4132.62, z = 183.51 }, to = { id = 588, x = 3612.40, y = 3889.66, z = 169.34 }, isRetrace = False, name = Just "Orchard Path" }
+    , { from = { id = 588, x = 3612.40, y = 3889.66, z = 169.34 }, to = { id = 587, x = 3508.49, y = 4132.62, z = 183.51 }, isRetrace = True, name = Just "Orchard Path" }
+    , { from = { id = 587, x = 3508.49, y = 4132.62, z = 183.51 }, to = { id = 591, x = 3416.08, y = 4221.56, z = 180.44 }, isRetrace = False, name = Just "Orchard Path" }
+    , { from = { id = 591, x = 3416.08, y = 4221.56, z = 180.44 }, to = { id = 595, x = 3503.71, y = 4287.90, z = 180.28 }, isRetrace = False, name = Just "Hemlock Avenue" }
+    , { from = { id = 595, x = 3503.71, y = 4287.90, z = 180.28 }, to = { id = 591, x = 3416.08, y = 4221.56, z = 180.44 }, isRetrace = True, name = Just "Hemlock Avenue" }
+    , { from = { id = 591, x = 3416.08, y = 4221.56, z = 180.44 }, to = { id = 381, x = 3365.76, y = 4178.49, z = 182.27 }, isRetrace = False, name = Just "Hemlock Avenue" }
+    , { from = { id = 381, x = 3365.76, y = 4178.49, z = 182.27 }, to = { id = 439, x = 3087.09, y = 4470.42, z = 189.60 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 439, x = 3087.09, y = 4470.42, z = 189.60 }, to = { id = 423, x = 3034.25, y = 4516.31, z = 188.62 }, isRetrace = True, name = Just "Battle Avenue" }
+    , { from = { id = 423, x = 3034.25, y = 4516.31, z = 188.62 }, to = { id = 417, x = 2952.14, y = 4465.01, z = 190.54 }, isRetrace = False, name = Nothing }
+    , { from = { id = 417, x = 2952.14, y = 4465.01, z = 190.54 }, to = { id = 420, x = 2905.56, y = 4473.25, z = 190.04 }, isRetrace = False, name = Nothing }
+    , { from = { id = 420, x = 2905.56, y = 4473.25, z = 190.04 }, to = { id = 424, x = 2873.99, y = 4521.66, z = 185.85 }, isRetrace = False, name = Nothing }
+    , { from = { id = 424, x = 2873.99, y = 4521.66, z = 185.85 }, to = { id = 596, x = 2647.54, y = 4392.22, z = 171.60 }, isRetrace = False, name = Just "Greenbank Path" }
+    , { from = { id = 596, x = 2647.54, y = 4392.22, z = 171.60 }, to = { id = 592, x = 2513.14, y = 4259.60, z = 178.08 }, isRetrace = False, name = Just "Greenbank Path" }
+    , { from = { id = 592, x = 2513.14, y = 4259.60, z = 178.08 }, to = { id = 397, x = 2499.61, y = 4244.18, z = 177.43 }, isRetrace = False, name = Just "Greenbank Path" }
+    , { from = { id = 397, x = 2499.61, y = 4244.18, z = 177.43 }, to = { id = 592, x = 2513.14, y = 4259.60, z = 178.08 }, isRetrace = True, name = Just "Greenbank Path" }
+    , { from = { id = 592, x = 2513.14, y = 4259.60, z = 178.08 }, to = { id = 596, x = 2647.54, y = 4392.22, z = 171.60 }, isRetrace = True, name = Just "Greenbank Path" }
+    , { from = { id = 596, x = 2647.54, y = 4392.22, z = 171.60 }, to = { id = 428, x = 2655.31, y = 4566.19, z = 155.49 }, isRetrace = False, name = Just "Verdant Path" }
+    , { from = { id = 428, x = 2655.31, y = 4566.19, z = 155.49 }, to = { id = 445, x = 2707.89, y = 4562.49, z = 157.80 }, isRetrace = False, name = Just "Bay View Avenue" }
+    , { from = { id = 445, x = 2707.89, y = 4562.49, z = 157.80 }, to = { id = 444, x = 2657.87, y = 4735.79, z = 142.85 }, isRetrace = True, name = Nothing }
+    , { from = { id = 444, x = 2657.87, y = 4735.79, z = 142.85 }, to = { id = 603, x = 2391.81, y = 4681.39, z = 127.50 }, isRetrace = False, name = Just "Bay View Avenue" }
+    , { from = { id = 603, x = 2391.81, y = 4681.39, z = 127.50 }, to = { id = 600, x = 2429.98, y = 4545.23, z = 140.54 }, isRetrace = False, name = Just "Bay-View Path" }
+    , { from = { id = 600, x = 2429.98, y = 4545.23, z = 140.54 }, to = { id = 432, x = 2343.93, y = 4573.05, z = 133.60 }, isRetrace = False, name = Just "Battle Avenue" }
+    , { from = { id = 432, x = 2343.93, y = 4573.05, z = 133.60 }, to = { id = 600, x = 2429.98, y = 4545.23, z = 140.54 }, isRetrace = True, name = Just "Battle Avenue" }
+    , { from = { id = 600, x = 2429.98, y = 4545.23, z = 140.54 }, to = { id = 429, x = 2455.65, y = 4533.88, z = 145.11 }, isRetrace = False, name = Just "Battle Avenue" }
+    , { from = { id = 429, x = 2455.65, y = 4533.88, z = 145.11 }, to = { id = 428, x = 2655.31, y = 4566.19, z = 155.49 }, isRetrace = False, name = Nothing }
+    , { from = { id = 428, x = 2655.31, y = 4566.19, z = 155.49 }, to = { id = 429, x = 2455.65, y = 4533.88, z = 145.11 }, isRetrace = True, name = Nothing }
+    , { from = { id = 429, x = 2455.65, y = 4533.88, z = 145.11 }, to = { id = 594, x = 2426.54, y = 4281.77, z = 169.53 }, isRetrace = False, name = Just "Highland Avenue" }
+    , { from = { id = 594, x = 2426.54, y = 4281.77, z = 169.53 }, to = { id = 396, x = 2415.16, y = 4241.71, z = 170.46 }, isRetrace = False, name = Just "Highland Avenue" }
+    , { from = { id = 396, x = 2415.16, y = 4241.71, z = 170.46 }, to = { id = 397, x = 2499.61, y = 4244.18, z = 177.43 }, isRetrace = False, name = Just "Bayside Path" }
+    , { from = { id = 397, x = 2499.61, y = 4244.18, z = 177.43 }, to = { id = 393, x = 2580.85, y = 4224.53, z = 183.84 }, isRetrace = False, name = Nothing }
+    , { from = { id = 393, x = 2580.85, y = 4224.53, z = 183.84 }, to = { id = 420, x = 2905.56, y = 4473.25, z = 190.04 }, isRetrace = False, name = Nothing }
+    , { from = { id = 420, x = 2905.56, y = 4473.25, z = 190.04 }, to = { id = 417, x = 2952.14, y = 4465.01, z = 190.54 }, isRetrace = True, name = Nothing }
+    , { from = { id = 417, x = 2952.14, y = 4465.01, z = 190.54 }, to = { id = 414, x = 2960.95, y = 4439.63, z = 188.96 }, isRetrace = False, name = Nothing }
+    , { from = { id = 414, x = 2960.95, y = 4439.63, z = 188.96 }, to = { id = 384, x = 3042.37, y = 4097.94, z = 179.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 384, x = 3042.37, y = 4097.94, z = 179.79 }, to = { id = 414, x = 2960.95, y = 4439.63, z = 188.96 }, isRetrace = True, name = Nothing }
+    , { from = { id = 414, x = 2960.95, y = 4439.63, z = 188.96 }, to = { id = 387, x = 2735.32, y = 4147.12, z = 174.54 }, isRetrace = False, name = Just "Warrior Path" }
+    , { from = { id = 387, x = 2735.32, y = 4147.12, z = 174.54 }, to = { id = 386, x = 2822.27, y = 3904.71, z = 165.54 }, isRetrace = False, name = Nothing }
+    , { from = { id = 386, x = 2822.27, y = 3904.71, z = 165.54 }, to = { id = 369, x = 2883.03, y = 3895.65, z = 166.40 }, isRetrace = False, name = Just "Meadow Avenue" }
+    , { from = { id = 369, x = 2883.03, y = 3895.65, z = 166.40 }, to = { id = 384, x = 3042.37, y = 4097.94, z = 179.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 384, x = 3042.37, y = 4097.94, z = 179.79 }, to = { id = 381, x = 3365.76, y = 4178.49, z = 182.27 }, isRetrace = False, name = Just "Hemlock Avenue" }
+    , { from = { id = 381, x = 3365.76, y = 4178.49, z = 182.27 }, to = { id = 380, x = 3438.37, y = 3826.00, z = 169.11 }, isRetrace = False, name = Nothing }
+    , { from = { id = 380, x = 3438.37, y = 3826.00, z = 169.11 }, to = { id = 360, x = 3351.93, y = 3781.64, z = 168.34 }, isRetrace = False, name = Just "Meadow Avenue" }
+    , { from = { id = 360, x = 3351.93, y = 3781.64, z = 168.34 }, to = { id = 363, x = 3006.74, y = 3792.48, z = 174.00 }, isRetrace = False, name = Just "Sunny Path" }
+    , { from = { id = 363, x = 3006.74, y = 3792.48, z = 174.00 }, to = { id = 348, x = 3257.58, y = 3717.38, z = 171.38 }, isRetrace = False, name = Just "Atlantic Avenue" }
+    , { from = { id = 348, x = 3257.58, y = 3717.38, z = 171.38 }, to = { id = 363, x = 3006.74, y = 3792.48, z = 174.00 }, isRetrace = True, name = Just "Atlantic Avenue" }
+    , { from = { id = 363, x = 3006.74, y = 3792.48, z = 174.00 }, to = { id = 362, x = 2925.46, y = 3822.23, z = 170.24 }, isRetrace = False, name = Nothing }
+    , { from = { id = 362, x = 2925.46, y = 3822.23, z = 170.24 }, to = { id = 569, x = 2797.93, y = 3659.65, z = 167.52 }, isRetrace = False, name = Just "Twilight Path" }
+    , { from = { id = 569, x = 2797.93, y = 3659.65, z = 167.52 }, to = { id = 362, x = 2925.46, y = 3822.23, z = 170.24 }, isRetrace = True, name = Just "Twilight Path" }
+    , { from = { id = 362, x = 2925.46, y = 3822.23, z = 170.24 }, to = { id = 369, x = 2883.03, y = 3895.65, z = 166.40 }, isRetrace = False, name = Nothing }
+    , { from = { id = 369, x = 2883.03, y = 3895.65, z = 166.40 }, to = { id = 386, x = 2822.27, y = 3904.71, z = 165.54 }, isRetrace = True, name = Just "Meadow Avenue" }
+    , { from = { id = 386, x = 2822.27, y = 3904.71, z = 165.54 }, to = { id = 358, x = 2573.27, y = 3748.64, z = 146.26 }, isRetrace = False, name = Just "Greenborough Avenue" }
+    , { from = { id = 358, x = 2573.27, y = 3748.64, z = 146.26 }, to = { id = 359, x = 2568.99, y = 3766.23, z = 146.26 }, isRetrace = False, name = Nothing }
+    , { from = { id = 359, x = 2568.99, y = 3766.23, z = 146.26 }, to = { id = 373, x = 2429.54, y = 3955.94, z = 155.59 }, isRetrace = False, name = Just "Fern Avenue" }
+    , { from = { id = 373, x = 2429.54, y = 3955.94, z = 155.59 }, to = { id = 387, x = 2735.32, y = 4147.12, z = 174.54 }, isRetrace = False, name = Just "Hydrangea Path" }
+    , { from = { id = 387, x = 2735.32, y = 4147.12, z = 174.54 }, to = { id = 388, x = 2681.47, y = 4158.16, z = 178.24 }, isRetrace = False, name = Nothing }
+    , { from = { id = 388, x = 2681.47, y = 4158.16, z = 178.24 }, to = { id = 393, x = 2580.85, y = 4224.53, z = 183.84 }, isRetrace = False, name = Just "Atlantic Avenue" }
+    , { from = { id = 393, x = 2580.85, y = 4224.53, z = 183.84 }, to = { id = 391, x = 2280.49, y = 4076.53, z = 163.81 }, isRetrace = False, name = Nothing }
+    , { from = { id = 391, x = 2280.49, y = 4076.53, z = 163.81 }, to = { id = 379, x = 2275.94, y = 4038.55, z = 163.81 }, isRetrace = False, name = Just "Highland Avenue" }
+    , { from = { id = 379, x = 2275.94, y = 4038.55, z = 163.81 }, to = { id = 391, x = 2280.49, y = 4076.53, z = 163.81 }, isRetrace = True, name = Just "Highland Avenue" }
+    , { from = { id = 391, x = 2280.49, y = 4076.53, z = 163.81 }, to = { id = 390, x = 2387.76, y = 4219.19, z = 170.46 }, isRetrace = False, name = Nothing }
+    , { from = { id = 390, x = 2387.76, y = 4219.19, z = 170.46 }, to = { id = 396, x = 2415.16, y = 4241.71, z = 170.46 }, isRetrace = False, name = Nothing }
+    , { from = { id = 396, x = 2415.16, y = 4241.71, z = 170.46 }, to = { id = 593, x = 2279.93, y = 4266.65, z = 148.25 }, isRetrace = False, name = Just "Bayside Path" }
+    , { from = { id = 593, x = 2279.93, y = 4266.65, z = 148.25 }, to = { id = 406, x = 2265.45, y = 4296.48, z = 146.29 }, isRetrace = False, name = Just "Bay Side Avenue" }
+    , { from = { id = 406, x = 2265.45, y = 4296.48, z = 146.29 }, to = { id = 432, x = 2343.93, y = 4573.05, z = 133.60 }, isRetrace = False, name = Just "Syringa Path" }
+    , { from = { id = 432, x = 2343.93, y = 4573.05, z = 133.60 }, to = { id = 431, x = 2220.43, y = 4587.26, z = 123.29 }, isRetrace = False, name = Nothing }
+    , { from = { id = 431, x = 2220.43, y = 4587.26, z = 123.29 }, to = { id = 412, x = 2091.34, y = 4416.24, z = 131.07 }, isRetrace = False, name = Just "Bay Side Avenue" }
+    , { from = { id = 412, x = 2091.34, y = 4416.24, z = 131.07 }, to = { id = 431, x = 2220.43, y = 4587.26, z = 123.29 }, isRetrace = True, name = Just "Bay Side Avenue" }
+    , { from = { id = 431, x = 2220.43, y = 4587.26, z = 123.29 }, to = { id = 441, x = 2129.55, y = 4611.81, z = 115.26 }, isRetrace = False, name = Just "Battle Avenue" }
+    , { from = { id = 441, x = 2129.55, y = 4611.81, z = 115.26 }, to = { id = 602, x = 1995.22, y = 4667.54, z = 105.26 }, isRetrace = True, name = Just "Battle Avenue" }
+    , { from = { id = 602, x = 1995.22, y = 4667.54, z = 105.26 }, to = { id = 413, x = 1985.48, y = 4423.64, z = 129.23 }, isRetrace = False, name = Just "Arbor Avenue" }
+    , { from = { id = 413, x = 1985.48, y = 4423.64, z = 129.23 }, to = { id = 411, x = 1939.80, y = 4373.69, z = 130.99 }, isRetrace = False, name = Just "Bay Side Avenue" }
+    , { from = { id = 411, x = 1939.80, y = 4373.69, z = 130.99 }, to = { id = 413, x = 1985.48, y = 4423.64, z = 129.23 }, isRetrace = True, name = Just "Bay Side Avenue" }
+    , { from = { id = 413, x = 1985.48, y = 4423.64, z = 129.23 }, to = { id = 412, x = 2091.34, y = 4416.24, z = 131.07 }, isRetrace = False, name = Nothing }
+    , { from = { id = 412, x = 2091.34, y = 4416.24, z = 131.07 }, to = { id = 404, x = 2148.18, y = 4310.33, z = 138.53 }, isRetrace = False, name = Just "Bay Side Avenue" }
+    , { from = { id = 404, x = 2148.18, y = 4310.33, z = 138.53 }, to = { id = 406, x = 2265.45, y = 4296.48, z = 146.29 }, isRetrace = False, name = Nothing }
+    , { from = { id = 406, x = 2265.45, y = 4296.48, z = 146.29 }, to = { id = 593, x = 2279.93, y = 4266.65, z = 148.25 }, isRetrace = True, name = Just "Bay Side Avenue" }
+    , { from = { id = 593, x = 2279.93, y = 4266.65, z = 148.25 }, to = { id = 405, x = 2118.71, y = 4250.70, z = 144.07 }, isRetrace = False, name = Just "Bayside Path" }
+    , { from = { id = 405, x = 2118.71, y = 4250.70, z = 144.07 }, to = { id = 404, x = 2148.18, y = 4310.33, z = 138.53 }, isRetrace = False, name = Nothing }
+    , { from = { id = 404, x = 2148.18, y = 4310.33, z = 138.53 }, to = { id = 405, x = 2118.71, y = 4250.70, z = 144.07 }, isRetrace = True, name = Nothing }
+    , { from = { id = 405, x = 2118.71, y = 4250.70, z = 144.07 }, to = { id = 374, x = 2114.83, y = 4009.79, z = 157.35 }, isRetrace = False, name = Just "Bay-Grove Path" }
+    , { from = { id = 374, x = 2114.83, y = 4009.79, z = 157.35 }, to = { id = 579, x = 2014.35, y = 3875.45, z = 136.15 }, isRetrace = False, name = Just "Rue Path" }
+    , { from = { id = 579, x = 2014.35, y = 3875.45, z = 136.15 }, to = { id = 580, x = 2000.03, y = 3888.84, z = 136.88 }, isRetrace = False, name = Just "Berry Path" }
+    , { from = { id = 580, x = 2000.03, y = 3888.84, z = 136.88 }, to = { id = 579, x = 2014.35, y = 3875.45, z = 136.15 }, isRetrace = True, name = Just "Berry Path" }
+    , { from = { id = 579, x = 2014.35, y = 3875.45, z = 136.15 }, to = { id = 572, x = 2109.10, y = 3721.28, z = 140.11 }, isRetrace = False, name = Just "Berry Path" }
+    , { from = { id = 572, x = 2109.10, y = 3721.28, z = 140.11 }, to = { id = 571, x = 2036.93, y = 3678.41, z = 134.95 }, isRetrace = False, name = Just "Corvus Avenue" }
+    , { from = { id = 571, x = 2036.93, y = 3678.41, z = 134.95 }, to = { id = 572, x = 2109.10, y = 3721.28, z = 140.11 }, isRetrace = True, name = Just "Corvus Avenue" }
+    , { from = { id = 572, x = 2109.10, y = 3721.28, z = 140.11 }, to = { id = 353, x = 2175.38, y = 3732.85, z = 146.72 }, isRetrace = False, name = Just "Corvus Avenue" }
+    , { from = { id = 353, x = 2175.38, y = 3732.85, z = 146.72 }, to = { id = 352, x = 2284.03, y = 3713.68, z = 154.95 }, isRetrace = False, name = Nothing }
+    , { from = { id = 352, x = 2284.03, y = 3713.68, z = 154.95 }, to = { id = 353, x = 2175.38, y = 3732.85, z = 146.72 }, isRetrace = True, name = Nothing }
+    , { from = { id = 353, x = 2175.38, y = 3732.85, z = 146.72 }, to = { id = 341, x = 2233.64, y = 3589.30, z = 131.13 }, isRetrace = False, name = Just "Sycamore Avenue" }
+    , { from = { id = 341, x = 2233.64, y = 3589.30, z = 131.13 }, to = { id = 568, x = 2104.99, y = 3611.31, z = 132.45 }, isRetrace = False, name = Just "Sumac Path" }
+    , { from = { id = 568, x = 2104.99, y = 3611.31, z = 132.45 }, to = { id = 342, x = 2088.26, y = 3568.03, z = 124.66 }, isRetrace = False, name = Just "Sumac Path" }
+    , { from = { id = 342, x = 2088.26, y = 3568.03, z = 124.66 }, to = { id = 568, x = 2104.99, y = 3611.31, z = 132.45 }, isRetrace = True, name = Just "Sumac Path" }
+    , { from = { id = 568, x = 2104.99, y = 3611.31, z = 132.45 }, to = { id = 571, x = 2036.93, y = 3678.41, z = 134.95 }, isRetrace = False, name = Just "Sycamore Avenue" }
+    , { from = { id = 571, x = 2036.93, y = 3678.41, z = 134.95 }, to = { id = 576, x = 1967.84, y = 3805.05, z = 123.42 }, isRetrace = False, name = Just "Sycamore Avenue" }
+    , { from = { id = 576, x = 1967.84, y = 3805.05, z = 123.42 }, to = { id = 578, x = 1941.78, y = 3836.34, z = 123.44 }, isRetrace = False, name = Just "Blossom Path" }
+    , { from = { id = 578, x = 1941.78, y = 3836.34, z = 123.44 }, to = { id = 576, x = 1967.84, y = 3805.05, z = 123.42 }, isRetrace = True, name = Just "Blossom Path" }
+    , { from = { id = 576, x = 1967.84, y = 3805.05, z = 123.42 }, to = { id = 73, x = 1899.03, y = 3876.82, z = 118.62 }, isRetrace = False, name = Just "Blossom Path" }
+    , { from = { id = 73, x = 1899.03, y = 3876.82, z = 118.62 }, to = { id = 578, x = 1941.78, y = 3836.34, z = 123.44 }, isRetrace = False, name = Just "Sycamore Avenue" }
+    , { from = { id = 578, x = 1941.78, y = 3836.34, z = 123.44 }, to = { id = 580, x = 2000.03, y = 3888.84, z = 136.88 }, isRetrace = False, name = Just "Rue Path" }
+    , { from = { id = 580, x = 2000.03, y = 3888.84, z = 136.88 }, to = { id = 581, x = 1868.19, y = 3972.38, z = 117.07 }, isRetrace = False, name = Just "Berry Path" }
+    , { from = { id = 581, x = 1868.19, y = 3972.38, z = 117.07 }, to = { id = 72, x = 1838.56, y = 3941.94, z = 115.03 }, isRetrace = False, name = Just "Bay Side Avenue" }
+    , { from = { id = 72, x = 1838.56, y = 3941.94, z = 115.03 }, to = { id = 581, x = 1868.19, y = 3972.38, z = 117.07 }, isRetrace = True, name = Just "Bay Side Avenue" }
+    , { from = { id = 581, x = 1868.19, y = 3972.38, z = 117.07 }, to = { id = 589, x = 1951.34, y = 4134.62, z = 133.14 }, isRetrace = False, name = Just "Bay Side Avenue" }
+    , { from = { id = 589, x = 1951.34, y = 4134.62, z = 133.14 }, to = { id = 411, x = 1939.80, y = 4373.69, z = 130.99 }, isRetrace = False, name = Just "Artemisia Path" }
+    , { from = { id = 411, x = 1939.80, y = 4373.69, z = 130.99 }, to = { id = 408, x = 1907.93, y = 4357.32, z = 127.25 }, isRetrace = False, name = Nothing }
+    , { from = { id = 408, x = 1907.93, y = 4357.32, z = 127.25 }, to = { id = 419, x = 1868.02, y = 4465.58, z = 116.01 }, isRetrace = False, name = Just "Artemisia Path" }
+    , { from = { id = 419, x = 1868.02, y = 4465.58, z = 116.01 }, to = { id = 599, x = 1861.56, y = 4480.05, z = 116.01 }, isRetrace = False, name = Just "Artemisia Path" }
+    , { from = { id = 599, x = 1861.56, y = 4480.05, z = 116.01 }, to = { id = 419, x = 1868.02, y = 4465.58, z = 116.01 }, isRetrace = True, name = Just "Artemisia Path" }
+    , { from = { id = 419, x = 1868.02, y = 4465.58, z = 116.01 }, to = { id = 418, x = 1860.87, y = 4465.93, z = 116.01 }, isRetrace = False, name = Nothing }
+    , { from = { id = 418, x = 1860.87, y = 4465.93, z = 116.01 }, to = { id = 416, x = 1846.91, y = 4397.93, z = 100.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 416, x = 1846.91, y = 4397.93, z = 100.79 }, to = { id = 418, x = 1860.87, y = 4465.93, z = 116.01 }, isRetrace = True, name = Nothing }
+    , { from = { id = 418, x = 1860.87, y = 4465.93, z = 116.01 }, to = { id = 599, x = 1861.56, y = 4480.05, z = 116.01 }, isRetrace = False, name = Just "Artemisia Path" }
+    , { from = { id = 599, x = 1861.56, y = 4480.05, z = 116.01 }, to = { id = 94, x = 1841.34, y = 4738.31, z = 93.60 }, isRetrace = False, name = Just "Artemisia Path" }
+    , { from = { id = 94, x = 1841.34, y = 4738.31, z = 93.60 }, to = { id = 93, x = 1822.41, y = 4824.18, z = 130.41 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 93, x = 1822.41, y = 4824.18, z = 130.41 }, to = { id = 95, x = 1566.94, y = 5129.51, z = 67.01 }, isRetrace = False, name = Nothing }
+    , { from = { id = 95, x = 1566.94, y = 5129.51, z = 67.01 }, to = { id = 90, x = 1464.77, y = 4806.33, z = 80.08 }, isRetrace = False, name = Just "Magnolia Avenue" }
+    , { from = { id = 90, x = 1464.77, y = 4806.33, z = 80.08 }, to = { id = 440, x = 1648.70, y = 4634.83, z = 86.03 }, isRetrace = False, name = Nothing }
+    , { from = { id = 440, x = 1648.70, y = 4634.83, z = 86.03 }, to = { id = 436, x = 1682.38, y = 4603.57, z = 82.30 }, isRetrace = False, name = Nothing }
+    , { from = { id = 436, x = 1682.38, y = 4603.57, z = 82.30 }, to = { id = 435, x = 1705.06, y = 4584.93, z = 82.30 }, isRetrace = False, name = Nothing }
+    , { from = { id = 435, x = 1705.06, y = 4584.93, z = 82.30 }, to = { id = 415, x = 1704.30, y = 4449.22, z = 79.87 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 415, x = 1704.30, y = 4449.22, z = 79.87 }, to = { id = 435, x = 1705.06, y = 4584.93, z = 82.30 }, isRetrace = True, name = Just "Landscape Avenue" }
+    , { from = { id = 435, x = 1705.06, y = 4584.93, z = 82.30 }, to = { id = 433, x = 1674.68, y = 4589.07, z = 82.30 }, isRetrace = False, name = Nothing }
+    , { from = { id = 433, x = 1674.68, y = 4589.07, z = 82.30 }, to = { id = 436, x = 1682.38, y = 4603.57, z = 82.30 }, isRetrace = False, name = Nothing }
+    , { from = { id = 436, x = 1682.38, y = 4603.57, z = 82.30 }, to = { id = 92, x = 1725.68, y = 4675.07, z = 86.52 }, isRetrace = False, name = Nothing }
+    , { from = { id = 92, x = 1725.68, y = 4675.07, z = 86.52 }, to = { id = 440, x = 1648.70, y = 4634.83, z = 86.03 }, isRetrace = False, name = Nothing }
+    , { from = { id = 440, x = 1648.70, y = 4634.83, z = 86.03 }, to = { id = 86, x = 1539.18, y = 4630.57, z = 87.53 }, isRetrace = False, name = Nothing }
+    , { from = { id = 86, x = 1539.18, y = 4630.57, z = 87.53 }, to = { id = 443, x = 1405.68, y = 4627.82, z = 86.04 }, isRetrace = False, name = Nothing }
+    , { from = { id = 443, x = 1405.68, y = 4627.82, z = 86.04 }, to = { id = 86, x = 1539.18, y = 4630.57, z = 87.53 }, isRetrace = True, name = Nothing }
+    , { from = { id = 86, x = 1539.18, y = 4630.57, z = 87.53 }, to = { id = 87, x = 1518.68, y = 4584.82, z = 87.89 }, isRetrace = False, name = Nothing }
+    , { from = { id = 87, x = 1518.68, y = 4584.82, z = 87.89 }, to = { id = 86, x = 1539.18, y = 4630.57, z = 87.53 }, isRetrace = True, name = Nothing }
+    , { from = { id = 86, x = 1539.18, y = 4630.57, z = 87.53 }, to = { id = 440, x = 1648.70, y = 4634.83, z = 86.03 }, isRetrace = True, name = Nothing }
+    , { from = { id = 440, x = 1648.70, y = 4634.83, z = 86.03 }, to = { id = 92, x = 1725.68, y = 4675.07, z = 86.52 }, isRetrace = True, name = Nothing }
+    , { from = { id = 92, x = 1725.68, y = 4675.07, z = 86.52 }, to = { id = 93, x = 1822.41, y = 4824.18, z = 130.41 }, isRetrace = False, name = Nothing }
+    , { from = { id = 93, x = 1822.41, y = 4824.18, z = 130.41 }, to = { id = 94, x = 1841.34, y = 4738.31, z = 93.60 }, isRetrace = True, name = Just "Landscape Avenue" }
+    , { from = { id = 94, x = 1841.34, y = 4738.31, z = 93.60 }, to = { id = 435, x = 1705.06, y = 4584.93, z = 82.30 }, isRetrace = False, name = Nothing }
+    , { from = { id = 435, x = 1705.06, y = 4584.93, z = 82.30 }, to = { id = 433, x = 1674.68, y = 4589.07, z = 82.30 }, isRetrace = True, name = Nothing }
+    , { from = { id = 433, x = 1674.68, y = 4589.07, z = 82.30 }, to = { id = 434, x = 1547.93, y = 4331.32, z = 79.60 }, isRetrace = False, name = Nothing }
+    , { from = { id = 434, x = 1547.93, y = 4331.32, z = 79.60 }, to = { id = 597, x = 1578.18, y = 4453.07, z = 87.62 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 597, x = 1578.18, y = 4453.07, z = 87.62 }, to = { id = 434, x = 1547.93, y = 4331.32, z = 79.60 }, isRetrace = True, name = Just "Landscape Avenue" }
+    , { from = { id = 434, x = 1547.93, y = 4331.32, z = 79.60 }, to = { id = 584, x = 1500.12, y = 4015.56, z = 74.55 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 584, x = 1500.12, y = 4015.56, z = 74.55 }, to = { id = 583, x = 1520.01, y = 4005.69, z = 75.42 }, isRetrace = False, name = Just "Waterside Path" }
+    , { from = { id = 583, x = 1520.01, y = 4005.69, z = 75.42 }, to = { id = 399, x = 1550.85, y = 4082.54, z = 75.49 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 399, x = 1550.85, y = 4082.54, z = 75.49 }, to = { id = 415, x = 1704.30, y = 4449.22, z = 79.87 }, isRetrace = False, name = Just "Willow Avenue" }
+    , { from = { id = 415, x = 1704.30, y = 4449.22, z = 79.87 }, to = { id = 410, x = 1726.93, y = 4359.62, z = 82.29 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 410, x = 1726.93, y = 4359.62, z = 82.29 }, to = { id = 415, x = 1704.30, y = 4449.22, z = 79.87 }, isRetrace = True, name = Just "Landscape Avenue" }
+    , { from = { id = 415, x = 1704.30, y = 4449.22, z = 79.87 }, to = { id = 416, x = 1846.91, y = 4397.93, z = 100.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 416, x = 1846.91, y = 4397.93, z = 100.79 }, to = { id = 409, x = 1876.96, y = 4347.24, z = 113.02 }, isRetrace = False, name = Just "Sweet-Gum Path" }
+    , { from = { id = 409, x = 1876.96, y = 4347.24, z = 113.02 }, to = { id = 408, x = 1907.93, y = 4357.32, z = 127.25 }, isRetrace = False, name = Nothing }
+    , { from = { id = 408, x = 1907.93, y = 4357.32, z = 127.25 }, to = { id = 409, x = 1876.96, y = 4347.24, z = 113.02 }, isRetrace = True, name = Nothing }
+    , { from = { id = 409, x = 1876.96, y = 4347.24, z = 113.02 }, to = { id = 589, x = 1951.34, y = 4134.62, z = 133.14 }, isRetrace = False, name = Just "Sweet-Gum Path" }
+    , { from = { id = 589, x = 1951.34, y = 4134.62, z = 133.14 }, to = { id = 374, x = 2114.83, y = 4009.79, z = 157.35 }, isRetrace = False, name = Just "Fern Path" }
+    , { from = { id = 374, x = 2114.83, y = 4009.79, z = 157.35 }, to = { id = 375, x = 2213.50, y = 3997.32, z = 161.99 }, isRetrace = False, name = Nothing }
+    , { from = { id = 375, x = 2213.50, y = 3997.32, z = 161.99 }, to = { id = 76, x = 2227.85, y = 3870.60, z = 164.13 }, isRetrace = False, name = Just "Highland Avenue" }
+    , { from = { id = 76, x = 2227.85, y = 3870.60, z = 164.13 }, to = { id = 375, x = 2213.50, y = 3997.32, z = 161.99 }, isRetrace = True, name = Just "Highland Avenue" }
+    , { from = { id = 375, x = 2213.50, y = 3997.32, z = 161.99 }, to = { id = 379, x = 2275.94, y = 4038.55, z = 163.81 }, isRetrace = False, name = Nothing }
+    , { from = { id = 379, x = 2275.94, y = 4038.55, z = 163.81 }, to = { id = 77, x = 2363.11, y = 3973.22, z = 158.26 }, isRetrace = False, name = Just "Fern Avenue" }
+    , { from = { id = 77, x = 2363.11, y = 3973.22, z = 158.26 }, to = { id = 373, x = 2429.54, y = 3955.94, z = 155.59 }, isRetrace = False, name = Nothing }
+    , { from = { id = 373, x = 2429.54, y = 3955.94, z = 155.59 }, to = { id = 77, x = 2363.11, y = 3973.22, z = 158.26 }, isRetrace = True, name = Nothing }
+    , { from = { id = 77, x = 2363.11, y = 3973.22, z = 158.26 }, to = { id = 76, x = 2227.85, y = 3870.60, z = 164.13 }, isRetrace = False, name = Just "Chestnut Path" }
+    , { from = { id = 76, x = 2227.85, y = 3870.60, z = 164.13 }, to = { id = 352, x = 2284.03, y = 3713.68, z = 154.95 }, isRetrace = False, name = Nothing }
+    , { from = { id = 352, x = 2284.03, y = 3713.68, z = 154.95 }, to = { id = 359, x = 2568.99, y = 3766.23, z = 146.26 }, isRetrace = False, name = Just "Corvus Avenue" }
+    , { from = { id = 359, x = 2568.99, y = 3766.23, z = 146.26 }, to = { id = 358, x = 2573.27, y = 3748.64, z = 146.26 }, isRetrace = True, name = Nothing }
+    , { from = { id = 358, x = 2573.27, y = 3748.64, z = 146.26 }, to = { id = 357, x = 2504.64, y = 3604.29, z = 139.23 }, isRetrace = False, name = Nothing }
+    , { from = { id = 357, x = 2504.64, y = 3604.29, z = 139.23 }, to = { id = 340, x = 2399.87, y = 3534.67, z = 134.66 }, isRetrace = False, name = Just "Greenborough Avenue" }
+    , { from = { id = 340, x = 2399.87, y = 3534.67, z = 134.66 }, to = { id = 357, x = 2504.64, y = 3604.29, z = 139.23 }, isRetrace = True, name = Just "Greenborough Avenue" }
+    , { from = { id = 357, x = 2504.64, y = 3604.29, z = 139.23 }, to = { id = 67, x = 2648.12, y = 3499.35, z = 150.23 }, isRetrace = False, name = Just "Pine Avenue" }
+    , { from = { id = 67, x = 2648.12, y = 3499.35, z = 150.23 }, to = { id = 327, x = 2756.42, y = 3339.50, z = 147.53 }, isRetrace = False, name = Just "Pine Avenue" }
+    , { from = { id = 327, x = 2756.42, y = 3339.50, z = 147.53 }, to = { id = 53, x = 2634.39, y = 3327.00, z = 146.53 }, isRetrace = False, name = Nothing }
+    , { from = { id = 53, x = 2634.39, y = 3327.00, z = 146.53 }, to = { id = 326, x = 2541.05, y = 3330.88, z = 147.13 }, isRetrace = False, name = Nothing }
+    , { from = { id = 326, x = 2541.05, y = 3330.88, z = 147.13 }, to = { id = 340, x = 2399.87, y = 3534.67, z = 134.66 }, isRetrace = False, name = Just "Sycamore Avenue" }
+    , { from = { id = 340, x = 2399.87, y = 3534.67, z = 134.66 }, to = { id = 339, x = 2313.00, y = 3544.93, z = 131.95 }, isRetrace = False, name = Nothing }
+    , { from = { id = 339, x = 2313.00, y = 3544.93, z = 131.95 }, to = { id = 65, x = 2194.37, y = 3448.99, z = 122.66 }, isRetrace = False, name = Nothing }
+    , { from = { id = 65, x = 2194.37, y = 3448.99, z = 122.66 }, to = { id = 339, x = 2313.00, y = 3544.93, z = 131.95 }, isRetrace = True, name = Nothing }
+    , { from = { id = 339, x = 2313.00, y = 3544.93, z = 131.95 }, to = { id = 341, x = 2233.64, y = 3589.30, z = 131.13 }, isRetrace = False, name = Just "Sumac Path" }
+    , { from = { id = 341, x = 2233.64, y = 3589.30, z = 131.13 }, to = { id = 342, x = 2088.26, y = 3568.03, z = 124.66 }, isRetrace = False, name = Nothing }
+    , { from = { id = 342, x = 2088.26, y = 3568.03, z = 124.66 }, to = { id = 566, x = 1781.76, y = 3670.91, z = 107.34 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 566, x = 1781.76, y = 3670.91, z = 107.34 }, to = { id = 350, x = 1739.77, y = 3706.61, z = 102.93 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 350, x = 1739.77, y = 3706.61, z = 102.93 }, to = { id = 575, x = 1523.77, y = 3796.81, z = 84.24 }, isRetrace = False, name = Just "Vale Path" }
+    , { from = { id = 575, x = 1523.77, y = 3796.81, z = 84.24 }, to = { id = 372, x = 1650.75, y = 3905.44, z = 96.12 }, isRetrace = False, name = Just "Strawberry Path" }
+    , { from = { id = 372, x = 1650.75, y = 3905.44, z = 96.12 }, to = { id = 582, x = 1534.84, y = 3978.02, z = 75.42 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 582, x = 1534.84, y = 3978.02, z = 75.42 }, to = { id = 378, x = 1576.75, y = 4034.27, z = 75.42 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 378, x = 1576.75, y = 4034.27, z = 75.42 }, to = { id = 582, x = 1534.84, y = 3978.02, z = 75.42 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 582, x = 1534.84, y = 3978.02, z = 75.42 }, to = { id = 378, x = 1576.75, y = 4034.27, z = 75.42 }, isRetrace = True, name = Just "Lake Avenue" }
+    , { from = { id = 378, x = 1576.75, y = 4034.27, z = 75.42 }, to = { id = 370, x = 1689.73, y = 3904.64, z = 99.80 }, isRetrace = False, name = Nothing }
+    , { from = { id = 370, x = 1689.73, y = 3904.64, z = 99.80 }, to = { id = 74, x = 1786.38, y = 3914.55, z = 109.75 }, isRetrace = False, name = Just "Bud Path" }
+    , { from = { id = 74, x = 1786.38, y = 3914.55, z = 109.75 }, to = { id = 370, x = 1689.73, y = 3904.64, z = 99.80 }, isRetrace = True, name = Just "Bud Path" }
+    , { from = { id = 370, x = 1689.73, y = 3904.64, z = 99.80 }, to = { id = 371, x = 1770.04, y = 3810.91, z = 104.80 }, isRetrace = False, name = Nothing }
+    , { from = { id = 371, x = 1770.04, y = 3810.91, z = 104.80 }, to = { id = 351, x = 1744.04, y = 3724.10, z = 102.93 }, isRetrace = False, name = Just "Bay-Side Avenue" }
+    , { from = { id = 351, x = 1744.04, y = 3724.10, z = 102.93 }, to = { id = 372, x = 1650.75, y = 3905.44, z = 96.12 }, isRetrace = False, name = Nothing }
+    , { from = { id = 372, x = 1650.75, y = 3905.44, z = 96.12 }, to = { id = 575, x = 1523.77, y = 3796.81, z = 84.24 }, isRetrace = True, name = Just "Strawberry Path" }
+    , { from = { id = 575, x = 1523.77, y = 3796.81, z = 84.24 }, to = { id = 361, x = 1470.78, y = 3821.56, z = 78.00 }, isRetrace = False, name = Just "Vale Path" }
+    , { from = { id = 361, x = 1470.78, y = 3821.56, z = 78.00 }, to = { id = 575, x = 1523.77, y = 3796.81, z = 84.24 }, isRetrace = True, name = Just "Vale Path" }
+    , { from = { id = 575, x = 1523.77, y = 3796.81, z = 84.24 }, to = { id = 337, x = 1884.46, y = 3454.20, z = 129.31 }, isRetrace = False, name = Just "Vale Path" }
+    , { from = { id = 337, x = 1884.46, y = 3454.20, z = 129.31 }, to = { id = 563, x = 1806.58, y = 3397.92, z = 134.28 }, isRetrace = False, name = Just "Myrtle Path" }
+    , { from = { id = 563, x = 1806.58, y = 3397.92, z = 134.28 }, to = { id = 337, x = 1884.46, y = 3454.20, z = 129.31 }, isRetrace = True, name = Just "Myrtle Path" }
+    , { from = { id = 337, x = 1884.46, y = 3454.20, z = 129.31 }, to = { id = 56, x = 2017.52, y = 3425.29, z = 126.53 }, isRetrace = False, name = Nothing }
+    , { from = { id = 56, x = 2017.52, y = 3425.29, z = 126.53 }, to = { id = 64, x = 2053.53, y = 3517.05, z = 116.41 }, isRetrace = False, name = Just "Myrtle Path" }
+    , { from = { id = 64, x = 2053.53, y = 3517.05, z = 116.41 }, to = { id = 65, x = 2194.37, y = 3448.99, z = 122.66 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 65, x = 2194.37, y = 3448.99, z = 122.66 }, to = { id = 332, x = 2221.58, y = 3384.12, z = 127.22 }, isRetrace = False, name = Nothing }
+    , { from = { id = 332, x = 2221.58, y = 3384.12, z = 127.22 }, to = { id = 51, x = 2381.68, y = 3309.39, z = 138.66 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 51, x = 2381.68, y = 3309.39, z = 138.66 }, to = { id = 332, x = 2221.58, y = 3384.12, z = 127.22 }, isRetrace = True, name = Just "Central Avenue" }
+    , { from = { id = 332, x = 2221.58, y = 3384.12, z = 127.22 }, to = { id = 325, x = 2159.64, y = 3313.18, z = 139.39 }, isRetrace = False, name = Nothing }
+    , { from = { id = 325, x = 2159.64, y = 3313.18, z = 139.39 }, to = { id = 324, x = 2152.76, y = 3138.92, z = 131.32 }, isRetrace = False, name = Nothing }
+    , { from = { id = 324, x = 2152.76, y = 3138.92, z = 131.32 }, to = { id = 300, x = 2199.15, y = 3065.62, z = 126.80 }, isRetrace = False, name = Just "Myrtle Path" }
+    , { from = { id = 300, x = 2199.15, y = 3065.62, z = 126.80 }, to = { id = 324, x = 2152.76, y = 3138.92, z = 131.32 }, isRetrace = True, name = Just "Myrtle Path" }
+    , { from = { id = 324, x = 2152.76, y = 3138.92, z = 131.32 }, to = { id = 531, x = 2057.31, y = 3109.93, z = 126.34 }, isRetrace = False, name = Just "Crocus Path" }
+    , { from = { id = 531, x = 2057.31, y = 3109.93, z = 126.34 }, to = { id = 548, x = 2049.68, y = 3039.81, z = 121.52 }, isRetrace = False, name = Just "Crocus Path" }
+    , { from = { id = 548, x = 2049.68, y = 3039.81, z = 121.52 }, to = { id = 531, x = 2057.31, y = 3109.93, z = 126.34 }, isRetrace = True, name = Just "Crocus Path" }
+    , { from = { id = 531, x = 2057.31, y = 3109.93, z = 126.34 }, to = { id = 309, x = 1941.44, y = 3113.35, z = 115.61 }, isRetrace = False, name = Just "Crocus Path" }
+    , { from = { id = 309, x = 1941.44, y = 3113.35, z = 115.61 }, to = { id = 304, x = 1940.10, y = 3097.77, z = 113.66 }, isRetrace = False, name = Nothing }
+    , { from = { id = 304, x = 1940.10, y = 3097.77, z = 113.66 }, to = { id = 309, x = 1941.44, y = 3113.35, z = 115.61 }, isRetrace = True, name = Nothing }
+    , { from = { id = 309, x = 1941.44, y = 3113.35, z = 115.61 }, to = { id = 317, x = 1933.42, y = 3184.94, z = 117.51 }, isRetrace = False, name = Nothing }
+    , { from = { id = 317, x = 1933.42, y = 3184.94, z = 117.51 }, to = { id = 559, x = 2023.81, y = 3296.30, z = 133.44 }, isRetrace = False, name = Just "Cypress Path" }
+    , { from = { id = 559, x = 2023.81, y = 3296.30, z = 133.44 }, to = { id = 317, x = 1933.42, y = 3184.94, z = 117.51 }, isRetrace = True, name = Just "Cypress Path" }
+    , { from = { id = 317, x = 1933.42, y = 3184.94, z = 117.51 }, to = { id = 50, x = 1849.44, y = 3260.20, z = 119.78 }, isRetrace = False, name = Just "Lawn Avenue" }
+    , { from = { id = 50, x = 1849.44, y = 3260.20, z = 119.78 }, to = { id = 559, x = 2023.81, y = 3296.30, z = 133.44 }, isRetrace = False, name = Just "Laurel Path" }
+    , { from = { id = 559, x = 2023.81, y = 3296.30, z = 133.44 }, to = { id = 55, x = 2131.35, y = 3330.72, z = 136.22 }, isRetrace = False, name = Just "Cypress Path" }
+    , { from = { id = 55, x = 2131.35, y = 3330.72, z = 136.22 }, to = { id = 325, x = 2159.64, y = 3313.18, z = 139.39 }, isRetrace = False, name = Just "Vale Path" }
+    , { from = { id = 325, x = 2159.64, y = 3313.18, z = 139.39 }, to = { id = 55, x = 2131.35, y = 3330.72, z = 136.22 }, isRetrace = True, name = Just "Vale Path" }
+    , { from = { id = 55, x = 2131.35, y = 3330.72, z = 136.22 }, to = { id = 56, x = 2017.52, y = 3425.29, z = 126.53 }, isRetrace = False, name = Just "Vale Path" }
+    , { from = { id = 56, x = 2017.52, y = 3425.29, z = 126.53 }, to = { id = 64, x = 2053.53, y = 3517.05, z = 116.41 }, isRetrace = True, name = Just "Myrtle Path" }
+    , { from = { id = 64, x = 2053.53, y = 3517.05, z = 116.41 }, to = { id = 566, x = 1781.76, y = 3670.91, z = 107.34 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 566, x = 1781.76, y = 3670.91, z = 107.34 }, to = { id = 350, x = 1739.77, y = 3706.61, z = 102.93 }, isRetrace = True, name = Just "Central Avenue" }
+    , { from = { id = 350, x = 1739.77, y = 3706.61, z = 102.93 }, to = { id = 351, x = 1744.04, y = 3724.10, z = 102.93 }, isRetrace = False, name = Nothing }
+    , { from = { id = 351, x = 1744.04, y = 3724.10, z = 102.93 }, to = { id = 371, x = 1770.04, y = 3810.91, z = 104.80 }, isRetrace = True, name = Just "Bay-Side Avenue" }
+    , { from = { id = 371, x = 1770.04, y = 3810.91, z = 104.80 }, to = { id = 74, x = 1786.38, y = 3914.55, z = 109.75 }, isRetrace = False, name = Just "Bay-Side Avenue" }
+    , { from = { id = 74, x = 1786.38, y = 3914.55, z = 109.75 }, to = { id = 75, x = 1789.15, y = 3948.91, z = 111.01 }, isRetrace = False, name = Just "Bay-Side Avenue" }
+    , { from = { id = 75, x = 1789.15, y = 3948.91, z = 111.01 }, to = { id = 72, x = 1838.56, y = 3941.94, z = 115.03 }, isRetrace = False, name = Nothing }
+    , { from = { id = 72, x = 1838.56, y = 3941.94, z = 115.03 }, to = { id = 73, x = 1899.03, y = 3876.82, z = 118.62 }, isRetrace = False, name = Just "Blossom Path" }
+    , { from = { id = 73, x = 1899.03, y = 3876.82, z = 118.62 }, to = { id = 72, x = 1838.56, y = 3941.94, z = 115.03 }, isRetrace = True, name = Just "Blossom Path" }
+    , { from = { id = 72, x = 1838.56, y = 3941.94, z = 115.03 }, to = { id = 75, x = 1789.15, y = 3948.91, z = 111.01 }, isRetrace = True, name = Nothing }
+    , { from = { id = 75, x = 1789.15, y = 3948.91, z = 111.01 }, to = { id = 410, x = 1726.93, y = 4359.62, z = 82.29 }, isRetrace = False, name = Nothing }
+    , { from = { id = 410, x = 1726.93, y = 4359.62, z = 82.29 }, to = { id = 398, x = 1735.90, y = 4256.84, z = 73.35 }, isRetrace = False, name = Nothing }
+    , { from = { id = 398, x = 1735.90, y = 4256.84, z = 73.35 }, to = { id = 400, x = 1723.92, y = 4260.44, z = 73.35 }, isRetrace = False, name = Nothing }
+    , { from = { id = 400, x = 1723.92, y = 4260.44, z = 73.35 }, to = { id = 401, x = 1722.19, y = 4266.18, z = 73.35 }, isRetrace = False, name = Nothing }
+    , { from = { id = 401, x = 1722.19, y = 4266.18, z = 73.35 }, to = { id = 400, x = 1723.92, y = 4260.44, z = 73.35 }, isRetrace = False, name = Nothing }
+    , { from = { id = 400, x = 1723.92, y = 4260.44, z = 73.35 }, to = { id = 398, x = 1735.90, y = 4256.84, z = 73.35 }, isRetrace = True, name = Nothing }
+    , { from = { id = 398, x = 1735.90, y = 4256.84, z = 73.35 }, to = { id = 399, x = 1550.85, y = 4082.54, z = 75.49 }, isRetrace = False, name = Nothing }
+    , { from = { id = 399, x = 1550.85, y = 4082.54, z = 75.49 }, to = { id = 583, x = 1520.01, y = 4005.69, z = 75.42 }, isRetrace = True, name = Just "Landscape Avenue" }
+    , { from = { id = 583, x = 1520.01, y = 4005.69, z = 75.42 }, to = { id = 368, x = 1444.47, y = 3857.42, z = 78.00 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 368, x = 1444.47, y = 3857.42, z = 78.00 }, to = { id = 364, x = 1429.43, y = 3835.00, z = 78.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 364, x = 1429.43, y = 3835.00, z = 78.00 }, to = { id = 368, x = 1444.47, y = 3857.42, z = 78.00 }, isRetrace = True, name = Nothing }
+    , { from = { id = 368, x = 1444.47, y = 3857.42, z = 78.00 }, to = { id = 361, x = 1470.78, y = 3821.56, z = 78.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 361, x = 1470.78, y = 3821.56, z = 78.00 }, to = { id = 355, x = 1420.15, y = 3738.72, z = 87.32 }, isRetrace = False, name = Nothing }
+    , { from = { id = 355, x = 1420.15, y = 3738.72, z = 87.32 }, to = { id = 361, x = 1470.78, y = 3821.56, z = 78.00 }, isRetrace = True, name = Nothing }
+    , { from = { id = 361, x = 1470.78, y = 3821.56, z = 78.00 }, to = { id = 364, x = 1429.43, y = 3835.00, z = 78.00 }, isRetrace = False, name = Just "Walnut Avenue" }
+    , { from = { id = 364, x = 1429.43, y = 3835.00, z = 78.00 }, to = { id = 365, x = 1204.68, y = 3794.69, z = 72.89 }, isRetrace = False, name = Nothing }
+    , { from = { id = 365, x = 1204.68, y = 3794.69, z = 72.89 }, to = { id = 574, x = 1161.16, y = 3794.65, z = 72.89 }, isRetrace = False, name = Just "Walnut Avenue" }
+    , { from = { id = 574, x = 1161.16, y = 3794.65, z = 72.89 }, to = { id = 349, x = 1167.68, y = 3724.07, z = 83.08 }, isRetrace = False, name = Just "Dew Path" }
+    , { from = { id = 349, x = 1167.68, y = 3724.07, z = 83.08 }, to = { id = 356, x = 1204.36, y = 3745.15, z = 85.95 }, isRetrace = False, name = Nothing }
+    , { from = { id = 356, x = 1204.36, y = 3745.15, z = 85.95 }, to = { id = 349, x = 1167.68, y = 3724.07, z = 83.08 }, isRetrace = True, name = Nothing }
+    , { from = { id = 349, x = 1167.68, y = 3724.07, z = 83.08 }, to = { id = 347, x = 1182.92, y = 3691.50, z = 92.81 }, isRetrace = False, name = Just "Dew Path" }
+    , { from = { id = 347, x = 1182.92, y = 3691.50, z = 92.81 }, to = { id = 349, x = 1167.68, y = 3724.07, z = 83.08 }, isRetrace = True, name = Just "Dew Path" }
+    , { from = { id = 349, x = 1167.68, y = 3724.07, z = 83.08 }, to = { id = 574, x = 1161.16, y = 3794.65, z = 72.89 }, isRetrace = True, name = Just "Dew Path" }
+    , { from = { id = 574, x = 1161.16, y = 3794.65, z = 72.89 }, to = { id = 376, x = 982.56, y = 3852.69, z = 79.33 }, isRetrace = False, name = Just "Walnut Avenue" }
+    , { from = { id = 376, x = 982.56, y = 3852.69, z = 79.33 }, to = { id = 377, x = 907.54, y = 4027.20, z = 65.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 377, x = 907.54, y = 4027.20, z = 65.79 }, to = { id = 81, x = 887.74, y = 4036.24, z = 65.31 }, isRetrace = False, name = Just "Walnut Avenue" }
+    , { from = { id = 81, x = 887.74, y = 4036.24, z = 65.31 }, to = { id = 377, x = 907.54, y = 4027.20, z = 65.79 }, isRetrace = True, name = Just "Walnut Avenue" }
+    , { from = { id = 377, x = 907.54, y = 4027.20, z = 65.79 }, to = { id = 585, x = 1056.09, y = 4022.68, z = 67.70 }, isRetrace = False, name = Just "Walnut Avenue" }
+    , { from = { id = 585, x = 1056.09, y = 4022.68, z = 67.70 }, to = { id = 383, x = 1227.87, y = 4056.49, z = 72.21 }, isRetrace = False, name = Just "Waterside Path" }
+    , { from = { id = 383, x = 1227.87, y = 4056.49, z = 72.21 }, to = { id = 394, x = 1029.22, y = 4227.80, z = 66.66 }, isRetrace = False, name = Just "Mimosa Path" }
+    , { from = { id = 394, x = 1029.22, y = 4227.80, z = 66.66 }, to = { id = 80, x = 963.29, y = 4202.27, z = 64.93 }, isRetrace = False, name = Nothing }
+    , { from = { id = 80, x = 963.29, y = 4202.27, z = 64.93 }, to = { id = 394, x = 1029.22, y = 4227.80, z = 66.66 }, isRetrace = True, name = Nothing }
+    , { from = { id = 394, x = 1029.22, y = 4227.80, z = 66.66 }, to = { id = 403, x = 963.84, y = 4292.94, z = 67.78 }, isRetrace = False, name = Just "Mimosa Path" }
+    , { from = { id = 403, x = 963.84, y = 4292.94, z = 67.78 }, to = { id = 91, x = 1181.52, y = 4535.36, z = 78.32 }, isRetrace = False, name = Just "Margin Path" }
+    , { from = { id = 91, x = 1181.52, y = 4535.36, z = 78.32 }, to = { id = 403, x = 963.84, y = 4292.94, z = 67.78 }, isRetrace = True, name = Just "Margin Path" }
+    , { from = { id = 403, x = 963.84, y = 4292.94, z = 67.78 }, to = { id = 80, x = 963.29, y = 4202.27, z = 64.93 }, isRetrace = False, name = Nothing }
+    , { from = { id = 80, x = 963.29, y = 4202.27, z = 64.93 }, to = { id = 81, x = 887.74, y = 4036.24, z = 65.31 }, isRetrace = False, name = Just "Margin Path" }
+    , { from = { id = 81, x = 887.74, y = 4036.24, z = 65.31 }, to = { id = 586, x = 838.28, y = 4055.08, z = 66.43 }, isRetrace = False, name = Just "Walnut Avenue" }
+    , { from = { id = 586, x = 838.28, y = 4055.08, z = 66.43 }, to = { id = 240, x = 753.35, y = 3917.48, z = 71.37 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 240, x = 753.35, y = 3917.48, z = 71.37 }, to = { id = 577, x = 878.18, y = 3824.57, z = 79.06 }, isRetrace = False, name = Just "Sunset Path" }
+    , { from = { id = 577, x = 878.18, y = 3824.57, z = 79.06 }, to = { id = 240, x = 753.35, y = 3917.48, z = 71.37 }, isRetrace = True, name = Just "Sunset Path" }
+    , { from = { id = 240, x = 753.35, y = 3917.48, z = 71.37 }, to = { id = 239, x = 694.68, y = 3678.07, z = 39.90 }, isRetrace = False, name = Nothing }
+    , { from = { id = 239, x = 694.68, y = 3678.07, z = 39.90 }, to = { id = 240, x = 753.35, y = 3917.48, z = 71.37 }, isRetrace = False, name = Nothing }
+    , { from = { id = 240, x = 753.35, y = 3917.48, z = 71.37 }, to = { id = 586, x = 838.28, y = 4055.08, z = 66.43 }, isRetrace = True, name = Just "Lake Avenue" }
+    , { from = { id = 586, x = 838.28, y = 4055.08, z = 66.43 }, to = { id = 345, x = 650.42, y = 3648.62, z = 27.02 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 345, x = 650.42, y = 3648.62, z = 27.02 }, to = { id = 239, x = 694.68, y = 3678.07, z = 39.90 }, isRetrace = False, name = Nothing }
+    , { from = { id = 239, x = 694.68, y = 3678.07, z = 39.90 }, to = { id = 345, x = 650.42, y = 3648.62, z = 27.02 }, isRetrace = True, name = Nothing }
+    , { from = { id = 345, x = 650.42, y = 3648.62, z = 27.02 }, to = { id = 69, x = 684.33, y = 3603.97, z = 26.15 }, isRetrace = False, name = Nothing }
+    , { from = { id = 69, x = 684.33, y = 3603.97, z = 26.15 }, to = { id = 61, x = 588.36, y = 3503.00, z = 23.91 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 61, x = 588.36, y = 3503.00, z = 23.91 }, to = { id = 69, x = 684.33, y = 3603.97, z = 26.15 }, isRetrace = True, name = Just "Lake Avenue" }
+    , { from = { id = 69, x = 684.33, y = 3603.97, z = 26.15 }, to = { id = 336, x = 903.66, y = 3453.45, z = 29.40 }, isRetrace = False, name = Nothing }
+    , { from = { id = 336, x = 903.66, y = 3453.45, z = 29.40 }, to = { id = 62, x = 871.34, y = 3411.95, z = 29.40 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 62, x = 871.34, y = 3411.95, z = 29.40 }, to = { id = 61, x = 588.36, y = 3503.00, z = 23.91 }, isRetrace = False, name = Just "Sylvan Avenue" }
+    , { from = { id = 61, x = 588.36, y = 3503.00, z = 23.91 }, to = { id = 338, x = 235.42, y = 3229.32, z = 20.83 }, isRetrace = False, name = Nothing }
+    , { from = { id = 338, x = 235.42, y = 3229.32, z = 20.83 }, to = { id = 320, x = 36.72, y = 3208.12, z = 17.91 }, isRetrace = False, name = Just "Sylvan Avenue" }
+    , { from = { id = 320, x = 36.72, y = 3208.12, z = 17.91 }, to = { id = 321, x = 0.00, y = 3237.79, z = 45.36 }, isRetrace = False, name = Nothing }
+    , { from = { id = 321, x = 0.00, y = 3237.79, z = 45.36 }, to = { id = 320, x = 36.72, y = 3208.12, z = 17.91 }, isRetrace = True, name = Nothing }
+    , { from = { id = 320, x = 36.72, y = 3208.12, z = 17.91 }, to = { id = 289, x = 168.44, y = 2982.99, z = 27.18 }, isRetrace = False, name = Just "Maple Avenue" }
+    , { from = { id = 289, x = 168.44, y = 2982.99, z = 27.18 }, to = { id = 298, x = 283.94, y = 3059.33, z = 26.37 }, isRetrace = False, name = Nothing }
+    , { from = { id = 298, x = 283.94, y = 3059.33, z = 26.37 }, to = { id = 437, x = 322.85, y = 3033.10, z = 27.54 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 437, x = 322.85, y = 3033.10, z = 27.54 }, to = { id = 542, x = 420.74, y = 2871.34, z = 39.17 }, isRetrace = False, name = Just "Pastoral Path" }
+    , { from = { id = 542, x = 420.74, y = 2871.34, z = 39.17 }, to = { id = 539, x = 394.27, y = 2852.38, z = 42.11 }, isRetrace = False, name = Just "Andromeda Path" }
+    , { from = { id = 539, x = 394.27, y = 2852.38, z = 42.11 }, to = { id = 542, x = 420.74, y = 2871.34, z = 39.17 }, isRetrace = True, name = Just "Andromeda Path" }
+    , { from = { id = 542, x = 420.74, y = 2871.34, z = 39.17 }, to = { id = 251, x = 652.27, y = 2593.24, z = 53.05 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 251, x = 652.27, y = 2593.24, z = 53.05 }, to = { id = 243, x = 639.97, y = 2560.24, z = 56.14 }, isRetrace = False, name = Nothing }
+    , { from = { id = 243, x = 639.97, y = 2560.24, z = 56.14 }, to = { id = 539, x = 394.27, y = 2852.38, z = 42.11 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 539, x = 394.27, y = 2852.38, z = 42.11 }, to = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, isRetrace = False, name = Just "Andromeda Path" }
+    , { from = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, to = { id = 534, x = 351.55, y = 2796.37, z = 53.42 }, isRetrace = False, name = Just "Andromeda Path" }
+    , { from = { id = 534, x = 351.55, y = 2796.37, z = 53.42 }, to = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, isRetrace = False, name = Just "Andromeda Path" }
+    , { from = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, to = { id = 288, x = 284.83, y = 2697.43, z = 51.27 }, isRetrace = False, name = Just "Andromeda Path" }
+    , { from = { id = 288, x = 284.83, y = 2697.43, z = 51.27 }, to = { id = 289, x = 168.44, y = 2982.99, z = 27.18 }, isRetrace = False, name = Nothing }
+    , { from = { id = 289, x = 168.44, y = 2982.99, z = 27.18 }, to = { id = 298, x = 283.94, y = 3059.33, z = 26.37 }, isRetrace = True, name = Nothing }
+    , { from = { id = 298, x = 283.94, y = 3059.33, z = 26.37 }, to = { id = 338, x = 235.42, y = 3229.32, z = 20.83 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 338, x = 235.42, y = 3229.32, z = 20.83 }, to = { id = 311, x = 322.43, y = 3197.57, z = 31.43 }, isRetrace = False, name = Just "Lake-Ridge Path" }
+    , { from = { id = 311, x = 322.43, y = 3197.57, z = 31.43 }, to = { id = 312, x = 438.43, y = 3089.82, z = 46.54 }, isRetrace = False, name = Nothing }
+    , { from = { id = 312, x = 438.43, y = 3089.82, z = 46.54 }, to = { id = 311, x = 322.43, y = 3197.57, z = 31.43 }, isRetrace = True, name = Nothing }
+    , { from = { id = 311, x = 322.43, y = 3197.57, z = 31.43 }, to = { id = 312, x = 438.43, y = 3089.82, z = 46.54 }, isRetrace = False, name = Nothing }
+    , { from = { id = 312, x = 438.43, y = 3089.82, z = 46.54 }, to = { id = 533, x = 659.18, y = 2779.82, z = 52.60 }, isRetrace = False, name = Just "Lake-Ridge Path" }
+    , { from = { id = 533, x = 659.18, y = 2779.82, z = 52.60 }, to = { id = 527, x = 826.05, y = 2694.98, z = 55.91 }, isRetrace = False, name = Just "Cedar Path" }
+    , { from = { id = 527, x = 826.05, y = 2694.98, z = 55.91 }, to = { id = 259, x = 800.84, y = 2620.89, z = 59.06 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 259, x = 800.84, y = 2620.89, z = 59.06 }, to = { id = 250, x = 833.48, y = 2592.39, z = 59.06 }, isRetrace = False, name = Nothing }
+    , { from = { id = 250, x = 833.48, y = 2592.39, z = 59.06 }, to = { id = 249, x = 798.07, y = 2591.85, z = 59.06 }, isRetrace = False, name = Nothing }
+    , { from = { id = 249, x = 798.07, y = 2591.85, z = 59.06 }, to = { id = 252, x = 774.12, y = 2595.70, z = 59.06 }, isRetrace = False, name = Nothing }
+    , { from = { id = 252, x = 774.12, y = 2595.70, z = 59.06 }, to = { id = 249, x = 798.07, y = 2591.85, z = 59.06 }, isRetrace = True, name = Nothing }
+    , { from = { id = 249, x = 798.07, y = 2591.85, z = 59.06 }, to = { id = 244, x = 800.22, y = 2561.80, z = 59.06 }, isRetrace = False, name = Nothing }
+    , { from = { id = 244, x = 800.22, y = 2561.80, z = 59.06 }, to = { id = 252, x = 774.12, y = 2595.70, z = 59.06 }, isRetrace = False, name = Nothing }
+    , { from = { id = 252, x = 774.12, y = 2595.70, z = 59.06 }, to = { id = 31, x = 668.30, y = 2635.65, z = 53.78 }, isRetrace = False, name = Nothing }
+    , { from = { id = 31, x = 668.30, y = 2635.65, z = 53.78 }, to = { id = 437, x = 322.85, y = 3033.10, z = 27.54 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 437, x = 322.85, y = 3033.10, z = 27.54 }, to = { id = 30, x = 677.15, y = 2701.81, z = 53.40 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 30, x = 677.15, y = 2701.81, z = 53.40 }, to = { id = 533, x = 659.18, y = 2779.82, z = 52.60 }, isRetrace = False, name = Just "Lake-Ridge Path" }
+    , { from = { id = 533, x = 659.18, y = 2779.82, z = 52.60 }, to = { id = 30, x = 677.15, y = 2701.81, z = 53.40 }, isRetrace = True, name = Just "Lake-Ridge Path" }
+    , { from = { id = 30, x = 677.15, y = 2701.81, z = 53.40 }, to = { id = 31, x = 668.30, y = 2635.65, z = 53.78 }, isRetrace = False, name = Nothing }
+    , { from = { id = 31, x = 668.30, y = 2635.65, z = 53.78 }, to = { id = 251, x = 652.27, y = 2593.24, z = 53.05 }, isRetrace = False, name = Nothing }
+    , { from = { id = 251, x = 652.27, y = 2593.24, z = 53.05 }, to = { id = 243, x = 639.97, y = 2560.24, z = 56.14 }, isRetrace = True, name = Nothing }
+    , { from = { id = 243, x = 639.97, y = 2560.24, z = 56.14 }, to = { id = 25, x = 644.19, y = 2500.38, z = 59.04 }, isRetrace = False, name = Nothing }
+    , { from = { id = 25, x = 644.19, y = 2500.38, z = 59.04 }, to = { id = 27, x = 659.87, y = 2447.95, z = 60.92 }, isRetrace = False, name = Nothing }
+    , { from = { id = 27, x = 659.87, y = 2447.95, z = 60.92 }, to = { id = 288, x = 284.83, y = 2697.43, z = 51.27 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 288, x = 284.83, y = 2697.43, z = 51.27 }, to = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, isRetrace = True, name = Just "Andromeda Path" }
+    , { from = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, to = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, isRetrace = False, name = Just "Andromeda Path" }
+    , { from = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, to = { id = 534, x = 351.55, y = 2796.37, z = 53.42 }, isRetrace = False, name = Just "Maple-Leaf Path" }
+    , { from = { id = 534, x = 351.55, y = 2796.37, z = 53.42 }, to = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, isRetrace = True, name = Just "Andromeda Path" }
+    , { from = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, to = { id = 26, x = 602.39, y = 2500.22, z = 63.93 }, isRetrace = False, name = Just "Columbine Path" }
+    , { from = { id = 26, x = 602.39, y = 2500.22, z = 63.93 }, to = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, isRetrace = False, name = Just "Andromeda Path" }
+    , { from = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, to = { id = 26, x = 602.39, y = 2500.22, z = 63.93 }, isRetrace = True, name = Just "Andromeda Path" }
+    , { from = { id = 26, x = 602.39, y = 2500.22, z = 63.93 }, to = { id = 25, x = 644.19, y = 2500.38, z = 59.04 }, isRetrace = False, name = Nothing }
+    , { from = { id = 25, x = 644.19, y = 2500.38, z = 59.04 }, to = { id = 27, x = 659.87, y = 2447.95, z = 60.92 }, isRetrace = True, name = Nothing }
+    , { from = { id = 27, x = 659.87, y = 2447.95, z = 60.92 }, to = { id = 509, x = 801.47, y = 2316.82, z = 66.37 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 509, x = 801.47, y = 2316.82, z = 66.37 }, to = { id = 195, x = 828.26, y = 2236.92, z = 70.36 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 195, x = 828.26, y = 2236.92, z = 70.36 }, to = { id = 509, x = 801.47, y = 2316.82, z = 66.37 }, isRetrace = True, name = Just "Spruce Avenue" }
+    , { from = { id = 509, x = 801.47, y = 2316.82, z = 66.37 }, to = { id = 237, x = 817.47, y = 2488.79, z = 59.30 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 237, x = 817.47, y = 2488.79, z = 59.30 }, to = { id = 244, x = 800.22, y = 2561.80, z = 59.06 }, isRetrace = False, name = Nothing }
+    , { from = { id = 244, x = 800.22, y = 2561.80, z = 59.06 }, to = { id = 250, x = 833.48, y = 2592.39, z = 59.06 }, isRetrace = False, name = Just "Oak Avenue" }
+    , { from = { id = 250, x = 833.48, y = 2592.39, z = 59.06 }, to = { id = 28, x = 892.87, y = 2602.75, z = 61.96 }, isRetrace = False, name = Nothing }
+    , { from = { id = 28, x = 892.87, y = 2602.75, z = 61.96 }, to = { id = 29, x = 928.68, y = 2551.32, z = 65.55 }, isRetrace = False, name = Nothing }
+    , { from = { id = 29, x = 928.68, y = 2551.32, z = 65.55 }, to = { id = 28, x = 892.87, y = 2602.75, z = 61.96 }, isRetrace = True, name = Nothing }
+    , { from = { id = 28, x = 892.87, y = 2602.75, z = 61.96 }, to = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, isRetrace = False, name = Just "Oak Avenue" }
+    , { from = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, to = { id = 268, x = 1258.38, y = 2735.21, z = 83.65 }, isRetrace = False, name = Just "Oak Avenue" }
+    , { from = { id = 268, x = 1258.38, y = 2735.21, z = 83.65 }, to = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, isRetrace = True, name = Just "Oak Avenue" }
+    , { from = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, to = { id = 246, x = 1272.44, y = 2578.30, z = 93.38 }, isRetrace = False, name = Just "Serpentine Path" }
+    , { from = { id = 246, x = 1272.44, y = 2578.30, z = 93.38 }, to = { id = 22, x = 1170.68, y = 2494.57, z = 96.07 }, isRetrace = False, name = Nothing }
+    , { from = { id = 22, x = 1170.68, y = 2494.57, z = 96.07 }, to = { id = 246, x = 1272.44, y = 2578.30, z = 93.38 }, isRetrace = True, name = Nothing }
+    , { from = { id = 246, x = 1272.44, y = 2578.30, z = 93.38 }, to = { id = 248, x = 1285.07, y = 2534.36, z = 96.44 }, isRetrace = False, name = Just "Serpentine Path" }
+    , { from = { id = 248, x = 1285.07, y = 2534.36, z = 96.44 }, to = { id = 231, x = 1329.27, y = 2414.99, z = 109.12 }, isRetrace = False, name = Just "Serpentine Path" }
+    , { from = { id = 231, x = 1329.27, y = 2414.99, z = 109.12 }, to = { id = 248, x = 1285.07, y = 2534.36, z = 96.44 }, isRetrace = True, name = Just "Serpentine Path" }
+    , { from = { id = 248, x = 1285.07, y = 2534.36, z = 96.44 }, to = { id = 247, x = 1342.93, y = 2588.57, z = 110.83 }, isRetrace = False, name = Nothing }
+    , { from = { id = 247, x = 1342.93, y = 2588.57, z = 110.83 }, to = { id = 260, x = 1379.43, y = 2636.57, z = 113.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 260, x = 1379.43, y = 2636.57, z = 113.79 }, to = { id = 247, x = 1342.93, y = 2588.57, z = 110.83 }, isRetrace = False, name = Nothing }
+    , { from = { id = 247, x = 1342.93, y = 2588.57, z = 110.83 }, to = { id = 260, x = 1379.43, y = 2636.57, z = 113.79 }, isRetrace = True, name = Nothing }
+    , { from = { id = 260, x = 1379.43, y = 2636.57, z = 113.79 }, to = { id = 267, x = 1293.98, y = 2743.78, z = 84.89 }, isRetrace = False, name = Just "Acacia Path" }
+    , { from = { id = 267, x = 1293.98, y = 2743.78, z = 84.89 }, to = { id = 295, x = 1469.22, y = 3044.03, z = 96.86 }, isRetrace = False, name = Nothing }
+    , { from = { id = 295, x = 1469.22, y = 3044.03, z = 96.86 }, to = { id = 297, x = 1330.06, y = 3058.36, z = 92.60 }, isRetrace = False, name = Nothing }
+    , { from = { id = 297, x = 1330.06, y = 3058.36, z = 92.60 }, to = { id = 295, x = 1469.22, y = 3044.03, z = 96.86 }, isRetrace = True, name = Nothing }
+    , { from = { id = 295, x = 1469.22, y = 3044.03, z = 96.86 }, to = { id = 47, x = 1667.11, y = 2992.29, z = 106.67 }, isRetrace = False, name = Just "Vista Avenue" }
+    , { from = { id = 47, x = 1667.11, y = 2992.29, z = 106.67 }, to = { id = 303, x = 1896.84, y = 3096.76, z = 113.88 }, isRetrace = False, name = Nothing }
+    , { from = { id = 303, x = 1896.84, y = 3096.76, z = 113.88 }, to = { id = 302, x = 1873.68, y = 3052.57, z = 115.66 }, isRetrace = False, name = Nothing }
+    , { from = { id = 302, x = 1873.68, y = 3052.57, z = 115.66 }, to = { id = 303, x = 1896.84, y = 3096.76, z = 113.88 }, isRetrace = True, name = Nothing }
+    , { from = { id = 303, x = 1896.84, y = 3096.76, z = 113.88 }, to = { id = 304, x = 1940.10, y = 3097.77, z = 113.66 }, isRetrace = False, name = Nothing }
+    , { from = { id = 304, x = 1940.10, y = 3097.77, z = 113.66 }, to = { id = 548, x = 2049.68, y = 3039.81, z = 121.52 }, isRetrace = False, name = Just "Vista Avenue" }
+    , { from = { id = 548, x = 2049.68, y = 3039.81, z = 121.52 }, to = { id = 294, x = 2087.40, y = 3027.74, z = 122.35 }, isRetrace = False, name = Just "Vista Avenue" }
+    , { from = { id = 294, x = 2087.40, y = 3027.74, z = 122.35 }, to = { id = 274, x = 2179.35, y = 2866.82, z = 131.98 }, isRetrace = False, name = Nothing }
+    , { from = { id = 274, x = 2179.35, y = 2866.82, z = 131.98 }, to = { id = 294, x = 2087.40, y = 3027.74, z = 122.35 }, isRetrace = True, name = Nothing }
+    , { from = { id = 294, x = 2087.40, y = 3027.74, z = 122.35 }, to = { id = 300, x = 2199.15, y = 3065.62, z = 126.80 }, isRetrace = False, name = Nothing }
+    , { from = { id = 300, x = 2199.15, y = 3065.62, z = 126.80 }, to = { id = 52, x = 2369.81, y = 3277.38, z = 138.57 }, isRetrace = False, name = Just "Alder Avenue" }
+    , { from = { id = 52, x = 2369.81, y = 3277.38, z = 138.57 }, to = { id = 550, x = 2497.18, y = 3100.32, z = 145.32 }, isRetrace = False, name = Just "Iris Path" }
+    , { from = { id = 550, x = 2497.18, y = 3100.32, z = 145.32 }, to = { id = 551, x = 2547.68, y = 3081.07, z = 148.05 }, isRetrace = False, name = Just "Lupine Path" }
+    , { from = { id = 551, x = 2547.68, y = 3081.07, z = 148.05 }, to = { id = 550, x = 2497.18, y = 3100.32, z = 145.32 }, isRetrace = True, name = Just "Lupine Path" }
+    , { from = { id = 550, x = 2497.18, y = 3100.32, z = 145.32 }, to = { id = 553, x = 2410.43, y = 3148.32, z = 141.61 }, isRetrace = False, name = Just "Lupine Path" }
+    , { from = { id = 553, x = 2410.43, y = 3148.32, z = 141.61 }, to = { id = 550, x = 2497.18, y = 3100.32, z = 145.32 }, isRetrace = True, name = Just "Lupine Path" }
+    , { from = { id = 550, x = 2497.18, y = 3100.32, z = 145.32 }, to = { id = 52, x = 2369.81, y = 3277.38, z = 138.57 }, isRetrace = True, name = Just "Iris Path" }
+    , { from = { id = 52, x = 2369.81, y = 3277.38, z = 138.57 }, to = { id = 51, x = 2381.68, y = 3309.39, z = 138.66 }, isRetrace = False, name = Nothing }
+    , { from = { id = 51, x = 2381.68, y = 3309.39, z = 138.66 }, to = { id = 326, x = 2541.05, y = 3330.88, z = 147.13 }, isRetrace = False, name = Nothing }
+    , { from = { id = 326, x = 2541.05, y = 3330.88, z = 147.13 }, to = { id = 53, x = 2634.39, y = 3327.00, z = 146.53 }, isRetrace = True, name = Nothing }
+    , { from = { id = 53, x = 2634.39, y = 3327.00, z = 146.53 }, to = { id = 327, x = 2756.42, y = 3339.50, z = 147.53 }, isRetrace = True, name = Nothing }
+    , { from = { id = 327, x = 2756.42, y = 3339.50, z = 147.53 }, to = { id = 328, x = 2802.06, y = 3320.19, z = 147.19 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 328, x = 2802.06, y = 3320.19, z = 147.19 }, to = { id = 329, x = 2903.43, y = 3371.79, z = 149.36 }, isRetrace = False, name = Nothing }
+    , { from = { id = 329, x = 2903.43, y = 3371.79, z = 149.36 }, to = { id = 328, x = 2802.06, y = 3320.19, z = 147.19 }, isRetrace = True, name = Nothing }
+    , { from = { id = 328, x = 2802.06, y = 3320.19, z = 147.19 }, to = { id = 314, x = 2856.33, y = 3138.58, z = 149.11 }, isRetrace = False, name = Just "Pine Avenue" }
+    , { from = { id = 314, x = 2856.33, y = 3138.58, z = 149.11 }, to = { id = 281, x = 2871.19, y = 3055.13, z = 156.24 }, isRetrace = False, name = Nothing }
+    , { from = { id = 281, x = 2871.19, y = 3055.13, z = 156.24 }, to = { id = 314, x = 2856.33, y = 3138.58, z = 149.11 }, isRetrace = True, name = Nothing }
+    , { from = { id = 314, x = 2856.33, y = 3138.58, z = 149.11 }, to = { id = 54, x = 2622.18, y = 3226.82, z = 156.53 }, isRetrace = False, name = Just "Glade Path" }
+    , { from = { id = 54, x = 2622.18, y = 3226.82, z = 156.53 }, to = { id = 53, x = 2634.39, y = 3327.00, z = 146.53 }, isRetrace = False, name = Just "Rose Path" }
+    , { from = { id = 53, x = 2634.39, y = 3327.00, z = 146.53 }, to = { id = 54, x = 2622.18, y = 3226.82, z = 156.53 }, isRetrace = True, name = Just "Rose Path" }
+    , { from = { id = 54, x = 2622.18, y = 3226.82, z = 156.53 }, to = { id = 280, x = 2789.62, y = 3011.43, z = 160.16 }, isRetrace = False, name = Just "Birch Path" }
+    , { from = { id = 280, x = 2789.62, y = 3011.43, z = 160.16 }, to = { id = 286, x = 2697.30, y = 2938.93, z = 157.91 }, isRetrace = False, name = Nothing }
+    , { from = { id = 286, x = 2697.30, y = 2938.93, z = 157.91 }, to = { id = 280, x = 2789.62, y = 3011.43, z = 160.16 }, isRetrace = True, name = Nothing }
+    , { from = { id = 280, x = 2789.62, y = 3011.43, z = 160.16 }, to = { id = 281, x = 2871.19, y = 3055.13, z = 156.24 }, isRetrace = False, name = Nothing }
+    , { from = { id = 281, x = 2871.19, y = 3055.13, z = 156.24 }, to = { id = 547, x = 2999.56, y = 3012.37, z = 159.28 }, isRetrace = False, name = Just "Vista Avenue" }
+    , { from = { id = 547, x = 2999.56, y = 3012.37, z = 159.28 }, to = { id = 549, x = 3062.01, y = 3075.58, z = 160.29 }, isRetrace = False, name = Just "Oak Leaf Avenue" }
+    , { from = { id = 549, x = 3062.01, y = 3075.58, z = 160.29 }, to = { id = 555, x = 3218.94, y = 3173.74, z = 160.07 }, isRetrace = False, name = Just "Oak Leaf Avenue" }
+    , { from = { id = 555, x = 3218.94, y = 3173.74, z = 160.07 }, to = { id = 549, x = 3062.01, y = 3075.58, z = 160.29 }, isRetrace = True, name = Just "Oak Leaf Avenue" }
+    , { from = { id = 549, x = 3062.01, y = 3075.58, z = 160.29 }, to = { id = 284, x = 3184.43, y = 2962.57, z = 144.00 }, isRetrace = False, name = Just "Dell-Wood Path" }
+    , { from = { id = 284, x = 3184.43, y = 2962.57, z = 144.00 }, to = { id = 287, x = 3247.32, y = 2971.49, z = 139.89 }, isRetrace = False, name = Nothing }
+    , { from = { id = 287, x = 3247.32, y = 2971.49, z = 139.89 }, to = { id = 284, x = 3184.43, y = 2962.57, z = 144.00 }, isRetrace = True, name = Nothing }
+    , { from = { id = 284, x = 3184.43, y = 2962.57, z = 144.00 }, to = { id = 285, x = 3127.68, y = 2790.32, z = 155.39 }, isRetrace = False, name = Nothing }
+    , { from = { id = 285, x = 3127.68, y = 2790.32, z = 155.39 }, to = { id = 273, x = 3047.21, y = 2847.22, z = 166.81 }, isRetrace = False, name = Just "Vista Avenue" }
+    , { from = { id = 273, x = 3047.21, y = 2847.22, z = 166.81 }, to = { id = 285, x = 3127.68, y = 2790.32, z = 155.39 }, isRetrace = True, name = Just "Vista Avenue" }
+    , { from = { id = 285, x = 3127.68, y = 2790.32, z = 155.39 }, to = { id = 213, x = 3334.07, y = 2351.04, z = 151.16 }, isRetrace = False, name = Just "Woodbine Path" }
+    , { from = { id = 213, x = 3334.07, y = 2351.04, z = 151.16 }, to = { id = 287, x = 3247.32, y = 2971.49, z = 139.89 }, isRetrace = False, name = Just "Laburnum Path" }
+    , { from = { id = 287, x = 3247.32, y = 2971.49, z = 139.89 }, to = { id = 555, x = 3218.94, y = 3173.74, z = 160.07 }, isRetrace = False, name = Just "Dell Avenue" }
+    , { from = { id = 555, x = 3218.94, y = 3173.74, z = 160.07 }, to = { id = 561, x = 3231.88, y = 3305.00, z = 158.97 }, isRetrace = False, name = Just "Dell Avenue" }
+    , { from = { id = 561, x = 3231.88, y = 3305.00, z = 158.97 }, to = { id = 556, x = 3365.55, y = 3225.32, z = 158.77 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 556, x = 3365.55, y = 3225.32, z = 158.77 }, to = { id = 313, x = 3472.41, y = 3121.75, z = 156.36 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 313, x = 3472.41, y = 3121.75, z = 156.36 }, to = { id = 556, x = 3365.55, y = 3225.32, z = 158.77 }, isRetrace = True, name = Just "Central Avenue" }
+    , { from = { id = 556, x = 3365.55, y = 3225.32, z = 158.77 }, to = { id = 331, x = 3465.45, y = 3320.21, z = 158.91 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 331, x = 3465.45, y = 3320.21, z = 158.91 }, to = { id = 562, x = 3495.74, y = 3336.83, z = 158.91 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 562, x = 3495.74, y = 3336.83, z = 158.91 }, to = { id = 331, x = 3465.45, y = 3320.21, z = 158.91 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 331, x = 3465.45, y = 3320.21, z = 158.91 }, to = { id = 330, x = 3448.43, y = 3377.18, z = 159.50 }, isRetrace = False, name = Nothing }
+    , { from = { id = 330, x = 3448.43, y = 3377.18, z = 159.50 }, to = { id = 331, x = 3465.45, y = 3320.21, z = 158.91 }, isRetrace = True, name = Nothing }
+    , { from = { id = 331, x = 3465.45, y = 3320.21, z = 158.91 }, to = { id = 562, x = 3495.74, y = 3336.83, z = 158.91 }, isRetrace = True, name = Just "Central Avenue" }
+    , { from = { id = 562, x = 3495.74, y = 3336.83, z = 158.91 }, to = { id = 333, x = 4217.71, y = 3439.34, z = 159.05 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 333, x = 4217.71, y = 3439.34, z = 159.05 }, to = { id = 318, x = 4047.48, y = 3227.21, z = 147.89 }, isRetrace = False, name = Nothing }
+    , { from = { id = 318, x = 4047.48, y = 3227.21, z = 147.89 }, to = { id = 319, x = 4035.31, y = 3207.20, z = 147.89 }, isRetrace = False, name = Nothing }
+    , { from = { id = 319, x = 4035.31, y = 3207.20, z = 147.89 }, to = { id = 316, x = 4083.49, y = 3176.13, z = 144.65 }, isRetrace = False, name = Just "Atlantic Avenue" }
+    , { from = { id = 316, x = 4083.49, y = 3176.13, z = 144.65 }, to = { id = 310, x = 4079.33, y = 3116.50, z = 144.11 }, isRetrace = False, name = Nothing }
+    , { from = { id = 310, x = 4079.33, y = 3116.50, z = 144.11 }, to = { id = 316, x = 4083.49, y = 3176.13, z = 144.65 }, isRetrace = True, name = Nothing }
+    , { from = { id = 316, x = 4083.49, y = 3176.13, z = 144.65 }, to = { id = 315, x = 4148.58, y = 3143.08, z = 144.65 }, isRetrace = False, name = Nothing }
+    , { from = { id = 315, x = 4148.58, y = 3143.08, z = 144.65 }, to = { id = 299, x = 4132.27, y = 3064.31, z = 145.73 }, isRetrace = False, name = Nothing }
+    , { from = { id = 299, x = 4132.27, y = 3064.31, z = 145.73 }, to = { id = 301, x = 4124.22, y = 3087.72, z = 145.73 }, isRetrace = False, name = Nothing }
+    , { from = { id = 301, x = 4124.22, y = 3087.72, z = 145.73 }, to = { id = 310, x = 4079.33, y = 3116.50, z = 144.11 }, isRetrace = False, name = Nothing }
+    , { from = { id = 310, x = 4079.33, y = 3116.50, z = 144.11 }, to = { id = 305, x = 3979.13, y = 3093.79, z = 144.19 }, isRetrace = False, name = Nothing }
+    , { from = { id = 305, x = 3979.13, y = 3093.79, z = 144.19 }, to = { id = 306, x = 4060.24, y = 3059.95, z = 145.65 }, isRetrace = False, name = Nothing }
+    , { from = { id = 306, x = 4060.24, y = 3059.95, z = 145.65 }, to = { id = 45, x = 3971.50, y = 2981.64, z = 144.15 }, isRetrace = False, name = Just "Almond Path" }
+    , { from = { id = 45, x = 3971.50, y = 2981.64, z = 144.15 }, to = { id = 48, x = 3916.12, y = 3025.25, z = 140.69 }, isRetrace = False, name = Just "Almond Path" }
+    , { from = { id = 48, x = 3916.12, y = 3025.25, z = 140.69 }, to = { id = 283, x = 3860.93, y = 2949.49, z = 136.84 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 283, x = 3860.93, y = 2949.49, z = 136.84 }, to = { id = 48, x = 3916.12, y = 3025.25, z = 140.69 }, isRetrace = True, name = Just "Grove Avenue" }
+    , { from = { id = 48, x = 3916.12, y = 3025.25, z = 140.69 }, to = { id = 305, x = 3979.13, y = 3093.79, z = 144.19 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 305, x = 3979.13, y = 3093.79, z = 144.19 }, to = { id = 319, x = 4035.31, y = 3207.20, z = 147.89 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 319, x = 4035.31, y = 3207.20, z = 147.89 }, to = { id = 318, x = 4047.48, y = 3227.21, z = 147.89 }, isRetrace = True, name = Nothing }
+    , { from = { id = 318, x = 4047.48, y = 3227.21, z = 147.89 }, to = { id = 333, x = 4217.71, y = 3439.34, z = 159.05 }, isRetrace = True, name = Nothing }
+    , { from = { id = 333, x = 4217.71, y = 3439.34, z = 159.05 }, to = { id = 334, x = 4447.84, y = 3373.89, z = 150.94 }, isRetrace = False, name = Nothing }
+    , { from = { id = 334, x = 4447.84, y = 3373.89, z = 150.94 }, to = { id = 564, x = 4813.06, y = 3566.78, z = 160.87 }, isRetrace = False, name = Just "Elm Avenue" }
+    , { from = { id = 564, x = 4813.06, y = 3566.78, z = 160.87 }, to = { id = 366, x = 4941.58, y = 3687.74, z = 158.36 }, isRetrace = False, name = Just "Ocean Avenue" }
+    , { from = { id = 366, x = 4941.58, y = 3687.74, z = 158.36 }, to = { id = 564, x = 4813.06, y = 3566.78, z = 160.87 }, isRetrace = True, name = Just "Ocean Avenue" }
+    , { from = { id = 564, x = 4813.06, y = 3566.78, z = 160.87 }, to = { id = 335, x = 4808.85, y = 3451.35, z = 172.51 }, isRetrace = False, name = Just "Hillside Avenue" }
+    , { from = { id = 335, x = 4808.85, y = 3451.35, z = 172.51 }, to = { id = 560, x = 4771.19, y = 3304.59, z = 176.71 }, isRetrace = False, name = Just "Hillside Avenue" }
+    , { from = { id = 560, x = 4771.19, y = 3304.59, z = 176.71 }, to = { id = 546, x = 4597.80, y = 2971.81, z = 171.82 }, isRetrace = False, name = Just "Ocean Avenue" }
+    , { from = { id = 546, x = 4597.80, y = 2971.81, z = 171.82 }, to = { id = 322, x = 4471.86, y = 3085.57, z = 193.81 }, isRetrace = False, name = Just "Lotus Path" }
+    , { from = { id = 322, x = 4471.86, y = 3085.57, z = 193.81 }, to = { id = 552, x = 4416.96, y = 3143.16, z = 178.51 }, isRetrace = False, name = Just "Jasmine Path" }
+    , { from = { id = 552, x = 4416.96, y = 3143.16, z = 178.51 }, to = { id = 558, x = 4523.93, y = 3276.58, z = 172.82 }, isRetrace = False, name = Just "Vine Path" }
+    , { from = { id = 558, x = 4523.93, y = 3276.58, z = 172.82 }, to = { id = 552, x = 4416.96, y = 3143.16, z = 178.51 }, isRetrace = True, name = Just "Vine Path" }
+    , { from = { id = 552, x = 4416.96, y = 3143.16, z = 178.51 }, to = { id = 554, x = 4215.31, y = 3145.97, z = 145.54 }, isRetrace = False, name = Just "Jasmine Path" }
+    , { from = { id = 554, x = 4215.31, y = 3145.97, z = 145.54 }, to = { id = 334, x = 4447.84, y = 3373.89, z = 150.94 }, isRetrace = False, name = Just "Elm Avenue" }
+    , { from = { id = 334, x = 4447.84, y = 3373.89, z = 150.94 }, to = { id = 554, x = 4215.31, y = 3145.97, z = 145.54 }, isRetrace = True, name = Just "Elm Avenue" }
+    , { from = { id = 554, x = 4215.31, y = 3145.97, z = 145.54 }, to = { id = 558, x = 4523.93, y = 3276.58, z = 172.82 }, isRetrace = False, name = Just "Atlantic Avenue" }
+    , { from = { id = 558, x = 4523.93, y = 3276.58, z = 172.82 }, to = { id = 323, x = 4703.48, y = 3269.69, z = 180.79 }, isRetrace = False, name = Just "Atlantic Avenue" }
+    , { from = { id = 323, x = 4703.48, y = 3269.69, z = 180.79 }, to = { id = 560, x = 4771.19, y = 3304.59, z = 176.71 }, isRetrace = False, name = Just "Atlantic Avenue" }
+    , { from = { id = 560, x = 4771.19, y = 3304.59, z = 176.71 }, to = { id = 323, x = 4703.48, y = 3269.69, z = 180.79 }, isRetrace = True, name = Just "Atlantic Avenue" }
+    , { from = { id = 323, x = 4703.48, y = 3269.69, z = 180.79 }, to = { id = 322, x = 4471.86, y = 3085.57, z = 193.81 }, isRetrace = False, name = Nothing }
+    , { from = { id = 322, x = 4471.86, y = 3085.57, z = 193.81 }, to = { id = 552, x = 4416.96, y = 3143.16, z = 178.51 }, isRetrace = True, name = Just "Jasmine Path" }
+    , { from = { id = 552, x = 4416.96, y = 3143.16, z = 178.51 }, to = { id = 526, x = 4200.41, y = 2938.95, z = 187.19 }, isRetrace = False, name = Just "Vine Path" }
+    , { from = { id = 526, x = 4200.41, y = 2938.95, z = 187.19 }, to = { id = 279, x = 3981.55, y = 2890.22, z = 163.73 }, isRetrace = False, name = Just "Lily Path" }
+    , { from = { id = 279, x = 3981.55, y = 2890.22, z = 163.73 }, to = { id = 526, x = 4200.41, y = 2938.95, z = 187.19 }, isRetrace = True, name = Just "Lily Path" }
+    , { from = { id = 526, x = 4200.41, y = 2938.95, z = 187.19 }, to = { id = 33, x = 3953.61, y = 2707.86, z = 180.17 }, isRetrace = False, name = Just "Vine Path" }
+    , { from = { id = 33, x = 3953.61, y = 2707.86, z = 180.17 }, to = { id = 322, x = 4471.86, y = 3085.57, z = 193.81 }, isRetrace = False, name = Just "Vine Path" }
+    , { from = { id = 322, x = 4471.86, y = 3085.57, z = 193.81 }, to = { id = 546, x = 4597.80, y = 2971.81, z = 171.82 }, isRetrace = True, name = Just "Lotus Path" }
+    , { from = { id = 546, x = 4597.80, y = 2971.81, z = 171.82 }, to = { id = 522, x = 3962.89, y = 2516.24, z = 134.54 }, isRetrace = False, name = Just "Ocean Avenue" }
+    , { from = { id = 522, x = 3962.89, y = 2516.24, z = 134.54 }, to = { id = 224, x = 3800.78, y = 2394.68, z = 122.00 }, isRetrace = False, name = Just "Ocean Avenue" }
+    , { from = { id = 224, x = 3800.78, y = 2394.68, z = 122.00 }, to = { id = 227, x = 3802.20, y = 2400.12, z = 122.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 227, x = 3802.20, y = 2400.12, z = 122.00 }, to = { id = 232, x = 3748.71, y = 2415.15, z = 122.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 232, x = 3748.71, y = 2415.15, z = 122.00 }, to = { id = 230, x = 3743.62, y = 2413.15, z = 123.97 }, isRetrace = False, name = Nothing }
+    , { from = { id = 230, x = 3743.62, y = 2413.15, z = 123.97 }, to = { id = 223, x = 3765.33, y = 2392.53, z = 122.00 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 223, x = 3765.33, y = 2392.53, z = 122.00 }, to = { id = 224, x = 3800.78, y = 2394.68, z = 122.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 224, x = 3800.78, y = 2394.68, z = 122.00 }, to = { id = 220, x = 3794.51, y = 2370.57, z = 122.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 220, x = 3794.51, y = 2370.57, z = 122.00 }, to = { id = 223, x = 3765.33, y = 2392.53, z = 122.00 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 223, x = 3765.33, y = 2392.53, z = 122.00 }, to = { id = 222, x = 3741.85, y = 2384.95, z = 122.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 222, x = 3741.85, y = 2384.95, z = 122.00 }, to = { id = 230, x = 3743.62, y = 2413.15, z = 123.97 }, isRetrace = False, name = Nothing }
+    , { from = { id = 230, x = 3743.62, y = 2413.15, z = 123.97 }, to = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, to = { id = 226, x = 3628.16, y = 2400.09, z = 128.00 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 226, x = 3628.16, y = 2400.09, z = 128.00 }, to = { id = 229, x = 3533.65, y = 2310.55, z = 138.39 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 229, x = 3533.65, y = 2310.55, z = 138.39 }, to = { id = 501, x = 3494.08, y = 2282.08, z = 141.82 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 501, x = 3494.08, y = 2282.08, z = 141.82 }, to = { id = 229, x = 3533.65, y = 2310.55, z = 138.39 }, isRetrace = True, name = Just "Grove Avenue" }
+    , { from = { id = 229, x = 3533.65, y = 2310.55, z = 138.39 }, to = { id = 228, x = 3522.18, y = 2402.57, z = 141.58 }, isRetrace = False, name = Nothing }
+    , { from = { id = 228, x = 3522.18, y = 2402.57, z = 141.58 }, to = { id = 226, x = 3628.16, y = 2400.09, z = 128.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 226, x = 3628.16, y = 2400.09, z = 128.00 }, to = { id = 210, x = 3704.86, y = 2326.25, z = 123.49 }, isRetrace = False, name = Nothing }
+    , { from = { id = 210, x = 3704.86, y = 2326.25, z = 123.49 }, to = { id = 226, x = 3628.16, y = 2400.09, z = 128.00 }, isRetrace = True, name = Nothing }
+    , { from = { id = 226, x = 3628.16, y = 2400.09, z = 128.00 }, to = { id = 228, x = 3522.18, y = 2402.57, z = 141.58 }, isRetrace = True, name = Nothing }
+    , { from = { id = 228, x = 3522.18, y = 2402.57, z = 141.58 }, to = { id = 245, x = 3578.43, y = 2569.57, z = 144.22 }, isRetrace = False, name = Nothing }
+    , { from = { id = 245, x = 3578.43, y = 2569.57, z = 144.22 }, to = { id = 32, x = 3685.19, y = 2525.87, z = 126.06 }, isRetrace = False, name = Just "Flower Path" }
+    , { from = { id = 32, x = 3685.19, y = 2525.87, z = 126.06 }, to = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 520, x = 3681.29, y = 2509.79, z = 126.06 }, to = { id = 32, x = 3685.19, y = 2525.87, z = 126.06 }, isRetrace = True, name = Just "Grove Avenue" }
+    , { from = { id = 32, x = 3685.19, y = 2525.87, z = 126.06 }, to = { id = 245, x = 3578.43, y = 2569.57, z = 144.22 }, isRetrace = True, name = Just "Flower Path" }
+    , { from = { id = 245, x = 3578.43, y = 2569.57, z = 144.22 }, to = { id = 37, x = 3621.68, y = 2670.07, z = 141.13 }, isRetrace = False, name = Just "Evergreen Path" }
+    , { from = { id = 37, x = 3621.68, y = 2670.07, z = 141.13 }, to = { id = 44, x = 3723.85, y = 2626.19, z = 128.48 }, isRetrace = False, name = Just "Vineleaf Path" }
+    , { from = { id = 44, x = 3723.85, y = 2626.19, z = 128.48 }, to = { id = 45, x = 3971.50, y = 2981.64, z = 144.15 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 45, x = 3971.50, y = 2981.64, z = 144.15 }, to = { id = 306, x = 4060.24, y = 3059.95, z = 145.65 }, isRetrace = True, name = Just "Almond Path" }
+    , { from = { id = 306, x = 4060.24, y = 3059.95, z = 145.65 }, to = { id = 293, x = 4094.92, y = 3021.12, z = 147.62 }, isRetrace = False, name = Just "Almond Path" }
+    , { from = { id = 293, x = 4094.92, y = 3021.12, z = 147.62 }, to = { id = 299, x = 4132.27, y = 3064.31, z = 145.73 }, isRetrace = False, name = Nothing }
+    , { from = { id = 299, x = 4132.27, y = 3064.31, z = 145.73 }, to = { id = 293, x = 4094.92, y = 3021.12, z = 147.62 }, isRetrace = True, name = Nothing }
+    , { from = { id = 293, x = 4094.92, y = 3021.12, z = 147.62 }, to = { id = 279, x = 3981.55, y = 2890.22, z = 163.73 }, isRetrace = False, name = Nothing }
+    , { from = { id = 279, x = 3981.55, y = 2890.22, z = 163.73 }, to = { id = 33, x = 3953.61, y = 2707.86, z = 180.17 }, isRetrace = False, name = Nothing }
+    , { from = { id = 33, x = 3953.61, y = 2707.86, z = 180.17 }, to = { id = 32, x = 3685.19, y = 2525.87, z = 126.06 }, isRetrace = False, name = Just "Atlantic Avenue" }
+    , { from = { id = 32, x = 3685.19, y = 2525.87, z = 126.06 }, to = { id = 44, x = 3723.85, y = 2626.19, z = 128.48 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 44, x = 3723.85, y = 2626.19, z = 128.48 }, to = { id = 41, x = 3806.66, y = 2823.23, z = 134.41 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 41, x = 3806.66, y = 2823.23, z = 134.41 }, to = { id = 283, x = 3860.93, y = 2949.49, z = 136.84 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 283, x = 3860.93, y = 2949.49, z = 136.84 }, to = { id = 40, x = 3712.04, y = 2926.73, z = 144.18 }, isRetrace = False, name = Nothing }
+    , { from = { id = 40, x = 3712.04, y = 2926.73, z = 144.18 }, to = { id = 544, x = 3695.93, y = 2932.43, z = 144.18 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 544, x = 3695.93, y = 2932.43, z = 144.18 }, to = { id = 278, x = 3637.68, y = 2827.57, z = 150.35 }, isRetrace = False, name = Just "Evergreen Path" }
+    , { from = { id = 278, x = 3637.68, y = 2827.57, z = 150.35 }, to = { id = 277, x = 3565.68, y = 2873.57, z = 157.74 }, isRetrace = False, name = Nothing }
+    , { from = { id = 277, x = 3565.68, y = 2873.57, z = 157.74 }, to = { id = 278, x = 3637.68, y = 2827.57, z = 150.35 }, isRetrace = True, name = Nothing }
+    , { from = { id = 278, x = 3637.68, y = 2827.57, z = 150.35 }, to = { id = 36, x = 3635.93, y = 2813.82, z = 149.74 }, isRetrace = False, name = Just "Evergreen Path" }
+    , { from = { id = 36, x = 3635.93, y = 2813.82, z = 149.74 }, to = { id = 37, x = 3621.68, y = 2670.07, z = 141.13 }, isRetrace = False, name = Just "Evergreen Path" }
+    , { from = { id = 37, x = 3621.68, y = 2670.07, z = 141.13 }, to = { id = 36, x = 3635.93, y = 2813.82, z = 149.74 }, isRetrace = True, name = Just "Evergreen Path" }
+    , { from = { id = 36, x = 3635.93, y = 2813.82, z = 149.74 }, to = { id = 41, x = 3806.66, y = 2823.23, z = 134.41 }, isRetrace = False, name = Nothing }
+    , { from = { id = 41, x = 3806.66, y = 2823.23, z = 134.41 }, to = { id = 40, x = 3712.04, y = 2926.73, z = 144.18 }, isRetrace = False, name = Nothing }
+    , { from = { id = 40, x = 3712.04, y = 2926.73, z = 144.18 }, to = { id = 544, x = 3695.93, y = 2932.43, z = 144.18 }, isRetrace = True, name = Just "Central Avenue" }
+    , { from = { id = 544, x = 3695.93, y = 2932.43, z = 144.18 }, to = { id = 292, x = 3610.50, y = 3020.03, z = 150.63 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 292, x = 3610.50, y = 3020.03, z = 150.63 }, to = { id = 313, x = 3472.41, y = 3121.75, z = 156.36 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 313, x = 3472.41, y = 3121.75, z = 156.36 }, to = { id = 296, x = 3425.96, y = 3052.23, z = 153.71 }, isRetrace = False, name = Nothing }
+    , { from = { id = 296, x = 3425.96, y = 3052.23, z = 153.71 }, to = { id = 291, x = 3387.35, y = 2923.34, z = 153.62 }, isRetrace = False, name = Just "Oakwood Avenue" }
+    , { from = { id = 291, x = 3387.35, y = 2923.34, z = 153.62 }, to = { id = 296, x = 3425.96, y = 3052.23, z = 153.71 }, isRetrace = True, name = Just "Oakwood Avenue" }
+    , { from = { id = 296, x = 3425.96, y = 3052.23, z = 153.71 }, to = { id = 290, x = 3526.15, y = 3004.97, z = 152.70 }, isRetrace = False, name = Nothing }
+    , { from = { id = 290, x = 3526.15, y = 3004.97, z = 152.70 }, to = { id = 292, x = 3610.50, y = 3020.03, z = 150.63 }, isRetrace = False, name = Nothing }
+    , { from = { id = 292, x = 3610.50, y = 3020.03, z = 150.63 }, to = { id = 290, x = 3526.15, y = 3004.97, z = 152.70 }, isRetrace = True, name = Nothing }
+    , { from = { id = 290, x = 3526.15, y = 3004.97, z = 152.70 }, to = { id = 291, x = 3387.35, y = 2923.34, z = 153.62 }, isRetrace = False, name = Nothing }
+    , { from = { id = 291, x = 3387.35, y = 2923.34, z = 153.62 }, to = { id = 215, x = 3411.95, y = 2357.69, z = 150.38 }, isRetrace = False, name = Just "Oakwood Avenue" }
+    , { from = { id = 215, x = 3411.95, y = 2357.69, z = 150.38 }, to = { id = 213, x = 3334.07, y = 2351.04, z = 151.16 }, isRetrace = False, name = Just "Fir Path" }
+    , { from = { id = 213, x = 3334.07, y = 2351.04, z = 151.16 }, to = { id = 212, x = 3339.03, y = 2341.77, z = 151.16 }, isRetrace = False, name = Nothing }
+    , { from = { id = 212, x = 3339.03, y = 2341.77, z = 151.16 }, to = { id = 206, x = 3208.82, y = 2291.20, z = 147.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 206, x = 3208.82, y = 2291.20, z = 147.43 }, to = { id = 207, x = 3214.32, y = 2297.08, z = 147.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 207, x = 3214.32, y = 2297.08, z = 147.43 }, to = { id = 206, x = 3208.82, y = 2291.20, z = 147.43 }, isRetrace = True, name = Nothing }
+    , { from = { id = 206, x = 3208.82, y = 2291.20, z = 147.43 }, to = { id = 212, x = 3339.03, y = 2341.77, z = 151.16 }, isRetrace = True, name = Nothing }
+    , { from = { id = 212, x = 3339.03, y = 2341.77, z = 151.16 }, to = { id = 215, x = 3411.95, y = 2357.69, z = 150.38 }, isRetrace = False, name = Nothing }
+    , { from = { id = 215, x = 3411.95, y = 2357.69, z = 150.38 }, to = { id = 501, x = 3494.08, y = 2282.08, z = 141.82 }, isRetrace = False, name = Just "Southwood Avenue" }
+    , { from = { id = 501, x = 3494.08, y = 2282.08, z = 141.82 }, to = { id = 193, x = 3279.88, y = 2173.89, z = 143.55 }, isRetrace = False, name = Just "Grove Avenue" }
+    , { from = { id = 193, x = 3279.88, y = 2173.89, z = 143.55 }, to = { id = 196, x = 3202.06, y = 2234.90, z = 147.43 }, isRetrace = False, name = Just "Vista Avenue" }
+    , { from = { id = 196, x = 3202.06, y = 2234.90, z = 147.43 }, to = { id = 206, x = 3208.82, y = 2291.20, z = 147.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 206, x = 3208.82, y = 2291.20, z = 147.43 }, to = { id = 207, x = 3214.32, y = 2297.08, z = 147.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 207, x = 3214.32, y = 2297.08, z = 147.43 }, to = { id = 258, x = 3163.78, y = 2344.02, z = 154.64 }, isRetrace = False, name = Just "Vista Avenue" }
+    , { from = { id = 258, x = 3163.78, y = 2344.02, z = 154.64 }, to = { id = 211, x = 3059.43, y = 2330.07, z = 146.38 }, isRetrace = False, name = Just "Fir Path" }
+    , { from = { id = 211, x = 3059.43, y = 2330.07, z = 146.38 }, to = { id = 258, x = 3163.78, y = 2344.02, z = 154.64 }, isRetrace = True, name = Just "Fir Path" }
+    , { from = { id = 258, x = 3163.78, y = 2344.02, z = 154.64 }, to = { id = 257, x = 3003.02, y = 2617.31, z = 165.59 }, isRetrace = False, name = Nothing }
+    , { from = { id = 257, x = 3003.02, y = 2617.31, z = 165.59 }, to = { id = 255, x = 2776.17, y = 2607.94, z = 152.43 }, isRetrace = False, name = Just "Forest Avenue" }
+    , { from = { id = 255, x = 2776.17, y = 2607.94, z = 152.43 }, to = { id = 286, x = 2697.30, y = 2938.93, z = 157.91 }, isRetrace = False, name = Just "Vista Path" }
+    , { from = { id = 286, x = 2697.30, y = 2938.93, z = 157.91 }, to = { id = 274, x = 2179.35, y = 2866.82, z = 131.98 }, isRetrace = False, name = Nothing }
+    , { from = { id = 274, x = 2179.35, y = 2866.82, z = 131.98 }, to = { id = 271, x = 2164.22, y = 2789.39, z = 126.07 }, isRetrace = False, name = Nothing }
+    , { from = { id = 271, x = 2164.22, y = 2789.39, z = 126.07 }, to = { id = 269, x = 2191.14, y = 2768.41, z = 125.77 }, isRetrace = False, name = Nothing }
+    , { from = { id = 269, x = 2191.14, y = 2768.41, z = 125.77 }, to = { id = 271, x = 2164.22, y = 2789.39, z = 126.07 }, isRetrace = True, name = Nothing }
+    , { from = { id = 271, x = 2164.22, y = 2789.39, z = 126.07 }, to = { id = 535, x = 2132.56, y = 2802.77, z = 122.72 }, isRetrace = False, name = Just "Forest Avenue" }
+    , { from = { id = 535, x = 2132.56, y = 2802.77, z = 122.72 }, to = { id = 270, x = 2059.84, y = 2663.90, z = 122.21 }, isRetrace = False, name = Just "Catalpa Path" }
+    , { from = { id = 270, x = 2059.84, y = 2663.90, z = 122.21 }, to = { id = 261, x = 2134.34, y = 2641.88, z = 125.95 }, isRetrace = False, name = Just "Locust Avenue" }
+    , { from = { id = 261, x = 2134.34, y = 2641.88, z = 125.95 }, to = { id = 262, x = 2178.11, y = 2665.59, z = 125.88 }, isRetrace = False, name = Nothing }
+    , { from = { id = 262, x = 2178.11, y = 2665.59, z = 125.88 }, to = { id = 269, x = 2191.14, y = 2768.41, z = 125.77 }, isRetrace = False, name = Nothing }
+    , { from = { id = 269, x = 2191.14, y = 2768.41, z = 125.77 }, to = { id = 272, x = 2555.68, y = 2790.61, z = 128.08 }, isRetrace = False, name = Just "Forest Avenue" }
+    , { from = { id = 272, x = 2555.68, y = 2790.61, z = 128.08 }, to = { id = 517, x = 2401.65, y = 2482.86, z = 128.52 }, isRetrace = False, name = Just "Mossy Path" }
+    , { from = { id = 517, x = 2401.65, y = 2482.86, z = 128.52 }, to = { id = 241, x = 2375.95, y = 2503.69, z = 127.73 }, isRetrace = False, name = Just "Southwood Avenue" }
+    , { from = { id = 241, x = 2375.95, y = 2503.69, z = 127.73 }, to = { id = 262, x = 2178.11, y = 2665.59, z = 125.88 }, isRetrace = False, name = Just "Southwood Avenue" }
+    , { from = { id = 262, x = 2178.11, y = 2665.59, z = 125.88 }, to = { id = 261, x = 2134.34, y = 2641.88, z = 125.95 }, isRetrace = True, name = Nothing }
+    , { from = { id = 261, x = 2134.34, y = 2641.88, z = 125.95 }, to = { id = 270, x = 2059.84, y = 2663.90, z = 122.21 }, isRetrace = True, name = Just "Locust Avenue" }
+    , { from = { id = 270, x = 2059.84, y = 2663.90, z = 122.21 }, to = { id = 34, x = 2017.65, y = 2781.88, z = 114.56 }, isRetrace = False, name = Nothing }
+    , { from = { id = 34, x = 2017.65, y = 2781.88, z = 114.56 }, to = { id = 536, x = 1959.23, y = 2814.37, z = 111.71 }, isRetrace = False, name = Just "Locust Avenue" }
+    , { from = { id = 536, x = 1959.23, y = 2814.37, z = 111.71 }, to = { id = 35, x = 2099.06, y = 2812.35, z = 120.21 }, isRetrace = False, name = Just "Forest Avenue" }
+    , { from = { id = 35, x = 2099.06, y = 2812.35, z = 120.21 }, to = { id = 535, x = 2132.56, y = 2802.77, z = 122.72 }, isRetrace = False, name = Just "Forest Avenue" }
+    , { from = { id = 535, x = 2132.56, y = 2802.77, z = 122.72 }, to = { id = 35, x = 2099.06, y = 2812.35, z = 120.21 }, isRetrace = True, name = Just "Forest Avenue" }
+    , { from = { id = 35, x = 2099.06, y = 2812.35, z = 120.21 }, to = { id = 34, x = 2017.65, y = 2781.88, z = 114.56 }, isRetrace = False, name = Nothing }
+    , { from = { id = 34, x = 2017.65, y = 2781.88, z = 114.56 }, to = { id = 536, x = 1959.23, y = 2814.37, z = 111.71 }, isRetrace = True, name = Just "Locust Avenue" }
+    , { from = { id = 536, x = 1959.23, y = 2814.37, z = 111.71 }, to = { id = 46, x = 1734.58, y = 2862.31, z = 105.52 }, isRetrace = False, name = Just "Forest Avenue" }
+    , { from = { id = 46, x = 1734.58, y = 2862.31, z = 105.52 }, to = { id = 47, x = 1667.11, y = 2992.29, z = 106.67 }, isRetrace = False, name = Nothing }
+    , { from = { id = 47, x = 1667.11, y = 2992.29, z = 106.67 }, to = { id = 46, x = 1734.58, y = 2862.31, z = 105.52 }, isRetrace = True, name = Nothing }
+    , { from = { id = 46, x = 1734.58, y = 2862.31, z = 105.52 }, to = { id = 525, x = 1699.53, y = 2658.56, z = 105.34 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 525, x = 1699.53, y = 2658.56, z = 105.34 }, to = { id = 524, x = 1684.96, y = 2586.65, z = 108.62 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 524, x = 1684.96, y = 2586.65, z = 108.62 }, to = { id = 525, x = 1699.53, y = 2658.56, z = 105.34 }, isRetrace = True, name = Just "Landscape Avenue" }
+    , { from = { id = 525, x = 1699.53, y = 2658.56, z = 105.34 }, to = { id = 266, x = 1943.18, y = 2654.32, z = 113.41 }, isRetrace = False, name = Just "Snowberry Path" }
+    , { from = { id = 266, x = 1943.18, y = 2654.32, z = 113.41 }, to = { id = 265, x = 1922.68, y = 2737.07, z = 112.64 }, isRetrace = False, name = Nothing }
+    , { from = { id = 265, x = 1922.68, y = 2737.07, z = 112.64 }, to = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, isRetrace = False, name = Just "Daffodil Path" }
+    , { from = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, to = { id = 265, x = 1922.68, y = 2737.07, z = 112.64 }, isRetrace = False, name = Just "Daffodil Path" }
+    , { from = { id = 265, x = 1922.68, y = 2737.07, z = 112.64 }, to = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, isRetrace = True, name = Just "Daffodil Path" }
+    , { from = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, to = { id = 265, x = 1922.68, y = 2737.07, z = 112.64 }, isRetrace = False, name = Just "Daffodil Path" }
+    , { from = { id = 265, x = 1922.68, y = 2737.07, z = 112.64 }, to = { id = 266, x = 1943.18, y = 2654.32, z = 113.41 }, isRetrace = True, name = Nothing }
+    , { from = { id = 266, x = 1943.18, y = 2654.32, z = 113.41 }, to = { id = 518, x = 1808.68, y = 2492.07, z = 122.47 }, isRetrace = False, name = Just "Lavender Path" }
+    , { from = { id = 518, x = 1808.68, y = 2492.07, z = 122.47 }, to = { id = 219, x = 1917.78, y = 2376.33, z = 136.40 }, isRetrace = False, name = Just "Circling Path" }
+    , { from = { id = 219, x = 1917.78, y = 2376.33, z = 136.40 }, to = { id = 518, x = 1808.68, y = 2492.07, z = 122.47 }, isRetrace = True, name = Just "Circling Path" }
+    , { from = { id = 518, x = 1808.68, y = 2492.07, z = 122.47 }, to = { id = 524, x = 1684.96, y = 2586.65, z = 108.62 }, isRetrace = False, name = Just "Circling Path" }
+    , { from = { id = 524, x = 1684.96, y = 2586.65, z = 108.62 }, to = { id = 203, x = 1652.15, y = 2280.07, z = 116.34 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 203, x = 1652.15, y = 2280.07, z = 116.34 }, to = { id = 500, x = 1680.86, y = 2279.43, z = 116.34 }, isRetrace = False, name = Just "Orchard Avenue" }
+    , { from = { id = 500, x = 1680.86, y = 2279.43, z = 116.34 }, to = { id = 203, x = 1652.15, y = 2280.07, z = 116.34 }, isRetrace = True, name = Just "Orchard Avenue" }
+    , { from = { id = 203, x = 1652.15, y = 2280.07, z = 116.34 }, to = { id = 500, x = 1680.86, y = 2279.43, z = 116.34 }, isRetrace = False, name = Just "Orchard Avenue" }
+    , { from = { id = 500, x = 1680.86, y = 2279.43, z = 116.34 }, to = { id = 205, x = 1879.60, y = 2290.45, z = 130.03 }, isRetrace = False, name = Just "Orchard Avenue" }
+    , { from = { id = 205, x = 1879.60, y = 2290.45, z = 130.03 }, to = { id = 236, x = 1931.73, y = 2280.09, z = 133.99 }, isRetrace = False, name = Just "Orchard Avenue" }
+    , { from = { id = 236, x = 1931.73, y = 2280.09, z = 133.99 }, to = { id = 186, x = 1941.93, y = 2093.57, z = 137.37 }, isRetrace = False, name = Just "Thorn Path" }
+    , { from = { id = 186, x = 1941.93, y = 2093.57, z = 137.37 }, to = { id = 236, x = 1931.73, y = 2280.09, z = 133.99 }, isRetrace = True, name = Just "Thorn Path" }
+    , { from = { id = 236, x = 1931.73, y = 2280.09, z = 133.99 }, to = { id = 235, x = 2031.47, y = 2479.01, z = 139.53 }, isRetrace = False, name = Nothing }
+    , { from = { id = 235, x = 2031.47, y = 2479.01, z = 139.53 }, to = { id = 261, x = 2134.34, y = 2641.88, z = 125.95 }, isRetrace = False, name = Nothing }
+    , { from = { id = 261, x = 2134.34, y = 2641.88, z = 125.95 }, to = { id = 235, x = 2031.47, y = 2479.01, z = 139.53 }, isRetrace = True, name = Nothing }
+    , { from = { id = 235, x = 2031.47, y = 2479.01, z = 139.53 }, to = { id = 219, x = 1917.78, y = 2376.33, z = 136.40 }, isRetrace = False, name = Nothing }
+    , { from = { id = 219, x = 1917.78, y = 2376.33, z = 136.40 }, to = { id = 205, x = 1879.60, y = 2290.45, z = 130.03 }, isRetrace = False, name = Nothing }
+    , { from = { id = 205, x = 1879.60, y = 2290.45, z = 130.03 }, to = { id = 174, x = 1782.13, y = 1976.96, z = 120.85 }, isRetrace = False, name = Nothing }
+    , { from = { id = 174, x = 1782.13, y = 1976.96, z = 120.85 }, to = { id = 162, x = 1538.99, y = 1825.84, z = 117.45 }, isRetrace = False, name = Nothing }
+    , { from = { id = 162, x = 1538.99, y = 1825.84, z = 117.45 }, to = { id = 174, x = 1782.13, y = 1976.96, z = 120.85 }, isRetrace = True, name = Nothing }
+    , { from = { id = 174, x = 1782.13, y = 1976.96, z = 120.85 }, to = { id = 186, x = 1941.93, y = 2093.57, z = 137.37 }, isRetrace = False, name = Nothing }
+    , { from = { id = 186, x = 1941.93, y = 2093.57, z = 137.37 }, to = { id = 187, x = 2080.29, y = 1891.89, z = 104.27 }, isRetrace = False, name = Nothing }
+    , { from = { id = 187, x = 2080.29, y = 1891.89, z = 104.27 }, to = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, isRetrace = False, name = Just "Vale Avenue" }
+    , { from = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, to = { id = 478, x = 1846.21, y = 1576.50, z = 92.74 }, isRetrace = False, name = Just "Vale Avenue" }
+    , { from = { id = 478, x = 1846.21, y = 1576.50, z = 92.74 }, to = { id = 477, x = 1824.61, y = 1558.88, z = 92.74 }, isRetrace = False, name = Just "Crescent Avenue" }
+    , { from = { id = 477, x = 1824.61, y = 1558.88, z = 92.74 }, to = { id = 473, x = 1537.37, y = 1471.53, z = 89.62 }, isRetrace = False, name = Just "Crescent Avenue" }
+    , { from = { id = 473, x = 1537.37, y = 1471.53, z = 89.62 }, to = { id = 134, x = 1498.33, y = 1327.09, z = 97.57 }, isRetrace = False, name = Just "Crescent Avenue" }
+    , { from = { id = 134, x = 1498.33, y = 1327.09, z = 97.57 }, to = { id = 473, x = 1537.37, y = 1471.53, z = 89.62 }, isRetrace = True, name = Just "Crescent Avenue" }
+    , { from = { id = 473, x = 1537.37, y = 1471.53, z = 89.62 }, to = { id = 467, x = 1811.45, y = 1294.48, z = 88.19 }, isRetrace = False, name = Just "Primrose Path" }
+    , { from = { id = 467, x = 1811.45, y = 1294.48, z = 88.19 }, to = { id = 121, x = 1823.31, y = 1087.31, z = 92.72 }, isRetrace = False, name = Just "Vale Avenue" }
+    , { from = { id = 121, x = 1823.31, y = 1087.31, z = 92.72 }, to = { id = 467, x = 1811.45, y = 1294.48, z = 88.19 }, isRetrace = True, name = Just "Vale Avenue" }
+    , { from = { id = 467, x = 1811.45, y = 1294.48, z = 88.19 }, to = { id = 477, x = 1824.61, y = 1558.88, z = 92.74 }, isRetrace = False, name = Just "Vale Avenue" }
+    , { from = { id = 477, x = 1824.61, y = 1558.88, z = 92.74 }, to = { id = 478, x = 1846.21, y = 1576.50, z = 92.74 }, isRetrace = True, name = Just "Crescent Avenue" }
+    , { from = { id = 478, x = 1846.21, y = 1576.50, z = 92.74 }, to = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, isRetrace = False, name = Just "Crescent Avenue" }
+    , { from = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, to = { id = 187, x = 2080.29, y = 1891.89, z = 104.27 }, isRetrace = True, name = Just "Vale Avenue" }
+    , { from = { id = 187, x = 2080.29, y = 1891.89, z = 104.27 }, to = { id = 191, x = 2078.66, y = 2153.75, z = 115.09 }, isRetrace = False, name = Just "Summit Avenue" }
+    , { from = { id = 191, x = 2078.66, y = 2153.75, z = 115.09 }, to = { id = 177, x = 2191.50, y = 2063.17, z = 119.78 }, isRetrace = False, name = Nothing }
+    , { from = { id = 177, x = 2191.50, y = 2063.17, z = 119.78 }, to = { id = 178, x = 2257.40, y = 2051.90, z = 121.49 }, isRetrace = False, name = Nothing }
+    , { from = { id = 178, x = 2257.40, y = 2051.90, z = 121.49 }, to = { id = 491, x = 2259.18, y = 2058.07, z = 121.49 }, isRetrace = False, name = Just "Spring Walk" }
+    , { from = { id = 491, x = 2259.18, y = 2058.07, z = 121.49 }, to = { id = 200, x = 2251.25, y = 2254.61, z = 118.81 }, isRetrace = False, name = Just "Spring Walk" }
+    , { from = { id = 200, x = 2251.25, y = 2254.61, z = 118.81 }, to = { id = 199, x = 2371.91, y = 2212.19, z = 116.89 }, isRetrace = False, name = Nothing }
+    , { from = { id = 199, x = 2371.91, y = 2212.19, z = 116.89 }, to = { id = 158, x = 2597.43, y = 1957.77, z = 128.60 }, isRetrace = False, name = Just "Southwood Avenue" }
+    , { from = { id = 158, x = 2597.43, y = 1957.77, z = 128.60 }, to = { id = 199, x = 2371.91, y = 2212.19, z = 116.89 }, isRetrace = True, name = Just "Southwood Avenue" }
+    , { from = { id = 199, x = 2371.91, y = 2212.19, z = 116.89 }, to = { id = 491, x = 2259.18, y = 2058.07, z = 121.49 }, isRetrace = False, name = Just "Summer Walk" }
+    , { from = { id = 491, x = 2259.18, y = 2058.07, z = 121.49 }, to = { id = 178, x = 2257.40, y = 2051.90, z = 121.49 }, isRetrace = True, name = Just "Spring Walk" }
+    , { from = { id = 178, x = 2257.40, y = 2051.90, z = 121.49 }, to = { id = 487, x = 2340.97, y = 1974.16, z = 121.85 }, isRetrace = False, name = Just "Winter Walk" }
+    , { from = { id = 487, x = 2340.97, y = 1974.16, z = 121.85 }, to = { id = 490, x = 2424.93, y = 2033.07, z = 121.97 }, isRetrace = False, name = Just "Autumn Walk" }
+    , { from = { id = 490, x = 2424.93, y = 2033.07, z = 121.97 }, to = { id = 487, x = 2340.97, y = 1974.16, z = 121.85 }, isRetrace = True, name = Just "Autumn Walk" }
+    , { from = { id = 487, x = 2340.97, y = 1974.16, z = 121.85 }, to = { id = 166, x = 2472.81, y = 1854.23, z = 123.00 }, isRetrace = False, name = Just "Winter Walk" }
+    , { from = { id = 166, x = 2472.81, y = 1854.23, z = 123.00 }, to = { id = 157, x = 2481.73, y = 1860.17, z = 123.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 157, x = 2481.73, y = 1860.17, z = 123.00 }, to = { id = 166, x = 2472.81, y = 1854.23, z = 123.00 }, isRetrace = True, name = Nothing }
+    , { from = { id = 166, x = 2472.81, y = 1854.23, z = 123.00 }, to = { id = 167, x = 2293.10, y = 1785.61, z = 125.33 }, isRetrace = False, name = Nothing }
+    , { from = { id = 167, x = 2293.10, y = 1785.61, z = 125.33 }, to = { id = 472, x = 2260.40, y = 1430.55, z = 126.14 }, isRetrace = False, name = Just "Summit Avenue" }
+    , { from = { id = 472, x = 2260.40, y = 1430.55, z = 126.14 }, to = { id = 464, x = 2343.43, y = 1231.82, z = 138.42 }, isRetrace = False, name = Just "Andean Path" }
+    , { from = { id = 464, x = 2343.43, y = 1231.82, z = 138.42 }, to = { id = 465, x = 2359.18, y = 1157.32, z = 130.97 }, isRetrace = False, name = Just "Andean Path" }
+    , { from = { id = 465, x = 2359.18, y = 1157.32, z = 130.97 }, to = { id = 464, x = 2343.43, y = 1231.82, z = 138.42 }, isRetrace = True, name = Just "Andean Path" }
+    , { from = { id = 464, x = 2343.43, y = 1231.82, z = 138.42 }, to = { id = 131, x = 2231.08, y = 1273.82, z = 121.64 }, isRetrace = False, name = Just "Alpine Path" }
+    , { from = { id = 131, x = 2231.08, y = 1273.82, z = 121.64 }, to = { id = 472, x = 2260.40, y = 1430.55, z = 126.14 }, isRetrace = False, name = Just "Summit Avenue" }
+    , { from = { id = 472, x = 2260.40, y = 1430.55, z = 126.14 }, to = { id = 167, x = 2293.10, y = 1785.61, z = 125.33 }, isRetrace = True, name = Just "Summit Avenue" }
+    , { from = { id = 167, x = 2293.10, y = 1785.61, z = 125.33 }, to = { id = 177, x = 2191.50, y = 2063.17, z = 119.78 }, isRetrace = False, name = Just "Summit Avenue" }
+    , { from = { id = 177, x = 2191.50, y = 2063.17, z = 119.78 }, to = { id = 191, x = 2078.66, y = 2153.75, z = 115.09 }, isRetrace = True, name = Nothing }
+    , { from = { id = 191, x = 2078.66, y = 2153.75, z = 115.09 }, to = { id = 200, x = 2251.25, y = 2254.61, z = 118.81 }, isRetrace = False, name = Nothing }
+    , { from = { id = 200, x = 2251.25, y = 2254.61, z = 118.81 }, to = { id = 242, x = 2273.16, y = 2344.59, z = 124.90 }, isRetrace = False, name = Just "Spring Walk" }
+    , { from = { id = 242, x = 2273.16, y = 2344.59, z = 124.90 }, to = { id = 504, x = 2437.68, y = 2236.32, z = 127.33 }, isRetrace = False, name = Just "Azalea Path" }
+    , { from = { id = 504, x = 2437.68, y = 2236.32, z = 127.33 }, to = { id = 505, x = 2466.43, y = 2279.07, z = 134.07 }, isRetrace = False, name = Just "Acanthus Path" }
+    , { from = { id = 505, x = 2466.43, y = 2279.07, z = 134.07 }, to = { id = 499, x = 2640.68, y = 2187.57, z = 141.70 }, isRetrace = False, name = Just "Hawthorne Path" }
+    , { from = { id = 499, x = 2640.68, y = 2187.57, z = 141.70 }, to = { id = 217, x = 2673.97, y = 2266.57, z = 137.28 }, isRetrace = False, name = Just "Hawthorne Path" }
+    , { from = { id = 217, x = 2673.97, y = 2266.57, z = 137.28 }, to = { id = 512, x = 2727.18, y = 2390.57, z = 149.63 }, isRetrace = False, name = Just "Violet Path" }
+    , { from = { id = 512, x = 2727.18, y = 2390.57, z = 149.63 }, to = { id = 217, x = 2673.97, y = 2266.57, z = 137.28 }, isRetrace = True, name = Just "Violet Path" }
+    , { from = { id = 217, x = 2673.97, y = 2266.57, z = 137.28 }, to = { id = 499, x = 2640.68, y = 2187.57, z = 141.70 }, isRetrace = True, name = Just "Hawthorne Path" }
+    , { from = { id = 499, x = 2640.68, y = 2187.57, z = 141.70 }, to = { id = 179, x = 2846.72, y = 2075.24, z = 146.45 }, isRetrace = False, name = Just "Locust Avenue" }
+    , { from = { id = 179, x = 2846.72, y = 2075.24, z = 146.45 }, to = { id = 180, x = 2899.95, y = 1983.33, z = 141.29 }, isRetrace = False, name = Nothing }
+    , { from = { id = 180, x = 2899.95, y = 1983.33, z = 141.29 }, to = { id = 504, x = 2437.68, y = 2236.32, z = 127.33 }, isRetrace = False, name = Just "Locust Avenue" }
+    , { from = { id = 504, x = 2437.68, y = 2236.32, z = 127.33 }, to = { id = 242, x = 2273.16, y = 2344.59, z = 124.90 }, isRetrace = True, name = Just "Azalea Path" }
+    , { from = { id = 242, x = 2273.16, y = 2344.59, z = 124.90 }, to = { id = 241, x = 2375.95, y = 2503.69, z = 127.73 }, isRetrace = False, name = Nothing }
+    , { from = { id = 241, x = 2375.95, y = 2503.69, z = 127.73 }, to = { id = 517, x = 2401.65, y = 2482.86, z = 128.52 }, isRetrace = True, name = Just "Southwood Avenue" }
+    , { from = { id = 517, x = 2401.65, y = 2482.86, z = 128.52 }, to = { id = 234, x = 2447.60, y = 2444.01, z = 129.60 }, isRetrace = False, name = Just "Southwood Avenue" }
+    , { from = { id = 234, x = 2447.60, y = 2444.01, z = 129.60 }, to = { id = 233, x = 2467.95, y = 2423.93, z = 130.23 }, isRetrace = False, name = Nothing }
+    , { from = { id = 233, x = 2467.95, y = 2423.93, z = 130.23 }, to = { id = 519, x = 2588.18, y = 2506.82, z = 145.95 }, isRetrace = False, name = Just "Woodland Path" }
+    , { from = { id = 519, x = 2588.18, y = 2506.82, z = 145.95 }, to = { id = 233, x = 2467.95, y = 2423.93, z = 130.23 }, isRetrace = True, name = Just "Woodland Path" }
+    , { from = { id = 233, x = 2467.95, y = 2423.93, z = 130.23 }, to = { id = 234, x = 2447.60, y = 2444.01, z = 129.60 }, isRetrace = True, name = Nothing }
+    , { from = { id = 234, x = 2447.60, y = 2444.01, z = 129.60 }, to = { id = 505, x = 2466.43, y = 2279.07, z = 134.07 }, isRetrace = False, name = Just "Hemlock Path" }
+    , { from = { id = 505, x = 2466.43, y = 2279.07, z = 134.07 }, to = { id = 216, x = 2532.20, y = 2374.42, z = 132.05 }, isRetrace = False, name = Just "Acanthus Path" }
+    , { from = { id = 216, x = 2532.20, y = 2374.42, z = 132.05 }, to = { id = 233, x = 2467.95, y = 2423.93, z = 130.23 }, isRetrace = False, name = Nothing }
+    , { from = { id = 233, x = 2467.95, y = 2423.93, z = 130.23 }, to = { id = 216, x = 2532.20, y = 2374.42, z = 132.05 }, isRetrace = True, name = Nothing }
+    , { from = { id = 216, x = 2532.20, y = 2374.42, z = 132.05 }, to = { id = 217, x = 2673.97, y = 2266.57, z = 137.28 }, isRetrace = False, name = Nothing }
+    , { from = { id = 217, x = 2673.97, y = 2266.57, z = 137.28 }, to = { id = 16, x = 2846.26, y = 2218.05, z = 143.53 }, isRetrace = False, name = Just "Locust Avenue" }
+    , { from = { id = 16, x = 2846.26, y = 2218.05, z = 143.53 }, to = { id = 179, x = 2846.72, y = 2075.24, z = 146.45 }, isRetrace = False, name = Nothing }
+    , { from = { id = 179, x = 2846.72, y = 2075.24, z = 146.45 }, to = { id = 180, x = 2899.95, y = 1983.33, z = 141.29 }, isRetrace = True, name = Nothing }
+    , { from = { id = 180, x = 2899.95, y = 1983.33, z = 141.29 }, to = { id = 173, x = 2926.19, y = 1955.37, z = 139.31 }, isRetrace = False, name = Just "Azalea Path" }
+    , { from = { id = 173, x = 2926.19, y = 1955.37, z = 139.31 }, to = { id = 180, x = 2899.95, y = 1983.33, z = 141.29 }, isRetrace = True, name = Just "Azalea Path" }
+    , { from = { id = 180, x = 2899.95, y = 1983.33, z = 141.29 }, to = { id = 495, x = 3014.18, y = 2142.07, z = 150.53 }, isRetrace = False, name = Just "Monarda Path" }
+    , { from = { id = 495, x = 3014.18, y = 2142.07, z = 150.53 }, to = { id = 181, x = 3099.17, y = 2084.80, z = 143.40 }, isRetrace = False, name = Just "Monarda Path" }
+    , { from = { id = 181, x = 3099.17, y = 2084.80, z = 143.40 }, to = { id = 495, x = 3014.18, y = 2142.07, z = 150.53 }, isRetrace = True, name = Just "Monarda Path" }
+    , { from = { id = 495, x = 3014.18, y = 2142.07, z = 150.53 }, to = { id = 17, x = 2914.93, y = 2211.07, z = 148.00 }, isRetrace = False, name = Just "Monarda Path" }
+    , { from = { id = 17, x = 2914.93, y = 2211.07, z = 148.00 }, to = { id = 16, x = 2846.26, y = 2218.05, z = 143.53 }, isRetrace = False, name = Just "Locust Avenue" }
+    , { from = { id = 16, x = 2846.26, y = 2218.05, z = 143.53 }, to = { id = 17, x = 2914.93, y = 2211.07, z = 148.00 }, isRetrace = True, name = Just "Locust Avenue" }
+    , { from = { id = 17, x = 2914.93, y = 2211.07, z = 148.00 }, to = { id = 211, x = 3059.43, y = 2330.07, z = 146.38 }, isRetrace = False, name = Nothing }
+    , { from = { id = 211, x = 3059.43, y = 2330.07, z = 146.38 }, to = { id = 512, x = 2727.18, y = 2390.57, z = 149.63 }, isRetrace = False, name = Just "Fir Path" }
+    , { from = { id = 512, x = 2727.18, y = 2390.57, z = 149.63 }, to = { id = 256, x = 2725.10, y = 2568.28, z = 149.45 }, isRetrace = False, name = Just "Violet Path" }
+    , { from = { id = 256, x = 2725.10, y = 2568.28, z = 149.45 }, to = { id = 272, x = 2555.68, y = 2790.61, z = 128.08 }, isRetrace = False, name = Nothing }
+    , { from = { id = 272, x = 2555.68, y = 2790.61, z = 128.08 }, to = { id = 256, x = 2725.10, y = 2568.28, z = 149.45 }, isRetrace = True, name = Nothing }
+    , { from = { id = 256, x = 2725.10, y = 2568.28, z = 149.45 }, to = { id = 255, x = 2776.17, y = 2607.94, z = 152.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 255, x = 2776.17, y = 2607.94, z = 152.43 }, to = { id = 257, x = 3003.02, y = 2617.31, z = 165.59 }, isRetrace = True, name = Just "Forest Avenue" }
+    , { from = { id = 257, x = 3003.02, y = 2617.31, z = 165.59 }, to = { id = 273, x = 3047.21, y = 2847.22, z = 166.81 }, isRetrace = False, name = Nothing }
+    , { from = { id = 273, x = 3047.21, y = 2847.22, z = 166.81 }, to = { id = 547, x = 2999.56, y = 3012.37, z = 159.28 }, isRetrace = False, name = Just "Woodbine Path" }
+    , { from = { id = 547, x = 2999.56, y = 3012.37, z = 159.28 }, to = { id = 561, x = 3231.88, y = 3305.00, z = 158.97 }, isRetrace = False, name = Just "Oak Leaf Avenue" }
+    , { from = { id = 561, x = 3231.88, y = 3305.00, z = 158.97 }, to = { id = 60, x = 3047.73, y = 3378.28, z = 153.80 }, isRetrace = False, name = Just "Central Avenue" }
+    , { from = { id = 60, x = 3047.73, y = 3378.28, z = 153.80 }, to = { id = 329, x = 2903.43, y = 3371.79, z = 149.36 }, isRetrace = False, name = Nothing }
+    , { from = { id = 329, x = 2903.43, y = 3371.79, z = 149.36 }, to = { id = 68, x = 2856.18, y = 3467.07, z = 151.52 }, isRetrace = False, name = Just "Holly Path" }
+    , { from = { id = 68, x = 2856.18, y = 3467.07, z = 151.52 }, to = { id = 66, x = 2688.45, y = 3538.74, z = 154.76 }, isRetrace = False, name = Nothing }
+    , { from = { id = 66, x = 2688.45, y = 3538.74, z = 154.76 }, to = { id = 67, x = 2648.12, y = 3499.35, z = 150.23 }, isRetrace = False, name = Just "Twilight Path" }
+    , { from = { id = 67, x = 2648.12, y = 3499.35, z = 150.23 }, to = { id = 66, x = 2688.45, y = 3538.74, z = 154.76 }, isRetrace = True, name = Just "Twilight Path" }
+    , { from = { id = 66, x = 2688.45, y = 3538.74, z = 154.76 }, to = { id = 569, x = 2797.93, y = 3659.65, z = 167.52 }, isRetrace = False, name = Just "Twilight Path" }
+    , { from = { id = 569, x = 2797.93, y = 3659.65, z = 167.52 }, to = { id = 63, x = 2861.43, y = 3497.57, z = 152.71 }, isRetrace = False, name = Just "Holly Path" }
+    , { from = { id = 63, x = 2861.43, y = 3497.57, z = 152.71 }, to = { id = 68, x = 2856.18, y = 3467.07, z = 151.52 }, isRetrace = False, name = Nothing }
+    , { from = { id = 68, x = 2856.18, y = 3467.07, z = 151.52 }, to = { id = 63, x = 2861.43, y = 3497.57, z = 152.71 }, isRetrace = True, name = Nothing }
+    , { from = { id = 63, x = 2861.43, y = 3497.57, z = 152.71 }, to = { id = 59, x = 3064.18, y = 3438.57, z = 157.06 }, isRetrace = False, name = Just "Alcove Path" }
+    , { from = { id = 59, x = 3064.18, y = 3438.57, z = 157.06 }, to = { id = 60, x = 3047.73, y = 3378.28, z = 153.80 }, isRetrace = False, name = Just "Spirea Path" }
+    , { from = { id = 60, x = 3047.73, y = 3378.28, z = 153.80 }, to = { id = 59, x = 3064.18, y = 3438.57, z = 157.06 }, isRetrace = True, name = Just "Spirea Path" }
+    , { from = { id = 59, x = 3064.18, y = 3438.57, z = 157.06 }, to = { id = 330, x = 3448.43, y = 3377.18, z = 159.50 }, isRetrace = False, name = Just "Grassy Path" }
+    , { from = { id = 330, x = 3448.43, y = 3377.18, z = 159.50 }, to = { id = 348, x = 3257.58, y = 3717.38, z = 171.38 }, isRetrace = False, name = Nothing }
+    , { from = { id = 348, x = 3257.58, y = 3717.38, z = 171.38 }, to = { id = 360, x = 3351.93, y = 3781.64, z = 168.34 }, isRetrace = False, name = Nothing }
+    , { from = { id = 360, x = 3351.93, y = 3781.64, z = 168.34 }, to = { id = 380, x = 3438.37, y = 3826.00, z = 169.11 }, isRetrace = True, name = Just "Meadow Avenue" }
+    , { from = { id = 380, x = 3438.37, y = 3826.00, z = 169.11 }, to = { id = 71, x = 3615.41, y = 3879.12, z = 169.34 }, isRetrace = False, name = Just "Meadow Avenue" }
+    , { from = { id = 71, x = 3615.41, y = 3879.12, z = 169.34 }, to = { id = 70, x = 3840.22, y = 3927.02, z = 169.50 }, isRetrace = False, name = Just "Meadow Avenue" }
+    , { from = { id = 70, x = 3840.22, y = 3927.02, z = 169.50 }, to = { id = 389, x = 3872.46, y = 4160.53, z = 169.36 }, isRetrace = True, name = Nothing }
+    , { from = { id = 389, x = 3872.46, y = 4160.53, z = 169.36 }, to = { id = 83, x = 3953.27, y = 4235.89, z = 170.22 }, isRetrace = False, name = Nothing }
+    , { from = { id = 83, x = 3953.27, y = 4235.89, z = 170.22 }, to = { id = 82, x = 3825.17, y = 4258.84, z = 172.65 }, isRetrace = False, name = Nothing }
+    , { from = { id = 82, x = 3825.17, y = 4258.84, z = 172.65 }, to = { id = 557, x = 3772.42, y = 4305.00, z = 175.29 }, isRetrace = True, name = Just "Garland Avenue" }
+    , { from = { id = 557, x = 3772.42, y = 4305.00, z = 175.29 }, to = { id = 85, x = 3665.33, y = 4382.44, z = 179.07 }, isRetrace = False, name = Just "Garland Avenue" }
+    , { from = { id = 85, x = 3665.33, y = 4382.44, z = 179.07 }, to = { id = 427, x = 3619.44, y = 4487.21, z = 188.14 }, isRetrace = False, name = Just "Garland Avenue" }
+    , { from = { id = 427, x = 3619.44, y = 4487.21, z = 188.14 }, to = { id = 426, x = 3506.23, y = 4541.53, z = 194.19 }, isRetrace = False, name = Nothing }
+    , { from = { id = 426, x = 3506.23, y = 4541.53, z = 194.19 }, to = { id = 421, x = 3244.38, y = 4500.33, z = 201.17 }, isRetrace = False, name = Just "Battle Path" }
+    , { from = { id = 421, x = 3244.38, y = 4500.33, z = 201.17 }, to = { id = 422, x = 3200.71, y = 4468.47, z = 201.40 }, isRetrace = False, name = Nothing }
+    , { from = { id = 422, x = 3200.71, y = 4468.47, z = 201.40 }, to = { id = 421, x = 3244.38, y = 4500.33, z = 201.17 }, isRetrace = True, name = Nothing }
+    , { from = { id = 421, x = 3244.38, y = 4500.33, z = 201.17 }, to = { id = 595, x = 3503.71, y = 4287.90, z = 180.28 }, isRetrace = False, name = Just "Liberty Path" }
+    , { from = { id = 595, x = 3503.71, y = 4287.90, z = 180.28 }, to = { id = 85, x = 3665.33, y = 4382.44, z = 179.07 }, isRetrace = False, name = Just "Hemlock Avenue" }
+    , { from = { id = 85, x = 3665.33, y = 4382.44, z = 179.07 }, to = { id = 84, x = 3951.72, y = 4508.21, z = 171.05 }, isRetrace = False, name = Just "Hemlock Avenue" }
+    , { from = { id = 84, x = 3951.72, y = 4508.21, z = 171.05 }, to = { id = 89, x = 4053.50, y = 4631.59, z = 170.61 }, isRetrace = False, name = Nothing }
+    , { from = { id = 89, x = 4053.50, y = 4631.59, z = 170.61 }, to = { id = 88, x = 4254.65, y = 4394.04, z = 172.28 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 88, x = 4254.65, y = 4394.04, z = 172.28 }, to = { id = 79, x = 4572.91, y = 4106.44, z = 176.03 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 79, x = 4572.91, y = 4106.44, z = 176.03 }, to = { id = 88, x = 4254.65, y = 4394.04, z = 172.28 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 88, x = 4254.65, y = 4394.04, z = 172.28 }, to = { id = 407, x = 4203.47, y = 4336.74, z = 171.77 }, isRetrace = False, name = Nothing }
+    , { from = { id = 407, x = 4203.47, y = 4336.74, z = 171.77 }, to = { id = 78, x = 4550.68, y = 4052.32, z = 185.12 }, isRetrace = False, name = Just "Wistaria Path" }
+    , { from = { id = 78, x = 4550.68, y = 4052.32, z = 185.12 }, to = { id = 79, x = 4572.91, y = 4106.44, z = 176.03 }, isRetrace = False, name = Just "Wistaria Path" }
+    , { from = { id = 79, x = 4572.91, y = 4106.44, z = 176.03 }, to = { id = 385, x = 4653.84, y = 4093.82, z = 176.64 }, isRetrace = False, name = Nothing }
+    , { from = { id = 385, x = 4653.84, y = 4093.82, z = 176.64 }, to = { id = 367, x = 4950.35, y = 3851.02, z = 156.87 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 367, x = 4950.35, y = 3851.02, z = 156.87 }, to = { id = 366, x = 4941.58, y = 3687.74, z = 158.36 }, isRetrace = False, name = Nothing }
+    , { from = { id = 366, x = 4941.58, y = 3687.74, z = 158.36 }, to = { id = 344, x = 5127.04, y = 3539.41, z = 149.28 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 344, x = 5127.04, y = 3539.41, z = 149.28 }, to = { id = 366, x = 4941.58, y = 3687.74, z = 158.36 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 366, x = 4941.58, y = 3687.74, z = 158.36 }, to = { id = 367, x = 4950.35, y = 3851.02, z = 156.87 }, isRetrace = True, name = Nothing }
+    , { from = { id = 367, x = 4950.35, y = 3851.02, z = 156.87 }, to = { id = 343, x = 5208.68, y = 3647.32, z = 147.01 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 343, x = 5208.68, y = 3647.32, z = 147.01 }, to = { id = 344, x = 5127.04, y = 3539.41, z = 149.28 }, isRetrace = False, name = Nothing }
+    , { from = { id = 344, x = 5127.04, y = 3539.41, z = 149.28 }, to = { id = 58, x = 5212.33, y = 3433.65, z = 142.48 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 58, x = 5212.33, y = 3433.65, z = 142.48 }, to = { id = 537, x = 5280.90, y = 3052.80, z = 109.56 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 537, x = 5280.90, y = 3052.80, z = 109.56 }, to = { id = 540, x = 5024.98, y = 2871.04, z = 103.46 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 540, x = 5024.98, y = 2871.04, z = 103.46 }, to = { id = 541, x = 5083.68, y = 2767.82, z = 96.89 }, isRetrace = False, name = Just "Urn Path" }
+    , { from = { id = 541, x = 5083.68, y = 2767.82, z = 96.89 }, to = { id = 540, x = 5024.98, y = 2871.04, z = 103.46 }, isRetrace = True, name = Just "Urn Path" }
+    , { from = { id = 540, x = 5024.98, y = 2871.04, z = 103.46 }, to = { id = 263, x = 4642.39, y = 2599.30, z = 98.76 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 263, x = 4642.39, y = 2599.30, z = 98.76 }, to = { id = 508, x = 4857.04, y = 2507.68, z = 87.43 }, isRetrace = False, name = Just "Beech Avenue" }
+    , { from = { id = 508, x = 4857.04, y = 2507.68, z = 87.43 }, to = { id = 514, x = 4706.18, y = 2416.57, z = 88.04 }, isRetrace = False, name = Just "Sage Path" }
+    , { from = { id = 514, x = 4706.18, y = 2416.57, z = 88.04 }, to = { id = 515, x = 4562.43, y = 2328.32, z = 90.29 }, isRetrace = False, name = Just "Sage Path" }
+    , { from = { id = 515, x = 4562.43, y = 2328.32, z = 90.29 }, to = { id = 514, x = 4706.18, y = 2416.57, z = 88.04 }, isRetrace = True, name = Just "Sage Path" }
+    , { from = { id = 514, x = 4706.18, y = 2416.57, z = 88.04 }, to = { id = 20, x = 4856.52, y = 2267.82, z = 82.71 }, isRetrace = False, name = Just "Viburum Path" }
+    , { from = { id = 20, x = 4856.52, y = 2267.82, z = 82.71 }, to = { id = 507, x = 5021.31, y = 2442.47, z = 83.65 }, isRetrace = False, name = Just "Marigold Path" }
+    , { from = { id = 507, x = 5021.31, y = 2442.47, z = 83.65 }, to = { id = 510, x = 5156.70, y = 2372.10, z = 81.73 }, isRetrace = False, name = Just "Beech Avenue" }
+    , { from = { id = 510, x = 5156.70, y = 2372.10, z = 81.73 }, to = { id = 507, x = 5021.31, y = 2442.47, z = 83.65 }, isRetrace = True, name = Just "Beech Avenue" }
+    , { from = { id = 507, x = 5021.31, y = 2442.47, z = 83.65 }, to = { id = 508, x = 4857.04, y = 2507.68, z = 87.43 }, isRetrace = False, name = Just "Beech Avenue" }
+    , { from = { id = 508, x = 4857.04, y = 2507.68, z = 87.43 }, to = { id = 263, x = 4642.39, y = 2599.30, z = 98.76 }, isRetrace = True, name = Just "Beech Avenue" }
+    , { from = { id = 263, x = 4642.39, y = 2599.30, z = 98.76 }, to = { id = 513, x = 4165.40, y = 2408.64, z = 103.74 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 513, x = 4165.40, y = 2408.64, z = 103.74 }, to = { id = 208, x = 4261.68, y = 2318.57, z = 102.09 }, isRetrace = False, name = Just "Vernal Path" }
+    , { from = { id = 208, x = 4261.68, y = 2318.57, z = 102.09 }, to = { id = 511, x = 4493.18, y = 2377.82, z = 94.97 }, isRetrace = False, name = Just "Cornus Path" }
+    , { from = { id = 511, x = 4493.18, y = 2377.82, z = 94.97 }, to = { id = 208, x = 4261.68, y = 2318.57, z = 102.09 }, isRetrace = True, name = Just "Cornus Path" }
+    , { from = { id = 208, x = 4261.68, y = 2318.57, z = 102.09 }, to = { id = 513, x = 4165.40, y = 2408.64, z = 103.74 }, isRetrace = True, name = Just "Vernal Path" }
+    , { from = { id = 513, x = 4165.40, y = 2408.64, z = 103.74 }, to = { id = 506, x = 4025.01, y = 2291.71, z = 104.96 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 506, x = 4025.01, y = 2291.71, z = 104.96 }, to = { id = 503, x = 4135.43, y = 2231.07, z = 104.98 }, isRetrace = False, name = Just "Landscape Path" }
+    , { from = { id = 503, x = 4135.43, y = 2231.07, z = 104.98 }, to = { id = 209, x = 4260.18, y = 2278.57, z = 102.14 }, isRetrace = False, name = Just "Cornus Path" }
+    , { from = { id = 209, x = 4260.18, y = 2278.57, z = 102.14 }, to = { id = 208, x = 4261.68, y = 2318.57, z = 102.09 }, isRetrace = False, name = Nothing }
+    , { from = { id = 208, x = 4261.68, y = 2318.57, z = 102.09 }, to = { id = 209, x = 4260.18, y = 2278.57, z = 102.14 }, isRetrace = True, name = Nothing }
+    , { from = { id = 209, x = 4260.18, y = 2278.57, z = 102.14 }, to = { id = 498, x = 4477.93, y = 2169.57, z = 88.79 }, isRetrace = False, name = Just "Vernal Path" }
+    , { from = { id = 498, x = 4477.93, y = 2169.57, z = 88.79 }, to = { id = 502, x = 4601.18, y = 2202.57, z = 84.53 }, isRetrace = False, name = Just "Mahonia Path" }
+    , { from = { id = 502, x = 4601.18, y = 2202.57, z = 84.53 }, to = { id = 498, x = 4477.93, y = 2169.57, z = 88.79 }, isRetrace = True, name = Just "Mahonia Path" }
+    , { from = { id = 498, x = 4477.93, y = 2169.57, z = 88.79 }, to = { id = 184, x = 4355.10, y = 2090.48, z = 93.74 }, isRetrace = False, name = Just "Mahonia Path" }
+    , { from = { id = 184, x = 4355.10, y = 2090.48, z = 93.74 }, to = { id = 503, x = 4135.43, y = 2231.07, z = 104.98 }, isRetrace = False, name = Just "Landscape Path" }
+    , { from = { id = 503, x = 4135.43, y = 2231.07, z = 104.98 }, to = { id = 506, x = 4025.01, y = 2291.71, z = 104.96 }, isRetrace = True, name = Just "Landscape Path" }
+    , { from = { id = 506, x = 4025.01, y = 2291.71, z = 104.96 }, to = { id = 197, x = 3968.39, y = 2254.78, z = 109.94 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 197, x = 3968.39, y = 2254.78, z = 109.94 }, to = { id = 198, x = 3960.79, y = 2206.44, z = 109.94 }, isRetrace = False, name = Nothing }
+    , { from = { id = 198, x = 3960.79, y = 2206.44, z = 109.94 }, to = { id = 192, x = 4001.95, y = 2171.45, z = 104.19 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 192, x = 4001.95, y = 2171.45, z = 104.19 }, to = { id = 198, x = 3960.79, y = 2206.44, z = 109.94 }, isRetrace = True, name = Just "Vine Avenue" }
+    , { from = { id = 198, x = 3960.79, y = 2206.44, z = 109.94 }, to = { id = 19, x = 3933.02, y = 2226.75, z = 109.94 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 19, x = 3933.02, y = 2226.75, z = 109.94 }, to = { id = 197, x = 3968.39, y = 2254.78, z = 109.94 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 197, x = 3968.39, y = 2254.78, z = 109.94 }, to = { id = 204, x = 3908.62, y = 2256.36, z = 109.94 }, isRetrace = False, name = Nothing }
+    , { from = { id = 204, x = 3908.62, y = 2256.36, z = 109.94 }, to = { id = 220, x = 3794.51, y = 2370.57, z = 122.00 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 220, x = 3794.51, y = 2370.57, z = 122.00 }, to = { id = 221, x = 3746.65, y = 2382.33, z = 122.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 221, x = 3746.65, y = 2382.33, z = 122.00 }, to = { id = 222, x = 3741.85, y = 2384.95, z = 122.00 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 222, x = 3741.85, y = 2384.95, z = 122.00 }, to = { id = 210, x = 3704.86, y = 2326.25, z = 123.49 }, isRetrace = False, name = Nothing }
+    , { from = { id = 210, x = 3704.86, y = 2326.25, z = 123.49 }, to = { id = 160, x = 3295.60, y = 1972.02, z = 128.03 }, isRetrace = False, name = Nothing }
+    , { from = { id = 160, x = 3295.60, y = 1972.02, z = 128.03 }, to = { id = 171, x = 3333.82, y = 1923.45, z = 119.38 }, isRetrace = False, name = Just "Grape Avenue" }
+    , { from = { id = 171, x = 3333.82, y = 1923.45, z = 119.38 }, to = { id = 160, x = 3295.60, y = 1972.02, z = 128.03 }, isRetrace = True, name = Just "Grape Avenue" }
+    , { from = { id = 160, x = 3295.60, y = 1972.02, z = 128.03 }, to = { id = 193, x = 3279.88, y = 2173.89, z = 143.55 }, isRetrace = False, name = Nothing }
+    , { from = { id = 193, x = 3279.88, y = 2173.89, z = 143.55 }, to = { id = 196, x = 3202.06, y = 2234.90, z = 147.43 }, isRetrace = True, name = Just "Vista Avenue" }
+    , { from = { id = 196, x = 3202.06, y = 2234.90, z = 147.43 }, to = { id = 181, x = 3099.17, y = 2084.80, z = 143.40 }, isRetrace = False, name = Nothing }
+    , { from = { id = 181, x = 3099.17, y = 2084.80, z = 143.40 }, to = { id = 173, x = 2926.19, y = 1955.37, z = 139.31 }, isRetrace = False, name = Nothing }
+    , { from = { id = 173, x = 2926.19, y = 1955.37, z = 139.31 }, to = { id = 154, x = 2935.34, y = 1786.32, z = 132.72 }, isRetrace = False, name = Nothing }
+    , { from = { id = 154, x = 2935.34, y = 1786.32, z = 132.72 }, to = { id = 153, x = 2839.97, y = 1755.88, z = 133.58 }, isRetrace = False, name = Nothing }
+    , { from = { id = 153, x = 2839.97, y = 1755.88, z = 133.58 }, to = { id = 158, x = 2597.43, y = 1957.77, z = 128.60 }, isRetrace = False, name = Just "Southwood Avenue" }
+    , { from = { id = 158, x = 2597.43, y = 1957.77, z = 128.60 }, to = { id = 157, x = 2481.73, y = 1860.17, z = 123.00 }, isRetrace = False, name = Nothing }
+    , { from = { id = 157, x = 2481.73, y = 1860.17, z = 123.00 }, to = { id = 168, x = 2778.14, y = 1339.44, z = 111.15 }, isRetrace = False, name = Nothing }
+    , { from = { id = 168, x = 2778.14, y = 1339.44, z = 111.15 }, to = { id = 143, x = 2942.18, y = 1568.57, z = 125.49 }, isRetrace = False, name = Just "Hazel Path" }
+    , { from = { id = 143, x = 2942.18, y = 1568.57, z = 125.49 }, to = { id = 153, x = 2839.97, y = 1755.88, z = 133.58 }, isRetrace = False, name = Just "Ivy Path" }
+    , { from = { id = 153, x = 2839.97, y = 1755.88, z = 133.58 }, to = { id = 154, x = 2935.34, y = 1786.32, z = 132.72 }, isRetrace = True, name = Nothing }
+    , { from = { id = 154, x = 2935.34, y = 1786.32, z = 132.72 }, to = { id = 165, x = 3016.16, y = 1765.01, z = 128.64 }, isRetrace = False, name = Just "Locust Avenue" }
+    , { from = { id = 165, x = 3016.16, y = 1765.01, z = 128.64 }, to = { id = 480, x = 3042.68, y = 1685.57, z = 124.22 }, isRetrace = False, name = Just "Hazel Path" }
+    , { from = { id = 480, x = 3042.68, y = 1685.57, z = 124.22 }, to = { id = 165, x = 3016.16, y = 1765.01, z = 128.64 }, isRetrace = True, name = Just "Hazel Path" }
+    , { from = { id = 165, x = 3016.16, y = 1765.01, z = 128.64 }, to = { id = 159, x = 3137.38, y = 1853.71, z = 125.56 }, isRetrace = False, name = Nothing }
+    , { from = { id = 159, x = 3137.38, y = 1853.71, z = 125.56 }, to = { id = 160, x = 3295.60, y = 1972.02, z = 128.03 }, isRetrace = False, name = Nothing }
+    , { from = { id = 160, x = 3295.60, y = 1972.02, z = 128.03 }, to = { id = 159, x = 3137.38, y = 1853.71, z = 125.56 }, isRetrace = True, name = Nothing }
+    , { from = { id = 159, x = 3137.38, y = 1853.71, z = 125.56 }, to = { id = 155, x = 3200.43, y = 1799.07, z = 118.46 }, isRetrace = False, name = Nothing }
+    , { from = { id = 155, x = 3200.43, y = 1799.07, z = 118.46 }, to = { id = 171, x = 3333.82, y = 1923.45, z = 119.38 }, isRetrace = False, name = Just "Hazel Path" }
+    , { from = { id = 171, x = 3333.82, y = 1923.45, z = 119.38 }, to = { id = 172, x = 3509.84, y = 1823.00, z = 98.78 }, isRetrace = False, name = Nothing }
+    , { from = { id = 172, x = 3509.84, y = 1823.00, z = 98.78 }, to = { id = 489, x = 3714.15, y = 2009.43, z = 106.20 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 489, x = 3714.15, y = 2009.43, z = 106.20 }, to = { id = 18, x = 3872.64, y = 2139.42, z = 109.12 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 18, x = 3872.64, y = 2139.42, z = 109.12 }, to = { id = 489, x = 3714.15, y = 2009.43, z = 106.20 }, isRetrace = True, name = Just "Cypress Avenue" }
+    , { from = { id = 489, x = 3714.15, y = 2009.43, z = 106.20 }, to = { id = 485, x = 3781.68, y = 1917.57, z = 102.32 }, isRetrace = False, name = Just "Elder Path" }
+    , { from = { id = 485, x = 3781.68, y = 1917.57, z = 102.32 }, to = { id = 161, x = 3658.93, y = 1812.07, z = 98.76 }, isRetrace = False, name = Just "Petunia Path" }
+    , { from = { id = 161, x = 3658.93, y = 1812.07, z = 98.76 }, to = { id = 485, x = 3781.68, y = 1917.57, z = 102.32 }, isRetrace = True, name = Just "Petunia Path" }
+    , { from = { id = 485, x = 3781.68, y = 1917.57, z = 102.32 }, to = { id = 492, x = 3991.68, y = 2077.82, z = 104.92 }, isRetrace = False, name = Just "Petunia Path" }
+    , { from = { id = 492, x = 3991.68, y = 2077.82, z = 104.92 }, to = { id = 190, x = 3972.43, y = 2108.32, z = 106.14 }, isRetrace = False, name = Just "Peony Path" }
+    , { from = { id = 190, x = 3972.43, y = 2108.32, z = 106.14 }, to = { id = 492, x = 3991.68, y = 2077.82, z = 104.92 }, isRetrace = True, name = Just "Peony Path" }
+    , { from = { id = 492, x = 3991.68, y = 2077.82, z = 104.92 }, to = { id = 481, x = 4252.18, y = 1692.32, z = 89.37 }, isRetrace = False, name = Just "Peony Path" }
+    , { from = { id = 481, x = 4252.18, y = 1692.32, z = 89.37 }, to = { id = 483, x = 4521.88, y = 1787.41, z = 82.73 }, isRetrace = False, name = Just "Alder Path" }
+    , { from = { id = 483, x = 4521.88, y = 1787.41, z = 82.73 }, to = { id = 185, x = 4269.01, y = 1968.33, z = 90.14 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 185, x = 4269.01, y = 1968.33, z = 90.14 }, to = { id = 192, x = 4001.95, y = 2171.45, z = 104.19 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 192, x = 4001.95, y = 2171.45, z = 104.19 }, to = { id = 190, x = 3972.43, y = 2108.32, z = 106.14 }, isRetrace = False, name = Nothing }
+    , { from = { id = 190, x = 3972.43, y = 2108.32, z = 106.14 }, to = { id = 18, x = 3872.64, y = 2139.42, z = 109.12 }, isRetrace = False, name = Nothing }
+    , { from = { id = 18, x = 3872.64, y = 2139.42, z = 109.12 }, to = { id = 19, x = 3933.02, y = 2226.75, z = 109.94 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 19, x = 3933.02, y = 2226.75, z = 109.94 }, to = { id = 204, x = 3908.62, y = 2256.36, z = 109.94 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 204, x = 3908.62, y = 2256.36, z = 109.94 }, to = { id = 220, x = 3794.51, y = 2370.57, z = 122.00 }, isRetrace = True, name = Just "Vine Avenue" }
+    , { from = { id = 220, x = 3794.51, y = 2370.57, z = 122.00 }, to = { id = 224, x = 3800.78, y = 2394.68, z = 122.00 }, isRetrace = True, name = Nothing }
+    , { from = { id = 224, x = 3800.78, y = 2394.68, z = 122.00 }, to = { id = 522, x = 3962.89, y = 2516.24, z = 134.54 }, isRetrace = True, name = Just "Ocean Avenue" }
     , { from = { id = 522, x = 3962.89, y = 2516.24, z = 134.54 }, to = { id = 523, x = 4046.18, y = 2459.32, z = 125.73 }, isRetrace = False, name = Just "Hill Path" }
     , { from = { id = 523, x = 4046.18, y = 2459.32, z = 125.73 }, to = { id = 532, x = 4611.18, y = 2776.32, z = 129.75 }, isRetrace = False, name = Just "Dawn Path" }
     , { from = { id = 532, x = 4611.18, y = 2776.32, z = 129.75 }, to = { id = 523, x = 4046.18, y = 2459.32, z = 125.73 }, isRetrace = True, name = Just "Dawn Path" }
-    , { from = { id = 523, x = 4046.18, y = 2459.32, z = 125.73 }, to = { id = 228, x = 4613.97, y = 2700.55, z = 109.70 }, isRetrace = False, name = Just "Edge Hill Path" }
-    , { from = { id = 228, x = 4613.97, y = 2700.55, z = 109.70 }, to = { id = 244, x = 4666.92, y = 2802.40, z = 125.33 }, isRetrace = False, name = Just "Hillside Avenue" }
-    , { from = { id = 244, x = 4666.92, y = 2802.40, z = 125.33 }, to = { id = 546, x = 5011.68, y = 2935.57, z = 129.16 }, isRetrace = False, name = Just "Dawn Path" }
-    , { from = { id = 546, x = 5011.68, y = 2935.57, z = 129.16 }, to = { id = 244, x = 4666.92, y = 2802.40, z = 125.33 }, isRetrace = True, name = Just "Dawn Path" }
-    , { from = { id = 244, x = 4666.92, y = 2802.40, z = 125.33 }, to = { id = 245, x = 4722.81, y = 2872.92, z = 137.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 245, x = 4722.81, y = 2872.92, z = 137.43 }, to = { id = 544, x = 4544.68, y = 2780.82, z = 148.65 }, isRetrace = False, name = Just "Aurora Path" }
-    , { from = { id = 544, x = 4544.68, y = 2780.82, z = 148.65 }, to = { id = 245, x = 4722.81, y = 2872.92, z = 137.43 }, isRetrace = True, name = Just "Aurora Path" }
-    , { from = { id = 245, x = 4722.81, y = 2872.92, z = 137.43 }, to = { id = 309, x = 4909.22, y = 3383.17, z = 170.00 }, isRetrace = False, name = Just "Hillside Avenue" }
-    , { from = { id = 309, x = 4909.22, y = 3383.17, z = 170.00 }, to = { id = 565, x = 5212.33, y = 3433.65, z = 142.48 }, isRetrace = False, name = Just "Mountain Path" }
-    , { from = { id = 565, x = 5212.33, y = 3433.65, z = 142.48 }, to = { id = 552, x = 5280.90, y = 3052.80, z = 109.56 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 552, x = 5280.90, y = 3052.80, z = 109.56 }, to = { id = 541, x = 5024.98, y = 2871.04, z = 103.46 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 541, x = 5024.98, y = 2871.04, z = 103.46 }, to = { id = 542, x = 5083.68, y = 2767.82, z = 96.89 }, isRetrace = False, name = Just "Urn Path" }
-    , { from = { id = 542, x = 5083.68, y = 2767.82, z = 96.89 }, to = { id = 541, x = 5024.98, y = 2871.04, z = 103.46 }, isRetrace = True, name = Just "Urn Path" }
-    , { from = { id = 541, x = 5024.98, y = 2871.04, z = 103.46 }, to = { id = 227, x = 4642.39, y = 2599.30, z = 98.76 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 227, x = 4642.39, y = 2599.30, z = 98.76 }, to = { id = 519, x = 4857.04, y = 2507.68, z = 87.43 }, isRetrace = False, name = Just "Beech Avenue" }
-    , { from = { id = 519, x = 4857.04, y = 2507.68, z = 87.43 }, to = { id = 514, x = 5021.31, y = 2442.47, z = 83.65 }, isRetrace = False, name = Just "Beech Avenue" }
-    , { from = { id = 514, x = 5021.31, y = 2442.47, z = 83.65 }, to = { id = 506, x = 5156.70, y = 2372.10, z = 81.73 }, isRetrace = False, name = Just "Beech Avenue" }
-    , { from = { id = 506, x = 5156.70, y = 2372.10, z = 81.73 }, to = { id = 497, x = 5059.43, y = 2160.32, z = 82.64 }, isRetrace = False, name = Just "Reed Path" }
-    , { from = { id = 497, x = 5059.43, y = 2160.32, z = 82.64 }, to = { id = 146, x = 5236.93, y = 2003.20, z = 76.26 }, isRetrace = False, name = Just "Viburum Path" }
-    , { from = { id = 146, x = 5236.93, y = 2003.20, z = 76.26 }, to = { id = 487, x = 5039.92, y = 1936.37, z = 76.48 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 487, x = 5039.92, y = 1936.37, z = 76.48 }, to = { id = 481, x = 5194.43, y = 1741.15, z = 88.27 }, isRetrace = False, name = Just "Gladiolus Path" }
-    , { from = { id = 481, x = 5194.43, y = 1741.15, z = 88.27 }, to = { id = 474, x = 5331.44, y = 1556.98, z = 75.53 }, isRetrace = False, name = Just "Gladiolus Path" }
-    , { from = { id = 474, x = 5331.44, y = 1556.98, z = 75.53 }, to = { id = 467, x = 5414.93, y = 1388.32, z = 67.02 }, isRetrace = False, name = Just "Gladiolus Path" }
-    , { from = { id = 467, x = 5414.93, y = 1388.32, z = 67.02 }, to = { id = 420, x = 5045.68, y = 1175.57, z = 72.06 }, isRetrace = False, name = Just "Chrysanthemum Path" }
-    , { from = { id = 420, x = 5045.68, y = 1175.57, z = 72.06 }, to = { id = 106, x = 4918.97, y = 1416.46, z = 85.31 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 106, x = 4918.97, y = 1416.46, z = 85.31 }, to = { id = 474, x = 5331.44, y = 1556.98, z = 75.53 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 474, x = 5331.44, y = 1556.98, z = 75.53 }, to = { id = 478, x = 5566.09, y = 1665.49, z = 72.06 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 478, x = 5566.09, y = 1665.49, z = 72.06 }, to = { id = 485, x = 5540.00, y = 1894.76, z = 77.16 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 485, x = 5540.00, y = 1894.76, z = 77.16 }, to = { id = 488, x = 5532.72, y = 1948.41, z = 76.66 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 488, x = 5532.72, y = 1948.41, z = 76.66 }, to = { id = 552, x = 5280.90, y = 3052.80, z = 109.56 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 552, x = 5280.90, y = 3052.80, z = 109.56 }, to = { id = 565, x = 5212.33, y = 3433.65, z = 142.48 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 565, x = 5212.33, y = 3433.65, z = 142.48 }, to = { id = 320, x = 5127.04, y = 3539.41, z = 149.28 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 320, x = 5127.04, y = 3539.41, z = 149.28 }, to = { id = 52, x = 5208.68, y = 3647.32, z = 147.01 }, isRetrace = False, name = Nothing }
-    , { from = { id = 52, x = 5208.68, y = 3647.32, z = 147.01 }, to = { id = 53, x = 4950.35, y = 3851.02, z = 156.87 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 53, x = 4950.35, y = 3851.02, z = 156.87 }, to = { id = 366, x = 4653.84, y = 4093.82, z = 176.64 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 366, x = 4653.84, y = 4093.82, z = 176.64 }, to = { id = 55, x = 4572.91, y = 4106.44, z = 176.03 }, isRetrace = True, name = Nothing }
-    , { from = { id = 55, x = 4572.91, y = 4106.44, z = 176.03 }, to = { id = 54, x = 4550.68, y = 4052.32, z = 185.12 }, isRetrace = False, name = Just "Wistaria Path" }
-    , { from = { id = 54, x = 4550.68, y = 4052.32, z = 185.12 }, to = { id = 397, x = 4203.47, y = 4336.74, z = 171.77 }, isRetrace = False, name = Just "Wistaria Path" }
-    , { from = { id = 397, x = 4203.47, y = 4336.74, z = 171.77 }, to = { id = 391, x = 4149.36, y = 4274.66, z = 171.50 }, isRetrace = False, name = Nothing }
-    , { from = { id = 391, x = 4149.36, y = 4274.66, z = 171.50 }, to = { id = 378, x = 4109.12, y = 4223.57, z = 171.82 }, isRetrace = False, name = Nothing }
-    , { from = { id = 378, x = 4109.12, y = 4223.57, z = 171.82 }, to = { id = 391, x = 4149.36, y = 4274.66, z = 171.50 }, isRetrace = True, name = Nothing }
-    , { from = { id = 391, x = 4149.36, y = 4274.66, z = 171.50 }, to = { id = 433, x = 3951.72, y = 4508.21, z = 171.05 }, isRetrace = False, name = Just "Canna Path" }
-    , { from = { id = 433, x = 3951.72, y = 4508.21, z = 171.05 }, to = { id = 598, x = 3665.33, y = 4382.44, z = 179.07 }, isRetrace = False, name = Just "Hemlock Avenue" }
-    , { from = { id = 598, x = 3665.33, y = 4382.44, z = 179.07 }, to = { id = 597, x = 3772.42, y = 4305.00, z = 175.29 }, isRetrace = False, name = Just "Garland Avenue" }
-    , { from = { id = 597, x = 3772.42, y = 4305.00, z = 175.29 }, to = { id = 388, x = 3825.17, y = 4258.84, z = 172.65 }, isRetrace = False, name = Just "Garland Avenue" }
-    , { from = { id = 388, x = 3825.17, y = 4258.84, z = 172.65 }, to = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, isRetrace = False, name = Nothing }
-    , { from = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, to = { id = 383, x = 3964.90, y = 4238.11, z = 170.22 }, isRetrace = False, name = Just "Jasmine Path" }
-    , { from = { id = 383, x = 3964.90, y = 4238.11, z = 170.22 }, to = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, isRetrace = False, name = Just "Jasmine Path" }
-    , { from = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, to = { id = 372, x = 3865.01, y = 4172.27, z = 169.36 }, isRetrace = False, name = Just "Jasmine Path" }
-    , { from = { id = 372, x = 3865.01, y = 4172.27, z = 169.36 }, to = { id = 388, x = 3825.17, y = 4258.84, z = 172.65 }, isRetrace = False, name = Just "Garland Avenue" }
-    , { from = { id = 388, x = 3825.17, y = 4258.84, z = 172.65 }, to = { id = 597, x = 3772.42, y = 4305.00, z = 175.29 }, isRetrace = True, name = Just "Garland Avenue" }
-    , { from = { id = 597, x = 3772.42, y = 4305.00, z = 175.29 }, to = { id = 589, x = 3508.49, y = 4132.62, z = 183.51 }, isRetrace = False, name = Just "Coronilla Path" }
-    , { from = { id = 589, x = 3508.49, y = 4132.62, z = 183.51 }, to = { id = 373, x = 3612.40, y = 3889.66, z = 169.34 }, isRetrace = False, name = Just "Orchard Path" }
-    , { from = { id = 373, x = 3612.40, y = 3889.66, z = 169.34 }, to = { id = 589, x = 3508.49, y = 4132.62, z = 183.51 }, isRetrace = True, name = Just "Orchard Path" }
-    , { from = { id = 589, x = 3508.49, y = 4132.62, z = 183.51 }, to = { id = 588, x = 3416.08, y = 4221.56, z = 180.44 }, isRetrace = False, name = Just "Orchard Path" }
-    , { from = { id = 588, x = 3416.08, y = 4221.56, z = 180.44 }, to = { id = 375, x = 3365.76, y = 4178.49, z = 182.27 }, isRetrace = False, name = Just "Hemlock Avenue" }
-    , { from = { id = 375, x = 3365.76, y = 4178.49, z = 182.27 }, to = { id = 435, x = 3087.09, y = 4470.42, z = 189.60 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 435, x = 3087.09, y = 4470.42, z = 189.60 }, to = { id = 414, x = 3034.25, y = 4516.31, z = 188.62 }, isRetrace = True, name = Just "Battle Avenue" }
-    , { from = { id = 414, x = 3034.25, y = 4516.31, z = 188.62 }, to = { id = 426, x = 2835.19, y = 4584.53, z = 168.92 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 426, x = 2835.19, y = 4584.53, z = 168.92 }, to = { id = 415, x = 2873.99, y = 4521.66, z = 185.85 }, isRetrace = False, name = Nothing }
-    , { from = { id = 415, x = 2873.99, y = 4521.66, z = 185.85 }, to = { id = 426, x = 2835.19, y = 4584.53, z = 168.92 }, isRetrace = True, name = Nothing }
-    , { from = { id = 426, x = 2835.19, y = 4584.53, z = 168.92 }, to = { id = 438, x = 2707.89, y = 4562.49, z = 157.80 }, isRetrace = False, name = Just "Bay View Avenue" }
-    , { from = { id = 438, x = 2707.89, y = 4562.49, z = 157.80 }, to = { id = 424, x = 2655.31, y = 4566.19, z = 155.49 }, isRetrace = False, name = Just "Bay View Avenue" }
-    , { from = { id = 424, x = 2655.31, y = 4566.19, z = 155.49 }, to = { id = 438, x = 2707.89, y = 4562.49, z = 157.80 }, isRetrace = True, name = Just "Bay View Avenue" }
-    , { from = { id = 438, x = 2707.89, y = 4562.49, z = 157.80 }, to = { id = 437, x = 2657.87, y = 4735.79, z = 142.85 }, isRetrace = False, name = Nothing }
-    , { from = { id = 437, x = 2657.87, y = 4735.79, z = 142.85 }, to = { id = 441, x = 2265.39, y = 4799.81, z = 107.55 }, isRetrace = False, name = Just "Bay View Avenue" }
-    , { from = { id = 441, x = 2265.39, y = 4799.81, z = 107.55 }, to = { id = 418, x = 2148.91, y = 4640.31, z = 115.26 }, isRetrace = False, name = Nothing }
-    , { from = { id = 418, x = 2148.91, y = 4640.31, z = 115.26 }, to = { id = 441, x = 2265.39, y = 4799.81, z = 107.55 }, isRetrace = True, name = Nothing }
-    , { from = { id = 441, x = 2265.39, y = 4799.81, z = 107.55 }, to = { id = 605, x = 2391.81, y = 4681.39, z = 127.50 }, isRetrace = False, name = Just "Bay-View Path" }
-    , { from = { id = 605, x = 2391.81, y = 4681.39, z = 127.50 }, to = { id = 437, x = 2657.87, y = 4735.79, z = 142.85 }, isRetrace = False, name = Just "Bay View Avenue" }
-    , { from = { id = 437, x = 2657.87, y = 4735.79, z = 142.85 }, to = { id = 605, x = 2391.81, y = 4681.39, z = 127.50 }, isRetrace = True, name = Just "Bay View Avenue" }
-    , { from = { id = 605, x = 2391.81, y = 4681.39, z = 127.50 }, to = { id = 603, x = 2429.98, y = 4545.23, z = 140.54 }, isRetrace = False, name = Just "Bay-View Path" }
-    , { from = { id = 603, x = 2429.98, y = 4545.23, z = 140.54 }, to = { id = 425, x = 2455.65, y = 4533.88, z = 145.11 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 425, x = 2455.65, y = 4533.88, z = 145.11 }, to = { id = 595, x = 2426.54, y = 4281.77, z = 169.53 }, isRetrace = False, name = Just "Highland Avenue" }
-    , { from = { id = 595, x = 2426.54, y = 4281.77, z = 169.53 }, to = { id = 593, x = 2513.14, y = 4259.60, z = 178.08 }, isRetrace = False, name = Just "Bayside Path" }
-    , { from = { id = 593, x = 2513.14, y = 4259.60, z = 178.08 }, to = { id = 599, x = 2647.54, y = 4392.22, z = 171.60 }, isRetrace = False, name = Just "Greenbank Path" }
-    , { from = { id = 599, x = 2647.54, y = 4392.22, z = 171.60 }, to = { id = 593, x = 2513.14, y = 4259.60, z = 178.08 }, isRetrace = True, name = Just "Greenbank Path" }
-    , { from = { id = 593, x = 2513.14, y = 4259.60, z = 178.08 }, to = { id = 385, x = 2499.61, y = 4244.18, z = 177.43 }, isRetrace = False, name = Just "Greenbank Path" }
-    , { from = { id = 385, x = 2499.61, y = 4244.18, z = 177.43 }, to = { id = 593, x = 2513.14, y = 4259.60, z = 178.08 }, isRetrace = True, name = Just "Greenbank Path" }
-    , { from = { id = 593, x = 2513.14, y = 4259.60, z = 178.08 }, to = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, to = { id = 411, x = 2905.56, y = 4473.25, z = 190.04 }, isRetrace = False, name = Nothing }
-    , { from = { id = 411, x = 2905.56, y = 4473.25, z = 190.04 }, to = { id = 415, x = 2873.99, y = 4521.66, z = 185.85 }, isRetrace = False, name = Nothing }
-    , { from = { id = 415, x = 2873.99, y = 4521.66, z = 185.85 }, to = { id = 599, x = 2647.54, y = 4392.22, z = 171.60 }, isRetrace = False, name = Just "Greenbank Path" }
-    , { from = { id = 599, x = 2647.54, y = 4392.22, z = 171.60 }, to = { id = 424, x = 2655.31, y = 4566.19, z = 155.49 }, isRetrace = False, name = Just "Verdant Path" }
-    , { from = { id = 424, x = 2655.31, y = 4566.19, z = 155.49 }, to = { id = 425, x = 2455.65, y = 4533.88, z = 145.11 }, isRetrace = False, name = Nothing }
-    , { from = { id = 425, x = 2455.65, y = 4533.88, z = 145.11 }, to = { id = 603, x = 2429.98, y = 4545.23, z = 140.54 }, isRetrace = True, name = Just "Battle Avenue" }
-    , { from = { id = 603, x = 2429.98, y = 4545.23, z = 140.54 }, to = { id = 428, x = 2343.93, y = 4573.05, z = 133.60 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 428, x = 2343.93, y = 4573.05, z = 133.60 }, to = { id = 427, x = 2220.43, y = 4587.26, z = 123.29 }, isRetrace = False, name = Nothing }
-    , { from = { id = 427, x = 2220.43, y = 4587.26, z = 123.29 }, to = { id = 428, x = 2343.93, y = 4573.05, z = 133.60 }, isRetrace = True, name = Nothing }
-    , { from = { id = 428, x = 2343.93, y = 4573.05, z = 133.60 }, to = { id = 396, x = 2265.45, y = 4296.48, z = 146.29 }, isRetrace = False, name = Just "Syringa Path" }
-    , { from = { id = 396, x = 2265.45, y = 4296.48, z = 146.29 }, to = { id = 594, x = 2279.93, y = 4266.65, z = 148.25 }, isRetrace = False, name = Just "Bay Side Avenue" }
-    , { from = { id = 594, x = 2279.93, y = 4266.65, z = 148.25 }, to = { id = 396, x = 2265.45, y = 4296.48, z = 146.29 }, isRetrace = True, name = Just "Bay Side Avenue" }
-    , { from = { id = 396, x = 2265.45, y = 4296.48, z = 146.29 }, to = { id = 394, x = 2148.18, y = 4310.33, z = 138.53 }, isRetrace = False, name = Nothing }
-    , { from = { id = 394, x = 2148.18, y = 4310.33, z = 138.53 }, to = { id = 395, x = 2118.71, y = 4250.70, z = 144.07 }, isRetrace = False, name = Nothing }
-    , { from = { id = 395, x = 2118.71, y = 4250.70, z = 144.07 }, to = { id = 594, x = 2279.93, y = 4266.65, z = 148.25 }, isRetrace = False, name = Just "Bayside Path" }
-    , { from = { id = 594, x = 2279.93, y = 4266.65, z = 148.25 }, to = { id = 384, x = 2415.16, y = 4241.71, z = 170.46 }, isRetrace = False, name = Just "Bayside Path" }
-    , { from = { id = 384, x = 2415.16, y = 4241.71, z = 170.46 }, to = { id = 595, x = 2426.54, y = 4281.77, z = 169.53 }, isRetrace = False, name = Just "Highland Avenue" }
-    , { from = { id = 595, x = 2426.54, y = 4281.77, z = 169.53 }, to = { id = 384, x = 2415.16, y = 4241.71, z = 170.46 }, isRetrace = True, name = Just "Highland Avenue" }
-    , { from = { id = 384, x = 2415.16, y = 4241.71, z = 170.46 }, to = { id = 376, x = 2387.76, y = 4219.19, z = 170.46 }, isRetrace = False, name = Nothing }
-    , { from = { id = 376, x = 2387.76, y = 4219.19, z = 170.46 }, to = { id = 384, x = 2415.16, y = 4241.71, z = 170.46 }, isRetrace = True, name = Nothing }
-    , { from = { id = 384, x = 2415.16, y = 4241.71, z = 170.46 }, to = { id = 385, x = 2499.61, y = 4244.18, z = 177.43 }, isRetrace = False, name = Just "Bayside Path" }
-    , { from = { id = 385, x = 2499.61, y = 4244.18, z = 177.43 }, to = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, isRetrace = False, name = Nothing }
-    , { from = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, to = { id = 376, x = 2387.76, y = 4219.19, z = 170.46 }, isRetrace = False, name = Nothing }
-    , { from = { id = 376, x = 2387.76, y = 4219.19, z = 170.46 }, to = { id = 377, x = 2280.49, y = 4076.53, z = 163.81 }, isRetrace = False, name = Nothing }
-    , { from = { id = 377, x = 2280.49, y = 4076.53, z = 163.81 }, to = { id = 362, x = 2275.94, y = 4038.55, z = 163.81 }, isRetrace = False, name = Just "Highland Avenue" }
-    , { from = { id = 362, x = 2275.94, y = 4038.55, z = 163.81 }, to = { id = 358, x = 2213.50, y = 3997.32, z = 161.99 }, isRetrace = False, name = Nothing }
-    , { from = { id = 358, x = 2213.50, y = 3997.32, z = 161.99 }, to = { id = 346, x = 2227.85, y = 3870.60, z = 164.13 }, isRetrace = False, name = Just "Highland Avenue" }
-    , { from = { id = 346, x = 2227.85, y = 3870.60, z = 164.13 }, to = { id = 356, x = 2363.11, y = 3973.22, z = 158.26 }, isRetrace = False, name = Just "Chestnut Path" }
-    , { from = { id = 356, x = 2363.11, y = 3973.22, z = 158.26 }, to = { id = 362, x = 2275.94, y = 4038.55, z = 163.81 }, isRetrace = False, name = Just "Fern Avenue" }
-    , { from = { id = 362, x = 2275.94, y = 4038.55, z = 163.81 }, to = { id = 377, x = 2280.49, y = 4076.53, z = 163.81 }, isRetrace = True, name = Just "Highland Avenue" }
-    , { from = { id = 377, x = 2280.49, y = 4076.53, z = 163.81 }, to = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, isRetrace = False, name = Nothing }
-    , { from = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, to = { id = 369, x = 2681.47, y = 4158.16, z = 178.24 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 369, x = 2681.47, y = 4158.16, z = 178.24 }, to = { id = 57, x = 2678.46, y = 4148.89, z = 178.24 }, isRetrace = False, name = Nothing }
-    , { from = { id = 57, x = 2678.46, y = 4148.89, z = 178.24 }, to = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 56, x = 2580.85, y = 4224.53, z = 183.84 }, to = { id = 57, x = 2678.46, y = 4148.89, z = 178.24 }, isRetrace = True, name = Just "Atlantic Avenue" }
-    , { from = { id = 57, x = 2678.46, y = 4148.89, z = 178.24 }, to = { id = 368, x = 2735.32, y = 4147.12, z = 174.54 }, isRetrace = False, name = Nothing }
-    , { from = { id = 368, x = 2735.32, y = 4147.12, z = 174.54 }, to = { id = 367, x = 2822.27, y = 3904.71, z = 165.54 }, isRetrace = False, name = Nothing }
-    , { from = { id = 367, x = 2822.27, y = 3904.71, z = 165.54 }, to = { id = 348, x = 2883.03, y = 3895.65, z = 166.40 }, isRetrace = False, name = Just "Meadow Avenue" }
-    , { from = { id = 348, x = 2883.03, y = 3895.65, z = 166.40 }, to = { id = 367, x = 2822.27, y = 3904.71, z = 165.54 }, isRetrace = True, name = Just "Meadow Avenue" }
-    , { from = { id = 367, x = 2822.27, y = 3904.71, z = 165.54 }, to = { id = 335, x = 2573.27, y = 3748.64, z = 146.26 }, isRetrace = False, name = Just "Greenborough Avenue" }
-    , { from = { id = 335, x = 2573.27, y = 3748.64, z = 146.26 }, to = { id = 337, x = 2568.99, y = 3766.23, z = 146.26 }, isRetrace = False, name = Nothing }
-    , { from = { id = 337, x = 2568.99, y = 3766.23, z = 146.26 }, to = { id = 335, x = 2573.27, y = 3748.64, z = 146.26 }, isRetrace = True, name = Nothing }
-    , { from = { id = 335, x = 2573.27, y = 3748.64, z = 146.26 }, to = { id = 334, x = 2504.64, y = 3604.29, z = 139.23 }, isRetrace = False, name = Nothing }
-    , { from = { id = 334, x = 2504.64, y = 3604.29, z = 139.23 }, to = { id = 50, x = 2399.87, y = 3534.67, z = 134.66 }, isRetrace = False, name = Just "Greenborough Avenue" }
-    , { from = { id = 50, x = 2399.87, y = 3534.67, z = 134.66 }, to = { id = 334, x = 2504.64, y = 3604.29, z = 139.23 }, isRetrace = True, name = Just "Greenborough Avenue" }
-    , { from = { id = 334, x = 2504.64, y = 3604.29, z = 139.23 }, to = { id = 51, x = 2648.12, y = 3499.35, z = 150.23 }, isRetrace = False, name = Just "Pine Avenue" }
-    , { from = { id = 51, x = 2648.12, y = 3499.35, z = 150.23 }, to = { id = 48, x = 2688.45, y = 3538.74, z = 154.76 }, isRetrace = False, name = Just "Twilight Path" }
-    , { from = { id = 48, x = 2688.45, y = 3538.74, z = 154.76 }, to = { id = 574, x = 2797.93, y = 3659.65, z = 167.52 }, isRetrace = False, name = Just "Twilight Path" }
-    , { from = { id = 574, x = 2797.93, y = 3659.65, z = 167.52 }, to = { id = 313, x = 2861.43, y = 3497.57, z = 152.71 }, isRetrace = False, name = Just "Holly Path" }
-    , { from = { id = 313, x = 2861.43, y = 3497.57, z = 152.71 }, to = { id = 574, x = 2797.93, y = 3659.65, z = 167.52 }, isRetrace = True, name = Just "Holly Path" }
-    , { from = { id = 574, x = 2797.93, y = 3659.65, z = 167.52 }, to = { id = 341, x = 2925.46, y = 3822.23, z = 170.24 }, isRetrace = False, name = Just "Twilight Path" }
-    , { from = { id = 341, x = 2925.46, y = 3822.23, z = 170.24 }, to = { id = 342, x = 3006.74, y = 3792.48, z = 174.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 342, x = 3006.74, y = 3792.48, z = 174.00 }, to = { id = 341, x = 2925.46, y = 3822.23, z = 170.24 }, isRetrace = True, name = Nothing }
-    , { from = { id = 341, x = 2925.46, y = 3822.23, z = 170.24 }, to = { id = 348, x = 2883.03, y = 3895.65, z = 166.40 }, isRetrace = False, name = Nothing }
-    , { from = { id = 348, x = 2883.03, y = 3895.65, z = 166.40 }, to = { id = 365, x = 3042.37, y = 4097.94, z = 179.79 }, isRetrace = False, name = Nothing }
-    , { from = { id = 365, x = 3042.37, y = 4097.94, z = 179.79 }, to = { id = 375, x = 3365.76, y = 4178.49, z = 182.27 }, isRetrace = False, name = Just "Hemlock Avenue" }
-    , { from = { id = 375, x = 3365.76, y = 4178.49, z = 182.27 }, to = { id = 374, x = 3438.37, y = 3826.00, z = 169.11 }, isRetrace = False, name = Nothing }
-    , { from = { id = 374, x = 3438.37, y = 3826.00, z = 169.11 }, to = { id = 517, x = 3615.41, y = 3879.12, z = 169.34 }, isRetrace = False, name = Just "Meadow Avenue" }
-    , { from = { id = 517, x = 3615.41, y = 3879.12, z = 169.34 }, to = { id = 373, x = 3612.40, y = 3889.66, z = 169.34 }, isRetrace = False, name = Just "Orchard Path" }
-    , { from = { id = 373, x = 3612.40, y = 3889.66, z = 169.34 }, to = { id = 517, x = 3615.41, y = 3879.12, z = 169.34 }, isRetrace = True, name = Just "Orchard Path" }
-    , { from = { id = 517, x = 3615.41, y = 3879.12, z = 169.34 }, to = { id = 371, x = 3840.22, y = 3927.02, z = 169.50 }, isRetrace = False, name = Just "Meadow Avenue" }
-    , { from = { id = 371, x = 3840.22, y = 3927.02, z = 169.50 }, to = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, isRetrace = False, name = Nothing }
-    , { from = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, to = { id = 370, x = 3872.46, y = 4160.53, z = 169.36 }, isRetrace = False, name = Nothing }
-    , { from = { id = 370, x = 3872.46, y = 4160.53, z = 169.36 }, to = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, isRetrace = True, name = Nothing }
-    , { from = { id = 382, x = 3953.27, y = 4235.89, z = 170.22 }, to = { id = 383, x = 3964.90, y = 4238.11, z = 170.22 }, isRetrace = True, name = Just "Jasmine Path" }
-    , { from = { id = 383, x = 3964.90, y = 4238.11, z = 170.22 }, to = { id = 378, x = 4109.12, y = 4223.57, z = 171.82 }, isRetrace = False, name = Nothing }
-    , { from = { id = 378, x = 4109.12, y = 4223.57, z = 171.82 }, to = { id = 371, x = 3840.22, y = 3927.02, z = 169.50 }, isRetrace = False, name = Nothing }
-    , { from = { id = 371, x = 3840.22, y = 3927.02, z = 169.50 }, to = { id = 370, x = 3872.46, y = 4160.53, z = 169.36 }, isRetrace = False, name = Nothing }
-    , { from = { id = 370, x = 3872.46, y = 4160.53, z = 169.36 }, to = { id = 372, x = 3865.01, y = 4172.27, z = 169.36 }, isRetrace = False, name = Just "Garland Avenue" }
-    , { from = { id = 372, x = 3865.01, y = 4172.27, z = 169.36 }, to = { id = 373, x = 3612.40, y = 3889.66, z = 169.34 }, isRetrace = False, name = Nothing }
-    , { from = { id = 373, x = 3612.40, y = 3889.66, z = 169.34 }, to = { id = 374, x = 3438.37, y = 3826.00, z = 169.11 }, isRetrace = False, name = Just "Meadow Avenue" }
-    , { from = { id = 374, x = 3438.37, y = 3826.00, z = 169.11 }, to = { id = 338, x = 3351.93, y = 3781.64, z = 168.34 }, isRetrace = False, name = Just "Meadow Avenue" }
-    , { from = { id = 338, x = 3351.93, y = 3781.64, z = 168.34 }, to = { id = 342, x = 3006.74, y = 3792.48, z = 174.00 }, isRetrace = False, name = Just "Sunny Path" }
-    , { from = { id = 342, x = 3006.74, y = 3792.48, z = 174.00 }, to = { id = 325, x = 3257.58, y = 3717.38, z = 171.38 }, isRetrace = False, name = Just "Atlantic Avenue" }
-    , { from = { id = 325, x = 3257.58, y = 3717.38, z = 171.38 }, to = { id = 338, x = 3351.93, y = 3781.64, z = 168.34 }, isRetrace = False, name = Nothing }
-    , { from = { id = 338, x = 3351.93, y = 3781.64, z = 168.34 }, to = { id = 325, x = 3257.58, y = 3717.38, z = 171.38 }, isRetrace = True, name = Nothing }
-    , { from = { id = 325, x = 3257.58, y = 3717.38, z = 171.38 }, to = { id = 300, x = 3448.43, y = 3377.18, z = 159.50 }, isRetrace = False, name = Nothing }
-    , { from = { id = 300, x = 3448.43, y = 3377.18, z = 159.50 }, to = { id = 301, x = 3465.45, y = 3320.21, z = 158.91 }, isRetrace = False, name = Nothing }
-    , { from = { id = 301, x = 3465.45, y = 3320.21, z = 158.91 }, to = { id = 300, x = 3448.43, y = 3377.18, z = 159.50 }, isRetrace = True, name = Nothing }
-    , { from = { id = 300, x = 3448.43, y = 3377.18, z = 159.50 }, to = { id = 566, x = 3064.18, y = 3438.57, z = 157.06 }, isRetrace = False, name = Just "Grassy Path" }
-    , { from = { id = 566, x = 3064.18, y = 3438.57, z = 157.06 }, to = { id = 313, x = 2861.43, y = 3497.57, z = 152.71 }, isRetrace = False, name = Just "Alcove Path" }
-    , { from = { id = 313, x = 2861.43, y = 3497.57, z = 152.71 }, to = { id = 47, x = 2856.18, y = 3467.07, z = 151.52 }, isRetrace = False, name = Nothing }
-    , { from = { id = 47, x = 2856.18, y = 3467.07, z = 151.52 }, to = { id = 48, x = 2688.45, y = 3538.74, z = 154.76 }, isRetrace = False, name = Nothing }
-    , { from = { id = 48, x = 2688.45, y = 3538.74, z = 154.76 }, to = { id = 51, x = 2648.12, y = 3499.35, z = 150.23 }, isRetrace = True, name = Just "Twilight Path" }
-    , { from = { id = 51, x = 2648.12, y = 3499.35, z = 150.23 }, to = { id = 297, x = 2756.42, y = 3339.50, z = 147.53 }, isRetrace = False, name = Just "Pine Avenue" }
-    , { from = { id = 297, x = 2756.42, y = 3339.50, z = 147.53 }, to = { id = 296, x = 2634.39, y = 3327.00, z = 146.53 }, isRetrace = False, name = Nothing }
-    , { from = { id = 296, x = 2634.39, y = 3327.00, z = 146.53 }, to = { id = 49, x = 2541.05, y = 3330.88, z = 147.13 }, isRetrace = False, name = Nothing }
-    , { from = { id = 49, x = 2541.05, y = 3330.88, z = 147.13 }, to = { id = 292, x = 2381.68, y = 3309.39, z = 138.66 }, isRetrace = False, name = Nothing }
-    , { from = { id = 292, x = 2381.68, y = 3309.39, z = 138.66 }, to = { id = 49, x = 2541.05, y = 3330.88, z = 147.13 }, isRetrace = True, name = Nothing }
-    , { from = { id = 49, x = 2541.05, y = 3330.88, z = 147.13 }, to = { id = 50, x = 2399.87, y = 3534.67, z = 134.66 }, isRetrace = False, name = Just "Sycamore Avenue" }
-    , { from = { id = 50, x = 2399.87, y = 3534.67, z = 134.66 }, to = { id = 316, x = 2313.00, y = 3544.93, z = 131.95 }, isRetrace = False, name = Nothing }
-    , { from = { id = 316, x = 2313.00, y = 3544.93, z = 131.95 }, to = { id = 317, x = 2233.64, y = 3589.30, z = 131.13 }, isRetrace = False, name = Just "Sumac Path" }
-    , { from = { id = 317, x = 2233.64, y = 3589.30, z = 131.13 }, to = { id = 329, x = 2175.38, y = 3732.85, z = 146.72 }, isRetrace = False, name = Just "Sycamore Avenue" }
-    , { from = { id = 329, x = 2175.38, y = 3732.85, z = 146.72 }, to = { id = 328, x = 2284.03, y = 3713.68, z = 154.95 }, isRetrace = True, name = Nothing }
-    , { from = { id = 328, x = 2284.03, y = 3713.68, z = 154.95 }, to = { id = 346, x = 2227.85, y = 3870.60, z = 164.13 }, isRetrace = False, name = Nothing }
-    , { from = { id = 346, x = 2227.85, y = 3870.60, z = 164.13 }, to = { id = 358, x = 2213.50, y = 3997.32, z = 161.99 }, isRetrace = True, name = Just "Highland Avenue" }
-    , { from = { id = 358, x = 2213.50, y = 3997.32, z = 161.99 }, to = { id = 357, x = 2114.83, y = 4009.79, z = 157.35 }, isRetrace = False, name = Nothing }
-    , { from = { id = 357, x = 2114.83, y = 4009.79, z = 157.35 }, to = { id = 395, x = 2118.71, y = 4250.70, z = 144.07 }, isRetrace = False, name = Just "Bay-Grove Path" }
-    , { from = { id = 395, x = 2118.71, y = 4250.70, z = 144.07 }, to = { id = 394, x = 2148.18, y = 4310.33, z = 138.53 }, isRetrace = True, name = Nothing }
-    , { from = { id = 394, x = 2148.18, y = 4310.33, z = 138.53 }, to = { id = 403, x = 2091.34, y = 4416.24, z = 131.07 }, isRetrace = False, name = Just "Bay Side Avenue" }
-    , { from = { id = 403, x = 2091.34, y = 4416.24, z = 131.07 }, to = { id = 427, x = 2220.43, y = 4587.26, z = 123.29 }, isRetrace = False, name = Just "Bay Side Avenue" }
-    , { from = { id = 427, x = 2220.43, y = 4587.26, z = 123.29 }, to = { id = 417, x = 2129.55, y = 4611.81, z = 115.26 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 417, x = 2129.55, y = 4611.81, z = 115.26 }, to = { id = 418, x = 2148.91, y = 4640.31, z = 115.26 }, isRetrace = False, name = Nothing }
-    , { from = { id = 418, x = 2148.91, y = 4640.31, z = 115.26 }, to = { id = 62, x = 1893.38, y = 4775.05, z = 93.60 }, isRetrace = False, name = Just "Battle Avenue" }
-    , { from = { id = 62, x = 1893.38, y = 4775.05, z = 93.60 }, to = { id = 439, x = 1841.34, y = 4738.31, z = 93.60 }, isRetrace = False, name = Nothing }
-    , { from = { id = 439, x = 1841.34, y = 4738.31, z = 93.60 }, to = { id = 431, x = 1705.06, y = 4584.93, z = 82.30 }, isRetrace = False, name = Nothing }
-    , { from = { id = 431, x = 1705.06, y = 4584.93, z = 82.30 }, to = { id = 416, x = 1682.38, y = 4603.57, z = 82.30 }, isRetrace = False, name = Nothing }
-    , { from = { id = 416, x = 1682.38, y = 4603.57, z = 82.30 }, to = { id = 436, x = 1725.68, y = 4675.07, z = 86.52 }, isRetrace = False, name = Nothing }
-    , { from = { id = 436, x = 1725.68, y = 4675.07, z = 86.52 }, to = { id = 416, x = 1682.38, y = 4603.57, z = 82.30 }, isRetrace = True, name = Nothing }
-    , { from = { id = 416, x = 1682.38, y = 4603.57, z = 82.30 }, to = { id = 429, x = 1674.68, y = 4589.07, z = 82.30 }, isRetrace = False, name = Nothing }
-    , { from = { id = 429, x = 1674.68, y = 4589.07, z = 82.30 }, to = { id = 431, x = 1705.06, y = 4584.93, z = 82.30 }, isRetrace = False, name = Nothing }
-    , { from = { id = 431, x = 1705.06, y = 4584.93, z = 82.30 }, to = { id = 406, x = 1704.30, y = 4449.22, z = 79.87 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 406, x = 1704.30, y = 4449.22, z = 79.87 }, to = { id = 387, x = 1550.85, y = 4082.54, z = 75.49 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 387, x = 1550.85, y = 4082.54, z = 75.49 }, to = { id = 585, x = 1520.01, y = 4005.69, z = 75.42 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 585, x = 1520.01, y = 4005.69, z = 75.42 }, to = { id = 387, x = 1550.85, y = 4082.54, z = 75.49 }, isRetrace = True, name = Just "Lake Avenue" }
-    , { from = { id = 387, x = 1550.85, y = 4082.54, z = 75.49 }, to = { id = 386, x = 1735.90, y = 4256.84, z = 73.35 }, isRetrace = False, name = Nothing }
-    , { from = { id = 386, x = 1735.90, y = 4256.84, z = 73.35 }, to = { id = 389, x = 1723.92, y = 4260.44, z = 73.35 }, isRetrace = False, name = Nothing }
-    , { from = { id = 389, x = 1723.92, y = 4260.44, z = 73.35 }, to = { id = 390, x = 1722.19, y = 4266.18, z = 73.35 }, isRetrace = False, name = Nothing }
-    , { from = { id = 390, x = 1722.19, y = 4266.18, z = 73.35 }, to = { id = 389, x = 1723.92, y = 4260.44, z = 73.35 }, isRetrace = False, name = Nothing }
-    , { from = { id = 389, x = 1723.92, y = 4260.44, z = 73.35 }, to = { id = 386, x = 1735.90, y = 4256.84, z = 73.35 }, isRetrace = True, name = Nothing }
-    , { from = { id = 386, x = 1735.90, y = 4256.84, z = 73.35 }, to = { id = 400, x = 1726.93, y = 4359.62, z = 82.29 }, isRetrace = False, name = Nothing }
-    , { from = { id = 400, x = 1726.93, y = 4359.62, z = 82.29 }, to = { id = 353, x = 1789.15, y = 3948.91, z = 111.01 }, isRetrace = False, name = Nothing }
-    , { from = { id = 353, x = 1789.15, y = 3948.91, z = 111.01 }, to = { id = 354, x = 1838.56, y = 3941.94, z = 115.03 }, isRetrace = False, name = Nothing }
-    , { from = { id = 354, x = 1838.56, y = 3941.94, z = 115.03 }, to = { id = 353, x = 1789.15, y = 3948.91, z = 111.01 }, isRetrace = True, name = Nothing }
-    , { from = { id = 353, x = 1789.15, y = 3948.91, z = 111.01 }, to = { id = 581, x = 1786.38, y = 3914.55, z = 109.75 }, isRetrace = False, name = Just "Bay-Side Avenue" }
-    , { from = { id = 581, x = 1786.38, y = 3914.55, z = 109.75 }, to = { id = 349, x = 1689.73, y = 3904.64, z = 99.80 }, isRetrace = False, name = Just "Bud Path" }
-    , { from = { id = 349, x = 1689.73, y = 3904.64, z = 99.80 }, to = { id = 581, x = 1786.38, y = 3914.55, z = 109.75 }, isRetrace = True, name = Just "Bud Path" }
-    , { from = { id = 581, x = 1786.38, y = 3914.55, z = 109.75 }, to = { id = 350, x = 1770.04, y = 3810.91, z = 104.80 }, isRetrace = False, name = Just "Bay-Side Avenue" }
-    , { from = { id = 350, x = 1770.04, y = 3810.91, z = 104.80 }, to = { id = 327, x = 1744.04, y = 3724.10, z = 102.93 }, isRetrace = False, name = Just "Bay-Side Avenue" }
-    , { from = { id = 327, x = 1744.04, y = 3724.10, z = 102.93 }, to = { id = 350, x = 1770.04, y = 3810.91, z = 104.80 }, isRetrace = True, name = Just "Bay-Side Avenue" }
-    , { from = { id = 350, x = 1770.04, y = 3810.91, z = 104.80 }, to = { id = 349, x = 1689.73, y = 3904.64, z = 99.80 }, isRetrace = False, name = Nothing }
-    , { from = { id = 349, x = 1689.73, y = 3904.64, z = 99.80 }, to = { id = 361, x = 1576.75, y = 4034.27, z = 75.42 }, isRetrace = False, name = Nothing }
-    , { from = { id = 361, x = 1576.75, y = 4034.27, z = 75.42 }, to = { id = 584, x = 1534.84, y = 3978.02, z = 75.42 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 584, x = 1534.84, y = 3978.02, z = 75.42 }, to = { id = 361, x = 1576.75, y = 4034.27, z = 75.42 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 361, x = 1576.75, y = 4034.27, z = 75.42 }, to = { id = 584, x = 1534.84, y = 3978.02, z = 75.42 }, isRetrace = True, name = Just "Lake Avenue" }
-    , { from = { id = 584, x = 1534.84, y = 3978.02, z = 75.42 }, to = { id = 351, x = 1650.75, y = 3905.44, z = 96.12 }, isRetrace = False, name = Just "Central Avenue" }
-    , { from = { id = 351, x = 1650.75, y = 3905.44, z = 96.12 }, to = { id = 580, x = 1523.77, y = 3796.81, z = 84.24 }, isRetrace = False, name = Just "Strawberry Path" }
-    , { from = { id = 580, x = 1523.77, y = 3796.81, z = 84.24 }, to = { id = 340, x = 1470.78, y = 3821.56, z = 78.00 }, isRetrace = False, name = Just "Vale Path" }
-    , { from = { id = 340, x = 1470.78, y = 3821.56, z = 78.00 }, to = { id = 343, x = 1429.43, y = 3835.00, z = 78.00 }, isRetrace = False, name = Just "Walnut Avenue" }
-    , { from = { id = 343, x = 1429.43, y = 3835.00, z = 78.00 }, to = { id = 345, x = 1444.47, y = 3857.42, z = 78.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 345, x = 1444.47, y = 3857.42, z = 78.00 }, to = { id = 585, x = 1520.01, y = 4005.69, z = 75.42 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 585, x = 1520.01, y = 4005.69, z = 75.42 }, to = { id = 586, x = 1500.12, y = 4015.56, z = 74.55 }, isRetrace = False, name = Just "Waterside Path" }
-    , { from = { id = 586, x = 1500.12, y = 4015.56, z = 74.55 }, to = { id = 364, x = 1227.87, y = 4056.49, z = 72.21 }, isRetrace = False, name = Just "Waterside Path" }
-    , { from = { id = 364, x = 1227.87, y = 4056.49, z = 72.21 }, to = { id = 587, x = 1056.09, y = 4022.68, z = 67.70 }, isRetrace = False, name = Just "Waterside Path" }
-    , { from = { id = 587, x = 1056.09, y = 4022.68, z = 67.70 }, to = { id = 360, x = 907.54, y = 4027.20, z = 65.79 }, isRetrace = False, name = Just "Walnut Avenue" }
-    , { from = { id = 360, x = 907.54, y = 4027.20, z = 65.79 }, to = { id = 359, x = 982.56, y = 3852.69, z = 79.33 }, isRetrace = False, name = Nothing }
-    , { from = { id = 359, x = 982.56, y = 3852.69, z = 79.33 }, to = { id = 579, x = 1161.16, y = 3794.65, z = 72.89 }, isRetrace = False, name = Just "Walnut Avenue" }
-    , { from = { id = 579, x = 1161.16, y = 3794.65, z = 72.89 }, to = { id = 339, x = 1204.68, y = 3794.69, z = 72.89 }, isRetrace = False, name = Just "Walnut Avenue" }
-    , { from = { id = 339, x = 1204.68, y = 3794.69, z = 72.89 }, to = { id = 343, x = 1429.43, y = 3835.00, z = 78.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 343, x = 1429.43, y = 3835.00, z = 78.00 }, to = { id = 345, x = 1444.47, y = 3857.42, z = 78.00 }, isRetrace = True, name = Nothing }
-    , { from = { id = 345, x = 1444.47, y = 3857.42, z = 78.00 }, to = { id = 340, x = 1470.78, y = 3821.56, z = 78.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 340, x = 1470.78, y = 3821.56, z = 78.00 }, to = { id = 331, x = 1420.15, y = 3738.72, z = 87.32 }, isRetrace = False, name = Nothing }
-    , { from = { id = 331, x = 1420.15, y = 3738.72, z = 87.32 }, to = { id = 340, x = 1470.78, y = 3821.56, z = 78.00 }, isRetrace = True, name = Nothing }
-    , { from = { id = 340, x = 1470.78, y = 3821.56, z = 78.00 }, to = { id = 580, x = 1523.77, y = 3796.81, z = 84.24 }, isRetrace = True, name = Just "Vale Path" }
-    , { from = { id = 580, x = 1523.77, y = 3796.81, z = 84.24 }, to = { id = 351, x = 1650.75, y = 3905.44, z = 96.12 }, isRetrace = True, name = Just "Strawberry Path" }
-    , { from = { id = 351, x = 1650.75, y = 3905.44, z = 96.12 }, to = { id = 327, x = 1744.04, y = 3724.10, z = 102.93 }, isRetrace = False, name = Nothing }
-    , { from = { id = 327, x = 1744.04, y = 3724.10, z = 102.93 }, to = { id = 326, x = 1739.77, y = 3706.61, z = 102.93 }, isRetrace = False, name = Nothing }
-    , { from = { id = 326, x = 1739.77, y = 3706.61, z = 102.93 }, to = { id = 580, x = 1523.77, y = 3796.81, z = 84.24 }, isRetrace = False, name = Just "Vale Path" }
-    , { from = { id = 580, x = 1523.77, y = 3796.81, z = 84.24 }, to = { id = 312, x = 1884.46, y = 3454.20, z = 129.31 }, isRetrace = False, name = Just "Vale Path" }
-    , { from = { id = 312, x = 1884.46, y = 3454.20, z = 129.31 }, to = { id = 564, x = 1806.58, y = 3397.92, z = 134.28 }, isRetrace = False, name = Just "Myrtle Path" }
-    , { from = { id = 564, x = 1806.58, y = 3397.92, z = 134.28 }, to = { id = 312, x = 1884.46, y = 3454.20, z = 129.31 }, isRetrace = True, name = Just "Myrtle Path" }
-    , { from = { id = 312, x = 1884.46, y = 3454.20, z = 129.31 }, to = { id = 46, x = 2017.52, y = 3425.29, z = 126.53 }, isRetrace = False, name = Nothing }
-    , { from = { id = 46, x = 2017.52, y = 3425.29, z = 126.53 }, to = { id = 45, x = 2131.35, y = 3330.72, z = 136.22 }, isRetrace = False, name = Just "Vale Path" }
-    , { from = { id = 45, x = 2131.35, y = 3330.72, z = 136.22 }, to = { id = 295, x = 2159.64, y = 3313.18, z = 139.39 }, isRetrace = False, name = Just "Vale Path" }
-    , { from = { id = 295, x = 2159.64, y = 3313.18, z = 139.39 }, to = { id = 294, x = 2152.76, y = 3138.92, z = 131.32 }, isRetrace = False, name = Nothing }
-    , { from = { id = 294, x = 2152.76, y = 3138.92, z = 131.32 }, to = { id = 268, x = 2199.15, y = 3065.62, z = 126.80 }, isRetrace = True, name = Just "Myrtle Path" }
-    , { from = { id = 268, x = 2199.15, y = 3065.62, z = 126.80 }, to = { id = 262, x = 2087.40, y = 3027.74, z = 122.35 }, isRetrace = False, name = Nothing }
-    , { from = { id = 262, x = 2087.40, y = 3027.74, z = 122.35 }, to = { id = 243, x = 2179.35, y = 2866.82, z = 131.98 }, isRetrace = False, name = Nothing }
-    , { from = { id = 243, x = 2179.35, y = 2866.82, z = 131.98 }, to = { id = 236, x = 2164.22, y = 2789.39, z = 126.07 }, isRetrace = False, name = Nothing }
-    , { from = { id = 236, x = 2164.22, y = 2789.39, z = 126.07 }, to = { id = 537, x = 2132.56, y = 2802.77, z = 122.72 }, isRetrace = False, name = Just "Forest Avenue" }
-    , { from = { id = 537, x = 2132.56, y = 2802.77, z = 122.72 }, to = { id = 36, x = 2099.06, y = 2812.35, z = 120.21 }, isRetrace = False, name = Just "Forest Avenue" }
-    , { from = { id = 36, x = 2099.06, y = 2812.35, z = 120.21 }, to = { id = 537, x = 2132.56, y = 2802.77, z = 122.72 }, isRetrace = True, name = Just "Forest Avenue" }
-    , { from = { id = 537, x = 2132.56, y = 2802.77, z = 122.72 }, to = { id = 234, x = 2059.84, y = 2663.90, z = 122.21 }, isRetrace = False, name = Just "Catalpa Path" }
-    , { from = { id = 234, x = 2059.84, y = 2663.90, z = 122.21 }, to = { id = 225, x = 2134.34, y = 2641.88, z = 125.95 }, isRetrace = False, name = Just "Locust Avenue" }
-    , { from = { id = 225, x = 2134.34, y = 2641.88, z = 125.95 }, to = { id = 226, x = 2178.11, y = 2665.59, z = 125.88 }, isRetrace = False, name = Nothing }
-    , { from = { id = 226, x = 2178.11, y = 2665.59, z = 125.88 }, to = { id = 233, x = 2191.14, y = 2768.41, z = 125.77 }, isRetrace = False, name = Nothing }
-    , { from = { id = 233, x = 2191.14, y = 2768.41, z = 125.77 }, to = { id = 237, x = 2555.68, y = 2790.61, z = 128.08 }, isRetrace = False, name = Just "Forest Avenue" }
-    , { from = { id = 237, x = 2555.68, y = 2790.61, z = 128.08 }, to = { id = 233, x = 2191.14, y = 2768.41, z = 125.77 }, isRetrace = True, name = Just "Forest Avenue" }
-    , { from = { id = 233, x = 2191.14, y = 2768.41, z = 125.77 }, to = { id = 236, x = 2164.22, y = 2789.39, z = 126.07 }, isRetrace = False, name = Nothing }
-    , { from = { id = 236, x = 2164.22, y = 2789.39, z = 126.07 }, to = { id = 243, x = 2179.35, y = 2866.82, z = 131.98 }, isRetrace = True, name = Nothing }
-    , { from = { id = 243, x = 2179.35, y = 2866.82, z = 131.98 }, to = { id = 252, x = 2697.30, y = 2938.93, z = 157.91 }, isRetrace = False, name = Nothing }
-    , { from = { id = 252, x = 2697.30, y = 2938.93, z = 157.91 }, to = { id = 219, x = 2776.17, y = 2607.94, z = 152.43 }, isRetrace = False, name = Just "Vista Path" }
-    , { from = { id = 219, x = 2776.17, y = 2607.94, z = 152.43 }, to = { id = 221, x = 3003.02, y = 2617.31, z = 165.59 }, isRetrace = False, name = Just "Forest Avenue" }
-    , { from = { id = 221, x = 3003.02, y = 2617.31, z = 165.59 }, to = { id = 219, x = 2776.17, y = 2607.94, z = 152.43 }, isRetrace = True, name = Just "Forest Avenue" }
-    , { from = { id = 219, x = 2776.17, y = 2607.94, z = 152.43 }, to = { id = 220, x = 2725.10, y = 2568.28, z = 149.45 }, isRetrace = False, name = Nothing }
-    , { from = { id = 220, x = 2725.10, y = 2568.28, z = 149.45 }, to = { id = 237, x = 2555.68, y = 2790.61, z = 128.08 }, isRetrace = False, name = Nothing }
-    , { from = { id = 237, x = 2555.68, y = 2790.61, z = 128.08 }, to = { id = 516, x = 2401.65, y = 2482.86, z = 128.52 }, isRetrace = False, name = Just "Mossy Path" }
-    , { from = { id = 516, x = 2401.65, y = 2482.86, z = 128.52 }, to = { id = 210, x = 2375.95, y = 2503.69, z = 127.73 }, isRetrace = False, name = Just "Southwood Avenue" }
-    , { from = { id = 210, x = 2375.95, y = 2503.69, z = 127.73 }, to = { id = 516, x = 2401.65, y = 2482.86, z = 128.52 }, isRetrace = True, name = Just "Southwood Avenue" }
-    , { from = { id = 516, x = 2401.65, y = 2482.86, z = 128.52 }, to = { id = 201, x = 2447.60, y = 2444.01, z = 129.60 }, isRetrace = False, name = Just "Southwood Avenue" }
-    , { from = { id = 201, x = 2447.60, y = 2444.01, z = 129.60 }, to = { id = 199, x = 2467.95, y = 2423.93, z = 130.23 }, isRetrace = False, name = Nothing }
-    , { from = { id = 199, x = 2467.95, y = 2423.93, z = 130.23 }, to = { id = 518, x = 2588.18, y = 2506.82, z = 145.95 }, isRetrace = False, name = Just "Woodland Path" }
-    , { from = { id = 518, x = 2588.18, y = 2506.82, z = 145.95 }, to = { id = 199, x = 2467.95, y = 2423.93, z = 130.23 }, isRetrace = True, name = Just "Woodland Path" }
-    , { from = { id = 199, x = 2467.95, y = 2423.93, z = 130.23 }, to = { id = 201, x = 2447.60, y = 2444.01, z = 129.60 }, isRetrace = True, name = Nothing }
-    , { from = { id = 201, x = 2447.60, y = 2444.01, z = 129.60 }, to = { id = 502, x = 2466.43, y = 2279.07, z = 134.07 }, isRetrace = False, name = Just "Hemlock Path" }
-    , { from = { id = 502, x = 2466.43, y = 2279.07, z = 134.07 }, to = { id = 186, x = 2532.20, y = 2374.42, z = 132.05 }, isRetrace = False, name = Just "Acanthus Path" }
-    , { from = { id = 186, x = 2532.20, y = 2374.42, z = 132.05 }, to = { id = 199, x = 2467.95, y = 2423.93, z = 130.23 }, isRetrace = False, name = Nothing }
-    , { from = { id = 199, x = 2467.95, y = 2423.93, z = 130.23 }, to = { id = 186, x = 2532.20, y = 2374.42, z = 132.05 }, isRetrace = True, name = Nothing }
-    , { from = { id = 186, x = 2532.20, y = 2374.42, z = 132.05 }, to = { id = 187, x = 2673.97, y = 2266.57, z = 137.28 }, isRetrace = False, name = Nothing }
-    , { from = { id = 187, x = 2673.97, y = 2266.57, z = 137.28 }, to = { id = 15, x = 2846.26, y = 2218.05, z = 143.53 }, isRetrace = False, name = Just "Locust Avenue" }
-    , { from = { id = 15, x = 2846.26, y = 2218.05, z = 143.53 }, to = { id = 16, x = 2914.93, y = 2211.07, z = 148.00 }, isRetrace = False, name = Just "Locust Avenue" }
-    , { from = { id = 16, x = 2914.93, y = 2211.07, z = 148.00 }, to = { id = 15, x = 2846.26, y = 2218.05, z = 143.53 }, isRetrace = True, name = Just "Locust Avenue" }
-    , { from = { id = 15, x = 2846.26, y = 2218.05, z = 143.53 }, to = { id = 149, x = 2846.72, y = 2075.24, z = 146.45 }, isRetrace = False, name = Nothing }
-    , { from = { id = 149, x = 2846.72, y = 2075.24, z = 146.45 }, to = { id = 150, x = 2899.95, y = 1983.33, z = 141.29 }, isRetrace = True, name = Nothing }
-    , { from = { id = 150, x = 2899.95, y = 1983.33, z = 141.29 }, to = { id = 141, x = 2926.19, y = 1955.37, z = 139.31 }, isRetrace = False, name = Just "Azalea Path" }
-    , { from = { id = 141, x = 2926.19, y = 1955.37, z = 139.31 }, to = { id = 151, x = 3099.17, y = 2084.80, z = 143.40 }, isRetrace = False, name = Nothing }
-    , { from = { id = 151, x = 3099.17, y = 2084.80, z = 143.40 }, to = { id = 165, x = 3202.06, y = 2234.90, z = 147.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 165, x = 3202.06, y = 2234.90, z = 147.43 }, to = { id = 163, x = 3279.88, y = 2173.89, z = 143.55 }, isRetrace = True, name = Just "Vista Avenue" }
-    , { from = { id = 163, x = 3279.88, y = 2173.89, z = 143.55 }, to = { id = 143, x = 3295.60, y = 1972.02, z = 128.03 }, isRetrace = False, name = Nothing }
-    , { from = { id = 143, x = 3295.60, y = 1972.02, z = 128.03 }, to = { id = 137, x = 3333.82, y = 1923.45, z = 119.38 }, isRetrace = False, name = Just "Grape Avenue" }
-    , { from = { id = 137, x = 3333.82, y = 1923.45, z = 119.38 }, to = { id = 143, x = 3295.60, y = 1972.02, z = 128.03 }, isRetrace = True, name = Just "Grape Avenue" }
-    , { from = { id = 143, x = 3295.60, y = 1972.02, z = 128.03 }, to = { id = 132, x = 3137.38, y = 1853.71, z = 125.56 }, isRetrace = False, name = Nothing }
-    , { from = { id = 132, x = 3137.38, y = 1853.71, z = 125.56 }, to = { id = 143, x = 3295.60, y = 1972.02, z = 128.03 }, isRetrace = True, name = Nothing }
-    , { from = { id = 143, x = 3295.60, y = 1972.02, z = 128.03 }, to = { id = 180, x = 3704.86, y = 2326.25, z = 123.49 }, isRetrace = False, name = Nothing }
-    , { from = { id = 180, x = 3704.86, y = 2326.25, z = 123.49 }, to = { id = 190, x = 3741.85, y = 2384.95, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 190, x = 3741.85, y = 2384.95, z = 122.00 }, to = { id = 196, x = 3743.62, y = 2413.15, z = 123.97 }, isRetrace = False, name = Nothing }
-    , { from = { id = 196, x = 3743.62, y = 2413.15, z = 123.97 }, to = { id = 21, x = 3765.33, y = 2392.53, z = 122.00 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 21, x = 3765.33, y = 2392.53, z = 122.00 }, to = { id = 190, x = 3741.85, y = 2384.95, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 190, x = 3741.85, y = 2384.95, z = 122.00 }, to = { id = 189, x = 3746.65, y = 2382.33, z = 122.00 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 189, x = 3746.65, y = 2382.33, z = 122.00 }, to = { id = 22, x = 3794.51, y = 2370.57, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 22, x = 3794.51, y = 2370.57, z = 122.00 }, to = { id = 191, x = 3800.78, y = 2394.68, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 191, x = 3800.78, y = 2394.68, z = 122.00 }, to = { id = 21, x = 3765.33, y = 2392.53, z = 122.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 21, x = 3765.33, y = 2392.53, z = 122.00 }, to = { id = 22, x = 3794.51, y = 2370.57, z = 122.00 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 22, x = 3794.51, y = 2370.57, z = 122.00 }, to = { id = 173, x = 3908.62, y = 2256.36, z = 109.94 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 173, x = 3908.62, y = 2256.36, z = 109.94 }, to = { id = 18, x = 3933.02, y = 2226.75, z = 109.94 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 18, x = 3933.02, y = 2226.75, z = 109.94 }, to = { id = 173, x = 3908.62, y = 2256.36, z = 109.94 }, isRetrace = True, name = Just "Vine Avenue" }
-    , { from = { id = 173, x = 3908.62, y = 2256.36, z = 109.94 }, to = { id = 166, x = 3968.39, y = 2254.78, z = 109.94 }, isRetrace = False, name = Nothing }
-    , { from = { id = 166, x = 3968.39, y = 2254.78, z = 109.94 }, to = { id = 167, x = 3960.79, y = 2206.44, z = 109.94 }, isRetrace = False, name = Nothing }
-    , { from = { id = 167, x = 3960.79, y = 2206.44, z = 109.94 }, to = { id = 162, x = 4001.95, y = 2171.45, z = 104.19 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 162, x = 4001.95, y = 2171.45, z = 104.19 }, to = { id = 167, x = 3960.79, y = 2206.44, z = 109.94 }, isRetrace = True, name = Just "Vine Avenue" }
-    , { from = { id = 167, x = 3960.79, y = 2206.44, z = 109.94 }, to = { id = 18, x = 3933.02, y = 2226.75, z = 109.94 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 18, x = 3933.02, y = 2226.75, z = 109.94 }, to = { id = 166, x = 3968.39, y = 2254.78, z = 109.94 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 166, x = 3968.39, y = 2254.78, z = 109.94 }, to = { id = 479, x = 4025.01, y = 2291.71, z = 104.96 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 479, x = 4025.01, y = 2291.71, z = 104.96 }, to = { id = 483, x = 4135.43, y = 2231.07, z = 104.98 }, isRetrace = False, name = Just "Landscape Path" }
-    , { from = { id = 483, x = 4135.43, y = 2231.07, z = 104.98 }, to = { id = 179, x = 4260.18, y = 2278.57, z = 102.14 }, isRetrace = False, name = Just "Cornus Path" }
-    , { from = { id = 179, x = 4260.18, y = 2278.57, z = 102.14 }, to = { id = 499, x = 4477.93, y = 2169.57, z = 88.79 }, isRetrace = False, name = Just "Vernal Path" }
-    , { from = { id = 499, x = 4477.93, y = 2169.57, z = 88.79 }, to = { id = 500, x = 4601.18, y = 2202.57, z = 84.53 }, isRetrace = False, name = Just "Mahonia Path" }
-    , { from = { id = 500, x = 4601.18, y = 2202.57, z = 84.53 }, to = { id = 499, x = 4477.93, y = 2169.57, z = 88.79 }, isRetrace = True, name = Just "Mahonia Path" }
-    , { from = { id = 499, x = 4477.93, y = 2169.57, z = 88.79 }, to = { id = 154, x = 4355.10, y = 2090.48, z = 93.74 }, isRetrace = False, name = Just "Mahonia Path" }
-    , { from = { id = 154, x = 4355.10, y = 2090.48, z = 93.74 }, to = { id = 483, x = 4135.43, y = 2231.07, z = 104.98 }, isRetrace = False, name = Just "Landscape Path" }
-    , { from = { id = 483, x = 4135.43, y = 2231.07, z = 104.98 }, to = { id = 479, x = 4025.01, y = 2291.71, z = 104.96 }, isRetrace = True, name = Just "Landscape Path" }
-    , { from = { id = 479, x = 4025.01, y = 2291.71, z = 104.96 }, to = { id = 511, x = 4165.40, y = 2408.64, z = 103.74 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 511, x = 4165.40, y = 2408.64, z = 103.74 }, to = { id = 178, x = 4261.68, y = 2318.57, z = 102.09 }, isRetrace = False, name = Just "Vernal Path" }
-    , { from = { id = 178, x = 4261.68, y = 2318.57, z = 102.09 }, to = { id = 509, x = 4493.18, y = 2377.82, z = 94.97 }, isRetrace = False, name = Just "Cornus Path" }
-    , { from = { id = 509, x = 4493.18, y = 2377.82, z = 94.97 }, to = { id = 178, x = 4261.68, y = 2318.57, z = 102.09 }, isRetrace = True, name = Just "Cornus Path" }
-    , { from = { id = 178, x = 4261.68, y = 2318.57, z = 102.09 }, to = { id = 179, x = 4260.18, y = 2278.57, z = 102.14 }, isRetrace = False, name = Nothing }
-    , { from = { id = 179, x = 4260.18, y = 2278.57, z = 102.14 }, to = { id = 178, x = 4261.68, y = 2318.57, z = 102.09 }, isRetrace = True, name = Nothing }
-    , { from = { id = 178, x = 4261.68, y = 2318.57, z = 102.09 }, to = { id = 511, x = 4165.40, y = 2408.64, z = 103.74 }, isRetrace = True, name = Just "Vernal Path" }
-    , { from = { id = 511, x = 4165.40, y = 2408.64, z = 103.74 }, to = { id = 227, x = 4642.39, y = 2599.30, z = 98.76 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 227, x = 4642.39, y = 2599.30, z = 98.76 }, to = { id = 228, x = 4613.97, y = 2700.55, z = 109.70 }, isRetrace = False, name = Nothing }
-    , { from = { id = 228, x = 4613.97, y = 2700.55, z = 109.70 }, to = { id = 227, x = 4642.39, y = 2599.30, z = 98.76 }, isRetrace = True, name = Nothing }
-    , { from = { id = 227, x = 4642.39, y = 2599.30, z = 98.76 }, to = { id = 519, x = 4857.04, y = 2507.68, z = 87.43 }, isRetrace = True, name = Just "Beech Avenue" }
-    , { from = { id = 519, x = 4857.04, y = 2507.68, z = 87.43 }, to = { id = 512, x = 4706.18, y = 2416.57, z = 88.04 }, isRetrace = False, name = Just "Sage Path" }
-    , { from = { id = 512, x = 4706.18, y = 2416.57, z = 88.04 }, to = { id = 513, x = 4562.43, y = 2328.32, z = 90.29 }, isRetrace = False, name = Just "Sage Path" }
-    , { from = { id = 513, x = 4562.43, y = 2328.32, z = 90.29 }, to = { id = 512, x = 4706.18, y = 2416.57, z = 88.04 }, isRetrace = True, name = Just "Sage Path" }
-    , { from = { id = 512, x = 4706.18, y = 2416.57, z = 88.04 }, to = { id = 19, x = 4856.52, y = 2267.82, z = 82.71 }, isRetrace = False, name = Just "Viburum Path" }
-    , { from = { id = 19, x = 4856.52, y = 2267.82, z = 82.71 }, to = { id = 497, x = 5059.43, y = 2160.32, z = 82.64 }, isRetrace = False, name = Just "Viburum Path" }
-    , { from = { id = 497, x = 5059.43, y = 2160.32, z = 82.64 }, to = { id = 19, x = 4856.52, y = 2267.82, z = 82.71 }, isRetrace = True, name = Just "Viburum Path" }
-    , { from = { id = 19, x = 4856.52, y = 2267.82, z = 82.71 }, to = { id = 20, x = 4763.93, y = 2138.32, z = 81.75 }, isRetrace = False, name = Just "Marigold Path" }
-    , { from = { id = 20, x = 4763.93, y = 2138.32, z = 81.75 }, to = { id = 19, x = 4856.52, y = 2267.82, z = 82.71 }, isRetrace = True, name = Just "Marigold Path" }
-    , { from = { id = 19, x = 4856.52, y = 2267.82, z = 82.71 }, to = { id = 514, x = 5021.31, y = 2442.47, z = 83.65 }, isRetrace = False, name = Just "Marigold Path" }
-    , { from = { id = 514, x = 5021.31, y = 2442.47, z = 83.65 }, to = { id = 506, x = 5156.70, y = 2372.10, z = 81.73 }, isRetrace = True, name = Just "Beech Avenue" }
-    , { from = { id = 506, x = 5156.70, y = 2372.10, z = 81.73 }, to = { id = 145, x = 5438.19, y = 1983.34, z = 75.34 }, isRetrace = False, name = Just "Beech Avenue" }
-    , { from = { id = 145, x = 5438.19, y = 1983.34, z = 75.34 }, to = { id = 488, x = 5532.72, y = 1948.41, z = 76.66 }, isRetrace = False, name = Just "Beech Avenue" }
-    , { from = { id = 488, x = 5532.72, y = 1948.41, z = 76.66 }, to = { id = 145, x = 5438.19, y = 1983.34, z = 75.34 }, isRetrace = True, name = Just "Beech Avenue" }
-    , { from = { id = 145, x = 5438.19, y = 1983.34, z = 75.34 }, to = { id = 146, x = 5236.93, y = 2003.20, z = 76.26 }, isRetrace = False, name = Nothing }
-    , { from = { id = 146, x = 5236.93, y = 2003.20, z = 76.26 }, to = { id = 487, x = 5039.92, y = 1936.37, z = 76.48 }, isRetrace = True, name = Just "Sassafras Avenue" }
-    , { from = { id = 487, x = 5039.92, y = 1936.37, z = 76.48 }, to = { id = 104, x = 4815.34, y = 1826.25, z = 79.29 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 104, x = 4815.34, y = 1826.25, z = 79.29 }, to = { id = 130, x = 4689.68, y = 1770.69, z = 80.69 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 130, x = 4689.68, y = 1770.69, z = 80.69 }, to = { id = 129, x = 4655.43, y = 1842.32, z = 83.92 }, isRetrace = False, name = Nothing }
-    , { from = { id = 129, x = 4655.43, y = 1842.32, z = 83.92 }, to = { id = 130, x = 4689.68, y = 1770.69, z = 80.69 }, isRetrace = True, name = Nothing }
-    , { from = { id = 130, x = 4689.68, y = 1770.69, z = 80.69 }, to = { id = 480, x = 4587.73, y = 1728.53, z = 82.47 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 480, x = 4587.73, y = 1728.53, z = 82.47 }, to = { id = 477, x = 4265.54, y = 1611.86, z = 85.31 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 477, x = 4265.54, y = 1611.86, z = 85.31 }, to = { id = 116, x = 4204.89, y = 1595.73, z = 86.16 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 116, x = 4204.89, y = 1595.73, z = 86.16 }, to = { id = 477, x = 4265.54, y = 1611.86, z = 85.31 }, isRetrace = True, name = Just "Sassafras Avenue" }
-    , { from = { id = 477, x = 4265.54, y = 1611.86, z = 85.31 }, to = { id = 449, x = 4418.16, y = 1148.04, z = 85.32 }, isRetrace = False, name = Just "Lonicera Path" }
-    , { from = { id = 449, x = 4418.16, y = 1148.04, z = 85.32 }, to = { id = 465, x = 4808.65, y = 1378.96, z = 85.06 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 465, x = 4808.65, y = 1378.96, z = 85.06 }, to = { id = 105, x = 4863.85, y = 1405.09, z = 85.31 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 105, x = 4863.85, y = 1405.09, z = 85.31 }, to = { id = 473, x = 4755.90, y = 1539.49, z = 82.90 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 473, x = 4755.90, y = 1539.49, z = 82.90 }, to = { id = 480, x = 4587.73, y = 1728.53, z = 82.47 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 480, x = 4587.73, y = 1728.53, z = 82.47 }, to = { id = 482, x = 4521.88, y = 1787.41, z = 82.73 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 482, x = 4521.88, y = 1787.41, z = 82.73 }, to = { id = 12, x = 4252.18, y = 1692.32, z = 89.37 }, isRetrace = False, name = Just "Alder Path" }
-    , { from = { id = 12, x = 4252.18, y = 1692.32, z = 89.37 }, to = { id = 494, x = 3991.68, y = 2077.82, z = 104.92 }, isRetrace = False, name = Just "Peony Path" }
-    , { from = { id = 494, x = 3991.68, y = 2077.82, z = 104.92 }, to = { id = 160, x = 3972.43, y = 2108.32, z = 106.14 }, isRetrace = False, name = Just "Peony Path" }
-    , { from = { id = 160, x = 3972.43, y = 2108.32, z = 106.14 }, to = { id = 494, x = 3991.68, y = 2077.82, z = 104.92 }, isRetrace = True, name = Just "Peony Path" }
-    , { from = { id = 494, x = 3991.68, y = 2077.82, z = 104.92 }, to = { id = 486, x = 3781.68, y = 1917.57, z = 102.32 }, isRetrace = False, name = Just "Petunia Path" }
-    , { from = { id = 486, x = 3781.68, y = 1917.57, z = 102.32 }, to = { id = 491, x = 3714.15, y = 2009.43, z = 106.20 }, isRetrace = False, name = Just "Elder Path" }
-    , { from = { id = 491, x = 3714.15, y = 2009.43, z = 106.20 }, to = { id = 486, x = 3781.68, y = 1917.57, z = 102.32 }, isRetrace = True, name = Just "Elder Path" }
-    , { from = { id = 486, x = 3781.68, y = 1917.57, z = 102.32 }, to = { id = 127, x = 3658.93, y = 1812.07, z = 98.76 }, isRetrace = False, name = Just "Petunia Path" }
-    , { from = { id = 127, x = 3658.93, y = 1812.07, z = 98.76 }, to = { id = 125, x = 4160.68, y = 1667.82, z = 90.28 }, isRetrace = False, name = Just "Saffron Path" }
-    , { from = { id = 125, x = 4160.68, y = 1667.82, z = 90.28 }, to = { id = 13, x = 4187.68, y = 1653.07, z = 89.27 }, isRetrace = False, name = Just "Saffron Path" }
-    , { from = { id = 13, x = 4187.68, y = 1653.07, z = 89.27 }, to = { id = 125, x = 4160.68, y = 1667.82, z = 90.28 }, isRetrace = True, name = Just "Saffron Path" }
-    , { from = { id = 125, x = 4160.68, y = 1667.82, z = 90.28 }, to = { id = 115, x = 3857.41, y = 1563.49, z = 91.10 }, isRetrace = False, name = Just "Alder Path" }
-    , { from = { id = 115, x = 3857.41, y = 1563.49, z = 91.10 }, to = { id = 114, x = 3747.08, y = 1642.58, z = 91.62 }, isRetrace = False, name = Nothing }
-    , { from = { id = 114, x = 3747.08, y = 1642.58, z = 91.62 }, to = { id = 115, x = 3857.41, y = 1563.49, z = 91.10 }, isRetrace = True, name = Nothing }
-    , { from = { id = 115, x = 3857.41, y = 1563.49, z = 91.10 }, to = { id = 111, x = 3888.76, y = 1517.83, z = 90.63 }, isRetrace = False, name = Just "Grape Avenue" }
-    , { from = { id = 111, x = 3888.76, y = 1517.83, z = 90.63 }, to = { id = 472, x = 3855.85, y = 1504.87, z = 90.63 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 472, x = 3855.85, y = 1504.87, z = 90.63 }, to = { id = 111, x = 3888.76, y = 1517.83, z = 90.63 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 111, x = 3888.76, y = 1517.83, z = 90.63 }, to = { id = 116, x = 4204.89, y = 1595.73, z = 86.16 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 116, x = 4204.89, y = 1595.73, z = 86.16 }, to = { id = 13, x = 4187.68, y = 1653.07, z = 89.27 }, isRetrace = False, name = Nothing }
-    , { from = { id = 13, x = 4187.68, y = 1653.07, z = 89.27 }, to = { id = 12, x = 4252.18, y = 1692.32, z = 89.37 }, isRetrace = False, name = Just "Alder Path" }
-    , { from = { id = 12, x = 4252.18, y = 1692.32, z = 89.37 }, to = { id = 482, x = 4521.88, y = 1787.41, z = 82.73 }, isRetrace = True, name = Just "Alder Path" }
-    , { from = { id = 482, x = 4521.88, y = 1787.41, z = 82.73 }, to = { id = 155, x = 4269.01, y = 1968.33, z = 90.14 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 155, x = 4269.01, y = 1968.33, z = 90.14 }, to = { id = 154, x = 4355.10, y = 2090.48, z = 93.74 }, isRetrace = False, name = Nothing }
-    , { from = { id = 154, x = 4355.10, y = 2090.48, z = 93.74 }, to = { id = 499, x = 4477.93, y = 2169.57, z = 88.79 }, isRetrace = True, name = Just "Mahonia Path" }
-    , { from = { id = 499, x = 4477.93, y = 2169.57, z = 88.79 }, to = { id = 103, x = 4779.43, y = 1901.82, z = 82.04 }, isRetrace = False, name = Just "Vernal Path" }
-    , { from = { id = 103, x = 4779.43, y = 1901.82, z = 82.04 }, to = { id = 104, x = 4815.34, y = 1826.25, z = 79.29 }, isRetrace = False, name = Nothing }
-    , { from = { id = 104, x = 4815.34, y = 1826.25, z = 79.29 }, to = { id = 103, x = 4779.43, y = 1901.82, z = 82.04 }, isRetrace = True, name = Nothing }
-    , { from = { id = 103, x = 4779.43, y = 1901.82, z = 82.04 }, to = { id = 129, x = 4655.43, y = 1842.32, z = 83.92 }, isRetrace = False, name = Just "Prim Path" }
-    , { from = { id = 129, x = 4655.43, y = 1842.32, z = 83.92 }, to = { id = 154, x = 4355.10, y = 2090.48, z = 93.74 }, isRetrace = False, name = Just "Landscape Path" }
-    , { from = { id = 154, x = 4355.10, y = 2090.48, z = 93.74 }, to = { id = 155, x = 4269.01, y = 1968.33, z = 90.14 }, isRetrace = True, name = Nothing }
-    , { from = { id = 155, x = 4269.01, y = 1968.33, z = 90.14 }, to = { id = 162, x = 4001.95, y = 2171.45, z = 104.19 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 162, x = 4001.95, y = 2171.45, z = 104.19 }, to = { id = 160, x = 3972.43, y = 2108.32, z = 106.14 }, isRetrace = False, name = Nothing }
-    , { from = { id = 160, x = 3972.43, y = 2108.32, z = 106.14 }, to = { id = 17, x = 3872.64, y = 2139.42, z = 109.12 }, isRetrace = False, name = Nothing }
-    , { from = { id = 17, x = 3872.64, y = 2139.42, z = 109.12 }, to = { id = 18, x = 3933.02, y = 2226.75, z = 109.94 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 18, x = 3933.02, y = 2226.75, z = 109.94 }, to = { id = 17, x = 3872.64, y = 2139.42, z = 109.12 }, isRetrace = True, name = Just "Cypress Avenue" }
-    , { from = { id = 17, x = 3872.64, y = 2139.42, z = 109.12 }, to = { id = 491, x = 3714.15, y = 2009.43, z = 106.20 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 491, x = 3714.15, y = 2009.43, z = 106.20 }, to = { id = 138, x = 3509.84, y = 1823.00, z = 98.78 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 138, x = 3509.84, y = 1823.00, z = 98.78 }, to = { id = 137, x = 3333.82, y = 1923.45, z = 119.38 }, isRetrace = False, name = Nothing }
-    , { from = { id = 137, x = 3333.82, y = 1923.45, z = 119.38 }, to = { id = 123, x = 3200.43, y = 1799.07, z = 118.46 }, isRetrace = False, name = Just "Hazel Path" }
-    , { from = { id = 123, x = 3200.43, y = 1799.07, z = 118.46 }, to = { id = 132, x = 3137.38, y = 1853.71, z = 125.56 }, isRetrace = False, name = Nothing }
-    , { from = { id = 132, x = 3137.38, y = 1853.71, z = 125.56 }, to = { id = 131, x = 3016.16, y = 1765.01, z = 128.64 }, isRetrace = False, name = Nothing }
-    , { from = { id = 131, x = 3016.16, y = 1765.01, z = 128.64 }, to = { id = 122, x = 2935.34, y = 1786.32, z = 132.72 }, isRetrace = False, name = Just "Locust Avenue" }
-    , { from = { id = 122, x = 2935.34, y = 1786.32, z = 132.72 }, to = { id = 141, x = 2926.19, y = 1955.37, z = 139.31 }, isRetrace = False, name = Nothing }
-    , { from = { id = 141, x = 2926.19, y = 1955.37, z = 139.31 }, to = { id = 150, x = 2899.95, y = 1983.33, z = 141.29 }, isRetrace = True, name = Just "Azalea Path" }
-    , { from = { id = 150, x = 2899.95, y = 1983.33, z = 141.29 }, to = { id = 501, x = 2437.68, y = 2236.32, z = 127.33 }, isRetrace = False, name = Just "Locust Avenue" }
-    , { from = { id = 501, x = 2437.68, y = 2236.32, z = 127.33 }, to = { id = 211, x = 2273.16, y = 2344.59, z = 124.90 }, isRetrace = False, name = Just "Azalea Path" }
-    , { from = { id = 211, x = 2273.16, y = 2344.59, z = 124.90 }, to = { id = 169, x = 2251.25, y = 2254.61, z = 118.81 }, isRetrace = False, name = Just "Vale Avenue" }
-    , { from = { id = 169, x = 2251.25, y = 2254.61, z = 118.81 }, to = { id = 493, x = 2259.18, y = 2058.07, z = 121.49 }, isRetrace = False, name = Just "Spring Walk" }
-    , { from = { id = 493, x = 2259.18, y = 2058.07, z = 121.49 }, to = { id = 148, x = 2257.40, y = 2051.90, z = 121.49 }, isRetrace = False, name = Just "Spring Walk" }
-    , { from = { id = 148, x = 2257.40, y = 2051.90, z = 121.49 }, to = { id = 493, x = 2259.18, y = 2058.07, z = 121.49 }, isRetrace = True, name = Just "Spring Walk" }
-    , { from = { id = 493, x = 2259.18, y = 2058.07, z = 121.49 }, to = { id = 168, x = 2371.91, y = 2212.19, z = 116.89 }, isRetrace = False, name = Just "Summer Walk" }
-    , { from = { id = 168, x = 2371.91, y = 2212.19, z = 116.89 }, to = { id = 169, x = 2251.25, y = 2254.61, z = 118.81 }, isRetrace = False, name = Nothing }
-    , { from = { id = 169, x = 2251.25, y = 2254.61, z = 118.81 }, to = { id = 211, x = 2273.16, y = 2344.59, z = 124.90 }, isRetrace = True, name = Just "Vale Avenue" }
-    , { from = { id = 211, x = 2273.16, y = 2344.59, z = 124.90 }, to = { id = 210, x = 2375.95, y = 2503.69, z = 127.73 }, isRetrace = False, name = Nothing }
-    , { from = { id = 210, x = 2375.95, y = 2503.69, z = 127.73 }, to = { id = 226, x = 2178.11, y = 2665.59, z = 125.88 }, isRetrace = False, name = Just "Southwood Avenue" }
-    , { from = { id = 226, x = 2178.11, y = 2665.59, z = 125.88 }, to = { id = 225, x = 2134.34, y = 2641.88, z = 125.95 }, isRetrace = True, name = Nothing }
-    , { from = { id = 225, x = 2134.34, y = 2641.88, z = 125.95 }, to = { id = 202, x = 2031.47, y = 2479.01, z = 139.53 }, isRetrace = False, name = Nothing }
-    , { from = { id = 202, x = 2031.47, y = 2479.01, z = 139.53 }, to = { id = 203, x = 1931.73, y = 2280.09, z = 133.99 }, isRetrace = False, name = Nothing }
-    , { from = { id = 203, x = 1931.73, y = 2280.09, z = 133.99 }, to = { id = 156, x = 1941.93, y = 2093.57, z = 137.37 }, isRetrace = False, name = Just "Thorn Path" }
-    , { from = { id = 156, x = 1941.93, y = 2093.57, z = 137.37 }, to = { id = 203, x = 1931.73, y = 2280.09, z = 133.99 }, isRetrace = True, name = Just "Thorn Path" }
-    , { from = { id = 203, x = 1931.73, y = 2280.09, z = 133.99 }, to = { id = 164, x = 1879.60, y = 2290.45, z = 130.03 }, isRetrace = False, name = Just "Orchard Avenue" }
-    , { from = { id = 164, x = 1879.60, y = 2290.45, z = 130.03 }, to = { id = 503, x = 1680.86, y = 2279.43, z = 116.34 }, isRetrace = False, name = Just "Orchard Avenue" }
-    , { from = { id = 503, x = 1680.86, y = 2279.43, z = 116.34 }, to = { id = 172, x = 1652.15, y = 2280.07, z = 116.34 }, isRetrace = False, name = Just "Orchard Avenue" }
-    , { from = { id = 172, x = 1652.15, y = 2280.07, z = 116.34 }, to = { id = 503, x = 1680.86, y = 2279.43, z = 116.34 }, isRetrace = True, name = Just "Orchard Avenue" }
-    , { from = { id = 503, x = 1680.86, y = 2279.43, z = 116.34 }, to = { id = 172, x = 1652.15, y = 2280.07, z = 116.34 }, isRetrace = False, name = Just "Orchard Avenue" }
-    , { from = { id = 172, x = 1652.15, y = 2280.07, z = 116.34 }, to = { id = 525, x = 1684.96, y = 2586.65, z = 108.62 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 525, x = 1684.96, y = 2586.65, z = 108.62 }, to = { id = 526, x = 1699.53, y = 2658.56, z = 105.34 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 526, x = 1699.53, y = 2658.56, z = 105.34 }, to = { id = 525, x = 1684.96, y = 2586.65, z = 108.62 }, isRetrace = True, name = Just "Landscape Avenue" }
-    , { from = { id = 525, x = 1684.96, y = 2586.65, z = 108.62 }, to = { id = 25, x = 1808.68, y = 2492.07, z = 122.47 }, isRetrace = False, name = Just "Circling Path" }
-    , { from = { id = 25, x = 1808.68, y = 2492.07, z = 122.47 }, to = { id = 230, x = 1943.18, y = 2654.32, z = 113.41 }, isRetrace = False, name = Just "Lavender Path" }
-    , { from = { id = 230, x = 1943.18, y = 2654.32, z = 113.41 }, to = { id = 229, x = 1922.68, y = 2737.07, z = 112.64 }, isRetrace = False, name = Nothing }
-    , { from = { id = 229, x = 1922.68, y = 2737.07, z = 112.64 }, to = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, isRetrace = False, name = Just "Daffodil Path" }
-    , { from = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, to = { id = 229, x = 1922.68, y = 2737.07, z = 112.64 }, isRetrace = False, name = Just "Daffodil Path" }
-    , { from = { id = 229, x = 1922.68, y = 2737.07, z = 112.64 }, to = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, isRetrace = True, name = Just "Daffodil Path" }
-    , { from = { id = 530, x = 1783.93, y = 2755.32, z = 109.83 }, to = { id = 229, x = 1922.68, y = 2737.07, z = 112.64 }, isRetrace = False, name = Just "Daffodil Path" }
-    , { from = { id = 229, x = 1922.68, y = 2737.07, z = 112.64 }, to = { id = 230, x = 1943.18, y = 2654.32, z = 113.41 }, isRetrace = True, name = Nothing }
-    , { from = { id = 230, x = 1943.18, y = 2654.32, z = 113.41 }, to = { id = 526, x = 1699.53, y = 2658.56, z = 105.34 }, isRetrace = False, name = Just "Snowberry Path" }
-    , { from = { id = 526, x = 1699.53, y = 2658.56, z = 105.34 }, to = { id = 256, x = 1734.58, y = 2862.31, z = 105.52 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 256, x = 1734.58, y = 2862.31, z = 105.52 }, to = { id = 257, x = 1667.11, y = 2992.29, z = 106.67 }, isRetrace = False, name = Nothing }
-    , { from = { id = 257, x = 1667.11, y = 2992.29, z = 106.67 }, to = { id = 263, x = 1469.22, y = 3044.03, z = 96.86 }, isRetrace = False, name = Just "Vista Avenue" }
-    , { from = { id = 263, x = 1469.22, y = 3044.03, z = 96.86 }, to = { id = 266, x = 1330.06, y = 3058.36, z = 92.60 }, isRetrace = False, name = Nothing }
-    , { from = { id = 266, x = 1330.06, y = 3058.36, z = 92.60 }, to = { id = 274, x = 1226.40, y = 3108.28, z = 88.97 }, isRetrace = False, name = Just "Sylvan Avenue" }
-    , { from = { id = 274, x = 1226.40, y = 3108.28, z = 88.97 }, to = { id = 273, x = 1147.94, y = 3061.37, z = 79.37 }, isRetrace = True, name = Nothing }
-    , { from = { id = 273, x = 1147.94, y = 3061.37, z = 79.37 }, to = { id = 38, x = 1119.80, y = 2943.03, z = 74.91 }, isRetrace = False, name = Just "Acacia Path" }
-    , { from = { id = 38, x = 1119.80, y = 2943.03, z = 74.91 }, to = { id = 539, x = 1036.59, y = 2844.88, z = 55.27 }, isRetrace = False, name = Just "Acacia Path" }
-    , { from = { id = 539, x = 1036.59, y = 2844.88, z = 55.27 }, to = { id = 232, x = 1258.38, y = 2735.21, z = 83.65 }, isRetrace = False, name = Just "Ravine Path" }
-    , { from = { id = 232, x = 1258.38, y = 2735.21, z = 83.65 }, to = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, isRetrace = False, name = Just "Oak Avenue" }
-    , { from = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, to = { id = 232, x = 1258.38, y = 2735.21, z = 83.65 }, isRetrace = True, name = Just "Oak Avenue" }
-    , { from = { id = 232, x = 1258.38, y = 2735.21, z = 83.65 }, to = { id = 231, x = 1293.98, y = 2743.78, z = 84.89 }, isRetrace = False, name = Nothing }
-    , { from = { id = 231, x = 1293.98, y = 2743.78, z = 84.89 }, to = { id = 263, x = 1469.22, y = 3044.03, z = 96.86 }, isRetrace = False, name = Nothing }
-    , { from = { id = 263, x = 1469.22, y = 3044.03, z = 96.86 }, to = { id = 266, x = 1330.06, y = 3058.36, z = 92.60 }, isRetrace = True, name = Nothing }
-    , { from = { id = 266, x = 1330.06, y = 3058.36, z = 92.60 }, to = { id = 37, x = 1214.23, y = 2966.60, z = 89.07 }, isRetrace = False, name = Just "Acacia Path" }
-    , { from = { id = 37, x = 1214.23, y = 2966.60, z = 89.07 }, to = { id = 38, x = 1119.80, y = 2943.03, z = 74.91 }, isRetrace = False, name = Just "Acacia Path" }
-    , { from = { id = 38, x = 1119.80, y = 2943.03, z = 74.91 }, to = { id = 37, x = 1214.23, y = 2966.60, z = 89.07 }, isRetrace = True, name = Just "Acacia Path" }
-    , { from = { id = 37, x = 1214.23, y = 2966.60, z = 89.07 }, to = { id = 231, x = 1293.98, y = 2743.78, z = 84.89 }, isRetrace = False, name = Just "Acacia Path" }
-    , { from = { id = 231, x = 1293.98, y = 2743.78, z = 84.89 }, to = { id = 224, x = 1379.43, y = 2636.57, z = 113.79 }, isRetrace = False, name = Just "Acacia Path" }
-    , { from = { id = 224, x = 1379.43, y = 2636.57, z = 113.79 }, to = { id = 215, x = 1342.93, y = 2588.57, z = 110.83 }, isRetrace = False, name = Nothing }
-    , { from = { id = 215, x = 1342.93, y = 2588.57, z = 110.83 }, to = { id = 224, x = 1379.43, y = 2636.57, z = 113.79 }, isRetrace = False, name = Nothing }
-    , { from = { id = 224, x = 1379.43, y = 2636.57, z = 113.79 }, to = { id = 215, x = 1342.93, y = 2588.57, z = 110.83 }, isRetrace = True, name = Nothing }
-    , { from = { id = 215, x = 1342.93, y = 2588.57, z = 110.83 }, to = { id = 216, x = 1285.07, y = 2534.36, z = 96.44 }, isRetrace = False, name = Nothing }
-    , { from = { id = 216, x = 1285.07, y = 2534.36, z = 96.44 }, to = { id = 197, x = 1329.27, y = 2414.99, z = 109.12 }, isRetrace = False, name = Just "Serpentine Path" }
-    , { from = { id = 197, x = 1329.27, y = 2414.99, z = 109.12 }, to = { id = 216, x = 1285.07, y = 2534.36, z = 96.44 }, isRetrace = True, name = Just "Serpentine Path" }
-    , { from = { id = 216, x = 1285.07, y = 2534.36, z = 96.44 }, to = { id = 214, x = 1272.44, y = 2578.30, z = 93.38 }, isRetrace = False, name = Just "Serpentine Path" }
-    , { from = { id = 214, x = 1272.44, y = 2578.30, z = 93.38 }, to = { id = 23, x = 1170.68, y = 2494.57, z = 96.07 }, isRetrace = False, name = Nothing }
-    , { from = { id = 23, x = 1170.68, y = 2494.57, z = 96.07 }, to = { id = 214, x = 1272.44, y = 2578.30, z = 93.38 }, isRetrace = True, name = Nothing }
-    , { from = { id = 214, x = 1272.44, y = 2578.30, z = 93.38 }, to = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, isRetrace = False, name = Just "Serpentine Path" }
-    , { from = { id = 528, x = 1210.28, y = 2709.54, z = 83.45 }, to = { id = 27, x = 892.87, y = 2602.75, z = 61.96 }, isRetrace = False, name = Just "Oak Avenue" }
-    , { from = { id = 27, x = 892.87, y = 2602.75, z = 61.96 }, to = { id = 217, x = 833.48, y = 2592.39, z = 59.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 217, x = 833.48, y = 2592.39, z = 59.06 }, to = { id = 140, x = 800.22, y = 2561.80, z = 59.06 }, isRetrace = False, name = Just "Oak Avenue" }
-    , { from = { id = 140, x = 800.22, y = 2561.80, z = 59.06 }, to = { id = 204, x = 798.07, y = 2591.85, z = 59.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 204, x = 798.07, y = 2591.85, z = 59.06 }, to = { id = 139, x = 774.12, y = 2595.70, z = 59.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 139, x = 774.12, y = 2595.70, z = 59.06 }, to = { id = 204, x = 798.07, y = 2591.85, z = 59.06 }, isRetrace = True, name = Nothing }
-    , { from = { id = 204, x = 798.07, y = 2591.85, z = 59.06 }, to = { id = 140, x = 800.22, y = 2561.80, z = 59.06 }, isRetrace = True, name = Nothing }
-    , { from = { id = 140, x = 800.22, y = 2561.80, z = 59.06 }, to = { id = 205, x = 817.47, y = 2488.79, z = 59.30 }, isRetrace = False, name = Nothing }
-    , { from = { id = 205, x = 817.47, y = 2488.79, z = 59.30 }, to = { id = 505, x = 801.47, y = 2316.82, z = 66.37 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 505, x = 801.47, y = 2316.82, z = 66.37 }, to = { id = 177, x = 828.26, y = 2236.92, z = 70.36 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 177, x = 828.26, y = 2236.92, z = 70.36 }, to = { id = 505, x = 801.47, y = 2316.82, z = 66.37 }, isRetrace = True, name = Just "Spruce Avenue" }
-    , { from = { id = 505, x = 801.47, y = 2316.82, z = 66.37 }, to = { id = 209, x = 659.87, y = 2447.95, z = 60.92 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 209, x = 659.87, y = 2447.95, z = 60.92 }, to = { id = 207, x = 644.19, y = 2500.38, z = 59.04 }, isRetrace = False, name = Nothing }
-    , { from = { id = 207, x = 644.19, y = 2500.38, z = 59.04 }, to = { id = 209, x = 659.87, y = 2447.95, z = 60.92 }, isRetrace = True, name = Nothing }
-    , { from = { id = 209, x = 659.87, y = 2447.95, z = 60.92 }, to = { id = 254, x = 284.83, y = 2697.43, z = 51.27 }, isRetrace = False, name = Just "Maple Avenue" }
-    , { from = { id = 254, x = 284.83, y = 2697.43, z = 51.27 }, to = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, isRetrace = True, name = Just "Andromeda Path" }
-    , { from = { id = 529, x = 321.82, y = 2726.50, z = 57.95 }, to = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, isRetrace = False, name = Just "Andromeda Path" }
-    , { from = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, to = { id = 533, x = 351.55, y = 2796.37, z = 53.42 }, isRetrace = False, name = Just "Maple-Leaf Path" }
-    , { from = { id = 533, x = 351.55, y = 2796.37, z = 53.42 }, to = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, isRetrace = True, name = Just "Andromeda Path" }
-    , { from = { id = 538, x = 369.67, y = 2832.96, z = 45.82 }, to = { id = 208, x = 602.39, y = 2500.22, z = 63.93 }, isRetrace = False, name = Just "Columbine Path" }
-    , { from = { id = 208, x = 602.39, y = 2500.22, z = 63.93 }, to = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, isRetrace = False, name = Just "Andromeda Path" }
-    , { from = { id = 521, x = 558.73, y = 2513.17, z = 70.70 }, to = { id = 208, x = 602.39, y = 2500.22, z = 63.93 }, isRetrace = True, name = Just "Andromeda Path" }
-    , { from = { id = 208, x = 602.39, y = 2500.22, z = 63.93 }, to = { id = 207, x = 644.19, y = 2500.38, z = 59.04 }, isRetrace = False, name = Nothing }
-    , { from = { id = 207, x = 644.19, y = 2500.38, z = 59.04 }, to = { id = 212, x = 639.97, y = 2560.24, z = 56.14 }, isRetrace = False, name = Nothing }
-    , { from = { id = 212, x = 639.97, y = 2560.24, z = 56.14 }, to = { id = 218, x = 652.27, y = 2593.24, z = 53.05 }, isRetrace = True, name = Nothing }
-    , { from = { id = 218, x = 652.27, y = 2593.24, z = 53.05 }, to = { id = 30, x = 668.30, y = 2635.65, z = 53.78 }, isRetrace = False, name = Nothing }
-    , { from = { id = 30, x = 668.30, y = 2635.65, z = 53.78 }, to = { id = 551, x = 322.85, y = 3033.10, z = 27.54 }, isRetrace = False, name = Just "Clover Path" }
-    , { from = { id = 551, x = 322.85, y = 3033.10, z = 27.54 }, to = { id = 29, x = 677.15, y = 2701.81, z = 53.40 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 29, x = 677.15, y = 2701.81, z = 53.40 }, to = { id = 31, x = 659.18, y = 2779.82, z = 52.60 }, isRetrace = False, name = Just "Lake-Ridge Path" }
-    , { from = { id = 31, x = 659.18, y = 2779.82, z = 52.60 }, to = { id = 29, x = 677.15, y = 2701.81, z = 53.40 }, isRetrace = True, name = Just "Lake-Ridge Path" }
-    , { from = { id = 29, x = 677.15, y = 2701.81, z = 53.40 }, to = { id = 30, x = 668.30, y = 2635.65, z = 53.78 }, isRetrace = False, name = Nothing }
-    , { from = { id = 30, x = 668.30, y = 2635.65, z = 53.78 }, to = { id = 139, x = 774.12, y = 2595.70, z = 59.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 139, x = 774.12, y = 2595.70, z = 59.06 }, to = { id = 140, x = 800.22, y = 2561.80, z = 59.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 140, x = 800.22, y = 2561.80, z = 59.06 }, to = { id = 205, x = 817.47, y = 2488.79, z = 59.30 }, isRetrace = True, name = Nothing }
-    , { from = { id = 205, x = 817.47, y = 2488.79, z = 59.30 }, to = { id = 206, x = 913.68, y = 2487.82, z = 66.68 }, isRetrace = False, name = Nothing }
-    , { from = { id = 206, x = 913.68, y = 2487.82, z = 66.68 }, to = { id = 515, x = 949.93, y = 2455.82, z = 70.38 }, isRetrace = False, name = Just "Box-wood Path" }
-    , { from = { id = 515, x = 949.93, y = 2455.82, z = 70.38 }, to = { id = 206, x = 913.68, y = 2487.82, z = 66.68 }, isRetrace = True, name = Just "Box-wood Path" }
-    , { from = { id = 206, x = 913.68, y = 2487.82, z = 66.68 }, to = { id = 28, x = 928.68, y = 2551.32, z = 65.55 }, isRetrace = False, name = Nothing }
-    , { from = { id = 28, x = 928.68, y = 2551.32, z = 65.55 }, to = { id = 27, x = 892.87, y = 2602.75, z = 61.96 }, isRetrace = False, name = Nothing }
-    , { from = { id = 27, x = 892.87, y = 2602.75, z = 61.96 }, to = { id = 28, x = 928.68, y = 2551.32, z = 65.55 }, isRetrace = True, name = Nothing }
-    , { from = { id = 28, x = 928.68, y = 2551.32, z = 65.55 }, to = { id = 24, x = 1127.68, y = 2464.07, z = 86.88 }, isRetrace = False, name = Just "Furze Path" }
-    , { from = { id = 24, x = 1127.68, y = 2464.07, z = 86.88 }, to = { id = 200, x = 1165.93, y = 2430.07, z = 96.01 }, isRetrace = False, name = Just "Furze Path" }
-    , { from = { id = 200, x = 1165.93, y = 2430.07, z = 96.01 }, to = { id = 24, x = 1127.68, y = 2464.07, z = 86.88 }, isRetrace = True, name = Just "Furze Path" }
-    , { from = { id = 24, x = 1127.68, y = 2464.07, z = 86.88 }, to = { id = 23, x = 1170.68, y = 2494.57, z = 96.07 }, isRetrace = False, name = Nothing }
-    , { from = { id = 23, x = 1170.68, y = 2494.57, z = 96.07 }, to = { id = 200, x = 1165.93, y = 2430.07, z = 96.01 }, isRetrace = False, name = Nothing }
-    , { from = { id = 200, x = 1165.93, y = 2430.07, z = 96.01 }, to = { id = 188, x = 1152.68, y = 2375.57, z = 97.14 }, isRetrace = False, name = Nothing }
-    , { from = { id = 188, x = 1152.68, y = 2375.57, z = 97.14 }, to = { id = 184, x = 1137.43, y = 2351.32, z = 97.01 }, isRetrace = False, name = Nothing }
-    , { from = { id = 184, x = 1137.43, y = 2351.32, z = 97.01 }, to = { id = 515, x = 949.93, y = 2455.82, z = 70.38 }, isRetrace = False, name = Just "Box-wood Path" }
-    , { from = { id = 515, x = 949.93, y = 2455.82, z = 70.38 }, to = { id = 176, x = 923.93, y = 2303.32, z = 78.02 }, isRetrace = False, name = Just "Cone Path" }
-    , { from = { id = 176, x = 923.93, y = 2303.32, z = 78.02 }, to = { id = 171, x = 1062.68, y = 2254.82, z = 91.42 }, isRetrace = False, name = Just "Bush Path" }
-    , { from = { id = 171, x = 1062.68, y = 2254.82, z = 91.42 }, to = { id = 176, x = 923.93, y = 2303.32, z = 78.02 }, isRetrace = True, name = Just "Bush Path" }
-    , { from = { id = 176, x = 923.93, y = 2303.32, z = 78.02 }, to = { id = 177, x = 828.26, y = 2236.92, z = 70.36 }, isRetrace = False, name = Nothing }
-    , { from = { id = 177, x = 828.26, y = 2236.92, z = 70.36 }, to = { id = 152, x = 1011.95, y = 2088.34, z = 82.49 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 152, x = 1011.95, y = 2088.34, z = 82.49 }, to = { id = 153, x = 1050.24, y = 2068.75, z = 84.17 }, isRetrace = False, name = Nothing }
-    , { from = { id = 153, x = 1050.24, y = 2068.75, z = 84.17 }, to = { id = 495, x = 1208.80, y = 2115.69, z = 86.53 }, isRetrace = False, name = Just "Tulip Avenue" }
-    , { from = { id = 495, x = 1208.80, y = 2115.69, z = 86.53 }, to = { id = 498, x = 1193.43, y = 2168.32, z = 93.02 }, isRetrace = False, name = Just "Everglade Path" }
-    , { from = { id = 498, x = 1193.43, y = 2168.32, z = 93.02 }, to = { id = 170, x = 1139.93, y = 2275.07, z = 98.12 }, isRetrace = False, name = Just "Everglade Path" }
-    , { from = { id = 170, x = 1139.93, y = 2275.07, z = 98.12 }, to = { id = 498, x = 1193.43, y = 2168.32, z = 93.02 }, isRetrace = True, name = Just "Everglade Path" }
-    , { from = { id = 498, x = 1193.43, y = 2168.32, z = 93.02 }, to = { id = 158, x = 1436.50, y = 2138.76, z = 95.04 }, isRetrace = False, name = Just "Tulip Avenue" }
-    , { from = { id = 158, x = 1436.50, y = 2138.76, z = 95.04 }, to = { id = 495, x = 1208.80, y = 2115.69, z = 86.53 }, isRetrace = False, name = Just "Tulip Avenue" }
-    , { from = { id = 495, x = 1208.80, y = 2115.69, z = 86.53 }, to = { id = 158, x = 1436.50, y = 2138.76, z = 95.04 }, isRetrace = True, name = Just "Tulip Avenue" }
-    , { from = { id = 158, x = 1436.50, y = 2138.76, z = 95.04 }, to = { id = 456, x = 1326.18, y = 2080.32, z = 100.22 }, isRetrace = False, name = Just "Prospect Path" }
-    , { from = { id = 456, x = 1326.18, y = 2080.32, z = 100.22 }, to = { id = 469, x = 1336.43, y = 1949.57, z = 114.25 }, isRetrace = False, name = Just "Tulip Path" }
-    , { from = { id = 469, x = 1336.43, y = 1949.57, z = 114.25 }, to = { id = 456, x = 1326.18, y = 2080.32, z = 100.22 }, isRetrace = True, name = Just "Tulip Path" }
-    , { from = { id = 456, x = 1326.18, y = 2080.32, z = 100.22 }, to = { id = 457, x = 1075.68, y = 1983.78, z = 87.65 }, isRetrace = False, name = Just "Prospect Path" }
-    , { from = { id = 457, x = 1075.68, y = 1983.78, z = 87.65 }, to = { id = 153, x = 1050.24, y = 2068.75, z = 84.17 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 153, x = 1050.24, y = 2068.75, z = 84.17 }, to = { id = 152, x = 1011.95, y = 2088.34, z = 82.49 }, isRetrace = True, name = Nothing }
-    , { from = { id = 152, x = 1011.95, y = 2088.34, z = 82.49 }, to = { id = 171, x = 1062.68, y = 2254.82, z = 91.42 }, isRetrace = False, name = Just "Turf Path" }
-    , { from = { id = 171, x = 1062.68, y = 2254.82, z = 91.42 }, to = { id = 170, x = 1139.93, y = 2275.07, z = 98.12 }, isRetrace = False, name = Nothing }
-    , { from = { id = 170, x = 1139.93, y = 2275.07, z = 98.12 }, to = { id = 184, x = 1137.43, y = 2351.32, z = 97.01 }, isRetrace = False, name = Nothing }
-    , { from = { id = 184, x = 1137.43, y = 2351.32, z = 97.01 }, to = { id = 188, x = 1152.68, y = 2375.57, z = 97.14 }, isRetrace = True, name = Nothing }
-    , { from = { id = 188, x = 1152.68, y = 2375.57, z = 97.14 }, to = { id = 197, x = 1329.27, y = 2414.99, z = 109.12 }, isRetrace = False, name = Nothing }
-    , { from = { id = 197, x = 1329.27, y = 2414.99, z = 109.12 }, to = { id = 172, x = 1652.15, y = 2280.07, z = 116.34 }, isRetrace = False, name = Nothing }
-    , { from = { id = 172, x = 1652.15, y = 2280.07, z = 116.34 }, to = { id = 159, x = 1508.63, y = 2088.87, z = 104.45 }, isRetrace = False, name = Nothing }
-    , { from = { id = 159, x = 1508.63, y = 2088.87, z = 104.45 }, to = { id = 158, x = 1436.50, y = 2138.76, z = 95.04 }, isRetrace = False, name = Nothing }
-    , { from = { id = 158, x = 1436.50, y = 2138.76, z = 95.04 }, to = { id = 159, x = 1508.63, y = 2088.87, z = 104.45 }, isRetrace = True, name = Nothing }
-    , { from = { id = 159, x = 1508.63, y = 2088.87, z = 104.45 }, to = { id = 128, x = 1538.99, y = 1825.84, z = 117.45 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 128, x = 1538.99, y = 1825.84, z = 117.45 }, to = { id = 144, x = 1782.13, y = 1976.96, z = 120.85 }, isRetrace = False, name = Nothing }
-    , { from = { id = 144, x = 1782.13, y = 1976.96, z = 120.85 }, to = { id = 156, x = 1941.93, y = 2093.57, z = 137.37 }, isRetrace = False, name = Nothing }
-    , { from = { id = 156, x = 1941.93, y = 2093.57, z = 137.37 }, to = { id = 157, x = 2080.29, y = 1891.89, z = 104.27 }, isRetrace = False, name = Nothing }
-    , { from = { id = 157, x = 2080.29, y = 1891.89, z = 104.27 }, to = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, isRetrace = False, name = Just "Vale Avenue" }
-    , { from = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, to = { id = 476, x = 1846.21, y = 1576.50, z = 92.74 }, isRetrace = False, name = Just "Crescent Avenue" }
-    , { from = { id = 476, x = 1846.21, y = 1576.50, z = 92.74 }, to = { id = 475, x = 1824.61, y = 1558.88, z = 92.74 }, isRetrace = False, name = Just "Crescent Avenue" }
-    , { from = { id = 475, x = 1824.61, y = 1558.88, z = 92.74 }, to = { id = 471, x = 1537.37, y = 1471.53, z = 89.62 }, isRetrace = False, name = Just "Crescent Avenue" }
-    , { from = { id = 471, x = 1537.37, y = 1471.53, z = 89.62 }, to = { id = 102, x = 1498.33, y = 1327.09, z = 97.57 }, isRetrace = False, name = Just "Crescent Avenue" }
-    , { from = { id = 102, x = 1498.33, y = 1327.09, z = 97.57 }, to = { id = 471, x = 1537.37, y = 1471.53, z = 89.62 }, isRetrace = True, name = Just "Crescent Avenue" }
-    , { from = { id = 471, x = 1537.37, y = 1471.53, z = 89.62 }, to = { id = 464, x = 1811.45, y = 1294.48, z = 88.19 }, isRetrace = False, name = Just "Primrose Path" }
-    , { from = { id = 464, x = 1811.45, y = 1294.48, z = 88.19 }, to = { id = 85, x = 1823.31, y = 1087.31, z = 92.72 }, isRetrace = False, name = Just "Vale Avenue" }
-    , { from = { id = 85, x = 1823.31, y = 1087.31, z = 92.72 }, to = { id = 464, x = 1811.45, y = 1294.48, z = 88.19 }, isRetrace = True, name = Just "Vale Avenue" }
-    , { from = { id = 464, x = 1811.45, y = 1294.48, z = 88.19 }, to = { id = 475, x = 1824.61, y = 1558.88, z = 92.74 }, isRetrace = False, name = Just "Vale Avenue" }
-    , { from = { id = 475, x = 1824.61, y = 1558.88, z = 92.74 }, to = { id = 476, x = 1846.21, y = 1576.50, z = 92.74 }, isRetrace = True, name = Just "Crescent Avenue" }
-    , { from = { id = 476, x = 1846.21, y = 1576.50, z = 92.74 }, to = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, isRetrace = False, name = Just "Crescent Avenue" }
-    , { from = { id = 484, x = 2071.14, y = 1799.47, z = 98.31 }, to = { id = 157, x = 2080.29, y = 1891.89, z = 104.27 }, isRetrace = True, name = Just "Vale Avenue" }
-    , { from = { id = 157, x = 2080.29, y = 1891.89, z = 104.27 }, to = { id = 161, x = 2078.66, y = 2153.75, z = 115.09 }, isRetrace = False, name = Just "Summit Avenue" }
-    , { from = { id = 161, x = 2078.66, y = 2153.75, z = 115.09 }, to = { id = 147, x = 2191.50, y = 2063.17, z = 119.78 }, isRetrace = False, name = Nothing }
-    , { from = { id = 147, x = 2191.50, y = 2063.17, z = 119.78 }, to = { id = 161, x = 2078.66, y = 2153.75, z = 115.09 }, isRetrace = True, name = Nothing }
-    , { from = { id = 161, x = 2078.66, y = 2153.75, z = 115.09 }, to = { id = 169, x = 2251.25, y = 2254.61, z = 118.81 }, isRetrace = False, name = Nothing }
-    , { from = { id = 169, x = 2251.25, y = 2254.61, z = 118.81 }, to = { id = 168, x = 2371.91, y = 2212.19, z = 116.89 }, isRetrace = True, name = Nothing }
-    , { from = { id = 168, x = 2371.91, y = 2212.19, z = 116.89 }, to = { id = 142, x = 2597.43, y = 1957.77, z = 128.60 }, isRetrace = False, name = Just "Southwood Avenue" }
-    , { from = { id = 142, x = 2597.43, y = 1957.77, z = 128.60 }, to = { id = 121, x = 2839.97, y = 1755.88, z = 133.58 }, isRetrace = False, name = Just "Southwood Avenue" }
-    , { from = { id = 121, x = 2839.97, y = 1755.88, z = 133.58 }, to = { id = 142, x = 2597.43, y = 1957.77, z = 128.60 }, isRetrace = True, name = Just "Southwood Avenue" }
-    , { from = { id = 142, x = 2597.43, y = 1957.77, z = 128.60 }, to = { id = 135, x = 2481.73, y = 1860.17, z = 123.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 135, x = 2481.73, y = 1860.17, z = 123.00 }, to = { id = 133, x = 2472.81, y = 1854.23, z = 123.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 133, x = 2472.81, y = 1854.23, z = 123.00 }, to = { id = 490, x = 2340.97, y = 1974.16, z = 121.85 }, isRetrace = False, name = Just "Winter Walk" }
-    , { from = { id = 490, x = 2340.97, y = 1974.16, z = 121.85 }, to = { id = 492, x = 2424.93, y = 2033.07, z = 121.97 }, isRetrace = False, name = Just "Autumn Walk" }
-    , { from = { id = 492, x = 2424.93, y = 2033.07, z = 121.97 }, to = { id = 490, x = 2340.97, y = 1974.16, z = 121.85 }, isRetrace = True, name = Just "Autumn Walk" }
-    , { from = { id = 490, x = 2340.97, y = 1974.16, z = 121.85 }, to = { id = 148, x = 2257.40, y = 2051.90, z = 121.49 }, isRetrace = False, name = Just "Winter Walk" }
-    , { from = { id = 148, x = 2257.40, y = 2051.90, z = 121.49 }, to = { id = 147, x = 2191.50, y = 2063.17, z = 119.78 }, isRetrace = False, name = Nothing }
-    , { from = { id = 147, x = 2191.50, y = 2063.17, z = 119.78 }, to = { id = 134, x = 2293.10, y = 1785.61, z = 125.33 }, isRetrace = False, name = Just "Summit Avenue" }
-    , { from = { id = 134, x = 2293.10, y = 1785.61, z = 125.33 }, to = { id = 470, x = 2260.40, y = 1430.55, z = 126.14 }, isRetrace = False, name = Just "Summit Avenue" }
-    , { from = { id = 470, x = 2260.40, y = 1430.55, z = 126.14 }, to = { id = 461, x = 2343.43, y = 1231.82, z = 138.42 }, isRetrace = False, name = Just "Andean Path" }
-    , { from = { id = 461, x = 2343.43, y = 1231.82, z = 138.42 }, to = { id = 462, x = 2359.18, y = 1157.32, z = 130.97 }, isRetrace = False, name = Just "Andean Path" }
-    , { from = { id = 462, x = 2359.18, y = 1157.32, z = 130.97 }, to = { id = 461, x = 2343.43, y = 1231.82, z = 138.42 }, isRetrace = True, name = Just "Andean Path" }
-    , { from = { id = 461, x = 2343.43, y = 1231.82, z = 138.42 }, to = { id = 99, x = 2231.08, y = 1273.82, z = 121.64 }, isRetrace = False, name = Just "Alpine Path" }
-    , { from = { id = 99, x = 2231.08, y = 1273.82, z = 121.64 }, to = { id = 470, x = 2260.40, y = 1430.55, z = 126.14 }, isRetrace = False, name = Just "Summit Avenue" }
-    , { from = { id = 470, x = 2260.40, y = 1430.55, z = 126.14 }, to = { id = 134, x = 2293.10, y = 1785.61, z = 125.33 }, isRetrace = True, name = Just "Summit Avenue" }
-    , { from = { id = 134, x = 2293.10, y = 1785.61, z = 125.33 }, to = { id = 133, x = 2472.81, y = 1854.23, z = 123.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 133, x = 2472.81, y = 1854.23, z = 123.00 }, to = { id = 135, x = 2481.73, y = 1860.17, z = 123.00 }, isRetrace = True, name = Nothing }
-    , { from = { id = 135, x = 2481.73, y = 1860.17, z = 123.00 }, to = { id = 136, x = 2778.14, y = 1339.44, z = 111.15 }, isRetrace = False, name = Nothing }
-    , { from = { id = 136, x = 2778.14, y = 1339.44, z = 111.15 }, to = { id = 113, x = 2942.18, y = 1568.57, z = 125.49 }, isRetrace = False, name = Just "Hazel Path" }
-    , { from = { id = 113, x = 2942.18, y = 1568.57, z = 125.49 }, to = { id = 121, x = 2839.97, y = 1755.88, z = 133.58 }, isRetrace = False, name = Just "Ivy Path" }
-    , { from = { id = 121, x = 2839.97, y = 1755.88, z = 133.58 }, to = { id = 122, x = 2935.34, y = 1786.32, z = 132.72 }, isRetrace = False, name = Nothing }
-    , { from = { id = 122, x = 2935.34, y = 1786.32, z = 132.72 }, to = { id = 131, x = 3016.16, y = 1765.01, z = 128.64 }, isRetrace = True, name = Just "Locust Avenue" }
-    , { from = { id = 131, x = 3016.16, y = 1765.01, z = 128.64 }, to = { id = 8, x = 3042.68, y = 1685.57, z = 124.22 }, isRetrace = False, name = Just "Hazel Path" }
-    , { from = { id = 8, x = 3042.68, y = 1685.57, z = 124.22 }, to = { id = 123, x = 3200.43, y = 1799.07, z = 118.46 }, isRetrace = False, name = Just "Hazel Path" }
-    , { from = { id = 123, x = 3200.43, y = 1799.07, z = 118.46 }, to = { id = 124, x = 3356.53, y = 1633.52, z = 99.00 }, isRetrace = False, name = Nothing }
-    , { from = { id = 124, x = 3356.53, y = 1633.52, z = 99.00 }, to = { id = 112, x = 3276.50, y = 1540.46, z = 99.05 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 112, x = 3276.50, y = 1540.46, z = 99.05 }, to = { id = 124, x = 3356.53, y = 1633.52, z = 99.00 }, isRetrace = True, name = Just "Cypress Avenue" }
-    , { from = { id = 124, x = 3356.53, y = 1633.52, z = 99.00 }, to = { id = 138, x = 3509.84, y = 1823.00, z = 98.78 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 138, x = 3509.84, y = 1823.00, z = 98.78 }, to = { id = 120, x = 3572.45, y = 1786.14, z = 96.34 }, isRetrace = False, name = Just "Saffron Path" }
-    , { from = { id = 120, x = 3572.45, y = 1786.14, z = 96.34 }, to = { id = 127, x = 3658.93, y = 1812.07, z = 98.76 }, isRetrace = False, name = Nothing }
-    , { from = { id = 127, x = 3658.93, y = 1812.07, z = 98.76 }, to = { id = 120, x = 3572.45, y = 1786.14, z = 96.34 }, isRetrace = True, name = Nothing }
-    , { from = { id = 120, x = 3572.45, y = 1786.14, z = 96.34 }, to = { id = 6, x = 3529.43, y = 1718.57, z = 98.08 }, isRetrace = False, name = Just "Lawn Path" }
-    , { from = { id = 6, x = 3529.43, y = 1718.57, z = 98.08 }, to = { id = 120, x = 3572.45, y = 1786.14, z = 96.34 }, isRetrace = True, name = Just "Lawn Path" }
-    , { from = { id = 120, x = 3572.45, y = 1786.14, z = 96.34 }, to = { id = 114, x = 3747.08, y = 1642.58, z = 91.62 }, isRetrace = False, name = Nothing }
-    , { from = { id = 114, x = 3747.08, y = 1642.58, z = 91.62 }, to = { id = 7, x = 3700.43, y = 1573.32, z = 92.71 }, isRetrace = False, name = Just "Zephyr Path" }
-    , { from = { id = 7, x = 3700.43, y = 1573.32, z = 92.71 }, to = { id = 107, x = 3504.43, y = 1421.32, z = 94.46 }, isRetrace = False, name = Just "Zephyr Path" }
-    , { from = { id = 107, x = 3504.43, y = 1421.32, z = 94.46 }, to = { id = 109, x = 3372.68, y = 1434.07, z = 98.83 }, isRetrace = False, name = Just "Snowdrop Path" }
-    , { from = { id = 109, x = 3372.68, y = 1434.07, z = 98.83 }, to = { id = 95, x = 3183.43, y = 1235.57, z = 97.96 }, isRetrace = False, name = Nothing }
-    , { from = { id = 95, x = 3183.43, y = 1235.57, z = 97.96 }, to = { id = 98, x = 2969.93, y = 1253.32, z = 104.32 }, isRetrace = False, name = Nothing }
-    , { from = { id = 98, x = 2969.93, y = 1253.32, z = 104.32 }, to = { id = 101, x = 2925.12, y = 1310.64, z = 105.16 }, isRetrace = False, name = Nothing }
-    , { from = { id = 101, x = 2925.12, y = 1310.64, z = 105.16 }, to = { id = 100, x = 2869.17, y = 1286.14, z = 107.73 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 100, x = 2869.17, y = 1286.14, z = 107.73 }, to = { id = 136, x = 2778.14, y = 1339.44, z = 111.15 }, isRetrace = False, name = Just "Mistletoe Path" }
-    , { from = { id = 136, x = 2778.14, y = 1339.44, z = 111.15 }, to = { id = 86, x = 2634.43, y = 1183.32, z = 115.54 }, isRetrace = False, name = Just "Hazel Path" }
-    , { from = { id = 86, x = 2634.43, y = 1183.32, z = 115.54 }, to = { id = 91, x = 2595.68, y = 1208.57, z = 121.51 }, isRetrace = False, name = Nothing }
-    , { from = { id = 91, x = 2595.68, y = 1208.57, z = 121.51 }, to = { id = 466, x = 2539.93, y = 1379.32, z = 121.99 }, isRetrace = False, name = Just "Jonquil Path" }
-    , { from = { id = 466, x = 2539.93, y = 1379.32, z = 121.99 }, to = { id = 91, x = 2595.68, y = 1208.57, z = 121.51 }, isRetrace = True, name = Just "Jonquil Path" }
-    , { from = { id = 91, x = 2595.68, y = 1208.57, z = 121.51 }, to = { id = 92, x = 2520.93, y = 1127.57, z = 117.57 }, isRetrace = False, name = Nothing }
-    , { from = { id = 92, x = 2520.93, y = 1127.57, z = 117.57 }, to = { id = 347, x = 2451.18, y = 1177.32, z = 124.81 }, isRetrace = False, name = Just "Garland Path" }
-    , { from = { id = 347, x = 2451.18, y = 1177.32, z = 124.81 }, to = { id = 92, x = 2520.93, y = 1127.57, z = 117.57 }, isRetrace = True, name = Just "Garland Path" }
-    , { from = { id = 92, x = 2520.93, y = 1127.57, z = 117.57 }, to = { id = 459, x = 2616.37, y = 1051.18, z = 104.05 }, isRetrace = False, name = Just "Garland Path" }
-    , { from = { id = 459, x = 2616.37, y = 1051.18, z = 104.05 }, to = { id = 87, x = 2696.03, y = 1127.24, z = 106.27 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 87, x = 2696.03, y = 1127.24, z = 106.27 }, to = { id = 86, x = 2634.43, y = 1183.32, z = 115.54 }, isRetrace = False, name = Nothing }
-    , { from = { id = 86, x = 2634.43, y = 1183.32, z = 115.54 }, to = { id = 87, x = 2696.03, y = 1127.24, z = 106.27 }, isRetrace = True, name = Nothing }
-    , { from = { id = 87, x = 2696.03, y = 1127.24, z = 106.27 }, to = { id = 100, x = 2869.17, y = 1286.14, z = 107.73 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 100, x = 2869.17, y = 1286.14, z = 107.73 }, to = { id = 90, x = 2900.27, y = 1188.90, z = 102.91 }, isRetrace = False, name = Nothing }
-    , { from = { id = 90, x = 2900.27, y = 1188.90, z = 102.91 }, to = { id = 98, x = 2969.93, y = 1253.32, z = 104.32 }, isRetrace = False, name = Nothing }
-    , { from = { id = 98, x = 2969.93, y = 1253.32, z = 104.32 }, to = { id = 101, x = 2925.12, y = 1310.64, z = 105.16 }, isRetrace = True, name = Nothing }
-    , { from = { id = 101, x = 2925.12, y = 1310.64, z = 105.16 }, to = { id = 468, x = 3085.28, y = 1400.34, z = 103.37 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 468, x = 3085.28, y = 1400.34, z = 103.37 }, to = { id = 9, x = 2971.93, y = 1578.57, z = 123.83 }, isRetrace = False, name = Just "Heath Path" }
-    , { from = { id = 9, x = 2971.93, y = 1578.57, z = 123.83 }, to = { id = 113, x = 2942.18, y = 1568.57, z = 125.49 }, isRetrace = False, name = Nothing }
-    , { from = { id = 113, x = 2942.18, y = 1568.57, z = 125.49 }, to = { id = 9, x = 2971.93, y = 1578.57, z = 123.83 }, isRetrace = True, name = Nothing }
-    , { from = { id = 9, x = 2971.93, y = 1578.57, z = 123.83 }, to = { id = 8, x = 3042.68, y = 1685.57, z = 124.22 }, isRetrace = False, name = Just "Hazel Path" }
-    , { from = { id = 8, x = 3042.68, y = 1685.57, z = 124.22 }, to = { id = 9, x = 2971.93, y = 1578.57, z = 123.83 }, isRetrace = True, name = Just "Hazel Path" }
-    , { from = { id = 9, x = 2971.93, y = 1578.57, z = 123.83 }, to = { id = 468, x = 3085.28, y = 1400.34, z = 103.37 }, isRetrace = True, name = Just "Heath Path" }
-    , { from = { id = 468, x = 3085.28, y = 1400.34, z = 103.37 }, to = { id = 112, x = 3276.50, y = 1540.46, z = 99.05 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 112, x = 3276.50, y = 1540.46, z = 99.05 }, to = { id = 14, x = 3334.93, y = 1479.57, z = 99.15 }, isRetrace = False, name = Nothing }
-    , { from = { id = 14, x = 3334.93, y = 1479.57, z = 99.15 }, to = { id = 109, x = 3372.68, y = 1434.07, z = 98.83 }, isRetrace = False, name = Nothing }
-    , { from = { id = 109, x = 3372.68, y = 1434.07, z = 98.83 }, to = { id = 14, x = 3334.93, y = 1479.57, z = 99.15 }, isRetrace = True, name = Nothing }
-    , { from = { id = 14, x = 3334.93, y = 1479.57, z = 99.15 }, to = { id = 6, x = 3529.43, y = 1718.57, z = 98.08 }, isRetrace = False, name = Just "Lawn Path" }
-    , { from = { id = 6, x = 3529.43, y = 1718.57, z = 98.08 }, to = { id = 7, x = 3700.43, y = 1573.32, z = 92.71 }, isRetrace = False, name = Nothing }
-    , { from = { id = 7, x = 3700.43, y = 1573.32, z = 92.71 }, to = { id = 107, x = 3504.43, y = 1421.32, z = 94.46 }, isRetrace = True, name = Just "Zephyr Path" }
-    , { from = { id = 107, x = 3504.43, y = 1421.32, z = 94.46 }, to = { id = 108, x = 3574.80, y = 1367.44, z = 90.68 }, isRetrace = False, name = Nothing }
-    , { from = { id = 108, x = 3574.80, y = 1367.44, z = 90.68 }, to = { id = 463, x = 3451.78, y = 1260.37, z = 90.87 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 463, x = 3451.78, y = 1260.37, z = 90.87 }, to = { id = 108, x = 3574.80, y = 1367.44, z = 90.68 }, isRetrace = True, name = Just "Sassafras Avenue" }
-    , { from = { id = 108, x = 3574.80, y = 1367.44, z = 90.68 }, to = { id = 472, x = 3855.85, y = 1504.87, z = 90.63 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 472, x = 3855.85, y = 1504.87, z = 90.63 }, to = { id = 111, x = 3888.76, y = 1517.83, z = 90.63 }, isRetrace = True, name = Just "Sassafras Avenue" }
-    , { from = { id = 111, x = 3888.76, y = 1517.83, z = 90.63 }, to = { id = 96, x = 3870.50, y = 1243.99, z = 87.28 }, isRetrace = False, name = Nothing }
-    , { from = { id = 96, x = 3870.50, y = 1243.99, z = 87.28 }, to = { id = 450, x = 4169.94, y = 979.95, z = 81.26 }, isRetrace = False, name = Just "Lychnis Path" }
-    , { from = { id = 450, x = 4169.94, y = 979.95, z = 81.26 }, to = { id = 79, x = 4137.53, y = 959.10, z = 80.91 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 79, x = 4137.53, y = 959.10, z = 80.91 }, to = { id = 450, x = 4169.94, y = 979.95, z = 81.26 }, isRetrace = True, name = Just "Fir Avenue" }
-    , { from = { id = 450, x = 4169.94, y = 979.95, z = 81.26 }, to = { id = 449, x = 4418.16, y = 1148.04, z = 85.32 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 449, x = 4418.16, y = 1148.04, z = 85.32 }, to = { id = 5, x = 4583.18, y = 884.07, z = 69.37 }, isRetrace = False, name = Just "Lonicera Path" }
-    , { from = { id = 5, x = 4583.18, y = 884.07, z = 69.37 }, to = { id = 80, x = 4191.68, y = 887.07, z = 78.36 }, isRetrace = False, name = Just "Halesia Path" }
-    , { from = { id = 80, x = 4191.68, y = 887.07, z = 78.36 }, to = { id = 448, x = 4268.68, y = 469.57, z = 69.52 }, isRetrace = False, name = Just "Tecoma Path" }
-    , { from = { id = 448, x = 4268.68, y = 469.57, z = 69.52 }, to = { id = 80, x = 4191.68, y = 887.07, z = 78.36 }, isRetrace = True, name = Just "Tecoma Path" }
-    , { from = { id = 80, x = 4191.68, y = 887.07, z = 78.36 }, to = { id = 79, x = 4137.53, y = 959.10, z = 80.91 }, isRetrace = False, name = Nothing }
-    , { from = { id = 79, x = 4137.53, y = 959.10, z = 80.91 }, to = { id = 454, x = 3944.22, y = 810.32, z = 78.39 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 454, x = 3944.22, y = 810.32, z = 78.39 }, to = { id = 447, x = 4264.10, y = 345.32, z = 67.86 }, isRetrace = False, name = Just "Grape Avenue" }
-    , { from = { id = 447, x = 4264.10, y = 345.32, z = 67.86 }, to = { id = 71, x = 4319.96, y = 373.08, z = 67.19 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 71, x = 4319.96, y = 373.08, z = 67.19 }, to = { id = 448, x = 4268.68, y = 469.57, z = 69.52 }, isRetrace = False, name = Just "Tecoma Path" }
-    , { from = { id = 448, x = 4268.68, y = 469.57, z = 69.52 }, to = { id = 452, x = 4669.93, y = 731.32, z = 67.35 }, isRetrace = False, name = Just "Tunica Path" }
-    , { from = { id = 452, x = 4669.93, y = 731.32, z = 67.35 }, to = { id = 70, x = 4720.86, y = 637.98, z = 64.99 }, isRetrace = False, name = Just "Lonicera Path" }
-    , { from = { id = 70, x = 4720.86, y = 637.98, z = 64.99 }, to = { id = 452, x = 4669.93, y = 731.32, z = 67.35 }, isRetrace = True, name = Just "Lonicera Path" }
-    , { from = { id = 452, x = 4669.93, y = 731.32, z = 67.35 }, to = { id = 5, x = 4583.18, y = 884.07, z = 69.37 }, isRetrace = False, name = Just "Lonicera Path" }
-    , { from = { id = 5, x = 4583.18, y = 884.07, z = 69.37 }, to = { id = 4, x = 4824.60, y = 957.40, z = 68.00 }, isRetrace = False, name = Just "Halesia Path" }
-    , { from = { id = 4, x = 4824.60, y = 957.40, z = 68.00 }, to = { id = 465, x = 4808.65, y = 1378.96, z = 85.06 }, isRetrace = False, name = Just "Celastrus Path" }
-    , { from = { id = 465, x = 4808.65, y = 1378.96, z = 85.06 }, to = { id = 105, x = 4863.85, y = 1405.09, z = 85.31 }, isRetrace = True, name = Just "Fir Avenue" }
-    , { from = { id = 105, x = 4863.85, y = 1405.09, z = 85.31 }, to = { id = 106, x = 4918.97, y = 1416.46, z = 85.31 }, isRetrace = False, name = Nothing }
-    , { from = { id = 106, x = 4918.97, y = 1416.46, z = 85.31 }, to = { id = 420, x = 5045.68, y = 1175.57, z = 72.06 }, isRetrace = True, name = Just "Vine Avenue" }
-    , { from = { id = 420, x = 5045.68, y = 1175.57, z = 72.06 }, to = { id = 81, x = 5191.00, y = 965.91, z = 67.90 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 81, x = 5191.00, y = 965.91, z = 67.90 }, to = { id = 88, x = 5160.36, y = 953.04, z = 67.90 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 88, x = 5160.36, y = 953.04, z = 67.90 }, to = { id = 2, x = 5128.70, y = 939.60, z = 66.29 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 2, x = 5128.70, y = 939.60, z = 66.29 }, to = { id = 4, x = 4824.60, y = 957.40, z = 68.00 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 4, x = 4824.60, y = 957.40, z = 68.00 }, to = { id = 75, x = 4882.59, y = 776.12, z = 64.67 }, isRetrace = False, name = Just "Celastrus Path" }
-    , { from = { id = 75, x = 4882.59, y = 776.12, z = 64.67 }, to = { id = 2, x = 5128.70, y = 939.60, z = 66.29 }, isRetrace = False, name = Nothing }
-    , { from = { id = 2, x = 5128.70, y = 939.60, z = 66.29 }, to = { id = 88, x = 5160.36, y = 953.04, z = 67.90 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 88, x = 5160.36, y = 953.04, z = 67.90 }, to = { id = 1, x = 5179.08, y = 917.62, z = 67.90 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 1, x = 5179.08, y = 917.62, z = 67.90 }, to = { id = 88, x = 5160.36, y = 953.04, z = 67.90 }, isRetrace = True, name = Just "Vine Avenue" }
-    , { from = { id = 88, x = 5160.36, y = 953.04, z = 67.90 }, to = { id = 105, x = 4863.85, y = 1405.09, z = 85.31 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 105, x = 4863.85, y = 1405.09, z = 85.31 }, to = { id = 473, x = 4755.90, y = 1539.49, z = 82.90 }, isRetrace = True, name = Just "Vine Avenue" }
-    , { from = { id = 473, x = 4755.90, y = 1539.49, z = 82.90 }, to = { id = 481, x = 5194.43, y = 1741.15, z = 88.27 }, isRetrace = False, name = Just "Amaryllis Path" }
-    , { from = { id = 481, x = 5194.43, y = 1741.15, z = 88.27 }, to = { id = 485, x = 5540.00, y = 1894.76, z = 77.16 }, isRetrace = False, name = Just "Amaryllis Path" }
-    , { from = { id = 485, x = 5540.00, y = 1894.76, z = 77.16 }, to = { id = 478, x = 5566.09, y = 1665.49, z = 72.06 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 478, x = 5566.09, y = 1665.49, z = 72.06 }, to = { id = 89, x = 5492.59, y = 1183.62, z = 63.54 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 89, x = 5492.59, y = 1183.62, z = 63.54 }, to = { id = 467, x = 5414.93, y = 1388.32, z = 67.02 }, isRetrace = False, name = Just "Gladiolus Path" }
-    , { from = { id = 467, x = 5414.93, y = 1388.32, z = 67.02 }, to = { id = 89, x = 5492.59, y = 1183.62, z = 63.54 }, isRetrace = True, name = Just "Gladiolus Path" }
-    , { from = { id = 89, x = 5492.59, y = 1183.62, z = 63.54 }, to = { id = 81, x = 5191.00, y = 965.91, z = 67.90 }, isRetrace = False, name = Nothing }
-    , { from = { id = 81, x = 5191.00, y = 965.91, z = 67.90 }, to = { id = 1, x = 5179.08, y = 917.62, z = 67.90 }, isRetrace = False, name = Nothing }
-    , { from = { id = 1, x = 5179.08, y = 917.62, z = 67.90 }, to = { id = 3, x = 5247.10, y = 789.97, z = 63.11 }, isRetrace = False, name = Just "Vine Avenue" }
-    , { from = { id = 3, x = 5247.10, y = 789.97, z = 63.11 }, to = { id = 1, x = 5179.08, y = 917.62, z = 67.90 }, isRetrace = True, name = Just "Vine Avenue" }
-    , { from = { id = 1, x = 5179.08, y = 917.62, z = 67.90 }, to = { id = 2, x = 5128.70, y = 939.60, z = 66.29 }, isRetrace = False, name = Nothing }
-    , { from = { id = 2, x = 5128.70, y = 939.60, z = 66.29 }, to = { id = 75, x = 4882.59, y = 776.12, z = 64.67 }, isRetrace = True, name = Nothing }
-    , { from = { id = 75, x = 4882.59, y = 776.12, z = 64.67 }, to = { id = 70, x = 4720.86, y = 637.98, z = 64.99 }, isRetrace = False, name = Nothing }
-    , { from = { id = 70, x = 4720.86, y = 637.98, z = 64.99 }, to = { id = 71, x = 4319.96, y = 373.08, z = 67.19 }, isRetrace = False, name = Nothing }
-    , { from = { id = 71, x = 4319.96, y = 373.08, z = 67.19 }, to = { id = 447, x = 4264.10, y = 345.32, z = 67.86 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 447, x = 4264.10, y = 345.32, z = 67.86 }, to = { id = 446, x = 4009.53, y = 226.13, z = 70.03 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 446, x = 4009.53, y = 226.13, z = 70.03 }, to = { id = 68, x = 3759.37, y = 558.11, z = 76.36 }, isRetrace = False, name = Just "Rubra Path" }
-    , { from = { id = 68, x = 3759.37, y = 558.11, z = 76.36 }, to = { id = 454, x = 3944.22, y = 810.32, z = 78.39 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 454, x = 3944.22, y = 810.32, z = 78.39 }, to = { id = 97, x = 3874.15, y = 1019.17, z = 81.79 }, isRetrace = False, name = Just "Grape Avenue" }
-    , { from = { id = 97, x = 3874.15, y = 1019.17, z = 81.79 }, to = { id = 96, x = 3870.50, y = 1243.99, z = 87.28 }, isRetrace = False, name = Nothing }
-    , { from = { id = 96, x = 3870.50, y = 1243.99, z = 87.28 }, to = { id = 97, x = 3874.15, y = 1019.17, z = 81.79 }, isRetrace = True, name = Nothing }
-    , { from = { id = 97, x = 3874.15, y = 1019.17, z = 81.79 }, to = { id = 463, x = 3451.78, y = 1260.37, z = 90.87 }, isRetrace = False, name = Just "Woodlawn Path" }
-    , { from = { id = 463, x = 3451.78, y = 1260.37, z = 90.87 }, to = { id = 94, x = 3363.89, y = 1170.51, z = 90.38 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 94, x = 3363.89, y = 1170.51, z = 90.38 }, to = { id = 95, x = 3183.43, y = 1235.57, z = 97.96 }, isRetrace = False, name = Nothing }
-    , { from = { id = 95, x = 3183.43, y = 1235.57, z = 97.96 }, to = { id = 94, x = 3363.89, y = 1170.51, z = 90.38 }, isRetrace = False, name = Nothing }
-    , { from = { id = 94, x = 3363.89, y = 1170.51, z = 90.38 }, to = { id = 393, x = 3100.71, y = 944.09, z = 88.89 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 393, x = 3100.71, y = 944.09, z = 88.89 }, to = { id = 455, x = 2972.84, y = 830.41, z = 87.32 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 455, x = 2972.84, y = 830.41, z = 87.32 }, to = { id = 74, x = 2897.37, y = 769.43, z = 86.59 }, isRetrace = False, name = Just "Sassafras Avenue" }
-    , { from = { id = 74, x = 2897.37, y = 769.43, z = 86.59 }, to = { id = 77, x = 2663.93, y = 954.57, z = 99.85 }, isRetrace = False, name = Just "Olive Path" }
-    , { from = { id = 77, x = 2663.93, y = 954.57, z = 99.85 }, to = { id = 82, x = 2670.18, y = 990.07, z = 101.77 }, isRetrace = False, name = Nothing }
-    , { from = { id = 82, x = 2670.18, y = 990.07, z = 101.77 }, to = { id = 90, x = 2900.27, y = 1188.90, z = 102.91 }, isRetrace = False, name = Nothing }
-    , { from = { id = 90, x = 2900.27, y = 1188.90, z = 102.91 }, to = { id = 393, x = 3100.71, y = 944.09, z = 88.89 }, isRetrace = False, name = Just "Mistletoe Path" }
-    , { from = { id = 393, x = 3100.71, y = 944.09, z = 88.89 }, to = { id = 65, x = 3708.72, y = 455.47, z = 75.43 }, isRetrace = False, name = Just "Mistletoe Path" }
-    , { from = { id = 65, x = 3708.72, y = 455.47, z = 75.43 }, to = { id = 68, x = 3759.37, y = 558.11, z = 76.36 }, isRetrace = False, name = Nothing }
-    , { from = { id = 68, x = 3759.37, y = 558.11, z = 76.36 }, to = { id = 446, x = 4009.53, y = 226.13, z = 70.03 }, isRetrace = True, name = Just "Rubra Path" }
-    , { from = { id = 446, x = 4009.53, y = 226.13, z = 70.03 }, to = { id = 445, x = 3444.36, y = 175.87, z = 74.82 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 445, x = 3444.36, y = 175.87, z = 74.82 }, to = { id = 64, x = 3422.66, y = 173.62, z = 74.82 }, isRetrace = False, name = Just "Border Avenue" }
-    , { from = { id = 64, x = 3422.66, y = 173.62, z = 74.82 }, to = { id = 445, x = 3444.36, y = 175.87, z = 74.82 }, isRetrace = True, name = Just "Border Avenue" }
-    , { from = { id = 445, x = 3444.36, y = 175.87, z = 74.82 }, to = { id = 66, x = 3641.14, y = 332.41, z = 75.86 }, isRetrace = False, name = Just "Fir Avenue" }
-    , { from = { id = 66, x = 3641.14, y = 332.41, z = 75.86 }, to = { id = 65, x = 3708.72, y = 455.47, z = 75.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 65, x = 3708.72, y = 455.47, z = 75.43 }, to = { id = 66, x = 3641.14, y = 332.41, z = 75.86 }, isRetrace = True, name = Nothing }
-    , { from = { id = 66, x = 3641.14, y = 332.41, z = 75.86 }, to = { id = 455, x = 2972.84, y = 830.41, z = 87.32 }, isRetrace = False, name = Just "Prairie Path" }
-    , { from = { id = 455, x = 2972.84, y = 830.41, z = 87.32 }, to = { id = 74, x = 2897.37, y = 769.43, z = 86.59 }, isRetrace = True, name = Just "Sassafras Avenue" }
-    , { from = { id = 74, x = 2897.37, y = 769.43, z = 86.59 }, to = { id = 72, x = 2856.45, y = 718.40, z = 86.65 }, isRetrace = False, name = Nothing }
-    , { from = { id = 72, x = 2856.45, y = 718.40, z = 86.65 }, to = { id = 73, x = 2829.17, y = 728.61, z = 86.65 }, isRetrace = False, name = Nothing }
-    , { from = { id = 73, x = 2829.17, y = 728.61, z = 86.65 }, to = { id = 72, x = 2856.45, y = 718.40, z = 86.65 }, isRetrace = False, name = Nothing }
-    , { from = { id = 72, x = 2856.45, y = 718.40, z = 86.65 }, to = { id = 67, x = 2771.42, y = 556.70, z = 87.45 }, isRetrace = False, name = Nothing }
-    , { from = { id = 67, x = 2771.42, y = 556.70, z = 87.45 }, to = { id = 451, x = 2566.43, y = 719.57, z = 93.84 }, isRetrace = False, name = Just "Clethra Path" }
-    , { from = { id = 451, x = 2566.43, y = 719.57, z = 93.84 }, to = { id = 453, x = 2647.17, y = 801.94, z = 94.85 }, isRetrace = False, name = Just "Cydonia Path" }
-    , { from = { id = 453, x = 2647.17, y = 801.94, z = 94.85 }, to = { id = 451, x = 2566.43, y = 719.57, z = 93.84 }, isRetrace = True, name = Just "Cydonia Path" }
-    , { from = { id = 451, x = 2566.43, y = 719.57, z = 93.84 }, to = { id = 69, x = 2478.50, y = 614.70, z = 91.43 }, isRetrace = False, name = Just "Cydonia Path" }
-    , { from = { id = 69, x = 2478.50, y = 614.70, z = 91.43 }, to = { id = 451, x = 2566.43, y = 719.57, z = 93.84 }, isRetrace = True, name = Just "Cydonia Path" }
-    , { from = { id = 451, x = 2566.43, y = 719.57, z = 93.84 }, to = { id = 458, x = 2262.68, y = 974.82, z = 115.08 }, isRetrace = False, name = Just "Clethra Path" }
-    , { from = { id = 458, x = 2262.68, y = 974.82, z = 115.08 }, to = { id = 460, x = 2366.56, y = 1082.30, z = 122.16 }, isRetrace = False, name = Just "Corylus Path" }
-    , { from = { id = 460, x = 2366.56, y = 1082.30, z = 122.16 }, to = { id = 458, x = 2262.68, y = 974.82, z = 115.08 }, isRetrace = True, name = Just "Corylus Path" }
-    , { from = { id = 458, x = 2262.68, y = 974.82, z = 115.08 }, to = { id = 76, x = 2189.58, y = 921.72, z = 105.67 }, isRetrace = False, name = Just "Corylus Path" }
-    , { from = { id = 76, x = 2189.58, y = 921.72, z = 105.67 }, to = { id = 69, x = 2478.50, y = 614.70, z = 91.43 }, isRetrace = False, name = Nothing }
-    , { from = { id = 69, x = 2478.50, y = 614.70, z = 91.43 }, to = { id = 63, x = 2676.30, y = 435.27, z = 85.07 }, isRetrace = False, name = Nothing }
-    , { from = { id = 63, x = 2676.30, y = 435.27, z = 85.07 }, to = { id = 67, x = 2771.42, y = 556.70, z = 87.45 }, isRetrace = False, name = Nothing }
-    , { from = { id = 67, x = 2771.42, y = 556.70, z = 87.45 }, to = { id = 63, x = 2676.30, y = 435.27, z = 85.07 }, isRetrace = True, name = Nothing }
-    , { from = { id = 63, x = 2676.30, y = 435.27, z = 85.07 }, to = { id = 64, x = 3422.66, y = 173.62, z = 74.82 }, isRetrace = False, name = Nothing }
-    , { from = { id = 64, x = 3422.66, y = 173.62, z = 74.82 }, to = { id = 72, x = 2856.45, y = 718.40, z = 86.65 }, isRetrace = False, name = Just "Dale Avenue" }
-    , { from = { id = 72, x = 2856.45, y = 718.40, z = 86.65 }, to = { id = 73, x = 2829.17, y = 728.61, z = 86.65 }, isRetrace = True, name = Nothing }
-    , { from = { id = 73, x = 2829.17, y = 728.61, z = 86.65 }, to = { id = 453, x = 2647.17, y = 801.94, z = 94.85 }, isRetrace = False, name = Just "Dale Avenue" }
-    , { from = { id = 453, x = 2647.17, y = 801.94, z = 94.85 }, to = { id = 78, x = 2570.29, y = 909.97, z = 100.08 }, isRetrace = False, name = Just "Dale Avenue" }
-    , { from = { id = 78, x = 2570.29, y = 909.97, z = 100.08 }, to = { id = 77, x = 2663.93, y = 954.57, z = 99.85 }, isRetrace = False, name = Nothing }
-    , { from = { id = 77, x = 2663.93, y = 954.57, z = 99.85 }, to = { id = 82, x = 2670.18, y = 990.07, z = 101.77 }, isRetrace = True, name = Nothing }
-    , { from = { id = 82, x = 2670.18, y = 990.07, z = 101.77 }, to = { id = 459, x = 2616.37, y = 1051.18, z = 104.05 }, isRetrace = False, name = Just "Garland Path" }
-    , { from = { id = 459, x = 2616.37, y = 1051.18, z = 104.05 }, to = { id = 83, x = 2567.87, y = 994.88, z = 105.42 }, isRetrace = False, name = Just "Cypress Avenue" }
-    , { from = { id = 83, x = 2567.87, y = 994.88, z = 105.42 }, to = { id = 78, x = 2570.29, y = 909.97, z = 100.08 }, isRetrace = False, name = Nothing }
-    , { from = { id = 78, x = 2570.29, y = 909.97, z = 100.08 }, to = { id = 83, x = 2567.87, y = 994.88, z = 105.42 }, isRetrace = True, name = Nothing }
-    , { from = { id = 83, x = 2567.87, y = 994.88, z = 105.42 }, to = { id = 460, x = 2366.56, y = 1082.30, z = 122.16 }, isRetrace = False, name = Just "Dale Avenue" }
-    , { from = { id = 460, x = 2366.56, y = 1082.30, z = 122.16 }, to = { id = 93, x = 2209.62, y = 1232.26, z = 120.46 }, isRetrace = False, name = Just "Dale Avenue" }
-    , { from = { id = 93, x = 2209.62, y = 1232.26, z = 120.46 }, to = { id = 99, x = 2231.08, y = 1273.82, z = 121.64 }, isRetrace = False, name = Nothing }
-    , { from = { id = 99, x = 2231.08, y = 1273.82, z = 121.64 }, to = { id = 93, x = 2209.62, y = 1232.26, z = 120.46 }, isRetrace = True, name = Nothing }
-    , { from = { id = 93, x = 2209.62, y = 1232.26, z = 120.46 }, to = { id = 84, x = 2090.83, y = 1028.60, z = 107.79 }, isRetrace = False, name = Nothing }
-    , { from = { id = 84, x = 2090.83, y = 1028.60, z = 107.79 }, to = { id = 76, x = 2189.58, y = 921.72, z = 105.67 }, isRetrace = False, name = Nothing }
-    , { from = { id = 76, x = 2189.58, y = 921.72, z = 105.67 }, to = { id = 84, x = 2090.83, y = 1028.60, z = 107.79 }, isRetrace = True, name = Nothing }
-    , { from = { id = 84, x = 2090.83, y = 1028.60, z = 107.79 }, to = { id = 85, x = 1823.31, y = 1087.31, z = 92.72 }, isRetrace = False, name = Nothing }
-    , { from = { id = 85, x = 1823.31, y = 1087.31, z = 92.72 }, to = { id = 102, x = 1498.33, y = 1327.09, z = 97.57 }, isRetrace = False, name = Nothing }
-    , { from = { id = 102, x = 1498.33, y = 1327.09, z = 97.57 }, to = { id = 110, x = 1360.58, y = 1443.27, z = 106.74 }, isRetrace = False, name = Nothing }
-    , { from = { id = 110, x = 1360.58, y = 1443.27, z = 106.74 }, to = { id = 11, x = 1256.54, y = 1485.78, z = 106.83 }, isRetrace = False, name = Just "Oleaster Path" }
-    , { from = { id = 11, x = 1256.54, y = 1485.78, z = 106.83 }, to = { id = 117, x = 1198.99, y = 1741.06, z = 96.82 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 117, x = 1198.99, y = 1741.06, z = 96.82 }, to = { id = 126, x = 1386.68, y = 1813.82, z = 115.66 }, isRetrace = False, name = Just "Vision Path" }
-    , { from = { id = 126, x = 1386.68, y = 1813.82, z = 115.66 }, to = { id = 117, x = 1198.99, y = 1741.06, z = 96.82 }, isRetrace = True, name = Just "Vision Path" }
-    , { from = { id = 117, x = 1198.99, y = 1741.06, z = 96.82 }, to = { id = 457, x = 1075.68, y = 1983.78, z = 87.65 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 457, x = 1075.68, y = 1983.78, z = 87.65 }, to = { id = 10, x = 1115.68, y = 1688.07, z = 96.72 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 10, x = 1115.68, y = 1688.07, z = 96.72 }, to = { id = 117, x = 1198.99, y = 1741.06, z = 96.82 }, isRetrace = False, name = Nothing }
-    , { from = { id = 117, x = 1198.99, y = 1741.06, z = 96.82 }, to = { id = 10, x = 1115.68, y = 1688.07, z = 96.72 }, isRetrace = True, name = Nothing }
-    , { from = { id = 10, x = 1115.68, y = 1688.07, z = 96.72 }, to = { id = 11, x = 1256.54, y = 1485.78, z = 106.83 }, isRetrace = False, name = Just "Spruce Avenue" }
-    , { from = { id = 11, x = 1256.54, y = 1485.78, z = 106.83 }, to = { id = 110, x = 1360.58, y = 1443.27, z = 106.74 }, isRetrace = True, name = Just "Oleaster Path" }
-    , { from = { id = 110, x = 1360.58, y = 1443.27, z = 106.74 }, to = { id = 118, x = 1437.24, y = 1763.17, z = 117.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 118, x = 1437.24, y = 1763.17, z = 117.06 }, to = { id = 126, x = 1386.68, y = 1813.82, z = 115.66 }, isRetrace = False, name = Nothing }
-    , { from = { id = 126, x = 1386.68, y = 1813.82, z = 115.66 }, to = { id = 469, x = 1336.43, y = 1949.57, z = 114.25 }, isRetrace = False, name = Just "Tulip Path" }
-    , { from = { id = 469, x = 1336.43, y = 1949.57, z = 114.25 }, to = { id = 119, x = 1479.89, y = 1783.85, z = 122.07 }, isRetrace = False, name = Just "Highland Path" }
-    , { from = { id = 119, x = 1479.89, y = 1783.85, z = 122.07 }, to = { id = 118, x = 1437.24, y = 1763.17, z = 117.06 }, isRetrace = False, name = Nothing }
-    , { from = { id = 118, x = 1437.24, y = 1763.17, z = 117.06 }, to = { id = 119, x = 1479.89, y = 1783.85, z = 122.07 }, isRetrace = True, name = Nothing }
-    , { from = { id = 119, x = 1479.89, y = 1783.85, z = 122.07 }, to = { id = 128, x = 1538.99, y = 1825.84, z = 117.45 }, isRetrace = False, name = Nothing }
-    , { from = { id = 128, x = 1538.99, y = 1825.84, z = 117.45 }, to = { id = 144, x = 1782.13, y = 1976.96, z = 120.85 }, isRetrace = True, name = Nothing }
-    , { from = { id = 144, x = 1782.13, y = 1976.96, z = 120.85 }, to = { id = 164, x = 1879.60, y = 2290.45, z = 130.03 }, isRetrace = False, name = Nothing }
-    , { from = { id = 164, x = 1879.60, y = 2290.45, z = 130.03 }, to = { id = 26, x = 1917.78, y = 2376.33, z = 136.40 }, isRetrace = False, name = Nothing }
-    , { from = { id = 26, x = 1917.78, y = 2376.33, z = 136.40 }, to = { id = 25, x = 1808.68, y = 2492.07, z = 122.47 }, isRetrace = False, name = Just "Circling Path" }
-    , { from = { id = 25, x = 1808.68, y = 2492.07, z = 122.47 }, to = { id = 26, x = 1917.78, y = 2376.33, z = 136.40 }, isRetrace = True, name = Just "Circling Path" }
-    , { from = { id = 26, x = 1917.78, y = 2376.33, z = 136.40 }, to = { id = 202, x = 2031.47, y = 2479.01, z = 139.53 }, isRetrace = False, name = Nothing }
-    , { from = { id = 202, x = 2031.47, y = 2479.01, z = 139.53 }, to = { id = 225, x = 2134.34, y = 2641.88, z = 125.95 }, isRetrace = True, name = Nothing }
-    , { from = { id = 225, x = 2134.34, y = 2641.88, z = 125.95 }, to = { id = 234, x = 2059.84, y = 2663.90, z = 122.21 }, isRetrace = True, name = Just "Locust Avenue" }
-    , { from = { id = 234, x = 2059.84, y = 2663.90, z = 122.21 }, to = { id = 235, x = 2017.65, y = 2781.88, z = 114.56 }, isRetrace = False, name = Nothing }
-    , { from = { id = 235, x = 2017.65, y = 2781.88, z = 114.56 }, to = { id = 35, x = 1959.23, y = 2814.37, z = 111.71 }, isRetrace = False, name = Just "Locust Avenue" }
-    , { from = { id = 35, x = 1959.23, y = 2814.37, z = 111.71 }, to = { id = 235, x = 2017.65, y = 2781.88, z = 114.56 }, isRetrace = True, name = Just "Locust Avenue" }
-    , { from = { id = 235, x = 2017.65, y = 2781.88, z = 114.56 }, to = { id = 36, x = 2099.06, y = 2812.35, z = 120.21 }, isRetrace = False, name = Nothing }
-    , { from = { id = 36, x = 2099.06, y = 2812.35, z = 120.21 }, to = { id = 35, x = 1959.23, y = 2814.37, z = 111.71 }, isRetrace = False, name = Just "Forest Avenue" }
-    , { from = { id = 35, x = 1959.23, y = 2814.37, z = 111.71 }, to = { id = 256, x = 1734.58, y = 2862.31, z = 105.52 }, isRetrace = False, name = Just "Forest Avenue" }
-    , { from = { id = 256, x = 1734.58, y = 2862.31, z = 105.52 }, to = { id = 257, x = 1667.11, y = 2992.29, z = 106.67 }, isRetrace = True, name = Nothing }
-    , { from = { id = 257, x = 1667.11, y = 2992.29, z = 106.67 }, to = { id = 270, x = 1896.84, y = 3096.76, z = 113.88 }, isRetrace = False, name = Nothing }
-    , { from = { id = 270, x = 1896.84, y = 3096.76, z = 113.88 }, to = { id = 269, x = 1873.68, y = 3052.57, z = 115.66 }, isRetrace = False, name = Nothing }
-    , { from = { id = 269, x = 1873.68, y = 3052.57, z = 115.66 }, to = { id = 270, x = 1896.84, y = 3096.76, z = 113.88 }, isRetrace = True, name = Nothing }
-    , { from = { id = 270, x = 1896.84, y = 3096.76, z = 113.88 }, to = { id = 271, x = 1940.10, y = 3097.77, z = 113.66 }, isRetrace = False, name = Nothing }
-    , { from = { id = 271, x = 1940.10, y = 3097.77, z = 113.66 }, to = { id = 275, x = 1941.44, y = 3113.35, z = 115.61 }, isRetrace = True, name = Nothing }
-    , { from = { id = 275, x = 1941.44, y = 3113.35, z = 115.61 }, to = { id = 281, x = 1933.42, y = 3184.94, z = 117.51 }, isRetrace = True, name = Nothing }
-    , { from = { id = 281, x = 1933.42, y = 3184.94, z = 117.51 }, to = { id = 291, x = 1849.44, y = 3260.20, z = 119.78 }, isRetrace = False, name = Just "Lawn Avenue" }
-    , { from = { id = 291, x = 1849.44, y = 3260.20, z = 119.78 }, to = { id = 290, x = 1722.94, y = 3307.45, z = 122.39 }, isRetrace = True, name = Nothing }
-    , { from = { id = 290, x = 1722.94, y = 3307.45, z = 122.39 }, to = { id = 564, x = 1806.58, y = 3397.92, z = 134.28 }, isRetrace = False, name = Just "Myrtle Path" }
-    , { from = { id = 564, x = 1806.58, y = 3397.92, z = 134.28 }, to = { id = 576, x = 1389.69, y = 3673.25, z = 94.43 }, isRetrace = False, name = Just "Ridge Path" }
-    , { from = { id = 576, x = 1389.69, y = 3673.25, z = 94.43 }, to = { id = 330, x = 1399.69, y = 3701.88, z = 92.79 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 330, x = 1399.69, y = 3701.88, z = 92.79 }, to = { id = 578, x = 1220.53, y = 3627.44, z = 102.53 }, isRetrace = False, name = Just "Aspen Path" }
-    , { from = { id = 578, x = 1220.53, y = 3627.44, z = 102.53 }, to = { id = 330, x = 1399.69, y = 3701.88, z = 92.79 }, isRetrace = True, name = Just "Aspen Path" }
-    , { from = { id = 330, x = 1399.69, y = 3701.88, z = 92.79 }, to = { id = 331, x = 1420.15, y = 3738.72, z = 87.32 }, isRetrace = False, name = Nothing }
-    , { from = { id = 331, x = 1420.15, y = 3738.72, z = 87.32 }, to = { id = 336, x = 1261.43, y = 3728.32, z = 89.97 }, isRetrace = False, name = Just "Hillside Path" }
-    , { from = { id = 336, x = 1261.43, y = 3728.32, z = 89.97 }, to = { id = 323, x = 1199.27, y = 3701.83, z = 92.81 }, isRetrace = False, name = Just "Hillside Path" }
-    , { from = { id = 323, x = 1199.27, y = 3701.83, z = 92.81 }, to = { id = 336, x = 1261.43, y = 3728.32, z = 89.97 }, isRetrace = True, name = Just "Hillside Path" }
-    , { from = { id = 336, x = 1261.43, y = 3728.32, z = 89.97 }, to = { id = 332, x = 1204.36, y = 3745.15, z = 85.95 }, isRetrace = False, name = Nothing }
-    , { from = { id = 332, x = 1204.36, y = 3745.15, z = 85.95 }, to = { id = 339, x = 1204.68, y = 3794.69, z = 72.89 }, isRetrace = False, name = Nothing }
-    , { from = { id = 339, x = 1204.68, y = 3794.69, z = 72.89 }, to = { id = 579, x = 1161.16, y = 3794.65, z = 72.89 }, isRetrace = True, name = Just "Walnut Avenue" }
-    , { from = { id = 579, x = 1161.16, y = 3794.65, z = 72.89 }, to = { id = 333, x = 1167.68, y = 3724.07, z = 83.08 }, isRetrace = False, name = Just "Dew Path" }
-    , { from = { id = 333, x = 1167.68, y = 3724.07, z = 83.08 }, to = { id = 324, x = 1182.92, y = 3691.50, z = 92.81 }, isRetrace = False, name = Just "Dew Path" }
-    , { from = { id = 324, x = 1182.92, y = 3691.50, z = 92.81 }, to = { id = 333, x = 1167.68, y = 3724.07, z = 83.08 }, isRetrace = True, name = Just "Dew Path" }
-    , { from = { id = 333, x = 1167.68, y = 3724.07, z = 83.08 }, to = { id = 332, x = 1204.36, y = 3745.15, z = 85.95 }, isRetrace = False, name = Nothing }
-    , { from = { id = 332, x = 1204.36, y = 3745.15, z = 85.95 }, to = { id = 323, x = 1199.27, y = 3701.83, z = 92.81 }, isRetrace = False, name = Nothing }
-    , { from = { id = 323, x = 1199.27, y = 3701.83, z = 92.81 }, to = { id = 324, x = 1182.92, y = 3691.50, z = 92.81 }, isRetrace = False, name = Nothing }
-    , { from = { id = 324, x = 1182.92, y = 3691.50, z = 92.81 }, to = { id = 359, x = 982.56, y = 3852.69, z = 79.33 }, isRetrace = False, name = Just "Hillside Path" }
-    , { from = { id = 359, x = 982.56, y = 3852.69, z = 79.33 }, to = { id = 587, x = 1056.09, y = 4022.68, z = 67.70 }, isRetrace = False, name = Just "Aster Path" }
-    , { from = { id = 587, x = 1056.09, y = 4022.68, z = 67.70 }, to = { id = 364, x = 1227.87, y = 4056.49, z = 72.21 }, isRetrace = True, name = Just "Waterside Path" }
-    , { from = { id = 364, x = 1227.87, y = 4056.49, z = 72.21 }, to = { id = 380, x = 1029.22, y = 4227.80, z = 66.66 }, isRetrace = False, name = Just "Mimosa Path" }
-    , { from = { id = 380, x = 1029.22, y = 4227.80, z = 66.66 }, to = { id = 379, x = 963.29, y = 4202.27, z = 64.93 }, isRetrace = True, name = Nothing }
-    , { from = { id = 379, x = 963.29, y = 4202.27, z = 64.93 }, to = { id = 392, x = 963.84, y = 4292.94, z = 67.78 }, isRetrace = False, name = Nothing }
-    , { from = { id = 392, x = 963.84, y = 4292.94, z = 67.78 }, to = { id = 421, x = 1181.52, y = 4535.36, z = 78.32 }, isRetrace = True, name = Just "Margin Path" }
-    , { from = { id = 421, x = 1181.52, y = 4535.36, z = 78.32 }, to = { id = 363, x = 1355.89, y = 4084.60, z = 72.12 }, isRetrace = False, name = Nothing }
-    , { from = { id = 363, x = 1355.89, y = 4084.60, z = 72.12 }, to = { id = 364, x = 1227.87, y = 4056.49, z = 72.21 }, isRetrace = False, name = Nothing }
-    , { from = { id = 364, x = 1227.87, y = 4056.49, z = 72.21 }, to = { id = 363, x = 1355.89, y = 4084.60, z = 72.12 }, isRetrace = True, name = Nothing }
-    , { from = { id = 363, x = 1355.89, y = 4084.60, z = 72.12 }, to = { id = 586, x = 1500.12, y = 4015.56, z = 74.55 }, isRetrace = False, name = Just "Waterside Path" }
-    , { from = { id = 586, x = 1500.12, y = 4015.56, z = 74.55 }, to = { id = 430, x = 1547.93, y = 4331.32, z = 79.60 }, isRetrace = False, name = Just "Lake Avenue" }
-    , { from = { id = 430, x = 1547.93, y = 4331.32, z = 79.60 }, to = { id = 600, x = 1578.18, y = 4453.07, z = 87.62 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 600, x = 1578.18, y = 4453.07, z = 87.62 }, to = { id = 430, x = 1547.93, y = 4331.32, z = 79.60 }, isRetrace = True, name = Just "Landscape Avenue" }
-    , { from = { id = 430, x = 1547.93, y = 4331.32, z = 79.60 }, to = { id = 429, x = 1674.68, y = 4589.07, z = 82.30 }, isRetrace = False, name = Nothing }
-    , { from = { id = 429, x = 1674.68, y = 4589.07, z = 82.30 }, to = { id = 416, x = 1682.38, y = 4603.57, z = 82.30 }, isRetrace = True, name = Nothing }
-    , { from = { id = 416, x = 1682.38, y = 4603.57, z = 82.30 }, to = { id = 381, x = 1648.70, y = 4634.83, z = 86.03 }, isRetrace = False, name = Nothing }
-    , { from = { id = 381, x = 1648.70, y = 4634.83, z = 86.03 }, to = { id = 58, x = 1539.18, y = 4630.57, z = 87.53 }, isRetrace = False, name = Nothing }
-    , { from = { id = 58, x = 1539.18, y = 4630.57, z = 87.53 }, to = { id = 419, x = 1405.68, y = 4627.82, z = 86.04 }, isRetrace = False, name = Nothing }
-    , { from = { id = 419, x = 1405.68, y = 4627.82, z = 86.04 }, to = { id = 58, x = 1539.18, y = 4630.57, z = 87.53 }, isRetrace = True, name = Nothing }
-    , { from = { id = 58, x = 1539.18, y = 4630.57, z = 87.53 }, to = { id = 59, x = 1518.68, y = 4584.82, z = 87.89 }, isRetrace = False, name = Nothing }
-    , { from = { id = 59, x = 1518.68, y = 4584.82, z = 87.89 }, to = { id = 58, x = 1539.18, y = 4630.57, z = 87.53 }, isRetrace = True, name = Nothing }
-    , { from = { id = 58, x = 1539.18, y = 4630.57, z = 87.53 }, to = { id = 381, x = 1648.70, y = 4634.83, z = 86.03 }, isRetrace = True, name = Nothing }
-    , { from = { id = 381, x = 1648.70, y = 4634.83, z = 86.03 }, to = { id = 436, x = 1725.68, y = 4675.07, z = 86.52 }, isRetrace = False, name = Nothing }
-    , { from = { id = 436, x = 1725.68, y = 4675.07, z = 86.52 }, to = { id = 60, x = 1822.41, y = 4824.18, z = 130.41 }, isRetrace = False, name = Nothing }
-    , { from = { id = 60, x = 1822.41, y = 4824.18, z = 130.41 }, to = { id = 439, x = 1841.34, y = 4738.31, z = 93.60 }, isRetrace = False, name = Just "Landscape Avenue" }
-    , { from = { id = 439, x = 1841.34, y = 4738.31, z = 93.60 }, to = { id = 62, x = 1893.38, y = 4775.05, z = 93.60 }, isRetrace = True, name = Nothing }
-    , { from = { id = 62, x = 1893.38, y = 4775.05, z = 93.60 }, to = { id = 61, x = 1566.94, y = 5129.51, z = 67.01 }, isRetrace = False, name = Nothing }
-    , { from = { id = 61, x = 1566.94, y = 5129.51, z = 67.01 }, to = { id = 60, x = 1822.41, y = 4824.18, z = 130.41 }, isRetrace = False, name = Nothing }
-    , { from = { id = 60, x = 1822.41, y = 4824.18, z = 130.41 }, to = { id = 61, x = 1566.94, y = 5129.51, z = 67.01 }, isRetrace = False, name = Nothing }
+    , { from = { id = 523, x = 4046.18, y = 2459.32, z = 125.73 }, to = { id = 264, x = 4613.97, y = 2700.55, z = 109.70 }, isRetrace = False, name = Just "Edge Hill Path" }
+    , { from = { id = 264, x = 4613.97, y = 2700.55, z = 109.70 }, to = { id = 263, x = 4642.39, y = 2599.30, z = 98.76 }, isRetrace = False, name = Nothing }
+    , { from = { id = 263, x = 4642.39, y = 2599.30, z = 98.76 }, to = { id = 264, x = 4613.97, y = 2700.55, z = 109.70 }, isRetrace = True, name = Nothing }
+    , { from = { id = 264, x = 4613.97, y = 2700.55, z = 109.70 }, to = { id = 275, x = 4666.92, y = 2802.40, z = 125.33 }, isRetrace = False, name = Just "Hillside Avenue" }
+    , { from = { id = 275, x = 4666.92, y = 2802.40, z = 125.33 }, to = { id = 545, x = 5011.68, y = 2935.57, z = 129.16 }, isRetrace = False, name = Just "Dawn Path" }
+    , { from = { id = 545, x = 5011.68, y = 2935.57, z = 129.16 }, to = { id = 275, x = 4666.92, y = 2802.40, z = 125.33 }, isRetrace = True, name = Just "Dawn Path" }
+    , { from = { id = 275, x = 4666.92, y = 2802.40, z = 125.33 }, to = { id = 276, x = 4722.81, y = 2872.92, z = 137.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 276, x = 4722.81, y = 2872.92, z = 137.43 }, to = { id = 543, x = 4544.68, y = 2780.82, z = 148.65 }, isRetrace = False, name = Just "Aurora Path" }
+    , { from = { id = 543, x = 4544.68, y = 2780.82, z = 148.65 }, to = { id = 276, x = 4722.81, y = 2872.92, z = 137.43 }, isRetrace = True, name = Just "Aurora Path" }
+    , { from = { id = 276, x = 4722.81, y = 2872.92, z = 137.43 }, to = { id = 57, x = 4909.22, y = 3383.17, z = 170.00 }, isRetrace = False, name = Just "Hillside Avenue" }
+    , { from = { id = 57, x = 4909.22, y = 3383.17, z = 170.00 }, to = { id = 335, x = 4808.85, y = 3451.35, z = 172.51 }, isRetrace = False, name = Nothing }
+    , { from = { id = 335, x = 4808.85, y = 3451.35, z = 172.51 }, to = { id = 57, x = 4909.22, y = 3383.17, z = 170.00 }, isRetrace = True, name = Nothing }
+    , { from = { id = 57, x = 4909.22, y = 3383.17, z = 170.00 }, to = { id = 58, x = 5212.33, y = 3433.65, z = 142.48 }, isRetrace = False, name = Just "Mountain Path" }
+    , { from = { id = 58, x = 5212.33, y = 3433.65, z = 142.48 }, to = { id = 537, x = 5280.90, y = 3052.80, z = 109.56 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 537, x = 5280.90, y = 3052.80, z = 109.56 }, to = { id = 482, x = 5532.72, y = 1948.41, z = 76.66 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 482, x = 5532.72, y = 1948.41, z = 76.66 }, to = { id = 175, x = 5438.19, y = 1983.34, z = 75.34 }, isRetrace = False, name = Just "Beech Avenue" }
+    , { from = { id = 175, x = 5438.19, y = 1983.34, z = 75.34 }, to = { id = 510, x = 5156.70, y = 2372.10, z = 81.73 }, isRetrace = False, name = Just "Beech Avenue" }
+    , { from = { id = 510, x = 5156.70, y = 2372.10, z = 81.73 }, to = { id = 496, x = 5059.43, y = 2160.32, z = 82.64 }, isRetrace = False, name = Just "Reed Path" }
+    , { from = { id = 496, x = 5059.43, y = 2160.32, z = 82.64 }, to = { id = 20, x = 4856.52, y = 2267.82, z = 82.71 }, isRetrace = False, name = Just "Viburum Path" }
+    , { from = { id = 20, x = 4856.52, y = 2267.82, z = 82.71 }, to = { id = 21, x = 4763.93, y = 2138.32, z = 81.75 }, isRetrace = False, name = Just "Marigold Path" }
+    , { from = { id = 21, x = 4763.93, y = 2138.32, z = 81.75 }, to = { id = 20, x = 4856.52, y = 2267.82, z = 82.71 }, isRetrace = True, name = Just "Marigold Path" }
+    , { from = { id = 20, x = 4856.52, y = 2267.82, z = 82.71 }, to = { id = 496, x = 5059.43, y = 2160.32, z = 82.64 }, isRetrace = True, name = Just "Viburum Path" }
+    , { from = { id = 496, x = 5059.43, y = 2160.32, z = 82.64 }, to = { id = 176, x = 5236.93, y = 2003.20, z = 76.26 }, isRetrace = False, name = Just "Viburum Path" }
+    , { from = { id = 176, x = 5236.93, y = 2003.20, z = 76.26 }, to = { id = 486, x = 5039.92, y = 1936.37, z = 76.48 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 486, x = 5039.92, y = 1936.37, z = 76.48 }, to = { id = 176, x = 5236.93, y = 2003.20, z = 76.26 }, isRetrace = True, name = Just "Sassafras Avenue" }
+    , { from = { id = 176, x = 5236.93, y = 2003.20, z = 76.26 }, to = { id = 175, x = 5438.19, y = 1983.34, z = 75.34 }, isRetrace = False, name = Nothing }
+    , { from = { id = 175, x = 5438.19, y = 1983.34, z = 75.34 }, to = { id = 482, x = 5532.72, y = 1948.41, z = 76.66 }, isRetrace = True, name = Just "Beech Avenue" }
+    , { from = { id = 482, x = 5532.72, y = 1948.41, z = 76.66 }, to = { id = 14, x = 5540.00, y = 1894.76, z = 77.16 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 14, x = 5540.00, y = 1894.76, z = 77.16 }, to = { id = 479, x = 5566.09, y = 1665.49, z = 72.06 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 479, x = 5566.09, y = 1665.49, z = 72.06 }, to = { id = 476, x = 5331.44, y = 1556.98, z = 75.53 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 476, x = 5331.44, y = 1556.98, z = 75.53 }, to = { id = 470, x = 5414.93, y = 1388.32, z = 67.02 }, isRetrace = False, name = Just "Gladiolus Path" }
+    , { from = { id = 470, x = 5414.93, y = 1388.32, z = 67.02 }, to = { id = 454, x = 5045.68, y = 1175.57, z = 72.06 }, isRetrace = False, name = Just "Chrysanthemum Path" }
+    , { from = { id = 454, x = 5045.68, y = 1175.57, z = 72.06 }, to = { id = 136, x = 4918.97, y = 1416.46, z = 85.31 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 136, x = 4918.97, y = 1416.46, z = 85.31 }, to = { id = 454, x = 5045.68, y = 1175.57, z = 72.06 }, isRetrace = True, name = Just "Vine Avenue" }
+    , { from = { id = 454, x = 5045.68, y = 1175.57, z = 72.06 }, to = { id = 118, x = 5191.00, y = 965.91, z = 67.90 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 118, x = 5191.00, y = 965.91, z = 67.90 }, to = { id = 457, x = 5160.36, y = 953.04, z = 67.90 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 457, x = 5160.36, y = 953.04, z = 67.90 }, to = { id = 113, x = 5179.08, y = 917.62, z = 67.90 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 113, x = 5179.08, y = 917.62, z = 67.90 }, to = { id = 456, x = 5247.10, y = 789.97, z = 63.11 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 456, x = 5247.10, y = 789.97, z = 63.11 }, to = { id = 113, x = 5179.08, y = 917.62, z = 67.90 }, isRetrace = True, name = Just "Vine Avenue" }
+    , { from = { id = 113, x = 5179.08, y = 917.62, z = 67.90 }, to = { id = 457, x = 5160.36, y = 953.04, z = 67.90 }, isRetrace = True, name = Just "Vine Avenue" }
+    , { from = { id = 457, x = 5160.36, y = 953.04, z = 67.90 }, to = { id = 112, x = 5128.70, y = 939.60, z = 66.29 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 112, x = 5128.70, y = 939.60, z = 66.29 }, to = { id = 457, x = 5160.36, y = 953.04, z = 67.90 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 457, x = 5160.36, y = 953.04, z = 67.90 }, to = { id = 135, x = 4863.85, y = 1405.09, z = 85.31 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 135, x = 4863.85, y = 1405.09, z = 85.31 }, to = { id = 468, x = 4808.65, y = 1378.96, z = 85.06 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 468, x = 4808.65, y = 1378.96, z = 85.06 }, to = { id = 458, x = 4824.60, y = 957.40, z = 68.00 }, isRetrace = False, name = Just "Celastrus Path" }
+    , { from = { id = 458, x = 4824.60, y = 957.40, z = 68.00 }, to = { id = 453, x = 4583.18, y = 884.07, z = 69.37 }, isRetrace = False, name = Just "Halesia Path" }
+    , { from = { id = 453, x = 4583.18, y = 884.07, z = 69.37 }, to = { id = 253, x = 4669.93, y = 731.32, z = 67.35 }, isRetrace = False, name = Just "Lonicera Path" }
+    , { from = { id = 253, x = 4669.93, y = 731.32, z = 67.35 }, to = { id = 103, x = 4720.86, y = 637.98, z = 64.99 }, isRetrace = False, name = Just "Lonicera Path" }
+    , { from = { id = 103, x = 4720.86, y = 637.98, z = 64.99 }, to = { id = 253, x = 4669.93, y = 731.32, z = 67.35 }, isRetrace = True, name = Just "Lonicera Path" }
+    , { from = { id = 253, x = 4669.93, y = 731.32, z = 67.35 }, to = { id = 254, x = 4268.68, y = 469.57, z = 69.52 }, isRetrace = False, name = Just "Tunica Path" }
+    , { from = { id = 254, x = 4268.68, y = 469.57, z = 69.52 }, to = { id = 117, x = 4191.68, y = 887.07, z = 78.36 }, isRetrace = False, name = Just "Tecoma Path" }
+    , { from = { id = 117, x = 4191.68, y = 887.07, z = 78.36 }, to = { id = 453, x = 4583.18, y = 884.07, z = 69.37 }, isRetrace = False, name = Just "Halesia Path" }
+    , { from = { id = 453, x = 4583.18, y = 884.07, z = 69.37 }, to = { id = 463, x = 4418.16, y = 1148.04, z = 85.32 }, isRetrace = False, name = Just "Lonicera Path" }
+    , { from = { id = 463, x = 4418.16, y = 1148.04, z = 85.32 }, to = { id = 468, x = 4808.65, y = 1378.96, z = 85.06 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 468, x = 4808.65, y = 1378.96, z = 85.06 }, to = { id = 135, x = 4863.85, y = 1405.09, z = 85.31 }, isRetrace = True, name = Just "Fir Avenue" }
+    , { from = { id = 135, x = 4863.85, y = 1405.09, z = 85.31 }, to = { id = 11, x = 4755.90, y = 1539.49, z = 82.90 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 11, x = 4755.90, y = 1539.49, z = 82.90 }, to = { id = 135, x = 4863.85, y = 1405.09, z = 85.31 }, isRetrace = True, name = Just "Vine Avenue" }
+    , { from = { id = 135, x = 4863.85, y = 1405.09, z = 85.31 }, to = { id = 136, x = 4918.97, y = 1416.46, z = 85.31 }, isRetrace = False, name = Nothing }
+    , { from = { id = 136, x = 4918.97, y = 1416.46, z = 85.31 }, to = { id = 476, x = 5331.44, y = 1556.98, z = 75.53 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 476, x = 5331.44, y = 1556.98, z = 75.53 }, to = { id = 15, x = 5194.43, y = 1741.15, z = 88.27 }, isRetrace = False, name = Just "Gladiolus Path" }
+    , { from = { id = 15, x = 5194.43, y = 1741.15, z = 88.27 }, to = { id = 486, x = 5039.92, y = 1936.37, z = 76.48 }, isRetrace = False, name = Just "Gladiolus Path" }
+    , { from = { id = 486, x = 5039.92, y = 1936.37, z = 76.48 }, to = { id = 170, x = 4815.34, y = 1826.25, z = 79.29 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 170, x = 4815.34, y = 1826.25, z = 79.29 }, to = { id = 169, x = 4779.43, y = 1901.82, z = 82.04 }, isRetrace = False, name = Nothing }
+    , { from = { id = 169, x = 4779.43, y = 1901.82, z = 82.04 }, to = { id = 498, x = 4477.93, y = 2169.57, z = 88.79 }, isRetrace = False, name = Just "Vernal Path" }
+    , { from = { id = 498, x = 4477.93, y = 2169.57, z = 88.79 }, to = { id = 184, x = 4355.10, y = 2090.48, z = 93.74 }, isRetrace = True, name = Just "Mahonia Path" }
+    , { from = { id = 184, x = 4355.10, y = 2090.48, z = 93.74 }, to = { id = 185, x = 4269.01, y = 1968.33, z = 90.14 }, isRetrace = False, name = Nothing }
+    , { from = { id = 185, x = 4269.01, y = 1968.33, z = 90.14 }, to = { id = 184, x = 4355.10, y = 2090.48, z = 93.74 }, isRetrace = True, name = Nothing }
+    , { from = { id = 184, x = 4355.10, y = 2090.48, z = 93.74 }, to = { id = 163, x = 4655.43, y = 1842.32, z = 83.92 }, isRetrace = False, name = Just "Landscape Path" }
+    , { from = { id = 163, x = 4655.43, y = 1842.32, z = 83.92 }, to = { id = 169, x = 4779.43, y = 1901.82, z = 82.04 }, isRetrace = False, name = Just "Prim Path" }
+    , { from = { id = 169, x = 4779.43, y = 1901.82, z = 82.04 }, to = { id = 170, x = 4815.34, y = 1826.25, z = 79.29 }, isRetrace = True, name = Nothing }
+    , { from = { id = 170, x = 4815.34, y = 1826.25, z = 79.29 }, to = { id = 164, x = 4689.68, y = 1770.69, z = 80.69 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 164, x = 4689.68, y = 1770.69, z = 80.69 }, to = { id = 163, x = 4655.43, y = 1842.32, z = 83.92 }, isRetrace = False, name = Nothing }
+    , { from = { id = 163, x = 4655.43, y = 1842.32, z = 83.92 }, to = { id = 164, x = 4689.68, y = 1770.69, z = 80.69 }, isRetrace = True, name = Nothing }
+    , { from = { id = 164, x = 4689.68, y = 1770.69, z = 80.69 }, to = { id = 9, x = 4587.73, y = 1728.53, z = 82.47 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 9, x = 4587.73, y = 1728.53, z = 82.47 }, to = { id = 483, x = 4521.88, y = 1787.41, z = 82.73 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 483, x = 4521.88, y = 1787.41, z = 82.73 }, to = { id = 481, x = 4252.18, y = 1692.32, z = 89.37 }, isRetrace = True, name = Just "Alder Path" }
+    , { from = { id = 481, x = 4252.18, y = 1692.32, z = 89.37 }, to = { id = 147, x = 4187.68, y = 1653.07, z = 89.27 }, isRetrace = False, name = Just "Alder Path" }
+    , { from = { id = 147, x = 4187.68, y = 1653.07, z = 89.27 }, to = { id = 149, x = 4160.68, y = 1667.82, z = 90.28 }, isRetrace = False, name = Just "Saffron Path" }
+    , { from = { id = 149, x = 4160.68, y = 1667.82, z = 90.28 }, to = { id = 161, x = 3658.93, y = 1812.07, z = 98.76 }, isRetrace = False, name = Just "Saffron Path" }
+    , { from = { id = 161, x = 3658.93, y = 1812.07, z = 98.76 }, to = { id = 152, x = 3572.45, y = 1786.14, z = 96.34 }, isRetrace = False, name = Nothing }
+    , { from = { id = 152, x = 3572.45, y = 1786.14, z = 96.34 }, to = { id = 145, x = 3747.08, y = 1642.58, z = 91.62 }, isRetrace = False, name = Nothing }
+    , { from = { id = 145, x = 3747.08, y = 1642.58, z = 91.62 }, to = { id = 146, x = 3857.41, y = 1563.49, z = 91.10 }, isRetrace = False, name = Nothing }
+    , { from = { id = 146, x = 3857.41, y = 1563.49, z = 91.10 }, to = { id = 149, x = 4160.68, y = 1667.82, z = 90.28 }, isRetrace = False, name = Just "Alder Path" }
+    , { from = { id = 149, x = 4160.68, y = 1667.82, z = 90.28 }, to = { id = 147, x = 4187.68, y = 1653.07, z = 89.27 }, isRetrace = True, name = Just "Saffron Path" }
+    , { from = { id = 147, x = 4187.68, y = 1653.07, z = 89.27 }, to = { id = 148, x = 4204.89, y = 1595.73, z = 86.16 }, isRetrace = False, name = Nothing }
+    , { from = { id = 148, x = 4204.89, y = 1595.73, z = 86.16 }, to = { id = 141, x = 3888.76, y = 1517.83, z = 90.63 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 141, x = 3888.76, y = 1517.83, z = 90.63 }, to = { id = 475, x = 3855.85, y = 1504.87, z = 90.63 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 475, x = 3855.85, y = 1504.87, z = 90.63 }, to = { id = 141, x = 3888.76, y = 1517.83, z = 90.63 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 141, x = 3888.76, y = 1517.83, z = 90.63 }, to = { id = 146, x = 3857.41, y = 1563.49, z = 91.10 }, isRetrace = False, name = Just "Grape Avenue" }
+    , { from = { id = 146, x = 3857.41, y = 1563.49, z = 91.10 }, to = { id = 145, x = 3747.08, y = 1642.58, z = 91.62 }, isRetrace = True, name = Nothing }
+    , { from = { id = 145, x = 3747.08, y = 1642.58, z = 91.62 }, to = { id = 6, x = 3700.43, y = 1573.32, z = 92.71 }, isRetrace = False, name = Just "Zephyr Path" }
+    , { from = { id = 6, x = 3700.43, y = 1573.32, z = 92.71 }, to = { id = 4, x = 3529.43, y = 1718.57, z = 98.08 }, isRetrace = False, name = Nothing }
+    , { from = { id = 4, x = 3529.43, y = 1718.57, z = 98.08 }, to = { id = 152, x = 3572.45, y = 1786.14, z = 96.34 }, isRetrace = False, name = Just "Lawn Path" }
+    , { from = { id = 152, x = 3572.45, y = 1786.14, z = 96.34 }, to = { id = 172, x = 3509.84, y = 1823.00, z = 98.78 }, isRetrace = False, name = Just "Saffron Path" }
+    , { from = { id = 172, x = 3509.84, y = 1823.00, z = 98.78 }, to = { id = 156, x = 3356.53, y = 1633.52, z = 99.00 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 156, x = 3356.53, y = 1633.52, z = 99.00 }, to = { id = 142, x = 3276.50, y = 1540.46, z = 99.05 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 142, x = 3276.50, y = 1540.46, z = 99.05 }, to = { id = 156, x = 3356.53, y = 1633.52, z = 99.00 }, isRetrace = True, name = Just "Cypress Avenue" }
+    , { from = { id = 156, x = 3356.53, y = 1633.52, z = 99.00 }, to = { id = 155, x = 3200.43, y = 1799.07, z = 118.46 }, isRetrace = False, name = Nothing }
+    , { from = { id = 155, x = 3200.43, y = 1799.07, z = 118.46 }, to = { id = 480, x = 3042.68, y = 1685.57, z = 124.22 }, isRetrace = False, name = Just "Hazel Path" }
+    , { from = { id = 480, x = 3042.68, y = 1685.57, z = 124.22 }, to = { id = 144, x = 2971.93, y = 1578.57, z = 123.83 }, isRetrace = False, name = Just "Hazel Path" }
+    , { from = { id = 144, x = 2971.93, y = 1578.57, z = 123.83 }, to = { id = 143, x = 2942.18, y = 1568.57, z = 125.49 }, isRetrace = False, name = Nothing }
+    , { from = { id = 143, x = 2942.18, y = 1568.57, z = 125.49 }, to = { id = 144, x = 2971.93, y = 1578.57, z = 123.83 }, isRetrace = True, name = Nothing }
+    , { from = { id = 144, x = 2971.93, y = 1578.57, z = 123.83 }, to = { id = 471, x = 3085.28, y = 1400.34, z = 103.37 }, isRetrace = False, name = Just "Heath Path" }
+    , { from = { id = 471, x = 3085.28, y = 1400.34, z = 103.37 }, to = { id = 133, x = 2925.12, y = 1310.64, z = 105.16 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 133, x = 2925.12, y = 1310.64, z = 105.16 }, to = { id = 132, x = 2869.17, y = 1286.14, z = 107.73 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 132, x = 2869.17, y = 1286.14, z = 107.73 }, to = { id = 168, x = 2778.14, y = 1339.44, z = 111.15 }, isRetrace = False, name = Just "Mistletoe Path" }
+    , { from = { id = 168, x = 2778.14, y = 1339.44, z = 111.15 }, to = { id = 109, x = 2634.43, y = 1183.32, z = 115.54 }, isRetrace = False, name = Just "Hazel Path" }
+    , { from = { id = 109, x = 2634.43, y = 1183.32, z = 115.54 }, to = { id = 123, x = 2595.68, y = 1208.57, z = 121.51 }, isRetrace = False, name = Nothing }
+    , { from = { id = 123, x = 2595.68, y = 1208.57, z = 121.51 }, to = { id = 469, x = 2539.93, y = 1379.32, z = 121.99 }, isRetrace = False, name = Just "Jonquil Path" }
+    , { from = { id = 469, x = 2539.93, y = 1379.32, z = 121.99 }, to = { id = 123, x = 2595.68, y = 1208.57, z = 121.51 }, isRetrace = True, name = Just "Jonquil Path" }
+    , { from = { id = 123, x = 2595.68, y = 1208.57, z = 121.51 }, to = { id = 124, x = 2520.93, y = 1127.57, z = 117.57 }, isRetrace = False, name = Nothing }
+    , { from = { id = 124, x = 2520.93, y = 1127.57, z = 117.57 }, to = { id = 455, x = 2451.18, y = 1177.32, z = 124.81 }, isRetrace = False, name = Just "Garland Path" }
+    , { from = { id = 455, x = 2451.18, y = 1177.32, z = 124.81 }, to = { id = 124, x = 2520.93, y = 1127.57, z = 117.57 }, isRetrace = True, name = Just "Garland Path" }
+    , { from = { id = 124, x = 2520.93, y = 1127.57, z = 117.57 }, to = { id = 461, x = 2616.37, y = 1051.18, z = 104.05 }, isRetrace = False, name = Just "Garland Path" }
+    , { from = { id = 461, x = 2616.37, y = 1051.18, z = 104.05 }, to = { id = 119, x = 2567.87, y = 994.88, z = 105.42 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 119, x = 2567.87, y = 994.88, z = 105.42 }, to = { id = 462, x = 2366.56, y = 1082.30, z = 122.16 }, isRetrace = False, name = Just "Dale Avenue" }
+    , { from = { id = 462, x = 2366.56, y = 1082.30, z = 122.16 }, to = { id = 459, x = 2262.68, y = 974.82, z = 115.08 }, isRetrace = False, name = Just "Corylus Path" }
+    , { from = { id = 459, x = 2262.68, y = 974.82, z = 115.08 }, to = { id = 462, x = 2366.56, y = 1082.30, z = 122.16 }, isRetrace = True, name = Just "Corylus Path" }
+    , { from = { id = 462, x = 2366.56, y = 1082.30, z = 122.16 }, to = { id = 125, x = 2209.62, y = 1232.26, z = 120.46 }, isRetrace = False, name = Just "Dale Avenue" }
+    , { from = { id = 125, x = 2209.62, y = 1232.26, z = 120.46 }, to = { id = 131, x = 2231.08, y = 1273.82, z = 121.64 }, isRetrace = False, name = Nothing }
+    , { from = { id = 131, x = 2231.08, y = 1273.82, z = 121.64 }, to = { id = 125, x = 2209.62, y = 1232.26, z = 120.46 }, isRetrace = True, name = Nothing }
+    , { from = { id = 125, x = 2209.62, y = 1232.26, z = 120.46 }, to = { id = 120, x = 2090.83, y = 1028.60, z = 107.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 120, x = 2090.83, y = 1028.60, z = 107.79 }, to = { id = 111, x = 2189.58, y = 921.72, z = 105.67 }, isRetrace = False, name = Nothing }
+    , { from = { id = 111, x = 2189.58, y = 921.72, z = 105.67 }, to = { id = 459, x = 2262.68, y = 974.82, z = 115.08 }, isRetrace = False, name = Just "Corylus Path" }
+    , { from = { id = 459, x = 2262.68, y = 974.82, z = 115.08 }, to = { id = 225, x = 2566.43, y = 719.57, z = 93.84 }, isRetrace = False, name = Just "Clethra Path" }
+    , { from = { id = 225, x = 2566.43, y = 719.57, z = 93.84 }, to = { id = 282, x = 2647.17, y = 801.94, z = 94.85 }, isRetrace = False, name = Just "Cydonia Path" }
+    , { from = { id = 282, x = 2647.17, y = 801.94, z = 94.85 }, to = { id = 115, x = 2570.29, y = 909.97, z = 100.08 }, isRetrace = False, name = Just "Dale Avenue" }
+    , { from = { id = 115, x = 2570.29, y = 909.97, z = 100.08 }, to = { id = 119, x = 2567.87, y = 994.88, z = 105.42 }, isRetrace = False, name = Nothing }
+    , { from = { id = 119, x = 2567.87, y = 994.88, z = 105.42 }, to = { id = 115, x = 2570.29, y = 909.97, z = 100.08 }, isRetrace = True, name = Nothing }
+    , { from = { id = 115, x = 2570.29, y = 909.97, z = 100.08 }, to = { id = 114, x = 2663.93, y = 954.57, z = 99.85 }, isRetrace = False, name = Nothing }
+    , { from = { id = 114, x = 2663.93, y = 954.57, z = 99.85 }, to = { id = 107, x = 2897.37, y = 769.43, z = 86.59 }, isRetrace = False, name = Just "Olive Path" }
+    , { from = { id = 107, x = 2897.37, y = 769.43, z = 86.59 }, to = { id = 452, x = 2972.84, y = 830.41, z = 87.32 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 452, x = 2972.84, y = 830.41, z = 87.32 }, to = { id = 99, x = 3641.14, y = 332.41, z = 75.86 }, isRetrace = False, name = Just "Prairie Path" }
+    , { from = { id = 99, x = 3641.14, y = 332.41, z = 75.86 }, to = { id = 425, x = 3444.36, y = 175.87, z = 74.82 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 425, x = 3444.36, y = 175.87, z = 74.82 }, to = { id = 450, x = 4009.53, y = 226.13, z = 70.03 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 450, x = 4009.53, y = 226.13, z = 70.03 }, to = { id = 449, x = 4264.10, y = 345.32, z = 67.86 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 449, x = 4264.10, y = 345.32, z = 67.86 }, to = { id = 104, x = 4319.96, y = 373.08, z = 67.19 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 104, x = 4319.96, y = 373.08, z = 67.19 }, to = { id = 449, x = 4264.10, y = 345.32, z = 67.86 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 449, x = 4264.10, y = 345.32, z = 67.86 }, to = { id = 451, x = 3944.22, y = 810.32, z = 78.39 }, isRetrace = False, name = Just "Grape Avenue" }
+    , { from = { id = 451, x = 3944.22, y = 810.32, z = 78.39 }, to = { id = 129, x = 3874.15, y = 1019.17, z = 81.79 }, isRetrace = False, name = Just "Grape Avenue" }
+    , { from = { id = 129, x = 3874.15, y = 1019.17, z = 81.79 }, to = { id = 466, x = 3451.78, y = 1260.37, z = 90.87 }, isRetrace = False, name = Just "Woodlawn Path" }
+    , { from = { id = 466, x = 3451.78, y = 1260.37, z = 90.87 }, to = { id = 127, x = 3363.89, y = 1170.51, z = 90.38 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 127, x = 3363.89, y = 1170.51, z = 90.38 }, to = { id = 466, x = 3451.78, y = 1260.37, z = 90.87 }, isRetrace = True, name = Just "Sassafras Avenue" }
+    , { from = { id = 466, x = 3451.78, y = 1260.37, z = 90.87 }, to = { id = 138, x = 3574.80, y = 1367.44, z = 90.68 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 138, x = 3574.80, y = 1367.44, z = 90.68 }, to = { id = 137, x = 3504.43, y = 1421.32, z = 94.46 }, isRetrace = False, name = Nothing }
+    , { from = { id = 137, x = 3504.43, y = 1421.32, z = 94.46 }, to = { id = 139, x = 3372.68, y = 1434.07, z = 98.83 }, isRetrace = False, name = Just "Snowdrop Path" }
+    , { from = { id = 139, x = 3372.68, y = 1434.07, z = 98.83 }, to = { id = 126, x = 3183.43, y = 1235.57, z = 97.96 }, isRetrace = False, name = Nothing }
+    , { from = { id = 126, x = 3183.43, y = 1235.57, z = 97.96 }, to = { id = 130, x = 2969.93, y = 1253.32, z = 104.32 }, isRetrace = False, name = Nothing }
+    , { from = { id = 130, x = 2969.93, y = 1253.32, z = 104.32 }, to = { id = 133, x = 2925.12, y = 1310.64, z = 105.16 }, isRetrace = False, name = Nothing }
+    , { from = { id = 133, x = 2925.12, y = 1310.64, z = 105.16 }, to = { id = 471, x = 3085.28, y = 1400.34, z = 103.37 }, isRetrace = True, name = Just "Cypress Avenue" }
+    , { from = { id = 471, x = 3085.28, y = 1400.34, z = 103.37 }, to = { id = 142, x = 3276.50, y = 1540.46, z = 99.05 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 142, x = 3276.50, y = 1540.46, z = 99.05 }, to = { id = 5, x = 3334.93, y = 1479.57, z = 99.15 }, isRetrace = False, name = Nothing }
+    , { from = { id = 5, x = 3334.93, y = 1479.57, z = 99.15 }, to = { id = 139, x = 3372.68, y = 1434.07, z = 98.83 }, isRetrace = False, name = Nothing }
+    , { from = { id = 139, x = 3372.68, y = 1434.07, z = 98.83 }, to = { id = 5, x = 3334.93, y = 1479.57, z = 99.15 }, isRetrace = True, name = Nothing }
+    , { from = { id = 5, x = 3334.93, y = 1479.57, z = 99.15 }, to = { id = 4, x = 3529.43, y = 1718.57, z = 98.08 }, isRetrace = False, name = Just "Lawn Path" }
+    , { from = { id = 4, x = 3529.43, y = 1718.57, z = 98.08 }, to = { id = 6, x = 3700.43, y = 1573.32, z = 92.71 }, isRetrace = True, name = Nothing }
+    , { from = { id = 6, x = 3700.43, y = 1573.32, z = 92.71 }, to = { id = 137, x = 3504.43, y = 1421.32, z = 94.46 }, isRetrace = False, name = Just "Zephyr Path" }
+    , { from = { id = 137, x = 3504.43, y = 1421.32, z = 94.46 }, to = { id = 138, x = 3574.80, y = 1367.44, z = 90.68 }, isRetrace = True, name = Nothing }
+    , { from = { id = 138, x = 3574.80, y = 1367.44, z = 90.68 }, to = { id = 475, x = 3855.85, y = 1504.87, z = 90.63 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 475, x = 3855.85, y = 1504.87, z = 90.63 }, to = { id = 141, x = 3888.76, y = 1517.83, z = 90.63 }, isRetrace = True, name = Just "Sassafras Avenue" }
+    , { from = { id = 141, x = 3888.76, y = 1517.83, z = 90.63 }, to = { id = 128, x = 3870.50, y = 1243.99, z = 87.28 }, isRetrace = False, name = Nothing }
+    , { from = { id = 128, x = 3870.50, y = 1243.99, z = 87.28 }, to = { id = 129, x = 3874.15, y = 1019.17, z = 81.79 }, isRetrace = False, name = Nothing }
+    , { from = { id = 129, x = 3874.15, y = 1019.17, z = 81.79 }, to = { id = 128, x = 3870.50, y = 1243.99, z = 87.28 }, isRetrace = True, name = Nothing }
+    , { from = { id = 128, x = 3870.50, y = 1243.99, z = 87.28 }, to = { id = 460, x = 4169.94, y = 979.95, z = 81.26 }, isRetrace = False, name = Just "Lychnis Path" }
+    , { from = { id = 460, x = 4169.94, y = 979.95, z = 81.26 }, to = { id = 116, x = 4137.53, y = 959.10, z = 80.91 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 116, x = 4137.53, y = 959.10, z = 80.91 }, to = { id = 460, x = 4169.94, y = 979.95, z = 81.26 }, isRetrace = True, name = Just "Fir Avenue" }
+    , { from = { id = 460, x = 4169.94, y = 979.95, z = 81.26 }, to = { id = 463, x = 4418.16, y = 1148.04, z = 85.32 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 463, x = 4418.16, y = 1148.04, z = 85.32 }, to = { id = 10, x = 4265.54, y = 1611.86, z = 85.31 }, isRetrace = False, name = Just "Lonicera Path" }
+    , { from = { id = 10, x = 4265.54, y = 1611.86, z = 85.31 }, to = { id = 148, x = 4204.89, y = 1595.73, z = 86.16 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 148, x = 4204.89, y = 1595.73, z = 86.16 }, to = { id = 10, x = 4265.54, y = 1611.86, z = 85.31 }, isRetrace = True, name = Just "Sassafras Avenue" }
+    , { from = { id = 10, x = 4265.54, y = 1611.86, z = 85.31 }, to = { id = 9, x = 4587.73, y = 1728.53, z = 82.47 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 9, x = 4587.73, y = 1728.53, z = 82.47 }, to = { id = 11, x = 4755.90, y = 1539.49, z = 82.90 }, isRetrace = False, name = Just "Vine Avenue" }
+    , { from = { id = 11, x = 4755.90, y = 1539.49, z = 82.90 }, to = { id = 15, x = 5194.43, y = 1741.15, z = 88.27 }, isRetrace = False, name = Just "Amaryllis Path" }
+    , { from = { id = 15, x = 5194.43, y = 1741.15, z = 88.27 }, to = { id = 14, x = 5540.00, y = 1894.76, z = 77.16 }, isRetrace = False, name = Just "Amaryllis Path" }
+    , { from = { id = 14, x = 5540.00, y = 1894.76, z = 77.16 }, to = { id = 479, x = 5566.09, y = 1665.49, z = 72.06 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 479, x = 5566.09, y = 1665.49, z = 72.06 }, to = { id = 122, x = 5492.59, y = 1183.62, z = 63.54 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 122, x = 5492.59, y = 1183.62, z = 63.54 }, to = { id = 470, x = 5414.93, y = 1388.32, z = 67.02 }, isRetrace = False, name = Just "Gladiolus Path" }
+    , { from = { id = 470, x = 5414.93, y = 1388.32, z = 67.02 }, to = { id = 122, x = 5492.59, y = 1183.62, z = 63.54 }, isRetrace = True, name = Just "Gladiolus Path" }
+    , { from = { id = 122, x = 5492.59, y = 1183.62, z = 63.54 }, to = { id = 118, x = 5191.00, y = 965.91, z = 67.90 }, isRetrace = False, name = Nothing }
+    , { from = { id = 118, x = 5191.00, y = 965.91, z = 67.90 }, to = { id = 113, x = 5179.08, y = 917.62, z = 67.90 }, isRetrace = False, name = Nothing }
+    , { from = { id = 113, x = 5179.08, y = 917.62, z = 67.90 }, to = { id = 112, x = 5128.70, y = 939.60, z = 66.29 }, isRetrace = False, name = Nothing }
+    , { from = { id = 112, x = 5128.70, y = 939.60, z = 66.29 }, to = { id = 458, x = 4824.60, y = 957.40, z = 68.00 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 458, x = 4824.60, y = 957.40, z = 68.00 }, to = { id = 108, x = 4882.59, y = 776.12, z = 64.67 }, isRetrace = False, name = Just "Celastrus Path" }
+    , { from = { id = 108, x = 4882.59, y = 776.12, z = 64.67 }, to = { id = 112, x = 5128.70, y = 939.60, z = 66.29 }, isRetrace = False, name = Nothing }
+    , { from = { id = 112, x = 5128.70, y = 939.60, z = 66.29 }, to = { id = 108, x = 4882.59, y = 776.12, z = 64.67 }, isRetrace = True, name = Nothing }
+    , { from = { id = 108, x = 4882.59, y = 776.12, z = 64.67 }, to = { id = 103, x = 4720.86, y = 637.98, z = 64.99 }, isRetrace = False, name = Nothing }
+    , { from = { id = 103, x = 4720.86, y = 637.98, z = 64.99 }, to = { id = 104, x = 4319.96, y = 373.08, z = 67.19 }, isRetrace = False, name = Nothing }
+    , { from = { id = 104, x = 4319.96, y = 373.08, z = 67.19 }, to = { id = 254, x = 4268.68, y = 469.57, z = 69.52 }, isRetrace = False, name = Just "Tecoma Path" }
+    , { from = { id = 254, x = 4268.68, y = 469.57, z = 69.52 }, to = { id = 117, x = 4191.68, y = 887.07, z = 78.36 }, isRetrace = True, name = Just "Tecoma Path" }
+    , { from = { id = 117, x = 4191.68, y = 887.07, z = 78.36 }, to = { id = 116, x = 4137.53, y = 959.10, z = 80.91 }, isRetrace = False, name = Nothing }
+    , { from = { id = 116, x = 4137.53, y = 959.10, z = 80.91 }, to = { id = 451, x = 3944.22, y = 810.32, z = 78.39 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 451, x = 3944.22, y = 810.32, z = 78.39 }, to = { id = 101, x = 3759.37, y = 558.11, z = 76.36 }, isRetrace = False, name = Just "Fir Avenue" }
+    , { from = { id = 101, x = 3759.37, y = 558.11, z = 76.36 }, to = { id = 450, x = 4009.53, y = 226.13, z = 70.03 }, isRetrace = False, name = Just "Rubra Path" }
+    , { from = { id = 450, x = 4009.53, y = 226.13, z = 70.03 }, to = { id = 101, x = 3759.37, y = 558.11, z = 76.36 }, isRetrace = True, name = Just "Rubra Path" }
+    , { from = { id = 101, x = 3759.37, y = 558.11, z = 76.36 }, to = { id = 98, x = 3708.72, y = 455.47, z = 75.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 98, x = 3708.72, y = 455.47, z = 75.43 }, to = { id = 99, x = 3641.14, y = 332.41, z = 75.86 }, isRetrace = False, name = Nothing }
+    , { from = { id = 99, x = 3641.14, y = 332.41, z = 75.86 }, to = { id = 98, x = 3708.72, y = 455.47, z = 75.43 }, isRetrace = True, name = Nothing }
+    , { from = { id = 98, x = 3708.72, y = 455.47, z = 75.43 }, to = { id = 3, x = 3100.71, y = 944.09, z = 88.89 }, isRetrace = False, name = Just "Mistletoe Path" }
+    , { from = { id = 3, x = 3100.71, y = 944.09, z = 88.89 }, to = { id = 127, x = 3363.89, y = 1170.51, z = 90.38 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 127, x = 3363.89, y = 1170.51, z = 90.38 }, to = { id = 126, x = 3183.43, y = 1235.57, z = 97.96 }, isRetrace = False, name = Nothing }
+    , { from = { id = 126, x = 3183.43, y = 1235.57, z = 97.96 }, to = { id = 130, x = 2969.93, y = 1253.32, z = 104.32 }, isRetrace = True, name = Nothing }
+    , { from = { id = 130, x = 2969.93, y = 1253.32, z = 104.32 }, to = { id = 1, x = 2900.27, y = 1188.90, z = 102.91 }, isRetrace = False, name = Nothing }
+    , { from = { id = 1, x = 2900.27, y = 1188.90, z = 102.91 }, to = { id = 132, x = 2869.17, y = 1286.14, z = 107.73 }, isRetrace = False, name = Nothing }
+    , { from = { id = 132, x = 2869.17, y = 1286.14, z = 107.73 }, to = { id = 110, x = 2696.03, y = 1127.24, z = 106.27 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 110, x = 2696.03, y = 1127.24, z = 106.27 }, to = { id = 109, x = 2634.43, y = 1183.32, z = 115.54 }, isRetrace = False, name = Nothing }
+    , { from = { id = 109, x = 2634.43, y = 1183.32, z = 115.54 }, to = { id = 110, x = 2696.03, y = 1127.24, z = 106.27 }, isRetrace = True, name = Nothing }
+    , { from = { id = 110, x = 2696.03, y = 1127.24, z = 106.27 }, to = { id = 461, x = 2616.37, y = 1051.18, z = 104.05 }, isRetrace = False, name = Just "Cypress Avenue" }
+    , { from = { id = 461, x = 2616.37, y = 1051.18, z = 104.05 }, to = { id = 2, x = 2670.18, y = 990.07, z = 101.77 }, isRetrace = False, name = Just "Garland Path" }
+    , { from = { id = 2, x = 2670.18, y = 990.07, z = 101.77 }, to = { id = 114, x = 2663.93, y = 954.57, z = 99.85 }, isRetrace = False, name = Nothing }
+    , { from = { id = 114, x = 2663.93, y = 954.57, z = 99.85 }, to = { id = 2, x = 2670.18, y = 990.07, z = 101.77 }, isRetrace = True, name = Nothing }
+    , { from = { id = 2, x = 2670.18, y = 990.07, z = 101.77 }, to = { id = 1, x = 2900.27, y = 1188.90, z = 102.91 }, isRetrace = False, name = Nothing }
+    , { from = { id = 1, x = 2900.27, y = 1188.90, z = 102.91 }, to = { id = 3, x = 3100.71, y = 944.09, z = 88.89 }, isRetrace = False, name = Just "Mistletoe Path" }
+    , { from = { id = 3, x = 3100.71, y = 944.09, z = 88.89 }, to = { id = 452, x = 2972.84, y = 830.41, z = 87.32 }, isRetrace = False, name = Just "Sassafras Avenue" }
+    , { from = { id = 452, x = 2972.84, y = 830.41, z = 87.32 }, to = { id = 107, x = 2897.37, y = 769.43, z = 86.59 }, isRetrace = True, name = Just "Sassafras Avenue" }
+    , { from = { id = 107, x = 2897.37, y = 769.43, z = 86.59 }, to = { id = 105, x = 2856.45, y = 718.40, z = 86.65 }, isRetrace = False, name = Nothing }
+    , { from = { id = 105, x = 2856.45, y = 718.40, z = 86.65 }, to = { id = 106, x = 2829.17, y = 728.61, z = 86.65 }, isRetrace = False, name = Nothing }
+    , { from = { id = 106, x = 2829.17, y = 728.61, z = 86.65 }, to = { id = 282, x = 2647.17, y = 801.94, z = 94.85 }, isRetrace = False, name = Just "Dale Avenue" }
+    , { from = { id = 282, x = 2647.17, y = 801.94, z = 94.85 }, to = { id = 225, x = 2566.43, y = 719.57, z = 93.84 }, isRetrace = True, name = Just "Cydonia Path" }
+    , { from = { id = 225, x = 2566.43, y = 719.57, z = 93.84 }, to = { id = 102, x = 2478.50, y = 614.70, z = 91.43 }, isRetrace = False, name = Just "Cydonia Path" }
+    , { from = { id = 102, x = 2478.50, y = 614.70, z = 91.43 }, to = { id = 225, x = 2566.43, y = 719.57, z = 93.84 }, isRetrace = True, name = Just "Cydonia Path" }
+    , { from = { id = 225, x = 2566.43, y = 719.57, z = 93.84 }, to = { id = 100, x = 2771.42, y = 556.70, z = 87.45 }, isRetrace = False, name = Just "Clethra Path" }
+    , { from = { id = 100, x = 2771.42, y = 556.70, z = 87.45 }, to = { id = 96, x = 2676.30, y = 435.27, z = 85.07 }, isRetrace = False, name = Nothing }
+    , { from = { id = 96, x = 2676.30, y = 435.27, z = 85.07 }, to = { id = 100, x = 2771.42, y = 556.70, z = 87.45 }, isRetrace = True, name = Nothing }
+    , { from = { id = 100, x = 2771.42, y = 556.70, z = 87.45 }, to = { id = 105, x = 2856.45, y = 718.40, z = 86.65 }, isRetrace = False, name = Nothing }
+    , { from = { id = 105, x = 2856.45, y = 718.40, z = 86.65 }, to = { id = 97, x = 3422.66, y = 173.62, z = 74.82 }, isRetrace = False, name = Just "Dale Avenue" }
+    , { from = { id = 97, x = 3422.66, y = 173.62, z = 74.82 }, to = { id = 425, x = 3444.36, y = 175.87, z = 74.82 }, isRetrace = False, name = Just "Border Avenue" }
+    , { from = { id = 425, x = 3444.36, y = 175.87, z = 74.82 }, to = { id = 97, x = 3422.66, y = 173.62, z = 74.82 }, isRetrace = True, name = Just "Border Avenue" }
+    , { from = { id = 97, x = 3422.66, y = 173.62, z = 74.82 }, to = { id = 96, x = 2676.30, y = 435.27, z = 85.07 }, isRetrace = False, name = Nothing }
+    , { from = { id = 96, x = 2676.30, y = 435.27, z = 85.07 }, to = { id = 102, x = 2478.50, y = 614.70, z = 91.43 }, isRetrace = False, name = Nothing }
+    , { from = { id = 102, x = 2478.50, y = 614.70, z = 91.43 }, to = { id = 111, x = 2189.58, y = 921.72, z = 105.67 }, isRetrace = False, name = Nothing }
+    , { from = { id = 111, x = 2189.58, y = 921.72, z = 105.67 }, to = { id = 120, x = 2090.83, y = 1028.60, z = 107.79 }, isRetrace = True, name = Nothing }
+    , { from = { id = 120, x = 2090.83, y = 1028.60, z = 107.79 }, to = { id = 121, x = 1823.31, y = 1087.31, z = 92.72 }, isRetrace = False, name = Nothing }
+    , { from = { id = 121, x = 1823.31, y = 1087.31, z = 92.72 }, to = { id = 134, x = 1498.33, y = 1327.09, z = 97.57 }, isRetrace = False, name = Nothing }
+    , { from = { id = 134, x = 1498.33, y = 1327.09, z = 97.57 }, to = { id = 140, x = 1360.58, y = 1443.27, z = 106.74 }, isRetrace = False, name = Nothing }
+    , { from = { id = 140, x = 1360.58, y = 1443.27, z = 106.74 }, to = { id = 474, x = 1256.54, y = 1485.78, z = 106.83 }, isRetrace = False, name = Just "Oleaster Path" }
+    , { from = { id = 474, x = 1256.54, y = 1485.78, z = 106.83 }, to = { id = 13, x = 1115.68, y = 1688.07, z = 96.72 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 13, x = 1115.68, y = 1688.07, z = 96.72 }, to = { id = 488, x = 1075.68, y = 1983.78, z = 87.65 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 488, x = 1075.68, y = 1983.78, z = 87.65 }, to = { id = 493, x = 1326.18, y = 2080.32, z = 100.22 }, isRetrace = False, name = Just "Prospect Path" }
+    , { from = { id = 493, x = 1326.18, y = 2080.32, z = 100.22 }, to = { id = 7, x = 1336.43, y = 1949.57, z = 114.25 }, isRetrace = False, name = Just "Tulip Path" }
+    , { from = { id = 7, x = 1336.43, y = 1949.57, z = 114.25 }, to = { id = 493, x = 1326.18, y = 2080.32, z = 100.22 }, isRetrace = True, name = Just "Tulip Path" }
+    , { from = { id = 493, x = 1326.18, y = 2080.32, z = 100.22 }, to = { id = 188, x = 1436.50, y = 2138.76, z = 95.04 }, isRetrace = False, name = Just "Prospect Path" }
+    , { from = { id = 188, x = 1436.50, y = 2138.76, z = 95.04 }, to = { id = 497, x = 1193.43, y = 2168.32, z = 93.02 }, isRetrace = False, name = Just "Tulip Avenue" }
+    , { from = { id = 497, x = 1193.43, y = 2168.32, z = 93.02 }, to = { id = 201, x = 1139.93, y = 2275.07, z = 98.12 }, isRetrace = False, name = Just "Everglade Path" }
+    , { from = { id = 201, x = 1139.93, y = 2275.07, z = 98.12 }, to = { id = 497, x = 1193.43, y = 2168.32, z = 93.02 }, isRetrace = True, name = Just "Everglade Path" }
+    , { from = { id = 497, x = 1193.43, y = 2168.32, z = 93.02 }, to = { id = 494, x = 1208.80, y = 2115.69, z = 86.53 }, isRetrace = False, name = Just "Everglade Path" }
+    , { from = { id = 494, x = 1208.80, y = 2115.69, z = 86.53 }, to = { id = 188, x = 1436.50, y = 2138.76, z = 95.04 }, isRetrace = False, name = Just "Tulip Avenue" }
+    , { from = { id = 188, x = 1436.50, y = 2138.76, z = 95.04 }, to = { id = 189, x = 1508.63, y = 2088.87, z = 104.45 }, isRetrace = False, name = Nothing }
+    , { from = { id = 189, x = 1508.63, y = 2088.87, z = 104.45 }, to = { id = 188, x = 1436.50, y = 2138.76, z = 95.04 }, isRetrace = True, name = Nothing }
+    , { from = { id = 188, x = 1436.50, y = 2138.76, z = 95.04 }, to = { id = 494, x = 1208.80, y = 2115.69, z = 86.53 }, isRetrace = True, name = Just "Tulip Avenue" }
+    , { from = { id = 494, x = 1208.80, y = 2115.69, z = 86.53 }, to = { id = 183, x = 1050.24, y = 2068.75, z = 84.17 }, isRetrace = False, name = Just "Tulip Avenue" }
+    , { from = { id = 183, x = 1050.24, y = 2068.75, z = 84.17 }, to = { id = 488, x = 1075.68, y = 1983.78, z = 87.65 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 488, x = 1075.68, y = 1983.78, z = 87.65 }, to = { id = 12, x = 1198.99, y = 1741.06, z = 96.82 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 12, x = 1198.99, y = 1741.06, z = 96.82 }, to = { id = 13, x = 1115.68, y = 1688.07, z = 96.72 }, isRetrace = False, name = Nothing }
+    , { from = { id = 13, x = 1115.68, y = 1688.07, z = 96.72 }, to = { id = 12, x = 1198.99, y = 1741.06, z = 96.82 }, isRetrace = True, name = Nothing }
+    , { from = { id = 12, x = 1198.99, y = 1741.06, z = 96.82 }, to = { id = 8, x = 1386.68, y = 1813.82, z = 115.66 }, isRetrace = False, name = Just "Vision Path" }
+    , { from = { id = 8, x = 1386.68, y = 1813.82, z = 115.66 }, to = { id = 12, x = 1198.99, y = 1741.06, z = 96.82 }, isRetrace = True, name = Just "Vision Path" }
+    , { from = { id = 12, x = 1198.99, y = 1741.06, z = 96.82 }, to = { id = 474, x = 1256.54, y = 1485.78, z = 106.83 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 474, x = 1256.54, y = 1485.78, z = 106.83 }, to = { id = 140, x = 1360.58, y = 1443.27, z = 106.74 }, isRetrace = True, name = Just "Oleaster Path" }
+    , { from = { id = 140, x = 1360.58, y = 1443.27, z = 106.74 }, to = { id = 150, x = 1437.24, y = 1763.17, z = 117.06 }, isRetrace = False, name = Nothing }
+    , { from = { id = 150, x = 1437.24, y = 1763.17, z = 117.06 }, to = { id = 151, x = 1479.89, y = 1783.85, z = 122.07 }, isRetrace = False, name = Nothing }
+    , { from = { id = 151, x = 1479.89, y = 1783.85, z = 122.07 }, to = { id = 150, x = 1437.24, y = 1763.17, z = 117.06 }, isRetrace = True, name = Nothing }
+    , { from = { id = 150, x = 1437.24, y = 1763.17, z = 117.06 }, to = { id = 8, x = 1386.68, y = 1813.82, z = 115.66 }, isRetrace = False, name = Nothing }
+    , { from = { id = 8, x = 1386.68, y = 1813.82, z = 115.66 }, to = { id = 7, x = 1336.43, y = 1949.57, z = 114.25 }, isRetrace = False, name = Just "Tulip Path" }
+    , { from = { id = 7, x = 1336.43, y = 1949.57, z = 114.25 }, to = { id = 151, x = 1479.89, y = 1783.85, z = 122.07 }, isRetrace = False, name = Just "Highland Path" }
+    , { from = { id = 151, x = 1479.89, y = 1783.85, z = 122.07 }, to = { id = 162, x = 1538.99, y = 1825.84, z = 117.45 }, isRetrace = False, name = Nothing }
+    , { from = { id = 162, x = 1538.99, y = 1825.84, z = 117.45 }, to = { id = 189, x = 1508.63, y = 2088.87, z = 104.45 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 189, x = 1508.63, y = 2088.87, z = 104.45 }, to = { id = 203, x = 1652.15, y = 2280.07, z = 116.34 }, isRetrace = False, name = Nothing }
+    , { from = { id = 203, x = 1652.15, y = 2280.07, z = 116.34 }, to = { id = 231, x = 1329.27, y = 2414.99, z = 109.12 }, isRetrace = False, name = Nothing }
+    , { from = { id = 231, x = 1329.27, y = 2414.99, z = 109.12 }, to = { id = 218, x = 1152.68, y = 2375.57, z = 97.14 }, isRetrace = False, name = Nothing }
+    , { from = { id = 218, x = 1152.68, y = 2375.57, z = 97.14 }, to = { id = 214, x = 1137.43, y = 2351.32, z = 97.01 }, isRetrace = False, name = Nothing }
+    , { from = { id = 214, x = 1137.43, y = 2351.32, z = 97.01 }, to = { id = 516, x = 949.93, y = 2455.82, z = 70.38 }, isRetrace = False, name = Just "Box-wood Path" }
+    , { from = { id = 516, x = 949.93, y = 2455.82, z = 70.38 }, to = { id = 238, x = 913.68, y = 2487.82, z = 66.68 }, isRetrace = False, name = Just "Box-wood Path" }
+    , { from = { id = 238, x = 913.68, y = 2487.82, z = 66.68 }, to = { id = 516, x = 949.93, y = 2455.82, z = 70.38 }, isRetrace = True, name = Just "Box-wood Path" }
+    , { from = { id = 516, x = 949.93, y = 2455.82, z = 70.38 }, to = { id = 194, x = 923.93, y = 2303.32, z = 78.02 }, isRetrace = False, name = Just "Cone Path" }
+    , { from = { id = 194, x = 923.93, y = 2303.32, z = 78.02 }, to = { id = 202, x = 1062.68, y = 2254.82, z = 91.42 }, isRetrace = False, name = Just "Bush Path" }
+    , { from = { id = 202, x = 1062.68, y = 2254.82, z = 91.42 }, to = { id = 194, x = 923.93, y = 2303.32, z = 78.02 }, isRetrace = True, name = Just "Bush Path" }
+    , { from = { id = 194, x = 923.93, y = 2303.32, z = 78.02 }, to = { id = 195, x = 828.26, y = 2236.92, z = 70.36 }, isRetrace = False, name = Nothing }
+    , { from = { id = 195, x = 828.26, y = 2236.92, z = 70.36 }, to = { id = 182, x = 1011.95, y = 2088.34, z = 82.49 }, isRetrace = False, name = Just "Spruce Avenue" }
+    , { from = { id = 182, x = 1011.95, y = 2088.34, z = 82.49 }, to = { id = 183, x = 1050.24, y = 2068.75, z = 84.17 }, isRetrace = False, name = Nothing }
+    , { from = { id = 183, x = 1050.24, y = 2068.75, z = 84.17 }, to = { id = 182, x = 1011.95, y = 2088.34, z = 82.49 }, isRetrace = True, name = Nothing }
+    , { from = { id = 182, x = 1011.95, y = 2088.34, z = 82.49 }, to = { id = 202, x = 1062.68, y = 2254.82, z = 91.42 }, isRetrace = False, name = Just "Turf Path" }
+    , { from = { id = 202, x = 1062.68, y = 2254.82, z = 91.42 }, to = { id = 201, x = 1139.93, y = 2275.07, z = 98.12 }, isRetrace = False, name = Nothing }
+    , { from = { id = 201, x = 1139.93, y = 2275.07, z = 98.12 }, to = { id = 214, x = 1137.43, y = 2351.32, z = 97.01 }, isRetrace = False, name = Nothing }
+    , { from = { id = 214, x = 1137.43, y = 2351.32, z = 97.01 }, to = { id = 218, x = 1152.68, y = 2375.57, z = 97.14 }, isRetrace = True, name = Nothing }
+    , { from = { id = 218, x = 1152.68, y = 2375.57, z = 97.14 }, to = { id = 24, x = 1165.93, y = 2430.07, z = 96.01 }, isRetrace = False, name = Nothing }
+    , { from = { id = 24, x = 1165.93, y = 2430.07, z = 96.01 }, to = { id = 23, x = 1127.68, y = 2464.07, z = 86.88 }, isRetrace = False, name = Just "Furze Path" }
+    , { from = { id = 23, x = 1127.68, y = 2464.07, z = 86.88 }, to = { id = 24, x = 1165.93, y = 2430.07, z = 96.01 }, isRetrace = True, name = Just "Furze Path" }
+    , { from = { id = 24, x = 1165.93, y = 2430.07, z = 96.01 }, to = { id = 22, x = 1170.68, y = 2494.57, z = 96.07 }, isRetrace = False, name = Nothing }
+    , { from = { id = 22, x = 1170.68, y = 2494.57, z = 96.07 }, to = { id = 23, x = 1127.68, y = 2464.07, z = 86.88 }, isRetrace = False, name = Nothing }
+    , { from = { id = 23, x = 1127.68, y = 2464.07, z = 86.88 }, to = { id = 29, x = 928.68, y = 2551.32, z = 65.55 }, isRetrace = False, name = Just "Furze Path" }
+    , { from = { id = 29, x = 928.68, y = 2551.32, z = 65.55 }, to = { id = 238, x = 913.68, y = 2487.82, z = 66.68 }, isRetrace = False, name = Nothing }
+    , { from = { id = 238, x = 913.68, y = 2487.82, z = 66.68 }, to = { id = 237, x = 817.47, y = 2488.79, z = 59.30 }, isRetrace = False, name = Nothing }
+    , { from = { id = 237, x = 817.47, y = 2488.79, z = 59.30 }, to = { id = 244, x = 800.22, y = 2561.80, z = 59.06 }, isRetrace = True, name = Nothing }
+    , { from = { id = 244, x = 800.22, y = 2561.80, z = 59.06 }, to = { id = 249, x = 798.07, y = 2591.85, z = 59.06 }, isRetrace = True, name = Nothing }
+    , { from = { id = 249, x = 798.07, y = 2591.85, z = 59.06 }, to = { id = 259, x = 800.84, y = 2620.89, z = 59.06 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 259, x = 800.84, y = 2620.89, z = 59.06 }, to = { id = 527, x = 826.05, y = 2694.98, z = 55.91 }, isRetrace = True, name = Just "Lake Avenue" }
+    , { from = { id = 527, x = 826.05, y = 2694.98, z = 55.91 }, to = { id = 38, x = 950.72, y = 2898.18, z = 36.50 }, isRetrace = False, name = Just "Lake Avenue" }
+    , { from = { id = 38, x = 950.72, y = 2898.18, z = 36.50 }, to = { id = 62, x = 871.34, y = 3411.95, z = 29.40 }, isRetrace = False, name = Nothing }
+    , { from = { id = 62, x = 871.34, y = 3411.95, z = 29.40 }, to = { id = 336, x = 903.66, y = 3453.45, z = 29.40 }, isRetrace = True, name = Just "Lake Avenue" }
+    , { from = { id = 336, x = 903.66, y = 3453.45, z = 29.40 }, to = { id = 307, x = 1147.94, y = 3061.37, z = 79.37 }, isRetrace = False, name = Nothing }
+    , { from = { id = 307, x = 1147.94, y = 3061.37, z = 79.37 }, to = { id = 308, x = 1226.40, y = 3108.28, z = 88.97 }, isRetrace = False, name = Nothing }
+    , { from = { id = 308, x = 1226.40, y = 3108.28, z = 88.97 }, to = { id = 307, x = 1147.94, y = 3061.37, z = 79.37 }, isRetrace = True, name = Nothing }
+    , { from = { id = 307, x = 1147.94, y = 3061.37, z = 79.37 }, to = { id = 43, x = 1119.80, y = 2943.03, z = 74.91 }, isRetrace = False, name = Just "Acacia Path" }
+    , { from = { id = 43, x = 1119.80, y = 2943.03, z = 74.91 }, to = { id = 42, x = 1214.23, y = 2966.60, z = 89.07 }, isRetrace = False, name = Just "Acacia Path" }
+    , { from = { id = 42, x = 1214.23, y = 2966.60, z = 89.07 }, to = { id = 267, x = 1293.98, y = 2743.78, z = 84.89 }, isRetrace = False, name = Just "Acacia Path" }
+    , { from = { id = 267, x = 1293.98, y = 2743.78, z = 84.89 }, to = { id = 268, x = 1258.38, y = 2735.21, z = 83.65 }, isRetrace = False, name = Nothing }
+    , { from = { id = 268, x = 1258.38, y = 2735.21, z = 83.65 }, to = { id = 39, x = 1036.59, y = 2844.88, z = 55.27 }, isRetrace = False, name = Just "Ravine Path" }
+    , { from = { id = 39, x = 1036.59, y = 2844.88, z = 55.27 }, to = { id = 38, x = 950.72, y = 2898.18, z = 36.50 }, isRetrace = False, name = Just "Ravine Path" }
+    , { from = { id = 38, x = 950.72, y = 2898.18, z = 36.50 }, to = { id = 39, x = 1036.59, y = 2844.88, z = 55.27 }, isRetrace = True, name = Just "Ravine Path" }
+    , { from = { id = 39, x = 1036.59, y = 2844.88, z = 55.27 }, to = { id = 43, x = 1119.80, y = 2943.03, z = 74.91 }, isRetrace = False, name = Just "Acacia Path" }
+    , { from = { id = 43, x = 1119.80, y = 2943.03, z = 74.91 }, to = { id = 42, x = 1214.23, y = 2966.60, z = 89.07 }, isRetrace = True, name = Just "Acacia Path" }
+    , { from = { id = 42, x = 1214.23, y = 2966.60, z = 89.07 }, to = { id = 297, x = 1330.06, y = 3058.36, z = 92.60 }, isRetrace = False, name = Just "Acacia Path" }
+    , { from = { id = 297, x = 1330.06, y = 3058.36, z = 92.60 }, to = { id = 308, x = 1226.40, y = 3108.28, z = 88.97 }, isRetrace = False, name = Just "Sylvan Avenue" }
+    , { from = { id = 308, x = 1226.40, y = 3108.28, z = 88.97 }, to = { id = 567, x = 1374.62, y = 3605.87, z = 98.42 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 567, x = 1374.62, y = 3605.87, z = 98.42 }, to = { id = 570, x = 1389.69, y = 3673.25, z = 94.43 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 570, x = 1389.69, y = 3673.25, z = 94.43 }, to = { id = 567, x = 1374.62, y = 3605.87, z = 98.42 }, isRetrace = True, name = Just "Landscape Avenue" }
+    , { from = { id = 567, x = 1374.62, y = 3605.87, z = 98.42 }, to = { id = 49, x = 1722.94, y = 3307.45, z = 122.39 }, isRetrace = False, name = Just "Lawn Avenue" }
+    , { from = { id = 49, x = 1722.94, y = 3307.45, z = 122.39 }, to = { id = 50, x = 1849.44, y = 3260.20, z = 119.78 }, isRetrace = False, name = Nothing }
+    , { from = { id = 50, x = 1849.44, y = 3260.20, z = 119.78 }, to = { id = 49, x = 1722.94, y = 3307.45, z = 122.39 }, isRetrace = True, name = Nothing }
+    , { from = { id = 49, x = 1722.94, y = 3307.45, z = 122.39 }, to = { id = 563, x = 1806.58, y = 3397.92, z = 134.28 }, isRetrace = False, name = Just "Myrtle Path" }
+    , { from = { id = 563, x = 1806.58, y = 3397.92, z = 134.28 }, to = { id = 570, x = 1389.69, y = 3673.25, z = 94.43 }, isRetrace = False, name = Just "Ridge Path" }
+    , { from = { id = 570, x = 1389.69, y = 3673.25, z = 94.43 }, to = { id = 354, x = 1399.69, y = 3701.88, z = 92.79 }, isRetrace = False, name = Just "Landscape Avenue" }
+    , { from = { id = 354, x = 1399.69, y = 3701.88, z = 92.79 }, to = { id = 565, x = 1220.53, y = 3627.44, z = 102.53 }, isRetrace = False, name = Just "Aspen Path" }
+    , { from = { id = 565, x = 1220.53, y = 3627.44, z = 102.53 }, to = { id = 354, x = 1399.69, y = 3701.88, z = 92.79 }, isRetrace = True, name = Just "Aspen Path" }
+    , { from = { id = 354, x = 1399.69, y = 3701.88, z = 92.79 }, to = { id = 355, x = 1420.15, y = 3738.72, z = 87.32 }, isRetrace = False, name = Nothing }
+    , { from = { id = 355, x = 1420.15, y = 3738.72, z = 87.32 }, to = { id = 573, x = 1261.43, y = 3728.32, z = 89.97 }, isRetrace = False, name = Just "Hillside Path" }
+    , { from = { id = 573, x = 1261.43, y = 3728.32, z = 89.97 }, to = { id = 346, x = 1199.27, y = 3701.83, z = 92.81 }, isRetrace = False, name = Just "Hillside Path" }
+    , { from = { id = 346, x = 1199.27, y = 3701.83, z = 92.81 }, to = { id = 347, x = 1182.92, y = 3691.50, z = 92.81 }, isRetrace = False, name = Nothing }
+    , { from = { id = 347, x = 1182.92, y = 3691.50, z = 92.81 }, to = { id = 376, x = 982.56, y = 3852.69, z = 79.33 }, isRetrace = False, name = Just "Hillside Path" }
+    , { from = { id = 376, x = 982.56, y = 3852.69, z = 79.33 }, to = { id = 585, x = 1056.09, y = 4022.68, z = 67.70 }, isRetrace = False, name = Just "Aster Path" }
+    , { from = { id = 585, x = 1056.09, y = 4022.68, z = 67.70 }, to = { id = 383, x = 1227.87, y = 4056.49, z = 72.21 }, isRetrace = True, name = Just "Waterside Path" }
+    , { from = { id = 383, x = 1227.87, y = 4056.49, z = 72.21 }, to = { id = 584, x = 1500.12, y = 4015.56, z = 74.55 }, isRetrace = False, name = Just "Waterside Path" }
+    , { from = { id = 584, x = 1500.12, y = 4015.56, z = 74.55 }, to = { id = 382, x = 1355.89, y = 4084.60, z = 72.12 }, isRetrace = False, name = Just "Waterside Path" }
+    , { from = { id = 382, x = 1355.89, y = 4084.60, z = 72.12 }, to = { id = 383, x = 1227.87, y = 4056.49, z = 72.21 }, isRetrace = False, name = Nothing }
+    , { from = { id = 383, x = 1227.87, y = 4056.49, z = 72.21 }, to = { id = 382, x = 1355.89, y = 4084.60, z = 72.12 }, isRetrace = True, name = Nothing }
+    , { from = { id = 382, x = 1355.89, y = 4084.60, z = 72.12 }, to = { id = 91, x = 1181.52, y = 4535.36, z = 78.32 }, isRetrace = False, name = Nothing }
+    , { from = { id = 91, x = 1181.52, y = 4535.36, z = 78.32 }, to = { id = 90, x = 1464.77, y = 4806.33, z = 80.08 }, isRetrace = False, name = Just "Margin Path" }
+    , { from = { id = 90, x = 1464.77, y = 4806.33, z = 80.08 }, to = { id = 95, x = 1566.94, y = 5129.51, z = 67.01 }, isRetrace = True, name = Just "Magnolia Avenue" }
     ]

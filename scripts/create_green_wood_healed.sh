@@ -23,7 +23,9 @@ WHERE ogc_fid NOT IN (
   -- streets, not cemetery paths), found by proximity to street_centerline
   51668, 51964, 52067, 53120, 53121, 53233, 55908, 55909, 56286,
   -- additional spurious/unwanted edges
-  55878, 50744
+  55878, 50744,
+  53117, 53299, 53202, 52898, 52923, 53091, 55771, 51926, 51984, 51892,
+  54755, 53129, 53131, 52954, 52228, 52229, 50564, 50723, 46418, 45512
 );
 
 SQL
