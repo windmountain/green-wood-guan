@@ -358,13 +358,25 @@ table.records td {
 .route-map {
   margin: calc(var(--rhythm) * 1) 0 calc(var(--rhythm) * 1.5);
   background: transparent;
-  overflow-x: auto;
+  /* Break out of .wrap's 56rem column to use the full viewport width,
+     so the map itself can render bigger instead of being squeezed down
+     to make room for rotation. */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  /* Padding rather than overflow: auto, so a rotated map has room to
+     turn without triggering scrollbars. 21% covers the worst case (a
+     square rotated 45deg needs ~20.7% extra on each side). */
+  padding: 10% 21%;
 }
 
 .route-map svg {
   display: block;
   width: 100%;
   height: auto;
+}
+
+#route-map-svg {
+  transform-origin: 50% 50%;
 }
 
 .route-controls {
@@ -407,6 +419,15 @@ table.records td {
 
 .route-controls-toggle input {
   cursor: pointer;
+}
+
+.route-rotate {
+  margin: 0 0 calc(var(--rhythm) * 1);
+}
+
+.route-rotate input[type="range"] {
+  width: 100%;
+  accent-color: var(--ink-1);
 }
 
 .route-segment {
