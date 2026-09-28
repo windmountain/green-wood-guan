@@ -60,11 +60,24 @@
           <input type="checkbox" id="route-show-rotate">
           Show rotation slider
         </label>
+        <label class="route-controls-toggle">
+          <input type="checkbox" id="route-show-speed">
+          Show speed slider
+        </label>
+        <label class="route-controls-toggle">
+          <input type="checkbox" id="route-show-segments">
+          Show segments
+        </label>
       </div>
 
-      <div id="route-rotate" class="route-rotate">
+      <div id="route-rotate" class="route-slider-panel">
         <label for="route-rotate-slider" class="sr-only">Rotate map</label>
         <input type="range" id="route-rotate-slider" min="-180" max="180" value="0" step="1">
+      </div>
+
+      <div id="route-speed" class="route-slider-panel">
+        <label for="route-speed-slider">Speed: <span id="route-speed-value">1×</span></label>
+        <input type="range" id="route-speed-slider" min="0.25" max="4" value="1" step="0.25">
       </div>
 
       <div id="route-directions" class="route-directions" aria-live="polite"></div>
@@ -111,6 +124,7 @@
   <script src="js/route-animation.js"></script>
   <script src="js/route-controls.js"></script>
   <script src="js/route-directions.js"></script>
+  <script src="js/route-segments.js"></script>
   <script src="js/route-stats.js"></script>
 </body>
 </html>

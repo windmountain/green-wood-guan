@@ -15,10 +15,24 @@
   sync();
 })();
 
-// Wires the "show rotation slider" checkbox to the .route-rotate panel.
+// Wires the "show rotation slider" checkbox to the #route-rotate panel.
 (function () {
   var checkbox = document.getElementById("route-show-rotate");
   var panel = document.getElementById("route-rotate");
+  if (!checkbox || !panel) return;
+
+  function sync() {
+    panel.hidden = !checkbox.checked;
+  }
+
+  checkbox.addEventListener("change", sync);
+  sync();
+})();
+
+// Wires the "show speed slider" checkbox to the #route-speed panel.
+(function () {
+  var checkbox = document.getElementById("route-show-speed");
+  var panel = document.getElementById("route-speed");
   if (!checkbox || !panel) return;
 
   function sync() {

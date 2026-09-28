@@ -421,11 +421,11 @@ table.records td {
   cursor: pointer;
 }
 
-.route-rotate {
+.route-slider-panel {
   margin: 0 0 calc(var(--rhythm) * 1);
 }
 
-.route-rotate input[type="range"] {
+.route-slider-panel input[type="range"] {
   width: 100%;
   accent-color: var(--ink-1);
 }
@@ -443,6 +443,47 @@ table.records td {
 
 .route-segment.is-walked {
   stroke: #ffffff;
+}
+
+/* Show-segments mode reuses is-current/is-walked from the walk animation,
+   just recolored per-segment: unwalked stays a light tint, current/walked
+   turns the full segment color. */
+
+/* A path walked twice (route-segment-repeated, see route-segments.js) can
+   land in two different color segments, so its two overlapping copies can
+   show different colors depending which is on top. Dotting both lets a
+   sliver of the covered one still show through, and marks the repeat
+   visually either way. Same color logic otherwise applies. */
+#route-map-svg.show-segments .route-segment.route-segment-repeated {
+  stroke-dasharray: 0.1 6;
+  stroke-linecap: round;
+}
+
+#route-map-svg.show-segments .route-segment.route-segment-color-0 {
+  stroke: #ffe6cc;
+}
+
+#route-map-svg.show-segments .route-segment.route-segment-color-0.is-current,
+#route-map-svg.show-segments .route-segment.route-segment-color-0.is-walked {
+  stroke: orange;
+}
+
+#route-map-svg.show-segments .route-segment.route-segment-color-1 {
+  stroke: #d6e0ff;
+}
+
+#route-map-svg.show-segments .route-segment.route-segment-color-1.is-current,
+#route-map-svg.show-segments .route-segment.route-segment-color-1.is-walked {
+  stroke: blue;
+}
+
+#route-map-svg.show-segments .route-segment.route-segment-color-2 {
+  stroke: #ffe0f2;
+}
+
+#route-map-svg.show-segments .route-segment.route-segment-color-2.is-current,
+#route-map-svg.show-segments .route-segment.route-segment-color-2.is-walked {
+  stroke: #ff00aa;
 }
 
 .route-directions {

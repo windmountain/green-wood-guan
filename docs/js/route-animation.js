@@ -35,11 +35,14 @@
     var playing = true;
     var elapsedSeconds = 0;
     var lastFrameTime = null;
+    var speedMultiplier = 1;
 
     var playPauseBtn = document.getElementById("route-play-pause");
     var stopBtn = document.getElementById("route-stop");
     var backBtn = document.getElementById("route-step-back");
     var forwardBtn = document.getElementById("route-step-forward");
+    var speedSlider = document.getElementById("route-speed-slider");
+    var speedValueEl = document.getElementById("route-speed-value");
 
     // SVG has no z-index — elements paint in document order. Since a
     // retraced segment's second <path> comes later in the document than
@@ -72,15 +75,24 @@
       elapsedSeconds = segments[currentIndex].startFraction * LOOP_SECONDS;
     }
 
+    function markCurrent() {
+      segments[currentIndex].el.classList.add("is-current");
+      bringToFront(segments[currentIndex].el);
+      announceCurrent(segments[currentIndex]);
+    }
+
+    // Resets position to the very start. Leaves the first segment
+    // unhighlighted when called while stopped (the Stop button) — nothing
+    // has actually been walked yet, so nothing should read as "current".
+    // Called while still playing (the initial setup), it does mark it,
+    // since playback picks up from segment 0 immediately.
     function resetToStart() {
       segments.forEach(function (s) {
         s.el.classList.remove("is-current", "is-walked");
       });
       currentIndex = 0;
       elapsedSeconds = 0;
-      segments[0].el.classList.add("is-current");
-      bringToFront(segments[0].el);
-      announceCurrent(segments[0]);
+      if (playing) markCurrent();
     }
 
     // Advances exactly one segment, wrapping (and clearing the walked
@@ -114,7 +126,7 @@
     function tick(timestampMs) {
       if (playing) {
         if (lastFrameTime !== null) {
-          elapsedSeconds += (timestampMs - lastFrameTime) / 1000;
+          elapsedSeconds += (timestampMs - lastFrameTime) / 1000 * speedMultiplier;
           if (elapsedSeconds >= LOOP_SECONDS) {
             elapsedSeconds -= LOOP_SECONDS;
           }
@@ -135,7 +147,13 @@
 
     if (playPauseBtn) {
       playPauseBtn.addEventListener("click", function () {
-        setPlaying(!playing);
+        var resuming = !playing;
+        setPlaying(resuming);
+        // Resuming from a full stop leaves nothing marked "current" (see
+        // resetToStart) — mark it now that playback is actually moving
+        // again. A no-op if it's already marked (e.g. resuming from a
+        // mid-route pause).
+        if (resuming) markCurrent();
       });
     }
     if (stopBtn) {
@@ -156,6 +174,12 @@
         setPlaying(false);
         stepForward();
         syncElapsedToCurrent();
+      });
+    }
+    if (speedSlider) {
+      speedSlider.addEventListener("input", function () {
+        speedMultiplier = parseFloat(speedSlider.value);
+        if (speedValueEl) speedValueEl.textContent = speedMultiplier + "×";
       });
     }
 
