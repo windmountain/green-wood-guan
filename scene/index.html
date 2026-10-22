@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green-Wood 3D</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: #111;
+        overflow: hidden;
+      }
+      /* The canvas renders at a true 1080×1920; this only scales it to fit. */
+      #stage {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #stage canvas {
+        height: min(100vh, calc(100vw * 16 / 9));
+        aspect-ratio: 9 / 16;
+        display: block;
+      }
+      #rec {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        color: #f33;
+        font: 600 14px system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage"></div>
+    <div id="rec" hidden>● REC</div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

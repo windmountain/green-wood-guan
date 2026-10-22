@@ -36,3 +36,5 @@ shoe-deal/*.log
 *radio
 
 elm/elm-stuff
+Movie
+scene/node_modules

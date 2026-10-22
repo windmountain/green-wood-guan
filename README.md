@@ -7,10 +7,8 @@ it in 1962.
 
 This repo is a shell carried over from a previous, similar project (McTrot,
 a TSP over McDonald's locations in Manhattan). It keeps the general
-pipeline — fetch data, load into Postgres/PostGIS, design a map in QGIS,
-route along a network with pgRouting — and drops everything specific to
-that earlier problem. The cemetery path network and the solving approach
-itself still need to be built.
+pipeline — fetch data, load into Postgres/PostGIS, route along a network
+with pgRouting — and drops everything specific to that earlier problem.
 
 This repo contains tools for:
 - downloading geospatial layers from NYC Open Data
@@ -27,9 +25,9 @@ This repository manages its external dependencies (gdal, postgres, jq, etc.) wit
 
 The data dependencies of this map are listed in datapackage.json. Datapackage is a [specification](https://datapackage.org/standard/data-package/) for documenting where data came from, how it's licensed, etc.
 
-Currently this is just the pedestrian network (sidewalk polygons, sidewalk
+Currently this is the pedestrian network (sidewalk polygons, sidewalk
 lines, street centerlines) and borough boundaries, kept over from the
-previous project as a starting base map layer.
+previous project.
 
 For some of these dependencies, you will need an account with NYC Open Data. Follow these steps:
 - Copy the .env.example file to a new file named .env.
@@ -82,17 +80,34 @@ stops short of solving anything. `./scripts/solve.sh` picks up from there:
   opening in a GUI vector editor
 - `export_guan_route_elm.py` — writes the route (with elevation) as a static
   Elm data module, for the 3D route view
+- `export_scene_data.py` — writes paths, route, boundary and elevation
+  points to `scene/public/greenwood.json`, for the abstract 3D scene
 
 Run `uv sync` first (for `solve_guan_route.py`'s `networkx`/`psycopg`
 dependencies), then `./scripts/solve.sh`.
 
-**Not yet connected to the site:** `elm/` is a complete Elm app (orbit
-camera, walk animation, elevation exaggeration) that consumes the
-generated `GuanRoute.elm` module, but nothing compiles it (no `elm make`
-step anywhere) and no page in `docs/` embeds the result. `./scripts/solve.sh`
-keeps `GuanRoute.elm` up to date; turning that into a working 3D view on
-the site still needs a build step (e.g. a `scripts/build_elm.sh` producing
-`docs/js/elm.js`) and a mount point in an HTML page.
+# Elm animation
+
+`elm/` is a complete Elm app (orbit camera, walk animation, elevation
+exaggeration) that consumes the generated `GuanRoute.elm` module, but nothing
+compiles it (no `elm make` step anywhere) and no page in `docs/` embeds the
+result. `./scripts/solve.sh` keeps `GuanRoute.elm` up to date; turning that
+into a working 3D view on the site still needs a build step (e.g. a
+`scripts/build_elm.sh` producing `docs/js/elm.js`) and a mount point in an
+HTML page.
+
+# Scene
+
+`scene/` is a standalone browser sketch for video: the cemetery as glowing
+paths and interpolated hills (ridgelines, contours, grid or points) on
+black, rendered at a fixed vertical 1080×1920, with the Guan route drawing
+itself over a timeline while the camera orbits.
+
+```
+cd scene
+npm install
+npm run dev
+```
 
 # A note on AI
 
